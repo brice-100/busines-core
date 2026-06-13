@@ -1,0 +1,52 @@
+[
+  {
+    "id": "m1",
+    "intitule": "Analyste Financier",
+    "secteur": "Finance",
+    "description": "L'analyste financier étudie les données économiques et les performances des entreprises pour aider à la prise de décision d'investissement.",
+    "competences": ["Analyse de données", "Excel avancé", "Python/R", "Marchés financiers", "Rapport"],
+    "salaireMoyen": "45 000 – 80 000 €/an",
+    "perspectives": "Forte demande, évolution vers des postes de gestion de portefeuille",
+    "formation": ["Master Finance", "CFA", "Grande école de commerce"]
+  },
+  {
+    "id": "m2",
+    "intitule": "Développeur Fintech",
+    "secteur": "Technologie",
+    "description": "Conçoit et développe des applications et API pour des services financiers (paiement, trading, crédit).",
+    "competences": ["Java/Python/Go", "API REST", "Microservices", "Sécurité", "Cloud"],
+    "salaireMoyen": "50 000 – 95 000 €/an",
+    "perspectives": "Très forte demande, possibilité de freelance ou startup",
+    "formation": ["Ingénierie informatique", "Bootcamp", "Autodidacte + certifications"]
+  },
+  {
+    "id": "m3",
+    "intitule": "Chargé de Conformité (Compliance)",
+    "secteur": "Réglementation",
+    "description": "Veille au respect des règlementations financières (AML, KYC, RGPD) et protège l'entreprise des risques légaux.",
+    "competences": ["Droit financier", "AML/KYC", "Audit", "Rédaction", "Veille réglementaire"],
+    "salaireMoyen": "40 000 – 70 000 €/an",
+    "perspectives": "Secteur en croissance avec le durcissement des régulations",
+    "formation": ["Master Droit des affaires", "Master Finance", "Certifications CAMS"]
+  },
+  {
+    "id": "m4",
+    "intitule": "Data Scientist Finance",
+    "secteur": "Data & IA",
+    "description": "Exploite les données financières pour construire des modèles prédictifs de risque, fraude ou comportement client.",
+    "competences": ["Python", "Machine Learning", "SQL", "Statistiques", "Visualisation"],
+    "salaireMoyen": "55 000 – 100 000 €/an",
+    "perspectives": "Métier d'avenir, très recherché dans banques et assurances",
+    "formation": ["Master Data Science", "Ingénierie", "Certifications ML"]
+  },
+  {
+    "id": "m5",
+    "intitule": "Conseiller en Gestion de Patrimoine",
+    "secteur": "Banque",
+    "description": "Accompagne les clients dans l'optimisation de leur patrimoine financier et fiscal.",
+    "competences": ["Fiscalité", "Droit successoral", "Placements", "Relation client", "Négociation"],
+    "salaireMoyen": "35 000 – 70 000 €/an (variable inclus)",
+    "perspectives": "Secteur stable, clientèle vieillissante = forte demande",
+    "formation": ["BTS Banque", "Licence Pro Finance", "Master Gestion de patrimoine"]
+  }
+]

@@ -1,0 +1,3 @@
+# Ce dossier contient les composants spécifiques au module Explorer.
+# Créez vos composants ici pour ne pas polluer /components/ui ou /components/layout.
+# Exemple : ExplorerSearch.tsx, ExplorerCard.tsx
