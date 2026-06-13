@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap");
 @import "tailwindcss";
 
 /* ===================================================
@@ -5,9 +6,7 @@
    Ne pas modifier sans accord de l'équipe
    =================================================== */
 
-/* Polices */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap");
-
+@config "../tailwind.config.ts";
 :root {
   --font-inter: "Inter", system-ui, sans-serif;
   --font-poppins: "Poppins", system-ui, sans-serif;
@@ -105,18 +104,13 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Layout principal : espace pour la sidebar et la navbar */
-.page-layout {
-  margin-left: var(--sidebar-width);
-  padding-top: var(--navbar-height);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Layout principal robuste */
+.desktop-sidebar-pad {
+  padding-left: 18rem; /* 288px (w-72) */
 }
-
 @media (max-width: 1023px) {
-  .page-layout {
-    margin-left: 0;
+  .desktop-sidebar-pad {
+    padding-left: 0;
   }
 }
 

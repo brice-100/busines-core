@@ -1,19 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Mail, Lock, LogIn, TrendingUp, Eye, EyeOff, ArrowRight } from "lucide-react";
 import { useAuth } from "@/lib/auth-context";
-import { Input } from "@/components/ui/Input";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { UserCheck, Shield, ChevronRight } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
   const { login } = useAuth();
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -22,108 +22,112 @@ export default function LoginPage() {
     setError("");
     setIsLoading(true);
 
-    const result = await login(email, password);
-    setIsLoading(false);
-
-    if (result.success) {
-      router.push("/dashboard");
-    } else {
-      setError(result.error ?? "Erreur de connexion.");
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 800));
+      const success = login(email, password);
+      if (success) {
+        router.push("/dashboard");
+      } else {
+        setError("Identifiants incorrects (essayez admin@businesscore.com / admin2024)");
+      }
+    } catch (err) {
+      setError("Une erreur est survenue.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4">
-      <div className="w-full max-w-md animate-slide-up">
-        {/* Logo */}
-        <div className="text-center mb-8">
-          <Link href="/" className="inline-flex items-center gap-2.5 group">
-            <div className="h-10 w-10 rounded-xl bg-white/20 flex items-center justify-center backdrop-blur-sm">
-              <TrendingUp className="h-5 w-5 text-white" />
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-100px)]">
+      <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-center justify-center">
+        
+        {/* Form Section */}
+        <div className="flex-1 w-full max-w-md bg-white p-8 sm:p-10 rounded-[2rem] shadow-xl shadow-gray-200/50 border border-gray-100">
+          <div className="mb-10 text-center">
+            <div className="mx-auto h-16 w-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+              <UserCheck className="h-8 w-8 text-primary" />
             </div>
-            <span className="font-display font-bold text-white text-xl">
-              Business<span className="text-primary-300">Core</span>
-            </span>
-          </Link>
-          <h1 className="mt-6 text-2xl font-display font-bold text-white">Bon retour !</h1>
-          <p className="mt-1 text-white/60 text-sm">Connectez-vous à votre espace</p>
-        </div>
+            <h1 className="text-3xl font-display font-bold text-secondary mb-2">Bon retour</h1>
+            <p className="text-sm text-gray-500">Veuillez vous connecter à votre compte</p>
+          </div>
 
-        {/* Card formulaire */}
-        <div className="glass rounded-3xl p-8 shadow-2xl">
-          <form onSubmit={handleSubmit} className="space-y-5" noValidate>
-            <Input
-              label="Adresse e-mail"
-              type="email"
-              placeholder="vous@exemple.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              leftIcon={<Mail className="h-4 w-4" />}
-              autoComplete="email"
-              required
-            />
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="space-y-6">
+              <Input
+                label="Email professionnel"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="nom@entreprise.com"
+                required
+                fullWidth
+              />
+              
+              <Input
+                label="Mot de passe"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="••••••••"
+                required
+                fullWidth
+              />
+            </div>
 
-            <Input
-              label="Mot de passe"
-              type={showPassword ? "text" : "password"}
-              placeholder="••••••••"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              leftIcon={<Lock className="h-4 w-4" />}
-              rightElement={
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
-                  aria-label={showPassword ? "Masquer" : "Afficher"}
-                >
-                  {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                </button>
-              }
-              autoComplete="current-password"
-              required
-            />
+            <div className="flex items-center justify-between">
+              <label className="flex items-center gap-3 cursor-pointer group">
+                <div className="relative flex items-center justify-center">
+                  <input type="checkbox" className="peer sr-only" />
+                  <div className="h-5 w-5 rounded-md border-2 border-gray-300 bg-white peer-checked:bg-primary peer-checked:border-primary transition-all"></div>
+                  <svg className="absolute w-3 h-3 text-white pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-sm text-gray-600 font-medium select-none group-hover:text-secondary">Se souvenir de moi</span>
+              </label>
 
-            {error && (
-              <div className="p-3 rounded-xl bg-red-50 border border-red-100">
-                <p className="text-sm text-red-600">{error}</p>
-              </div>
-            )}
+              <Link href="#" className="text-sm font-bold text-primary hover:text-primary-700 transition-colors">
+                Mot de passe oublié ?
+              </Link>
+            </div>
 
-            <Button
-              type="submit"
-              variant="primary"
-              size="lg"
-              fullWidth
+            {error && <p className="text-sm text-red-500 font-medium bg-red-50 p-3 rounded-xl border border-red-100">{error}</p>}
+
+            <Button 
+              type="submit" 
+              variant="primary" 
+              size="lg" 
+              fullWidth 
               isLoading={isLoading}
-              rightIcon={<LogIn className="h-4 w-4" />}
+              className="mt-4 shadow-lg shadow-primary/30 rounded-xl"
             >
               Se connecter
             </Button>
+
+            <div className="mt-8 pt-8 border-t border-gray-100 text-center">
+              <p className="text-sm text-gray-500 font-medium">
+                Vous n'avez pas de compte ?{" "}
+                <Link href="/register" className="text-primary font-bold hover:underline inline-flex items-center gap-1">
+                  S'inscrire <ChevronRight className="h-3 w-3" />
+                </Link>
+              </p>
+            </div>
           </form>
-
-          {/* Demo credentials */}
-          <div className="mt-4 p-3 rounded-xl bg-primary-50 border border-primary-100">
-            <p className="text-xs text-primary-700 font-medium mb-1">Compte démo :</p>
-            <p className="text-xs text-primary-600">admin@businesscore.com / admin2024</p>
-          </div>
-
-          <p className="mt-6 text-center text-sm text-gray-500">
-            Pas encore de compte ?{" "}
-            <Link
-              href="/register"
-              className="text-primary font-medium hover:underline inline-flex items-center gap-1"
-            >
-              S&apos;inscrire <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
-          </p>
         </div>
 
-        <p className="mt-6 text-center text-xs text-white/40">
-          <Link href="/" className="hover:text-white/60 transition-colors">
-            ← Continuer sans connexion
-          </Link>
-        </p>
+        {/* Decorative Section (Hidden on mobile) */}
+        <div className="hidden md:flex flex-1 flex-col items-center justify-center pl-10 border-l border-gray-200">
+          <div className="text-center max-w-sm">
+            <div className="inline-flex items-center justify-center p-4 bg-accent-violet-50 rounded-2xl mb-6">
+              <Shield className="h-10 w-10 text-accent-violet" />
+            </div>
+            <h2 className="text-2xl font-display font-bold text-secondary mb-4">Espace sécurisé</h2>
+            <p className="text-gray-500 leading-relaxed">
+              Vos données sont chiffrées de bout en bout. Accédez à vos formations, votre progression et vos outils de simulation en toute sécurité.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   );

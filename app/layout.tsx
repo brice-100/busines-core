@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/lib/auth-context";
-import { Sidebar } from "@/components/layout/Sidebar";
-import { Navbar } from "@/components/layout/Navbar";
+import { MainLayout } from "@/components/layout/MainLayout";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,13 +24,6 @@ export const metadata: Metadata = {
   },
   description:
     "BusinessCore est la plateforme éducative de référence sur la fintech et la finance : formations, décryptages, carrières, innovation et plus encore.",
-  keywords: ["fintech", "finance", "formation", "blockchain", "investissement", "Afrique"],
-  authors: [{ name: "Équipe BusinessCore" }],
-  openGraph: {
-    title: "BusinessCore",
-    description: "Votre plateforme éducative fintech & finance",
-    type: "website",
-  },
 };
 
 export default function RootLayout({
@@ -41,20 +33,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`${inter.variable} ${poppins.variable}`}>
-      <body>
+      <body className="bg-white text-secondary min-h-screen font-sans">
         <AuthProvider>
-          {/* Sidebar fixe */}
-          <div className="hidden lg:block">
-            <Sidebar />
-          </div>
-
-          {/* Navbar fixe en haut */}
-          <Navbar />
-
-          {/* Contenu principal décalé à droite de la sidebar */}
-          <div className="page-layout">
-            <main className="flex-1">{children}</main>
-          </div>
+          {/* MainLayout gère la responsivité et le décalage (margin-left) une bonne fois pour toutes */}
+          <MainLayout>
+            {children}
+          </MainLayout>
         </AuthProvider>
       </body>
     </html>

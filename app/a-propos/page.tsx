@@ -1,48 +1,105 @@
 import type { Metadata } from "next";
-import { Info, Users, Target, Globe } from "lucide-react";
+import { CheckCircle2, Target, Users, Zap } from "lucide-react";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "À propos",
-  description: "Découvrez l'équipe et la mission de BusinessCore.",
+  description: "Découvrez notre mission, notre vision et notre équipe chez BusinessCore.",
 };
 
-export default function AProposPage() {
+export default function AboutPage() {
   return (
-    <div className="px-6 py-10 lg:px-12">
-      <div className="max-w-3xl">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="h-10 w-10 rounded-xl bg-primary-50 text-primary flex items-center justify-center">
-            <Info className="h-5 w-5" />
+    <div className="flex flex-col w-full">
+      <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+        
+        {/* Left Column - Content */}
+        <div className="w-full lg:w-1/2">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide mb-6">
+            NOTRE MISSION
           </div>
-          <h1 className="text-3xl font-display font-bold text-secondary">À propos</h1>
-        </div>
-        <p className="text-gray-500 mb-8">Notre mission et notre équipe</p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-          {[
-            { icon: Target, title: "Notre mission", desc: "Démocratiser l'éducation financière et rendre la fintech accessible à tous." },
-            { icon: Users, title: "L'équipe", desc: "Un groupe d'étudiants passionnés de finance et de technologie." },
-            { icon: Globe, title: "Notre vision", desc: "Devenir la référence francophone en éducation fintech et finance." },
-          ].map((item) => {
-            const Icon = item.icon;
-            return (
-              <div key={item.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-card text-center">
-                <div className="h-12 w-12 rounded-2xl bg-primary-50 text-primary flex items-center justify-center mx-auto mb-3">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h2 className="font-semibold text-secondary mb-2">{item.title}</h2>
-                <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="bg-white rounded-2xl border border-dashed border-gray-200 p-8 text-center">
-          <p className="text-gray-400 text-sm">
-            Page complète en développement — branche{" "}
-            <code className="bg-gray-100 px-2 py-0.5 rounded text-primary text-xs">feature/a-propos</code>
+          
+          <h1 className="text-4xl lg:text-5xl font-display font-bold text-secondary leading-tight mb-6">
+            Démocratiser l'accès à l'éducation <span className="text-primary">financière.</span>
+          </h1>
+          
+          <p className="text-gray-600 text-lg leading-relaxed mb-10">
+            BusinessCore est né d'une conviction simple : la finance et la technologie financière (fintech) doivent être accessibles à tous. Nous construisons la plateforme de référence pour former la prochaine génération d'experts financiers.
           </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {/* Value 1 */}
+            <div className="flex gap-4">
+              <div className="h-12 w-12 rounded-xl bg-accent-violet-50 flex items-center justify-center flex-shrink-0">
+                <Target className="h-6 w-6 text-accent-violet" />
+              </div>
+              <div>
+                <h3 className="font-bold text-secondary mb-2">Notre Vision</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Devenir le pont entre l'éducation traditionnelle et les réalités du marché de l'emploi fintech.
+                </p>
+              </div>
+            </div>
+
+            {/* Value 2 */}
+            <div className="flex gap-4">
+              <div className="h-12 w-12 rounded-xl bg-accent-green-50 flex items-center justify-center flex-shrink-0">
+                <Users className="h-6 w-6 text-accent-green" />
+              </div>
+              <div>
+                <h3 className="font-bold text-secondary mb-2">Communauté</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Un espace d'échange, de mentorat et d'apprentissage collaboratif pour tous.
+                </p>
+              </div>
+            </div>
+
+            {/* Value 3 */}
+            <div className="flex gap-4">
+              <div className="h-12 w-12 rounded-xl bg-accent-orange-50 flex items-center justify-center flex-shrink-0">
+                <Zap className="h-6 w-6 text-accent-orange" />
+              </div>
+              <div>
+                <h3 className="font-bold text-secondary mb-2">Innovation</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Des contenus toujours à la pointe des dernières technologies (Blockchain, IA).
+                </p>
+              </div>
+            </div>
+
+            {/* Value 4 */}
+            <div className="flex gap-4">
+              <div className="h-12 w-12 rounded-xl bg-accent-cyan-50 flex items-center justify-center flex-shrink-0">
+                <CheckCircle2 className="h-6 w-6 text-accent-cyan" />
+              </div>
+              <div>
+                <h3 className="font-bold text-secondary mb-2">Excellence</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Une qualité de contenu validée par des experts de l'industrie.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Right Column - Image */}
+        <div className="w-full lg:w-1/2 relative">
+          <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
+            <Image
+              src="/images/building.png"
+              alt="Bâtiment moderne BusinessCore"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          
+          {/* Floating badge */}
+          <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-[200px] animate-float">
+            <p className="text-3xl font-display font-bold text-primary mb-1">2024</p>
+            <p className="text-sm text-gray-500 font-medium leading-tight">Lancement officiel de la plateforme</p>
+          </div>
+        </div>
+
       </div>
     </div>
   );
