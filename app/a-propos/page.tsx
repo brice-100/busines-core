@@ -18,17 +18,17 @@ export default function AboutPage() {
             NOTRE MISSION
           </div>
           
-          <h1 className="text-4xl lg:text-5xl font-display font-bold text-secondary leading-tight mb-6">
+          <h1 className="text-4xl lg:text-5xl font-display font-bold text-secondary leading-tight mb-8">
             Démocratiser l'accès à l'éducation <span className="text-primary">financière.</span>
           </h1>
           
-          <p className="text-gray-600 text-lg leading-relaxed mb-10">
+          <p className="text-gray-600 text-lg leading-relaxed mb-16">
             BusinessCore est né d'une conviction simple : la finance et la technologie financière (fintech) doivent être accessibles à tous. Nous construisons la plateforme de référence pour former la prochaine génération d'experts financiers.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Value 1 */}
-            <div className="flex gap-4">
+            <div className="flex gap-6">
               <div className="h-12 w-12 rounded-xl bg-accent-violet-50 flex items-center justify-center flex-shrink-0">
                 <Target className="h-6 w-6 text-accent-violet" />
               </div>
@@ -41,7 +41,7 @@ export default function AboutPage() {
             </div>
 
             {/* Value 2 */}
-            <div className="flex gap-4">
+            <div className="flex gap-6">
               <div className="h-12 w-12 rounded-xl bg-accent-green-50 flex items-center justify-center flex-shrink-0">
                 <Users className="h-6 w-6 text-accent-green" />
               </div>

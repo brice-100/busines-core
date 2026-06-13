@@ -85,9 +85,9 @@ export default function HomePage() {
       {/* =============================================
           SECTION HERO
           ============================================= */}
-      <section className="relative overflow-hidden bg-white flex flex-col md:flex-row items-center justify-between pb-12 mb-12 border-b border-gray-100">
+      <section className="relative overflow-hidden bg-white flex flex-col md:flex-row items-center justify-between pb-20 mb-20 border-b border-gray-100">
         
-        <div className="relative z-10 w-full md:w-1/2 md:pr-10 animate-fade-in mb-10 md:mb-0">
+        <div className="relative z-10 w-full md:w-1/2 md:pr-10 animate-fade-in mb-16 md:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-secondary leading-tight mb-6">
             Comprendre, Apprendre, Décrypter{" "}
             <span className="text-primary">la Finance.</span>
@@ -139,15 +139,15 @@ export default function HomePage() {
       {/* =============================================
           ACCÈS RAPIDE — 6 cartes
           ============================================= */}
-      <section className="pb-12 bg-white">
-        <div className="flex items-center justify-between mb-8">
+      <section className="pb-20 bg-white">
+        <div className="flex items-center justify-between mb-10">
           <h2 className="text-2xl font-display font-bold text-secondary">Accès rapide</h2>
           <Button variant="ghost" size="sm" className="rounded-full border border-gray-200 h-10 w-10 p-0 flex items-center justify-center">
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
           {quickAccess.map((item) => {
             const Icon = item.icon;
             return (
@@ -162,9 +162,9 @@ export default function HomePage() {
                   >
                     <Icon className="h-5 w-5" />
                   </div>
-                  <div className="flex flex-col">
-                    <h3 className="font-bold text-secondary text-[15px] mb-0.5">{item.label}</h3>
-                    <p className="text-[11px] text-gray-500 leading-snug line-clamp-2">{item.description}</p>
+                  <div className="flex flex-col min-w-0">
+                    <h3 className="font-bold text-secondary text-[15px] mb-0.5 break-words line-clamp-2">{item.label}</h3>
+                    <p className="text-[11px] text-gray-500 leading-snug break-words line-clamp-2">{item.description}</p>
                   </div>
                 </Card>
               </Link>
@@ -176,7 +176,7 @@ export default function HomePage() {
       {/* =============================================
           À LA UNE & NOS UNIVERS & ADJA
           ============================================= */}
-      <section className="py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start border-t border-gray-100">
+      <section className="py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start border-t border-gray-100">
         
         {/* À la une */}
         <div className="lg:col-span-4">
@@ -184,7 +184,7 @@ export default function HomePage() {
           {featuredArticles.slice(0, 1).map((article) => (
             <Link key={article.id} href={`/decryptages`}>
               <Card hover padding="none" className="overflow-hidden shadow-sm border-gray-100 group">
-                <div className="relative h-48 w-full bg-secondary flex items-center justify-center overflow-hidden">
+                <div className="relative h-48 w-full overflow-hidden bg-secondary flex items-center justify-center">
                   <Image 
                     src="/images/hero.png" 
                     alt="Article Image" 
@@ -197,15 +197,15 @@ export default function HomePage() {
                     <div className="w-32 h-20 rounded-xl bg-primary/90 backdrop-blur-md shadow-2xl border border-white/20 transform rotate-6 -translate-x-4 absolute"></div>
                   </div>
                 </div>
-                <div className="p-5">
-                  <Badge variant="primary" size="sm" className="bg-primary/5 text-primary mb-3">Tendance</Badge>
-                  <h3 className="font-bold text-secondary text-base mb-2 group-hover:text-primary transition-colors">
+                <div className="p-6 flex flex-col min-w-0 space-y-2">
+                  <Badge variant="primary" size="sm" className="bg-primary/5 text-primary self-start">Tendance</Badge>
+                  <h3 className="font-bold text-secondary text-base break-words line-clamp-2 group-hover:text-primary transition-colors">
                     La Fintech transforme l'Afrique
                   </h3>
-                  <p className="text-xs text-gray-500 leading-relaxed mb-4">
+                  <p className="text-xs text-gray-500 leading-relaxed break-words line-clamp-2">
                     De la monnaie mobile aux paiements numériques, découvrez les innovations qui changent notre quotidien.
                   </p>
-                  <span className="text-primary text-xs font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span className="text-primary text-xs font-semibold flex items-center gap-1 group-hover:gap-2 transition-all mt-2">
                     Lire l'article <ArrowRight className="h-3 w-3" />
                   </span>
                 </div>
@@ -224,9 +224,9 @@ export default function HomePage() {
               { value: "60+", label: "Métiers" },
               { value: "200+", label: "Articles & Ressources" },
             ].map((stat, i) => (
-              <Card key={i} padding="md" className="border-gray-100 shadow-sm flex flex-col justify-center text-center">
-                <p className="text-2xl font-bold text-primary mb-1">{stat.value}</p>
-                <p className="text-xs text-gray-500 font-medium">{stat.label}</p>
+              <Card key={i} padding="md" className="border-gray-100 shadow-sm flex flex-col justify-center text-center min-w-0 space-y-2">
+                <p className="text-2xl font-bold text-primary break-words">{stat.value}</p>
+                <p className="text-xs text-gray-500 font-medium break-words line-clamp-2">{stat.label}</p>
               </Card>
             ))}
           </div>
@@ -235,9 +235,9 @@ export default function HomePage() {
         {/* Adja Assistant */}
         <div className="lg:col-span-4">
           <Card padding="none" className="overflow-hidden bg-primary/5 border-primary/10 shadow-sm relative h-full min-h-[300px]">
-            <div className="p-6 relative z-10 w-2/3 h-full flex flex-col justify-center">
-              <h3 className="font-bold text-secondary text-lg mb-2 leading-snug">Adja, votre assistant</h3>
-              <p className="text-xs text-gray-600 mb-6 leading-relaxed">
+            <div className="p-6 relative z-10 w-2/3 h-full flex flex-col justify-center min-w-0 space-y-3">
+              <h3 className="font-bold text-secondary text-lg leading-snug break-words">Adja, votre assistant</h3>
+              <p className="text-xs text-gray-600 leading-relaxed break-words line-clamp-3">
                 Posez vos questions sur la finance et obtenez des réponses claires et simples.
               </p>
               <Button href="/adja" variant="primary" size="sm" className="rounded-full self-start shadow-md shadow-primary/20">

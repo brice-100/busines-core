@@ -53,7 +53,7 @@ export function Input({
         <input
           id={inputId}
           className={cn(
-            "w-full rounded-xl border bg-white px-4 py-3 text-sm text-secondary outline-none",
+            "w-full rounded-xl border bg-white px-5 py-4 text-sm text-secondary outline-none",
             "placeholder:text-gray-400 transition-all duration-200",
             "focus:border-primary focus:ring-2 focus:ring-primary/20",
             error

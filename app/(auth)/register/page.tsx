@@ -53,8 +53,8 @@ export default function RegisterPage() {
       <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row-reverse gap-10 items-center justify-center">
         
         {/* Form Section */}
-        <div className="flex-1 w-full max-w-md bg-white p-8 sm:p-10 rounded-[2rem] shadow-xl shadow-gray-200/50 border border-gray-100">
-          <div className="mb-10 text-center">
+        <div className="flex-1 w-full max-w-md bg-white p-6 sm:p-8 rounded-xl overflow-hidden shadow-card border border-gray-100 min-w-0">
+          <div className="mb-8 text-center space-y-2">
             <div className="mx-auto h-16 w-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
               <LockKeyhole className="h-8 w-8 text-primary" />
             </div>
@@ -63,7 +63,7 @@ export default function RegisterPage() {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="space-y-6">
+            <div className="space-y-4">
               <Input
                 label="Nom complet"
                 type="text"

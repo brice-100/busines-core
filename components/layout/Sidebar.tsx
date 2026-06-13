@@ -93,7 +93,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 overflow-y-auto px-4 py-2 space-y-2 custom-scrollbar">
+        <nav className="flex-1 overflow-y-auto px-4 py-4 space-y-4 custom-scrollbar">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             const Icon = item.icon;
