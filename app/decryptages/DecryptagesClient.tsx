@@ -9,27 +9,24 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-const pills = ["Tous", "Monnaie digitale", "Néobanques", "Crypto", "Finance Durable", "Marchés"];
+const tabs = [
+  { label: "Tous", href: "/decryptages" },
+  { label: "Monnaie digitale", href: "/decryptages/monnaie-digitale" },
+  { label: "Néobanques", href: "/decryptages/neobanques" },
+  { label: "Crypto", href: "/decryptages/crypto" },
+  { label: "Finance Durable", href: "/decryptages/finance-durable" },
+  { label: "Marchés", href: "/decryptages/marches" },
+];
 
 export default function DecryptagesClient() {
   const { articles } = useArticles();
   const { currentUser } = useAuth();
+  const pathname = usePathname();
 
-  // Etat pour l'onglet actif (0 = Tous)
-  const [active, setActive] = React.useState(0);
-
-  // Filtrer les articles selon l'onglet sélectionné. On compare en minuscules
-  const filteredArticles =
-    active === 0
-      ? articles
-      : articles.filter((a) => (a.categorie || "").toLowerCase().includes(pills[active].toLowerCase()));
-
-  // Choisir un article à la une parmi les articles filtrés, puis fallback sur l'ensemble
-  const featuredArticle =
-    filteredArticles.find((a) => a.featured) || filteredArticles[0] || articles.find((a) => a.featured) || articles[0];
-
-  const regularArticles = filteredArticles.filter((a) => a.id !== featuredArticle?.id);
+  const featuredArticle = articles.find((a) => a.featured) || articles[0];
+  const regularArticles = articles.filter((a) => a.id !== featuredArticle?.id);
 
   const canPublish = currentUser?.role === "blogueur" || currentUser?.role === "administrateur";
 
@@ -111,18 +108,13 @@ export default function DecryptagesClient() {
 
       {/* Filters */}
       <div className="flex flex-wrap gap-2 pt-4">
-        {pills.map((pill, i) => {
-          const isActive = i === active;
+        {tabs.map((tab) => {
+          const isActive = pathname === tab.href;
           const className = `px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${isActive ? "bg-secondary text-white shadow-md shadow-secondary/20" : "bg-gray-50 text-gray-600 hover:text-secondary hover:bg-gray-100 hover:shadow-sm"}`;
           return (
-            <button
-              key={pill}
-              onClick={() => setActive(i)}
-              aria-pressed={isActive}
-              className={className}
-            >
-              {pill}
-            </button>
+            <Link key={tab.href} href={tab.href} className={className} aria-current={isActive ? "page" : undefined}>
+              {tab.label}
+            </Link>
           );
         })}
       </div>

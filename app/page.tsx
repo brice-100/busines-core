@@ -85,7 +85,7 @@ export default function HomePage() {
       {/* =============================================
           SECTION HERO
           ============================================= */}
-      <section className="relative overflow-hidden bg-gradient-to-tr from-blue-50/20 via-white to-violet-50/10 flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-16 mb-16 border border-slate-100/60 rounded-3xl shadow-premium">
+      <section className="relative overflow-hidden bg-gradient-to-tr from-blue-50/20 via-white to-violet-50/10 flex flex-col md:flex-row items-center justify-between p-15 md:p-15 lg:p-16 mb-24 shadow-premium">
         
         <div className="relative z-10 w-full md:w-1/2 md:pr-10 animate-fade-in mb-12 md:mb-0">
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/5 text-primary text-xs font-semibold mb-6">
@@ -117,7 +117,7 @@ export default function HomePage() {
               href="/decryptages"
               variant="outline"
               size="lg"
-              className="rounded-full px-8 border-slate-200 text-slate-700 bg-white hover:bg-slate-50 active:bg-slate-100 hover:border-slate-300"
+              className="rounded px-8 border-slate-200 text-slate-700 bg-white hover:bg-slate-50 active:bg-slate-100 hover:border-slate-300"
             >
               Découvrir la Fintech
             </Button>
@@ -144,8 +144,8 @@ export default function HomePage() {
       {/* =============================================
           ACCÈS RAPIDE — 6 cartes
           ============================================= */}
-      <section className="pb-16">
-        <div className="flex items-center justify-between mb-8">
+      <section className="pb-24 pt-4">
+        <div className="flex items-center justify-between mb-15">
           <div>
             <h2 className="text-2xl font-display font-bold text-secondary">Accès rapide</h2>
             <p className="text-xs text-slate-500 mt-1">Accédez directement à nos services et ressources pédagogiques</p>
@@ -184,7 +184,7 @@ export default function HomePage() {
       {/* =============================================
           À LA UNE & NOS UNIVERS & ADJA
           ============================================= */}
-      <section className="py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch border-t border-slate-100/60">
+      <section className="py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch border-t border-slate-100/60">
         
         {/* À la une */}
         <div className="lg:col-span-4 flex flex-col">
@@ -212,7 +212,7 @@ export default function HomePage() {
                       De la monnaie mobile aux paiements numériques, découvrez les innovations qui changent notre quotidien.
                     </p>
                   </div>
-                  <span className="text-primary text-xs font-semibold flex items-center gap-1 group-hover:gap-2 transition-all mt-2 pt-2">
+                  <span className="text-primary text-xs font-semibold flex items-end gap-1 group-hover:gap-2 transition-all mt-2 pt-2">
                     Lire l'article <ArrowRight className="h-3 w-3" />
                   </span>
                 </div>
@@ -243,36 +243,38 @@ export default function HomePage() {
         <div className="lg:col-span-4 flex flex-col">
           <h2 className="text-xl font-display font-bold text-secondary mb-6">Assistant IA</h2>
           <div className="flex-1 flex">
-            <Card padding="none" className="overflow-hidden bg-gradient-to-br from-slate-900 via-secondary to-slate-950 border border-slate-800 shadow-premium relative w-full rounded-2xl flex items-center h-full min-h-[300px]">
-              <div className="p-6 relative z-10 w-2/3 flex flex-col justify-center min-w-0 space-y-3">
-                <h3 className="font-bold text-white text-lg leading-snug break-words">Adja, votre assistant</h3>
-                <p className="text-xs text-slate-300 leading-relaxed break-words line-clamp-3">
-                  Posez vos questions sur la finance et obtenez des réponses claires et simples.
-                </p>
-                <Button href="/adja" variant="outline" size="sm" className="rounded-full self-start bg-white text-slate-900 border-none hover:bg-slate-100 shadow-sm transition-all font-bold">
-                  Discuter avec Adja
-                </Button>
-              </div>
-              
-              {/* Adja Image */}
-              <div className="absolute right-0 bottom-0 top-0 w-1/2">
-                <div className="relative w-full h-full">
-                  {/* Decorative background circles */}
-                  <div className="absolute -left-10 top-1/2 -translate-y-1/2 h-40 w-40 rounded-full border border-white/5" />
-                  <div className="absolute -left-4 top-1/2 -translate-y-1/2 h-28 w-28 rounded-full border border-white/10" />
-                  
-                  <Image
-                    src="/images/adja.png"
-                    alt="Adja Assistant"
-                    fill
-                    className="object-cover object-top"
-                  />
-                  
-                  {/* Gradient fade on left side of image (dark theme compatible) */}
-                  <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-secondary to-transparent" />
+            <Link href="/adja" className="group w-full">
+              <Card padding="none" className="overflow-hidden bg-gradient-to-br from-slate-900 via-secondary to-slate-950 border border-slate-800 shadow-premium relative w-full rounded-2xl flex items-center h-full min-h-[300px] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+               <div className="p-8 relative z-10 w-2/3 flex flex-col justify-center min-w-0 space-y-4">
+  <h3 className="font-bold text-white text-lg leading-snug break-words">Adja, votre assistant</h3>
+  <p className="text-xs text-slate-300 leading-relaxed break-words line-clamp-3">
+    Posez vos questions sur la finance et obtenez des réponses claires et simples.
+  </p>
+  <div className="rounded-full self-start bg-white text-slate-900 border-none hover:bg-slate-100 shadow-sm transition-all font-bold px-5 py-2.5 text-sm mt-2">
+    Discuter avec Adja
+  </div>
+</div>
+                
+                {/* Adja Image */}
+                <div className="absolute right-0 bottom-0 top-0 w-1/2">
+                  <div className="relative w-full h-full">
+                    {/* Decorative background circles */}
+                    <div className="absolute -left-10 top-1/2 -translate-y-1/2 h-40 w-40 rounded-full border border-white/5" />
+                    <div className="absolute -left-4 top-1/2 -translate-y-1/2 h-28 w-28 rounded-full border border-white/10" />
+                    
+                    <Image
+                      src="/images/adja.png"
+                      alt="Adja Assistant"
+                      fill
+                      className="object-cover object-top"
+                    />
+                    
+                    {/* Gradient fade on left side of image (dark theme compatible) */}
+                    <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-secondary to-transparent" />
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
