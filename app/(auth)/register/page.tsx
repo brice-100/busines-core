@@ -35,7 +35,7 @@ export default function RegisterPage() {
       const [prenom, ...nomParts] = nomComplet.split(" ");
       const nom = nomParts.join(" ") || "Inconnu";
 
-      const success = register({ nom, prenom, email, password });
+      const success = await register({ nom, prenom, email, password });
       if (success) {
         router.push("/dashboard");
       } else {
