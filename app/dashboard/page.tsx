@@ -2,30 +2,15 @@
 
 import React from "react";
 import { useAuth } from "@/lib/auth-context";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import { LayoutDashboard, BookOpen, FileText, User, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
+import { RoleBadge } from "@/components/ui/RoleBadge";
 import { getInitials } from "@/lib/mock-data";
 
 export default function DashboardPage() {
-  const { currentUser, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
+  const { currentUser } = useAuth();
 
-  useEffect(() => {
-    if (!isLoading && !isAuthenticated) {
-      router.push("/login");
-    }
-  }, [isLoading, isAuthenticated, router]);
-
-  if (isLoading || !currentUser) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-      </div>
-    );
-  }
+  if (!currentUser) return null;
 
   return (
     <div className="px-6 py-10 lg:px-12">
@@ -50,12 +35,7 @@ export default function DashboardPage() {
           <div>
             <h2 className="font-semibold text-secondary">{currentUser.prenom} {currentUser.nom}</h2>
             <p className="text-sm text-gray-500">{currentUser.email}</p>
-            <Badge
-              variant={currentUser.role === "administrateur" ? "violet" : currentUser.role === "utilisateur" ? "primary" : "gray"}
-              className="mt-1"
-            >
-              {currentUser.role}
-            </Badge>
+            <RoleBadge role={currentUser.role} isBanned={currentUser.isBanned} />
           </div>
         </Card>
 
@@ -78,10 +58,9 @@ export default function DashboardPage() {
           })}
         </div>
 
-        <div className="bg-white rounded-2xl border border-dashed border-gray-200 p-8 text-center">
-          <p className="text-gray-400 text-sm">
-            Dashboard complet en développement — branche{" "}
-            <code className="bg-gray-100 px-2 py-0.5 rounded text-primary text-xs">feature/dashboard</code>
+        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
+          <p className="text-blue-600 text-sm font-medium">
+            Bienvenue sur BusinessCore ! Explorez les univers depuis la barre latérale.
           </p>
         </div>
       </div>

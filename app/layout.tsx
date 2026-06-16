@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/lib/auth-context";
+import { ArticleProvider } from "@/lib/article-context";
 import MainLayout from "@/components/layout/MainLayout";
 
 const inter = Inter({
@@ -35,10 +36,12 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.variable} ${poppins.variable}`}>
       <body className="bg-slate-50/70 text-secondary min-h-screen font-sans">
         <AuthProvider>
-          {/* MainLayout gère la responsivité et le décalage (margin-left) une bonne fois pour toutes */}
-          <MainLayout>
-            {children}
-          </MainLayout>
+          <ArticleProvider>
+              {/* MainLayout gère la responsivité et le décalage (margin-left) une bonne fois pour toutes */}
+              <MainLayout>
+                {children}
+              </MainLayout>
+          </ArticleProvider>
         </AuthProvider>
       </body>
     </html>

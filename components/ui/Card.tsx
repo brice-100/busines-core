@@ -76,7 +76,7 @@ export function CardHeader({
   className?: string;
 }) {
   return (
-    <div className={cn("mb-4 pb-4 border-b border-gray-100", className)}>{children}</div>
+    <div className={cn("mb-6 pb-6 border-b border-gray-100", className)}>{children}</div>
   );
 }
 
@@ -98,6 +98,6 @@ export function CardFooter({
   className?: string;
 }) {
   return (
-    <div className={cn("mt-4 pt-4 border-t border-gray-100", className)}>{children}</div>
+    <div className={cn("mt-6 pt-6 border-t border-gray-100", className)}>{children}</div>
   );
 }

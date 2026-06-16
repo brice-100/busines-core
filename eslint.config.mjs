@@ -13,6 +13,7 @@ const eslintConfig = [
     rules: {
       "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
       "react/display-name": "off",
+      "react/no-unescaped-entities": "off",
     },
   },
 ];

@@ -32,7 +32,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "bg-primary text-white hover:bg-primary-700 active:bg-primary-800 shadow-sm hover:shadow-glow focus-visible:ring-primary-400",
   outline:
-    "border-2 border-primary text-primary bg-transparent hover:bg-primary-50 active:bg-primary-100 focus-visible:ring-primary-400",
+    "border-1 border-primary text-primary bg-transparent hover:bg-primary-50 active:bg-primary-100 focus-visible:ring-primary-400",
   ghost:
     "bg-transparent text-secondary hover:bg-secondary-50 active:bg-secondary-100 focus-visible:ring-secondary-300",
   danger:
@@ -72,7 +72,7 @@ export function Button({
   const content = (
     <>
       {isLoading ? (
-        <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
+        <span className="h-4 w-4 animate-spin rounded-full border-1 border-current border-t-transparent" />
       ) : (
         leftIcon
       )}
