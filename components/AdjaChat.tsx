@@ -26,23 +26,25 @@ export default function AdjaChat() {
     setError(null);
 
     try {
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      // send full conversation to server-side proxy
+      const payload = { messages: [...messages, userMsg] };
+      const response = await fetch("/api/adja", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: "gpt-3.5-turbo",
-          messages: [userMsg],
-          max_tokens: 500,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
 
-      if (!response.ok) throw new Error(`OpenAI error: ${response.status}`);
+      if (!response.ok) {
+        const err = await response.json().catch(() => null);
+        console.error("Adja API error", err);
+        const serverMessage = err?.error || err?.message || "Erreur serveur";
+        setError(typeof serverMessage === "string" ? serverMessage : JSON.stringify(serverMessage));
+        setLoading(false);
+        return;
+      }
 
       const data = await response.json();
-      const reply = data.choices?.[0]?.message?.content ?? "";
+      const reply = data.reply ?? "";
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch (err) {
       console.error(err);
