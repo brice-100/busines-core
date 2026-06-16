@@ -15,12 +15,21 @@ const pills = ["Tous", "Monnaie digitale", "Néobanques", "Crypto", "Finance Dur
 export default function DecryptagesClient() {
   const { articles } = useArticles();
   const { currentUser } = useAuth();
-  
-  // Filtrer uniquement pour les Décryptages, ou si le tag correspond.
-  // Dans le mock actuel, la catégorie est "Finance africaine" ou autre, on va prendre tous les articles pour la démo, 
-  // mais en réalité il faudrait filtrer par la section si on veut juste "Décryptages".
-  const featuredArticle = articles.find(a => a.featured) || articles[0];
-  const regularArticles = articles.filter(a => a.id !== featuredArticle?.id);
+
+  // Etat pour l'onglet actif (0 = Tous)
+  const [active, setActive] = React.useState(0);
+
+  // Filtrer les articles selon l'onglet sélectionné. On compare en minuscules
+  const filteredArticles =
+    active === 0
+      ? articles
+      : articles.filter((a) => (a.categorie || "").toLowerCase().includes(pills[active].toLowerCase()));
+
+  // Choisir un article à la une parmi les articles filtrés, puis fallback sur l'ensemble
+  const featuredArticle =
+    filteredArticles.find((a) => a.featured) || filteredArticles[0] || articles.find((a) => a.featured) || articles[0];
+
+  const regularArticles = filteredArticles.filter((a) => a.id !== featuredArticle?.id);
 
   const canPublish = currentUser?.role === "blogueur" || currentUser?.role === "administrateur";
 
@@ -103,13 +112,15 @@ export default function DecryptagesClient() {
       {/* Filters */}
       <div className="flex flex-wrap gap-2 pt-4">
         {pills.map((pill, i) => {
-          const className = `px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-            i === 0 
-              ? "bg-secondary text-white shadow-md shadow-secondary/20" 
-              : "bg-gray-50 text-gray-600 hover:text-secondary hover:bg-gray-100 hover:shadow-sm"
-          }`;
+          const isActive = i === active;
+          const className = `px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${isActive ? "bg-secondary text-white shadow-md shadow-secondary/20" : "bg-gray-50 text-gray-600 hover:text-secondary hover:bg-gray-100 hover:shadow-sm"}`;
           return (
-            <button key={pill} className={className}>
+            <button
+              key={pill}
+              onClick={() => setActive(i)}
+              aria-pressed={isActive}
+              className={className}
+            >
               {pill}
             </button>
           );
