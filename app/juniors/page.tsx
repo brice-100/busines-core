@@ -14,7 +14,7 @@ const pills = ["Collège", "Lycée", "Université"];
 const parcoursItems = [
   {
     title: "Collège",
-    desc: "Découvrir les bases de l'argent et de la finance. Revenu...",
+    desc: "Découvrir les bases de l'argent et de la finance.",
     img: "/images/college_junior_univers.jpeg",
     bg: "bg-blue-50 border-blue-100",
     hoverBorder: "hover:border-blue-300",
@@ -102,11 +102,6 @@ export default function JuniorsPage() {
             );
           })}
         </div>
-
-        <Button variant="outline" className="rounded-full px-8 py-3 text-secondary border-gray-300 hover:bg-gray-50 font-semibold shadow-sm">
-          Voir tous les parcours
-        </Button>
-
       </div>
     </div>
   );
