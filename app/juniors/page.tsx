@@ -15,7 +15,7 @@ const parcoursItems = [
   {
     title: "Collège",
     desc: "Découvrir les bases de l'argent et de la finance. Revenu...",
-    img: "/images/college_junior_universe.png",
+    img: "/images/college_junior_univers.jpeg",
     bg: "bg-blue-50 border-blue-100",
     hoverBorder: "hover:border-blue-300",
     iconBg: "bg-white",
@@ -24,7 +24,7 @@ const parcoursItems = [
   {
     title: "Lycée",
     desc: "Comprendre l'économie et la gestion.",
-    img: "/images/lycee_junior_universe.png",
+    img: "/images/lycee_junior_universe.jpeg",
     bg: "bg-orange-50 border-orange-100",
     hoverBorder: "hover:border-orange-300",
     iconBg: "bg-white",
@@ -33,7 +33,7 @@ const parcoursItems = [
   {
     title: "Université",
     desc: "Approfondir ses connaissances en finance.",
-    img: "/images/university_junior_universe.png",
+    img: "/images/university_junior_universe.jpeg",
     bg: "bg-green-50 border-green-100",
     hoverBorder: "hover:border-green-300",
     iconBg: "bg-white",
@@ -87,13 +87,12 @@ export default function JuniorsPage() {
                   
                   {/* Illustration using project PNGs - centered, consistent size */}
                   <div className="mt-auto flex justify-center pb-4 relative z-10">
-                    <div className={`h-32 w-32 rounded-full ${item.iconBg} shadow-sm flex items-center justify-center transform group-hover:-translate-y-3 group-hover:scale-110 transition-all duration-500 overflow-hidden`}> 
+                    <div className={`relative h-32 w-32 rounded-full ${item.iconBg} shadow-sm transform group-hover:-translate-y-3 group-hover:scale-110 transition-all duration-500 overflow-hidden`}> 
                       <Image
                         src={item.img}
                         alt={item.title}
-                        width={64}
-                        height={64}
-                        className="object-contain"
+                        fill
+                        className="object-cover"
                         priority={true}
                       />
                     </div>
