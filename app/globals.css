@@ -6,17 +6,120 @@
    Ne pas modifier sans accord de l'équipe
    =================================================== */
 
-@config "../tailwind.config.ts";
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary: #2563eb;
+
+  --color-secondary-50: #e8edf5;
+  --color-secondary-100: #c5d0e6;
+  --color-secondary-200: #8fa2c9;
+  --color-secondary-300: #5a74ad;
+  --color-secondary-400: #2d4c93;
+  --color-secondary-500: #1a3578;
+  --color-secondary-600: #0f1e3d;
+  --color-secondary-700: #0b1830;
+  --color-secondary-800: #071224;
+  --color-secondary-900: #030b18;
+  --color-secondary: #0f1e3d;
+
+  --color-accent-green-50: #ecfdf5;
+  --color-accent-green-100: #d1fae5;
+  --color-accent-green-400: #34d399;
+  --color-accent-green-500: #10b981;
+  --color-accent-green-600: #059669;
+  --color-accent-green: #10b981;
+
+  --color-accent-violet-50: #f5f3ff;
+  --color-accent-violet-100: #ede9fe;
+  --color-accent-violet-400: #a78bfa;
+  --color-accent-violet-500: #7c3aed;
+  --color-accent-violet-600: #6d28d9;
+  --color-accent-violet: #7c3aed;
+
+  --color-accent-orange-50: #fffbeb;
+  --color-accent-orange-100: #fef3c7;
+  --color-accent-orange-400: #fbbf24;
+  --color-accent-orange-500: #f59e0b;
+  --color-accent-orange-600: #d97706;
+  --color-accent-orange: #f59e0b;
+
+  --color-accent-rose-50: #fdf2f8;
+  --color-accent-rose-100: #fce7f3;
+  --color-accent-rose-400: #f472b6;
+  --color-accent-rose-500: #ec4899;
+  --color-accent-rose-600: #db2777;
+  --color-accent-rose: #ec4899;
+
+  --color-accent-cyan-50: #ecfeff;
+  --color-accent-cyan-100: #cffafe;
+  --color-accent-cyan-400: #22d3ee;
+  --color-accent-cyan-500: #06b6d4;
+  --color-accent-cyan: #06b6d4;
+
+  --color-accent-indigo-50: #eef2ff;
+  --color-accent-indigo-100: #e0e7ff;
+  --color-accent-indigo-400: #818cf8;
+  --color-accent-indigo-500: #6366f1;
+  --color-accent-indigo: #6366f1;
+
+  --color-surface: #f8fafc;
+  --color-surface-dark: #f1f5f9;
+
+  --color-background: #eef2ff;
+  --color-background-card: #ffffff;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-poppins), system-ui, sans-serif;
+
+  --shadow-card: 0 1px 3px 0 rgba(0,0,0,0.08), 0 1px 2px -1px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 10px 25px -3px rgba(0,0,0,0.12), 0 4px 8px -2px rgba(0,0,0,0.08);
+  --shadow-sidebar: 2px 0 20px rgba(15,30,61,0.15);
+  --shadow-glow: 0 0 30px rgba(37,99,235,0.25);
+
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  --animate-fade-in: fadeIn 0.4s ease-out;
+  --animate-slide-up: slideUp 0.4s ease-out;
+  --animate-slide-in-left: slideInLeft 0.3s ease-out;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes slideUp {
+    0% { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-16px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
 :root {
   --font-inter: "Inter", system-ui, sans-serif;
   --font-poppins: "Poppins", system-ui, sans-serif;
-
-  /* Couleurs de design tokens CSS (miroir de tailwind.config.ts) */
-  --color-primary: #2563eb;
-  --color-secondary: #0f1e3d;
-  --color-surface: #f8fafc;
-  --color-background: #eef2ff;
-
+  
   --sidebar-width: 16rem; /* 256px */
   --navbar-height: 4rem;  /* 64px */
 }
