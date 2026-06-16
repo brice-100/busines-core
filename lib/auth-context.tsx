@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState, useCallback } from "react";
 import type { User, UserRole } from "@/types";
+import defaultUsers from "@/data/utilisateurs.json";
 
 // ===================================================
 // Types du contexte d'authentification
@@ -13,6 +14,8 @@ interface AuthContextType {
   login: (email: string, password: string) => Promise<{ success: boolean; error?: string }>;
   register: (data: RegisterData) => Promise<{ success: boolean; error?: string }>;
   logout: () => void;
+  getAllUsers: () => User[];
+  toggleBanStatus: (userId: string) => void;
 }
 
 interface RegisterData {
@@ -30,6 +33,15 @@ interface RegisterData {
 const LS_USERS_KEY = "bc_users";
 const LS_CURRENT_KEY = "bc_current_user";
 
+// Simulation d'un JWT et expiration
+const TOKEN_EXPIRATION_HOURS = 24;
+
+// Fonction utilitaire pour simuler un hash
+const hashPassword = (password: string) => {
+  // Ceci est un mock frontend. NE JAMAIS utiliser ça en prod.
+  return typeof window !== "undefined" ? btoa(password + "_salt_123") : password;
+};
+
 // ===================================================
 // Contexte
 // ===================================================
@@ -42,26 +54,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Charger l'utilisateur courant au montage
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem(LS_CURRENT_KEY);
-      if (stored) {
-        setCurrentUser(JSON.parse(stored));
-      }
-    } catch {
-      // session corrompue
-      localStorage.removeItem(LS_CURRENT_KEY);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
-
   // Lire la liste des utilisateurs dans localStorage
   const getUsers = useCallback((): User[] => {
     try {
       const raw = localStorage.getItem(LS_USERS_KEY);
-      return raw ? JSON.parse(raw) : [];
+      if (raw) {
+        return JSON.parse(raw);
+      }
+      
+      // Initialisation avec les données par défaut si vide
+      const mockUsers = defaultUsers.map(u => ({ 
+        ...u, 
+        password: hashPassword(u.password) 
+      })) as User[];
+      
+      localStorage.setItem(LS_USERS_KEY, JSON.stringify(mockUsers));
+      return mockUsers;
     } catch {
       return [];
     }
@@ -71,6 +79,45 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const saveUsers = useCallback((users: User[]) => {
     localStorage.setItem(LS_USERS_KEY, JSON.stringify(users));
   }, []);
+
+  // Charger l'utilisateur courant au montage
+  useEffect(() => {
+    try {
+      getUsers(); // S'assurer que les utilisateurs par défaut sont chargés
+
+      const stored = localStorage.getItem(LS_CURRENT_KEY);
+      if (stored) {
+        const session = JSON.parse(stored);
+        
+        // Vérification de l'expiration du token simulé
+        if (session.expiresAt && new Date(session.expiresAt) < new Date()) {
+          console.warn("Session expirée.");
+          localStorage.removeItem(LS_CURRENT_KEY);
+          setCurrentUser(null);
+        } else if (session.user) {
+          // Re-fetch fresh user to check ban status
+          const freshUsers = getUsers();
+          const freshUser = freshUsers.find(u => u.id === session.user.id);
+          
+          if (freshUser && freshUser.isBanned) {
+            console.warn("Utilisateur banni.");
+            localStorage.removeItem(LS_CURRENT_KEY);
+            setCurrentUser(null);
+          } else {
+            setCurrentUser(freshUser || session.user);
+          }
+        } else {
+          // Backward compatibility
+          setCurrentUser({ ...session, password: "***" });
+        }
+      }
+    } catch {
+      // session corrompue
+      localStorage.removeItem(LS_CURRENT_KEY);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [getUsers]);
 
   // --------------------------------------------------
   // register()
@@ -102,7 +149,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         nom: nom.trim(),
         prenom: prenom.trim(),
         email: email.toLowerCase().trim(),
-        password, // ⚠️ Simulation uniquement — ne jamais faire ça en production
+        password: hashPassword(password),
         role,
         createdAt: new Date().toISOString(),
       };
@@ -110,10 +157,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       saveUsers([...users, newUser]);
 
       // Connecter automatiquement après inscription
-      const { password: _pwd, ...safeUser } = newUser;
-      const userToStore = { ...newUser };
-      localStorage.setItem(LS_CURRENT_KEY, JSON.stringify(userToStore));
-      setCurrentUser(newUser);
+      const safeUser = { ...newUser, password: "***" };
+      
+      const token = btoa(`${safeUser.id}_mock_token_${Date.now()}`);
+      const expiresAt = new Date();
+      expiresAt.setHours(expiresAt.getHours() + TOKEN_EXPIRATION_HOURS);
+
+      const session = {
+        user: safeUser,
+        token,
+        expiresAt: expiresAt.toISOString()
+      };
+
+      localStorage.setItem(LS_CURRENT_KEY, JSON.stringify(session));
+      setCurrentUser(safeUser);
 
       return { success: true };
     },
@@ -130,16 +187,34 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
 
       const users = getUsers();
+      const hashedAttempt = hashPassword(password);
       const found = users.find(
-        (u) => u.email.toLowerCase() === email.toLowerCase() && u.password === password
+        (u) => u.email.toLowerCase() === email.toLowerCase() && u.password === hashedAttempt
       );
 
       if (!found) {
         return { success: false, error: "E-mail ou mot de passe incorrect." };
       }
 
-      localStorage.setItem(LS_CURRENT_KEY, JSON.stringify(found));
-      setCurrentUser(found);
+      if (found.isBanned) {
+        return { success: false, error: "Ce compte a été suspendu par l'administration." };
+      }
+
+      const safeUser = { ...found, password: "***" };
+      
+      // Simulation de JWT
+      const token = btoa(`${safeUser.id}_mock_token_${Date.now()}`);
+      const expiresAt = new Date();
+      expiresAt.setHours(expiresAt.getHours() + TOKEN_EXPIRATION_HOURS);
+
+      const session = {
+        user: safeUser,
+        token,
+        expiresAt: expiresAt.toISOString()
+      };
+
+      localStorage.setItem(LS_CURRENT_KEY, JSON.stringify(session));
+      setCurrentUser(safeUser);
       return { success: true };
     },
     [getUsers]
@@ -153,6 +228,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setCurrentUser(null);
   }, []);
 
+  // --------------------------------------------------
+  // Admin functions
+  // --------------------------------------------------
+  const toggleBanStatus = useCallback((userId: string) => {
+    const users = getUsers();
+    const updatedUsers = users.map(u => {
+      if (u.id === userId) {
+        return { ...u, isBanned: !u.isBanned };
+      }
+      return u;
+    });
+    saveUsers(updatedUsers);
+    
+    // If the banned user is the current user, log them out immediately
+    if (currentUser?.id === userId && updatedUsers.find(u => u.id === userId)?.isBanned) {
+      logout();
+    }
+  }, [getUsers, saveUsers, currentUser, logout]);
+
   return (
     <AuthContext.Provider
       value={{
@@ -162,6 +256,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         login,
         register,
         logout,
+        getAllUsers: getUsers,
+        toggleBanStatus,
       }}
     >
       {children}

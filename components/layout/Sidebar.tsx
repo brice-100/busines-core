@@ -1,16 +1,22 @@
+"use client";
+
 import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Sidebar() {
+  const pathname = usePathname();
+
   const menuItems = [
-    { title: "Accueil", subtitle: "Tableau de bord", icon: "🏠", active: false },
-    { title: "Explorer", subtitle: "Fintech & Monnaie", icon: "🔍", active: false },
-    { title: "Formations", subtitle: "Cours & Établissements", icon: "🎓", active: false },
-    { title: "Décryptages", subtitle: "Comprendre & Analyser", icon: "📊", active: true },
-    { title: "Pratiques", subtitle: "Simuler & Apprendre", icon: "💼", active: false },
-    { title: "Juniors", subtitle: "Par niveau scolaire", icon: "👶", active: false },
-    { title: "Carrières", subtitle: "Métiers & Débouchés", icon: "🚀", active: false },
-    { title: "Innovation", subtitle: "Startups & Tendances", icon: "💡", active: false },
-    { title: "À propos", subtitle: "Notre mission", icon: "ℹ️", active: false },
+    { title: "Accueil", subtitle: "Tableau de bord", icon: "🏠", href: "/" },
+    { title: "Explorer", subtitle: "Fintech & Monnaie", icon: "🔍", href: "/explorer" },
+    { title: "Formations", subtitle: "Cours & Établissements", icon: "🎓", href: "/formations" },
+    { title: "Décryptages", subtitle: "Comprendre & Analyser", icon: "📊", href: "/decryptages" },
+    { title: "Pratiques", subtitle: "Simuler & Apprendre", icon: "💼", href: "/pratiques" },
+    { title: "Juniors", subtitle: "Par niveau scolaire", icon: "👶", href: "/juniors" },
+    { title: "Carrières", subtitle: "Métiers & Débouchés", icon: "🚀", href: "/carrieres" },
+    { title: "Innovation", subtitle: "Startups & Tendances", icon: "💡", href: "/innovation" },
+    { title: "À propos", subtitle: "Notre mission", icon: "ℹ️", href: "/a-propos" },
   ];
 
   return (
@@ -33,29 +39,34 @@ export default function Sidebar() {
       {/* Navigation Links */}
       {/* MODIFICATION 2 : Passage de gap-1 à gap-2 pour donner de l'espace vertical entre chaque bouton de menu */}
       <nav className="flex-1 flex flex-col gap-2 overflow-y-auto pr-1 scrollbar-thin">
-        {menuItems.map((item, idx) => (
-          <button
-            key={idx}
-            // MODIFICATION 3 : py-2.5 passe à py-3 pour donner plus de volume à la zone cliquable
-            className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-left group ${
-              item.active
-                ? 'bg-[#2563EB] text-white font-medium shadow-md shadow-blue-600/20'
-                : 'hover:bg-slate-800/40 hover:text-slate-200'
-            }`}
-          >
-            <span className={`text-lg transition-transform duration-200 ${!item.active && 'group-hover:scale-110'}`}>
-              {item.icon}
-            </span>
-            <div className="flex flex-col min-w-0">
-              <span className={`text-xs md:text-sm truncate ${item.active ? 'font-bold text-white' : 'text-slate-300 font-medium'}`}>
-                {item.title}
+        {menuItems.map((item, idx) => {
+          const isActive = pathname === item.href || (pathname?.startsWith(item.href) && item.href !== '/');
+          
+          return (
+            <Link
+              key={idx}
+              href={item.href}
+              // MODIFICATION 3 : py-2.5 passe à py-3 pour donner plus de volume à la zone cliquable
+              className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-left group ${
+                isActive
+                  ? 'bg-[#2563EB] text-white font-medium shadow-md shadow-blue-600/20'
+                  : 'hover:bg-slate-800/40 hover:text-slate-200'
+              }`}
+            >
+              <span className={`text-lg transition-transform duration-200 ${!isActive && 'group-hover:scale-110'}`}>
+                {item.icon}
               </span>
-              <span className={`text-[10px] truncate mt-0.5 ${item.active ? 'text-blue-100/80' : 'text-slate-500'}`}>
-                {item.subtitle}
-              </span>
-            </div>
-          </button>
-        ))}
+              <div className="flex flex-col min-w-0">
+                <span className={`text-xs md:text-sm truncate ${isActive ? 'font-bold text-white' : 'text-slate-300 font-medium'}`}>
+                  {item.title}
+                </span>
+                <span className={`text-[10px] truncate mt-0.5 ${isActive ? 'text-blue-100/80' : 'text-slate-500'}`}>
+                  {item.subtitle}
+                </span>
+              </div>
+            </Link>
+          );
+        })}
       </nav>
     </aside>
   );
