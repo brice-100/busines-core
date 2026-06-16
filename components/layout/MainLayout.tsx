@@ -1,18 +1,31 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="w-full min-h-screen bg-[#090D1A] flex antialiased font-sans overflow-x-hidden">
-      {/* La Sidebar s'aligne sagement à gauche */}
-      <Sidebar />
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
-      {/* On a enlevé "pl-64" ici, le bloc prend le reste de l'espace proprement */}
-      <div className="flex-1 flex flex-col min-h-screen">
+  const toggleSidebar = () => setSidebarOpen((prev) => !prev);
+  const closeSidebar = () => setSidebarOpen(false);
+  return (
+    <div className="w-full min-h-screen bg-[white] flex antialiased font-sans overflow-x-hidden">
+      <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+
+      {isSidebarOpen && (
+        <button
+          type="button"
+          onClick={closeSidebar}
+          className="fixed inset-0 z-20 bg-slate-950/40 backdrop-blur-sm lg:hidden"
+          aria-label="Fermer le menu"
+        />
+      )}
+
+      <div className="flex-1 flex flex-col min-h-screen lg:ml-60">
         <div className="flex-1 bg-[#F8FAFC] rounded-l-[2.2rem] flex flex-col shadow-2xl border-l border-slate-900/10 my-1 mr-1 overflow-hidden">
-          <Navbar />
-          <main className="flex-1 overflow-y-auto px-10 pb-10">
+          <Navbar onToggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+          <main className="flex-1 overflow-y-auto px-6 lg:px-10 pb-10">
             {children}
           </main>
         </div>
