@@ -1,0 +1,318 @@
+[
+  {
+    "id": "uc1",
+    "titre": "Gestion financière avancée",
+    "description": "Planification financière personnelle, gestion des revenus et dépenses, fonds d'urgence, objectifs long terme, patrimoine.",
+    "categorie": "Gestion",
+    "niveau": "Avancé",
+    "duree": "3h00",
+    "modules": 5,
+    "tags": ["planification", "patrimoine", "fonds d'urgence"],
+    "auteur": "BusinessCore Université",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Planification financière personnelle",
+        "contenu": "La planification financière consiste à définir tes objectifs (court, moyen, long terme), inventorier tes ressources, et construire un plan pour atteindre ces objectifs. Elle inclut budget, épargne, investissement et préparation fiscale. Utilise des outils (tableur, apps) et révise ton plan chaque année.",
+        "exemple": "Objectif : acheter un appartement en 10 ans à 50 000€. Si tu épargnes 400€/mois et investis avec rendement moyen 4% annuel, tu peux atteindre cet objectif. Tu dois aussi prendre en compte frais et taxes.",
+        "questions": ["Quels sont tes objectifs financiers sur 5 et 10 ans ?","Quelle méthode utilises-tu pour suivre tes finances ?"]
+      },
+      {
+        "titre": "Gestion des revenus et dépenses",
+        "contenu": "Analyse tes revenus (salaires, revenus passifs) et catégorise dépenses fixes/variables. Cherche à augmenter revenus (compléments, freelance) ou réduire dépenses non-essentielles. Priorise épargne automatique (virements programmés).",
+        "exemple": "Si ton salaire augmente de 10%, affecte 50% de l'augmentation à l'épargne, 30% à la consommation, 20% à l'investissement. Ainsi ton niveau de vie augmente sans retarder l'épargne.",
+        "questions": ["Comment répartir une augmentation de salaire ?","Quelles dépenses pourrais-tu automatiser pour épargner ?"]
+      },
+      {
+        "titre": "Fonds d'urgence et patrimoine personnel",
+        "contenu": "Un fonds d'urgence couvre 3-6 mois de dépenses fixes. Le patrimoine regroupe toutes tes possessions financières et non-financières (comptes, investissements, immobilier). Protège ton patrimoine par diversification et assurances.",
+        "exemple": "Tu as 2000€/mois de dépenses : fonds d'urgence = 6000-12000€. Patrimoine = épargne + PEA + petit appartement. Assure-toi d'avoir assurance habitation et santé.",
+        "questions": ["Quelles composantes contient ton patrimoine ?","Quel montant viser pour ton fonds d'urgence ?"]
+      },
+      {
+        "titre": "Objectifs financiers à long terme",
+        "contenu": "Fixe objectifs financiers précis : retraite, achat immobilier, projet pro. Estime coûts, ajuste horizon et le niveau de risque. Utilise véhicules fiscaux avantageux (ex : plan épargne retraite, comptes dédiés) selon pays.",
+        "exemple": "Objectif retraite : accumuler 200 000€ à 65 ans. Calcule épargne mensuelle selon rendement attendu et commence tôt pour profiter des intérêts composés.",
+        "questions": ["Quel est ton objectif long terme principal ?","Quel horizon temporel choisis-tu ?"]
+      },
+      {
+        "titre": "Synthèse et bonnes pratiques",
+        "contenu": "Revue annuelle, diversification, automatisation des transferts, et réévaluation des objectifs selon vie. Prends conseil auprès d'un professionnel pour sujets complexes (impôts, transmissions).",
+        "exemple": "Chaque année, révise ton plan, ajuste investissement et réaffecte actifs si besoin (rééquilibrage).",
+        "questions": ["Quand vas-tu revoir ton plan financier ?","As-tu pensé à l'assurance et la succession ?"]
+      }
+    ]
+  },
+  {
+    "id": "uc2",
+    "titre": "Crédit et Endettement",
+    "description": "Fonctionnement du crédit, crédit étudiant, immobilier, consommation, taux d'intérêt et gestion responsable de la dette.",
+    "categorie": "Crédit",
+    "niveau": "Avancé",
+    "duree": "2h30",
+    "modules": 5,
+    "tags": ["crédit", "taux", "endettement"],
+    "auteur": "BusinessCore Université",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Fonctionnement du crédit",
+        "contenu": "Le crédit permet d'emprunter aujourd'hui et rembourser plus tard avec intérêts. Comprends le coût total (capital + intérêts), les mensualités, garanties et assurances. Compare TAEG (taux annuel effectif global) pour décider.",
+        "exemple": "Emprunter 10 000€ à 5% sur 3 ans → mensualité ~299€, coût total des intérêts ~764€.",
+        "questions": ["Qu'est-ce que le TAEG ?","Pourquoi comparer plusieurs offres de crédit ?"]
+      },
+      {
+        "titre": "Crédit étudiant vs crédit immobilier",
+        "contenu": "Crédit étudiant souvent à taux bas et différé possible. Crédit immobilier = longue durée, nécessite garanties (hypothèque). Compare durée, taux fixe vs variable, flexibilité de remboursement.",
+        "exemple": "Crédit étudiant : 5000€ à 2% différé 1 an. Crédit immobilier : 150 000€ à 3% sur 20 ans. Les durées changent le coût total.",
+        "questions": ["Quels avantages du crédit étudiant ?","Pourquoi la durée influence fortement le coût ?"]
+      },
+      {
+        "titre": "Crédit à la consommation et endettement responsable",
+        "contenu": "Crédit conso = rapide mais taux plus élevés. Évite l'utilisation systématique pour consommation courante. Priorise remboursement de dettes à taux élevés avant d'investir.",
+        "exemple": "Carte revolving: emprunte 1000€ → taux 20% → intérêts élevés si remboursement minimal. Mieux : rembourser en totalité rapidement.",
+        "questions": ["Pourquoi éviter le crédit revolving ?","Comment prioriser remboursements ?"]
+      },
+      {
+        "titre": "Taux d'intérêt et risques",
+        "contenu": "Taux fixe = mensualité stable. Taux variable = suit marché (risque hausse). En période de hausse des taux directeurs, le coût du crédit augmente. Prends marge de sécurité pour rembourser.",
+        "exemple": "Prêt à taux variable de 1% initial → si taux monte de 2 points, ta mensualité augmente sensiblement. Prévoit une simulation de scénario.",
+        "questions": ["Préférerais-tu taux fixe ou variable ? Pourquoi ?","Comment te protéger d'une hausse des taux ?"]
+      },
+      {
+        "titre": "Gestion responsable de la dette",
+        "contenu": "Évite surendettement : taux d'endettement < 33% souvent exigé. N'emprunte pas pour consommer ce que tu ne peux pas payer. Négocie conditions si problème. Cherche conseil (banque, association).",
+        "exemple": "Si revenu net 2000€/mois, limite mensualités totales à 660€/mois pour rester sous 33%.",
+        "questions": ["Quel est ton taux d'endettement potentiel ?","Que ferais-tu si ton revenu baisse ?"]
+      }
+    ]
+  },
+  {
+    "id": "uc3",
+    "titre": "Investissement avancé",
+    "description": "Analyse fondamentale et technique (initiation), actions, obligations, ETF, fonds communs, diversification et gestion du risque.",
+    "categorie": "Investissement",
+    "niveau": "Avancé",
+    "duree": "4h00",
+    "modules": 7,
+    "tags": ["investissement", "analyse", "ETF", "diversification"],
+    "auteur": "BusinessCore Université",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Analyse fondamentale (initiation)",
+        "contenu": "Analyse fondamentale = étudier la santé financière d'une entreprise (bénéfices, dettes, flux de trésorerie, position concurrentielle). Elle aide à estimer la valeur intrinsèque d'une action.",
+        "exemple": "Examiner le compte de résultat d'une entreprise: croissance du chiffre d'affaires, marge nette, dette. Si stable et en croissance, action peut être attractive.",
+        "questions": ["Quelles données financières clés vérifier ?","Que montre une marge nette en hausse ?"]
+      },
+      {
+        "titre": "Analyse technique (bases)",
+        "contenu": "Analyse technique = étudier le prix et le volume (graphes) pour repérer tendances et points d'entrée/sortie. Concepts : support, résistance, moyenne mobile. C'est plus court terme et nécessite discipline.",
+        "exemple": "Si le prix rebondit plusieurs fois sur un support à 50€, cela peut être un point d'achat pour un trading à court terme.",
+        "questions": ["Qu'est-ce qu'un support ?","Pourquoi les moyennes mobiles sont utiles ?"]
+      },
+      {
+        "titre": "Actions, obligations, ETF et fonds",
+        "contenu": "Actions = parts d'entreprise. Obligations = prêt. ETF = panier d'actifs répliquant un indice. Fonds communs = gestion active par un gestionnaire. Compare frais, liquidité et fiscalité.",
+        "exemple": "Un ETF MSCI World donne exposition globale avec frais faibles. Un fonds géré peut surperformer mais paye des frais plus élevés.",
+        "questions": ["Pourquoi choisir un ETF pour débuter ?","Quels inconvénients d'un fonds activement géré ?"]
+      },
+      {
+        "titre": "Diversification et gestion du risque",
+        "contenu": "Répartition d'actifs (actions, obligations, liquidités, immobilier) réduit risque. Rééquilibrage périodique garde allocation cible. Utilise couverture (hedging) pour expositions spécifiques.",
+        "exemple": "Allocation cible 60% actions / 40% obligations. Si actions montent et deviennent 70%, vends un peu d'actions pour revenir à 60% (rééquilibrage).",
+        "questions": ["Quelle allocation conviendrait à un investisseur de 30 ans ?","Quand rééquilibrer ?"]
+      },
+      {
+        "titre": "Valorisation et ratios clés",
+        "contenu": "P/E (price/earnings), P/B (price/book), EV/EBITDA sont des indicateurs pour comparer valorisation des entreprises. Utilise plusieurs ratios, pas un seul.",
+        "exemple": "Entreprise A P/E=8 (bon marché), Entreprise B P/E=25 (cher). Mais regarde croissance attendue et dette avant conclusion.",
+        "questions": ["Que signifie un P/E élevé ?","Pourquoi combiner plusieurs ratios ?"]
+      },
+      {
+        "titre": "Commencer une stratégie d'investissement",
+        "contenu": "Définis horizon et profil risque. Choisis véhicules (compte-titres, PEA, assurance-vie) selon fiscalité. Commence avec ETF puis ajoute actions ciblées. Investissement périodique (DCA) réduit timing risk.",
+        "exemple": "Investis 200€/mois via DCA dans un ETF MSCI World pendant 10 ans. Evite de tenter de timer le marché.",
+        "questions": ["Quelle stratégie mensuelle commencerais-tu ?","Pourquoi le DCA est utile ?"]
+      }
+    ]
+  },
+  {
+    "id": "uc4",
+    "titre": "Marchés Financiers",
+    "description": "Fonctionnement des bourses, indices, IPO, liquidité, volatilité et cycles de marché.",
+    "categorie": "Marchés",
+    "niveau": "Avancé",
+    "duree": "3h00",
+    "modules": 5,
+    "tags": ["bourse", "indice", "IPO", "volatilité"],
+    "auteur": "BusinessCore Université",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Fonctionnement des bourses",
+        "contenu": "La bourse est un lieu (physique ou électronique) où s'échangent actions et obligations. Les prix sont déterminés par l'offre et la demande. Les intervenants incluent traders, investisseurs institutionnels et courtiers.",
+        "exemple": "Un ordre d'achat placé sur une plateforme peut être exécuté en millisecondes si un vendeur correspond au prix.",
+        "questions": ["Qui sont les principaux acteurs en bourse ?","Comment un ordre est-il exécuté ?"]
+      },
+      {
+        "titre": "Indices boursiers et capitalisation",
+        "contenu": "Les indices (CAC40, S&P500) réunissent des entreprises représentatives. La capitalisation calcule la valeur totale d'une entreprise (prix × actions). Les indices servent de baromètre économique.",
+        "exemple": "Le CAC40 regroupe les 40 plus grandes entreprises françaises par capitalisation.",
+        "questions": ["Que mesure un indice boursier ?","Pourquoi la capitalisation importe-t-elle ?"]
+      },
+      {
+        "titre": "IPO et liquidité",
+        "contenu": "L'IPO permet à une entreprise d'aller sur le marché pour lever des fonds. La liquidité désigne la facilité d'acheter/vendre un actif sans gros impact sur le prix.",
+        "exemple": "Une startup qui réalise une IPO peut lever des millions pour se développer, mais ses actions peuvent être peu liquides au départ.",
+        "questions": ["Pourquoi une entreprise réalise une IPO ?","Qu'est-ce que la liquidité ?"]
+      },
+      {
+        "titre": "Volatilité et cycles de marché",
+        "contenu": "La volatilité mesure les variations de prix. Les marchés passent par cycles (hausses prolongées, corrections, krachs). Comprendre les cycles aide à prendre des décisions rationnelles.",
+        "exemple": "Après une période d'euphorie technologique, une correction peut réduire fortement les prix sur quelques mois.",
+        "questions": ["Comment mesurer la volatilité ?","Que faire lors d'une correction de marché ?"]
+      }
+    ]
+  },
+  {
+    "id": "uc5",
+    "titre": "Blockchain & Cryptoactifs",
+    "description": "Blockchain en profondeur, smart contracts, Bitcoin, Ethereum, stablecoins, DeFi, tokenisation et réglementation.",
+    "categorie": "Crypto",
+    "niveau": "Avancé",
+    "duree": "4h00",
+    "modules": 7,
+    "tags": ["blockchain", "bitcoin", "ethereum", "DeFi"],
+    "auteur": "BusinessCore Université",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Blockchain en profondeur",
+        "contenu": "La blockchain est un registre distribué sécurisé par cryptographie. On explore consensus (Proof of Work, Proof of Stake), finalité des transactions et scalabilité. Comprendre limitations et innovations.",
+        "exemple": "Bitcoin utilise Proof of Work ; Ethereum migre vers Proof of Stake pour réduire consommation énergétique.",
+        "questions": ["Quelles différences entre PoW et PoS ?","Quels sont les défis de scalabilité ?"]
+      },
+      {
+        "titre": "Smart contracts et tokenisation",
+        "contenu": "Smart contracts sont du code auto-exécutable (Ethereum). La tokenisation permet de représenter actifs réels (immobilier, œuvres) en tokens sur blockchain, facilitant liquidité et fractionnement.",
+        "exemple": "Un immeuble fractionné en tokens permet à 100 investisseurs d'acheter de petites parts.",
+        "questions": ["Qu'est-ce qu'un smart contract ?","Quels avantages de la tokenisation ?"]
+      },
+      {
+        "titre": "Bitcoin, Ethereum et stablecoins",
+        "contenu": "Bitcoin = réserve de valeur décentralisée. Ethereum = plateforme de smart contracts. Stablecoins = stable par rapport à une devise (ex: USDC). Connaître cas d'usage et risques.",
+        "exemple": "Stablecoins permettent paiements rapides entre pays sans conversion bancaire lourde.",
+        "questions": ["Pourquoi utiliser un stablecoin ?","Quelle différence entre BTC et ETH ?"]
+      },
+      {
+        "titre": "DeFi et risques associés",
+        "contenu": "DeFi = services financiers sans intermédiaire (prêts, exchanges décentralisés). Avantages : accessibilité. Risques : smart contract bugs, liquidations, manque de régulation.",
+        "exemple": "Prêter des cryptos sur une plateforme DeFi peut rapporter mais exposer à perte si le protocole est piraté.",
+        "questions": ["Quels risques de la DeFi ?","Comment évaluer la sécurité d'un protocole ?"]
+      },
+      {
+        "titre": "Réglementation des cryptos",
+        "contenu": "Les régulateurs cherchent à encadrer exchanges, stablecoins et ICOs pour protéger les investisseurs. Comprends KYC/AML, fiscalité des gains, et restrictions locales.",
+        "exemple": "Certains pays imposent déclaration des plus-values crypto et taxent différemment selon durée de détention.",
+        "questions": ["Quelles règles appliquer pour déclarer ses gains ?","Que signifie KYC ?"]
+      }
+    ]
+  },
+  {
+    "id": "uc6",
+    "titre": "Économie et Politique Monétaire",
+    "description": "Inflation, déflation, taux directeurs, banques centrales, création monétaire, crises économiques et systèmes monétaires internationaux.",
+    "categorie": "Macro-Économie",
+    "niveau": "Avancé",
+    "duree": "3h30",
+    "modules": 6,
+    "tags": ["inflation", "banque centrale", "politique monétaire"],
+    "auteur": "BusinessCore Université",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Inflation et déflation",
+        "contenu": "Inflation = hausse générale des prix; déflation = baisse générale. Causes, conséquences et politiques pour les maîtriser. Impact sur épargne et rémunération réelle.",
+        "exemple": "Une inflation élevée érode pouvoir d'achat; une déflation prolongée peut freiner consommation et investissement.",
+        "questions": ["Quelles causes de l'inflation ?","Pourquoi la déflation peut être dangereuse ?"]
+      },
+      {
+        "titre": "Taux directeurs et création monétaire",
+        "contenu": "Banques centrales fixent taux directeurs pour influencer inflation et croissance. La création monétaire (réserves, QE) augmente liquidité. Comprends effets à court et long terme.",
+        "exemple": "En crise, baisse des taux et programmes d'achat d'actifs injectent liquidité pour relancer l'économie.",
+        "questions": ["Comment une hausse du taux directeur influence les crédits ?","Qu'est-ce que le QE ?"]
+      },
+      {
+        "titre": "Crises économiques et systèmes monétaires",
+        "contenu": "Étude des crises passées (1929, 2008), réponses politiques et rôle des systèmes monétaires internationaux (dollar, FMI). Comprendre interdépendance mondiale.",
+        "exemple": "La crise 2008 a nécessité interventions massives pour stabiliser banques et marchés.",
+        "questions": ["Quelles leçons de la crise 2008 ?","Quel rôle joue le FMI ?"]
+      }
+    ]
+  },
+  {
+    "id": "uc7",
+    "titre": "Finance d'Entreprise",
+    "description": "États financiers, bilan, compte de résultat, flux de trésorerie, valorisation et financement des entreprises.",
+    "categorie": "Finance",
+    "niveau": "Avancé",
+    "duree": "3h30",
+    "modules": 6,
+    "tags": ["bilan", "flux", "valorisation"],
+    "auteur": "BusinessCore Université",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Lire un bilan et un compte de résultat",
+        "contenu": "Le bilan montre actif/passif; le compte de résultat détaille revenus et charges. Savoir analyser ces documents est fondamental pour évaluer santé financière.",
+        "exemple": "Si actifs > passifs et flux positifs, entreprise généralement stable. Si pertes répétées, alerte.",
+        "questions": ["Quelle différence entre actif et passif ?","Que montre un résultat net négatif ?"]
+      },
+      {
+        "titre": "Flux de trésorerie et valorisation",
+        "contenu": "Le cash-flow opérationnel montre capacité à générer liquidités. Valorisation = DCF (discounted cash flow), multiples comparables (EV/EBITDA). Comprendre hypothèses et sensibilité.",
+        "exemple": "Entreprise avec cash-flow sain peut supporter investissements et dettes; valorisation DCF dépend des prévisions de cash.",
+        "questions": ["Qu'est-ce qu'un cash-flow libre ?","Pourquoi la DCF dépend des hypothèses de croissance ?"]
+      },
+      {
+        "titre": "Financement des entreprises",
+        "contenu": "Sources : fonds propres (actions), dette (emprunts), financements hybrides. Avantages/inconvénients : dilution vs coût d'intérêt. Choisir mix optimal selon stade.",
+        "exemple": "Start-up early-stage : privilégie equity; entreprise mature : mix dette/équity pour optimiser coût du capital.",
+        "questions": ["Quelles sources de financement pour une startup ?","Qu'est-ce que la dilution ?"]
+      }
+    ]
+  },
+  {
+    "id": "uc8",
+    "titre": "Entrepreneuriat & Startup",
+    "description": "Création d'entreprise, business plan, levée de fonds, capital-risque, gestion financière d'une startup et FinTech.",
+    "categorie": "Entrepreneuriat",
+    "niveau": "Avancé",
+    "duree": "3h00",
+    "modules": 5,
+    "tags": ["startup", "levée de fonds", "business plan"],
+    "auteur": "BusinessCore Université",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "De l'idée au business plan",
+        "contenu": "Rédiger un business plan clair : problème, solution, marché, modèle économique, projections financières. Le plan sert à convaincre partenaires et investisseurs.",
+        "exemple": "Business plan : marché 1M clients, conversion 1% → 10k clients × ARPU 50€ = 500k€ CA annuel.",
+        "questions": ["Quels éléments essentiels dans un business plan ?","Comment estimer ton marché cible ?"]
+      },
+      {
+        "titre": "Levée de fonds et capital-risque",
+        "contenu": "Pitch, term-sheet, valorisation pré-money/post-money, dilution, ronde (seed, series A...). Comprendre attentes investisseurs (croissance rapide, scalabilité).",
+        "exemple": "Ronde seed : lève 500k€ pour 10% à valorisation pré-money 4.5M€.",
+        "questions": ["Qu'est-ce qu'une term-sheet ?","Pourquoi les investisseurs demandent-ils une part du capital ?"]
+      },
+      {
+        "titre": "Gestion financière d'une startup",
+        "contenu": "Suivi du burn rate, runway, indicateurs clés (MRR, CAC, LTV). Gérer cash conservativement et prioriser croissance rentable.",
+        "exemple": "Si burn 50k€/mois et 12 mois runway, cherche financement ou réduit burn pour survivre.",
+        "questions": ["Qu'est-ce que le burn rate ?","Comment prolonger le runway ?"]
+      }
+    ]
+  }
+]

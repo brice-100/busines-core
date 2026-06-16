@@ -1,4 +1,4 @@
-import type { Formation, Article, Metier, Startup, Exercice } from "@/types";
+import type { Formation, Article, Metier, Startup, Exercice, CollegeCourse, LyceeCourse, UniversiteCourse } from "@/types";
 
 // ===================================================
 // Import des données JSON mockées
@@ -8,6 +8,9 @@ import articlesData from "@/data/articles.json";
 import metiersData from "@/data/metiers.json";
 import startupsData from "@/data/startups.json";
 import exercicesData from "@/data/exercices.json";
+import collegeCoursesData from "@/data/college_courses.json";
+import lyceCoursesData from "@/data/lycee_courses.json";
+import universiteCoursesData from "@/data/universite_courses.json";
 
 // ===================================================
 // Formations
@@ -81,6 +84,48 @@ export const getExercicesByDifficulte = (
 ): Exercice[] =>
   (exercicesData as unknown as Exercice[]).filter(
     (e) => e.difficulte === difficulte
+  );
+
+// ===================================================
+// Juniors / Collège
+// ===================================================
+export const getAllCollegeCourses = (): CollegeCourse[] =>
+  collegeCoursesData as CollegeCourse[];
+
+export const getCollegeCourseById = (id: string): CollegeCourse | undefined =>
+  (collegeCoursesData as CollegeCourse[]).find((c) => c.id === id);
+
+export const getCollegeCoursesByCategorie = (categorie: string): CollegeCourse[] =>
+  (collegeCoursesData as CollegeCourse[]).filter(
+    (c) => c.categorie.toLowerCase() === categorie.toLowerCase()
+  );
+
+// ===================================================
+// Juniors / Lycée
+// ===================================================
+export const getAllLyceeCourses = (): LyceeCourse[] =>
+  lyceCoursesData as LyceeCourse[];
+
+export const getLyceeCourseById = (id: string): LyceeCourse | undefined =>
+  (lyceCoursesData as LyceeCourse[]).find((c) => c.id === id);
+
+export const getLyceeCoursesByCategorie = (categorie: string): LyceeCourse[] =>
+  (lyceCoursesData as LyceeCourse[]).filter(
+    (c) => c.categorie.toLowerCase() === categorie.toLowerCase()
+  );
+
+// ===================================================
+// Juniors / Université
+// ===================================================
+export const getAllUniversiteCourses = (): UniversiteCourse[] =>
+  universiteCoursesData as UniversiteCourse[];
+
+export const getUniversiteCourseById = (id: string): UniversiteCourse | undefined =>
+  (universiteCoursesData as UniversiteCourse[]).find((c) => c.id === id);
+
+export const getUniversiteCoursesByCategorie = (categorie: string): UniversiteCourse[] =>
+  (universiteCoursesData as UniversiteCourse[]).filter(
+    (c) => c.categorie.toLowerCase() === categorie.toLowerCase()
   );
 
 // ===================================================

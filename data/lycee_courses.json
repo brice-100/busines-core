@@ -1,0 +1,763 @@
+[
+  {
+    "id": "lc1",
+    "titre": "Gestion financière personnelle",
+    "description": "Construire un budget mensuel, fixer des objectifs financiers, gérer ses dépenses, fonds d'urgence et erreurs à éviter.",
+    "categorie": "Fondamentaux",
+    "niveau": "Intermédiaire",
+    "duree": "3h00",
+    "modules": 5,
+    "tags": ["budget", "gestion", "objectifs", "dépenses"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Construire un budget mensuel",
+        "contenu": "Un budget est un plan détaillé pour gérer ton argent. Il te permet de savoir où va chaque euro et de contrôler tes finances. Pour construire un budget : (1) Calcule tes revenus (argent reçu). (2) Liste toutes tes dépenses fixes (loyer, transport, abonnements). (3) Estime tes dépenses variables (nourriture, loisirs). (4) Compare revenus - dépenses. C'est ton surplus ou déficit.",
+        "exemple": "Tu gagnes 1500€/mois (salaire étudiant). Dépenses fixes : 600€ (loyer) + 100€ (téléphone) + 80€ (transports). Variables : 300€ (nourriture) + 200€ (loisirs). Total dépenses : 1280€. Surplus : 220€ pour économiser ou imprévus.",
+        "questions": [
+          "Quels sont tes revenus mensuels ?",
+          "Comment tu catégorises tes dépenses ?",
+          "As-tu un surplus ou un déficit ?"
+        ]
+      },
+      {
+        "titre": "Fixer des objectifs financiers",
+        "contenu": "Des objectifs clairs te motivent à économiser. Ils doivent être SMART : Spécifiques (pas juste 'économiser'), Mesurables (montant précis), Atteignables (réaliste), Pertinents (important pour toi), Temporels (délai). Catégories : court terme (< 1 an), moyen terme (1-5 ans), long terme (> 5 ans).",
+        "exemple": "Mauvais objectif : 'Je veux une voiture'. Bon objectif : 'Je veux acheter une voiture d'occasion à 5000€ en 2 ans en économisant 210€/mois.' C'est spécifique, mesurable, atteignable, pertinent et temporel.",
+        "questions": [
+          "Quels sont tes 3 objectifs financiers ?",
+          "Sont-ils SMART ? Pourquoi ?",
+          "Comment tu vas y arriver ?"
+        ]
+      },
+      {
+        "titre": "Gérer ses dépenses intelligemment",
+        "contenu": "Gestion des dépenses = tracker + analyser + ajuster. (1) Note chaque dépense (app ou carnet). (2) Catégorise-les (alimentation, transport, loisirs, etc.). (3) Chaque mois, vérifie si tu es dans le budget. (4) Identifie les fuites (abonnements inutiles, achats impulsifs). (5) Ajuste pour le mois suivant.",
+        "exemple": "En août, tu dépenses 450€ en loisirs alors que tu avais budgété 200€. Tu analyzes : Netflix (15€), Spotify (12€), 5 fois au ciné (50€), 6 fois au resto (180€), vêtements (193€). En septembre, tu cancels Spotify (utilise YouTube), limites le resto à 2 fois/mois, achètes moins de vêtements.",
+        "questions": [
+          "Où disparaît ton argent exactement ?",
+          "Quelles dépenses peux-tu réduire sans te priver ?",
+          "Comment tu évites les achats impulsifs ?"
+        ]
+      },
+      {
+        "titre": "Créer et gérer un fonds d'urgence",
+        "contenu": "Un fonds d'urgence est de l'argent mis de côté pour les imprévus (maladie, panne de voiture, réparation d'appart). Idéalement, 3-6 mois de dépenses. Avantages : (1) Pas besoin d'emprunter en urgence. (2) Pas d'intérêts à payer. (3) Sérénité. (4) Flexibilité pour saisir les opportunités.",
+        "exemple": "Tes dépenses mensuelles = 1500€. Un fonds d'urgence = 4500-9000€ (3-6 mois). Tu commences petit : 50€/mois pendant 1 an = 600€. C'est un début qui te protège.",
+        "questions": [
+          "Combien tu devrais mettre de côté pour un fonds d'urgence ?",
+          "Où tu gardes cet argent (compte courant ou épargne) ?",
+          "Quand tu touches à ce fonds ?"
+        ]
+      },
+      {
+        "titre": "Erreurs financières courantes à éviter",
+        "contenu": "Les erreurs : (1) Ne pas budgétiser = dépenser sans contrôle. (2) Achats impulsifs = regrets après. (3) Ignorer les petites dépenses = les petits euros s'accumulent. (4) Ne pas épargner = pas de sécurité. (5) Utiliser la carte de crédit à outrance = endettement. (6) Comparaison avec les autres = dépenses inutiles.",
+        "exemple": "Erreur courante : voir son ami avec l'iPhone 15 et acheter le même immédiatement avec un crédit. Résultat : 1200€ de dette + 20% d'intérêts = 1440€ à rembourser. Tu te retrouves coincé financièrement.",
+        "questions": [
+          "Quelles erreurs tu as commises ?",
+          "Comment tu vas les corriger ?",
+          "Comment tu résistes à la pression de consommer ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc2",
+    "titre": "Banque et services financiers",
+    "description": "Types de comptes, cartes de débit/crédit, frais bancaires, virements internationaux, néobanques.",
+    "categorie": "Banque",
+    "niveau": "Intermédiaire",
+    "duree": "2h30",
+    "modules": 5,
+    "tags": ["banque", "comptes", "cartes", "services", "néobanques"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Types de comptes bancaires",
+        "contenu": "Il existe plusieurs types : (1) Compte courant = pour tous les jours (dépôts, retraits, virements). (2) Compte d'épargne = taux d'intérêt, pour économiser. (3) Compte-titre = pour investir en actions/obligations. (4) Compte jeunes = avantages spéciaux pour mineurs. Chaque compte a des frais et conditions différents.",
+        "exemple": "Tu ouvres un compte jeune à 16 ans. Avantages : pas de frais de tenue (gratuit), carte de débit gratuite, petits intérêts sur l'épargne. À 18 ans, tu passes au compte adulte avec plus d'options.",
+        "questions": [
+          "Quel type de compte as-tu ?",
+          "Quels sont tes frais mensuels ?",
+          "Quel compte te convient pour tes objectifs ?"
+        ]
+      },
+      {
+        "titre": "Cartes de débit et de crédit",
+        "contenu": "DÉBIT : l'argent est prélevé immédiatement de ton compte. Tu ne peux dépenser que ce que tu as. Pas de risque d'endettement. Frais : généralement gratuite. CRÉDIT : la banque te prête de l'argent. Tu rembourses à la fin du mois avec intérêts. Danger : facile de s'endetter. Frais : annuels (30-100€) + intérêts (10-20% par an).",
+        "exemple": "Débit : Tu achètes un café (2€). L'argent sort immédiatement de ton compte. Crédit : Tu achètes un ordinateur (1000€). Tu dois rembourser 1000€ + intérêts. Si tu paies 50€/mois, tu mets 20 mois. Les intérêts coûtent 150€+ supplémentaires.",
+        "questions": [
+          "Quelle carte as-tu ? Débit ou crédit ?",
+          "Quel est le risque principal avec une carte de crédit ?",
+          "Quand c'est utile d'avoir une carte de crédit ?"
+        ]
+      },
+      {
+        "titre": "Comprendre les frais bancaires",
+        "contenu": "Types de frais : (1) Frais de tenue de compte (0-200€/an). (2) Frais de virement (1-5€). (3) Frais de retrait (gratuit à ton réseau, payant ailleurs). (4) Frais de dépassement (si tu dépenses plus que tu n'as). (5) Frais d'intérêts (sur crédit). Astuce : compare les banques, certaines offrent des comptes sans frais.",
+        "exemple": "Banque A : 120€/an de frais + 2€ par virement. Banque B : 0€/an + 0.50€ par virement. Si tu fais 50 virements/an : A = 120 + 100 = 220€. B = 25€. Tu économises 195€ juste en changeant de banque !",
+        "questions": [
+          "Combien coûte ton compte bancaire par an ?",
+          "Peux-tu trouver une banque meilleur marché ?",
+          "Que peux-tu faire pour réduire tes frais ?"
+        ]
+      },
+      {
+        "titre": "Virements et paiements internationaux",
+        "contenu": "VIREMENT NATIONAL : compte à compte en France/UE. Généralement gratuit ou peu coûteux (1-2€). Délai : 24h. PAIEMENT INTERNATIONAL : vers un pays hors UE. Coûteux (20-50€) et plus lent (3-5 jours). Frais de change s'ajoute. Services comme Wise = moins chers pour l'international.",
+        "exemple": "Tu veux envoyer 200€ à un ami au Canada. Virement bancaire classique = 40€ de frais + mauvais taux de change. Total : environ 300 CAD au lieu de 400 CAD attendus. Avec Wise = frais bas (2-5€) et bon taux. Tu envoies vraiment 400 CAD équivalent.",
+        "questions": [
+          "Quel service utilises-tu pour l'international ?",
+          "Combien coûte un virement international chez toi ?",
+          "Quand utilises-tu des services comme Wise ?"
+        ]
+      },
+      {
+        "titre": "Les néobanques (banques numériques)",
+        "contenu": "Néobanques = banques 100% en ligne (pas d'agence physique). Exemples : Revolut, N26, Wise, Bunq. Avantages : (1) Comptes gratuits ou très bon marché. (2) Pas de frais cachés. (3) App super pratique. (4) Bonnes conditions. Inconvénients : (1) Pas d'agence physique. (2) Service client par chat. (3) Moins connues.",
+        "exemple": "Tu ouvres un compte Revolut. C'est gratuit. Tu peux convertir de l'argent en 30+ devises avec bon taux. Tu envoies de l'argent à l'international pour presque rien. Tu reçois une carte Mastercard gratuite.",
+        "questions": [
+          "As-tu une néobanque ?",
+          "Quels avantages tu vois comparé à une banque classique ?",
+          "Quand c'est mieux d'utiliser une néobanque ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc3",
+    "titre": "Épargne et intérêts",
+    "description": "Épargne à court/long terme, intérêts simples et composés, inflation, produits d'épargne, objectifs financiers.",
+    "categorie": "Épargne",
+    "niveau": "Intermédiaire",
+    "duree": "3h00",
+    "modules": 5,
+    "tags": ["épargne", "intérêts", "inflation", "composés"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Épargne à court et long terme",
+        "contenu": "COURT TERME (< 2 ans) : compte d'épargne simple (Livret A, CEL). Besoin d'accès rapide. Intérêts bas mais sûr. LONG TERME (> 5 ans) : investissements (actions, obligations, assurance-vie). Moins liquide mais rendement plus élevé. Stratégie : urgences et court terme = compte d'épargne. Projets lointains = investissement.",
+        "exemple": "Tu as 1000€. 300€ en Livret A (taux ~3%, court terme). 700€ en PEA (plan d'épargne actions, long terme, taux ~6%). Deux stratégies complémentaires.",
+        "questions": [
+          "Quelle est ta épargne court terme ?",
+          "Quelle est ta épargne long terme ?",
+          "Quel taux tu reçois actuellement ?"
+        ]
+      },
+      {
+        "titre": "Intérêts simples vs composés",
+        "contenu": "SIMPLES : tu calcules une seule fois. 1000€ à 5% = 50€ d'intérêt chaque année. Année 2 : encore 50€. Total après 10 ans : 1000 + 500 = 1500€. COMPOSÉS : les intérêts gagnent aussi des intérêts. Année 1 : 1050€. Année 2 : 1050 × 1.05 = 1102.50€. Année 3 : 1102.50 × 1.05 = 1157.63€. Après 10 ans : 1629€. Les composés = bien mieux !",
+        "exemple": "1000€ à 5% pendant 20 ans. Simples = 1000 + (50 × 20) = 2000€. Composés = 1000 × (1.05^20) = 2653€. Différence = 653€ juste grâce aux intérêts composés ! Le temps est ton ami.",
+        "questions": [
+          "Peux-tu calculer les intérêts composés sur 5000€ à 3% pendant 10 ans ?",
+          "Pourquoi les intérêts composés sont puissants ?",
+          "Comment tu maximises les intérêts composés ?"
+        ]
+      },
+      {
+        "titre": "Inflation et pouvoir d'achat",
+        "contenu": "INFLATION = augmentation générale des prix. Exemple : une baguette coûte 1€ en 2024, 1.05€ en 2026 (inflation 2.5%). Ton argent perd du pouvoir d'achat. Si tu as 1000€ en épargne à 0% et inflation 3%, tu ne peux acheter que pour 970€ d'articles (même si tu as 1000€).",
+        "exemple": "Tu as 5000€ en Livret A à 3% d'intérêt annuel. Inflation = 2%. Rendement réel = 3% - 2% = 1%. Ton pouvoir d'achat augmente vraiment que de 1%, pas 3%.",
+        "questions": [
+          "Quel est le taux d'inflation en ce moment ?",
+          "Comment l'inflation affecte ton épargne ?",
+          "Quel taux d'intérêt tu dois viser pour battre l'inflation ?"
+        ]
+      },
+      {
+        "titre": "Produits d'épargne courants",
+        "contenu": "LIVRET A : sans risque, taux légal (3%). Parfait pour fonds d'urgence. ASSURANCE-VIE : assurance + épargne, très fiscalement avantageuse (France). PLAN D'ÉPARGNE ACTIONS : investis en actions via fond, fiscalité favorable. CERTIFICATS DE DÉPÔT : prêter argent à une banque avec taux fixe. Chaque produit a des avantages/inconvénients et risques différents.",
+        "exemple": "Tu ouvres un Livret A à 18 ans. Plafond = 22950€. Taux = 3% annuel (légal). C'est sûr et simple. À 21 ans, tu ouvres un PEA pour investir long terme en actions. Deux outils complémentaires.",
+        "questions": [
+          "Quel produit d'épargne as-tu ?",
+          "Quel est le meilleur pour ton objectif ?",
+          "Quel risque il y a avec chaque produit ?"
+        ]
+      },
+      {
+        "titre": "Liens entre épargne et objectifs financiers",
+        "contenu": "Épargne = carburant pour atteindre tes objectifs. Travail inverse : définis un objectif → calcule le montant → divise par durée → détermine ton épargne mensuelle. Exemple : objectif = 20000€ en 5 ans. Besoin = 20000 ÷ 60 mois = 333€/mois à épargner. Ajoute les intérêts = moins besoin.",
+        "exemple": "Objectif : 15000€ en 3 ans. Sans intérêts = 15000 ÷ 36 = 416€/mois. Avec intérêts 4% = 380€/mois suffisent (les intérêts complètent).",
+        "questions": [
+          "Quel est ton objectif ?",
+          "Combien tu dois épargner par mois ?",
+          "Comment les intérêts t'aident ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc4",
+    "titre": "Introduction à l'investissement",
+    "description": "Pourquoi investir, risque et rendement, diversification, actions, obligations, fonds, ETF pour débutants.",
+    "categorie": "Investissement",
+    "niveau": "Avancé",
+    "duree": "4h00",
+    "modules": 7,
+    "tags": ["investissement", "risque", "actions", "obligations", "ETF", "diversification"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Pourquoi investir ?",
+        "contenu": "L'épargne simple (Livret A ~3%) ne bat pas toujours l'inflation (~2%). Pour vraiment faire croître ton argent, tu dois investir (rendement 5-8% long terme). Plus le temps est long, plus tu peux prendre de risques car tu peux attendre les hauts et bas. Investir jeune = avantage énorme grâce aux intérêts composés.",
+        "exemple": "À 20 ans, tu invests 100€/mois pendant 40 ans avec rendement 7%. Montant investi = 48000€. Valeur à 60 ans = 147000€. Grâce aux intérêts composés, tu gagnes 99000€ 'gratuitement'.",
+        "questions": [
+          "Pourquoi c'est mieux d'investir que d'épargner en Livret A ?",
+          "Quel avantage tu as à investir jeune ?",
+          "Combien tu pourrais avoir à 65 ans si tu investis 200€/mois maintenant ?"
+        ]
+      },
+      {
+        "titre": "Risque et rendement",
+        "contenu": "Loi financière fondamentale : plus de rendement = plus de risque. Titres sûrs (obligations) = rendement bas (2-3%). Titres risqués (actions) = rendement haut potentiel (5-10% mais aussi peut baisser). Ton profil de risque dépend de : (1) ton âge (jeune = plus risque possible). (2) ton horizon (long terme = plus risque). (3) ta situation (besoin argent vite = moins risque).",
+        "exemple": "À 25 ans, horizon 40 ans : peux mettre 80% en actions (risqué mais temps pour récupérer). À 55 ans, besoin argent bientôt : 30% actions, 70% obligations (sûr).",
+        "questions": [
+          "Quel est ton profil de risque ?",
+          "Peux-tu accepter une baisse de 20% en court terme ?",
+          "Quel rendement tu cherches ?"
+        ]
+      },
+      {
+        "titre": "Diversification",
+        "contenu": "Ne mets pas tous tes œufs dans le même panier ! Diversifier = investir dans différents types d'actifs, secteurs, pays. Avantages : (1) une mauvaise investissement ne détruit pas tout. (2) meilleures performances long terme. (3) moins stress. Exemple : 50% actions, 30% obligations, 20% immobilier.",
+        "exemple": "Panier 1 (mal) : 100% en actions Apple. Apple baisse 50% → tu perds 50%. Panier 2 (bien) : 30% Apple, 30% autres actions, 20% obligations, 20% immobilier. Apple baisse 50% → tu perds ~15%. Beaucoup mieux.",
+        "questions": [
+          "Ton portefeuille est-il diversifié ?",
+          "Comment tu répartis ton argent ?"
+        ]
+      },
+      {
+        "titre": "Actions (stocks)",
+        "contenu": "Une action = une petite part d'une entreprise. Si tu achètes 1 action Apple à 150€, tu possèdes une minuscule partie d'Apple. Rendement = dividendes (argent que l'entreprise te donne) + augmentation du prix. Risque = prix peut baisser. Conseil : achète des actions stables/grandes (Apple, Microsoft) pour commencer, pas des startups risquées.",
+        "exemple": "Tu achètes 10 actions Microsoft à 300€ = 3000€ investi. Microsoft gagne bien, le prix monte à 350€ par action. Tes 10 actions valent maintenant 3500€. Tu as gagné 500€. Plus, Microsoft te verse 50€ en dividende. Gain total = 550€.",
+        "questions": [
+          "Quelle action tu trouves intéressante ?",
+          "Peux-tu supporter une baisse de 30% ?",
+          "Combien tu veux investir ?"
+        ]
+      },
+      {
+        "titre": "Obligations",
+        "contenu": "Une obligation = un prêt à une entreprise ou l'État. Tu prêtes 1000€, tu reçois 5% par an de rendement. L'État/entreprise repaye ton 1000€ à la fin. Moins risqué que les actions. Rendement plus bas mais sûr. Idéal pour complémenter des actions.",
+        "exemple": "Tu achètes une obligation d'État français. Valeur = 1000€, rendement = 3% par an. Pendant 10 ans, tu reçois 30€ chaque année. À la fin, tu reçois tes 1000€ d'origine. Rendement total = 300€ sur 10 ans. Prévisible et sûr.",
+        "questions": [
+          "Combien tu rendement tu attends d'une obligation ?",
+          "C'est mieux que le Livret A pour toi ?"
+        ]
+      },
+      {
+        "titre": "Fonds d'investissement et ETF",
+        "contenu": "Fonds = un gestionnaire choisit pour toi. Tu investis 100€, il met cet argent dans 50 entreprises différentes. Tu paies des frais (~0.5-1.5% par an). ETF = fonds passif qui suit un indice (pas de gestionnaire). Frais plus bas (~0.1-0.3%). Idéal pour débutants : achète un ETF qui suit le S&P 500 ou MSCI World. Diversification automatique.",
+        "exemple": "Tu investis 1000€ dans un ETF S&P 500 (suit 500 plus grandes entreprises US). Avec 1000€, tu possèdes de petites parts dans Apple, Microsoft, Google, Amazon, etc. C'est diversifié et frais bas (~0.05%).",
+        "questions": [
+          "Quels ETF tu connais ?",
+          "Quels frais tu acceptes ?",
+          "Pourquoi un ETF plutôt qu'une action simple ?"
+        ]
+      },
+      {
+        "titre": "Démarrer son premier investissement",
+        "contenu": "Étapes : (1) Ouvre un compte-titre ou PEA chez ta banque. (2) Décide ton profil de risque. (3) Choisis une stratégie (exemple : 70% ETF diversifiés, 20% obligations, 10% actions). (4) Commence petit (100-200€) et augmente régulièrement (investissement mensuel). (5) Laisse grandir long terme, ne trade pas tout le temps.",
+        "exemple": "À 20 ans, tu ouvres un PEA. Tu investis 200€/mois automatiquement dans un ETF MSCI World. Tu ne touches pas à cet argent pendant 20 ans. À 40 ans, tu as investi 48000€ et tu en as ~90000€ (rendement ~5% par an).",
+        "questions": [
+          "Quel courtier tu utiliserais (Degiro, Etoro, Boursorama) ?",
+          "Quel ETF tu choisirais pour démarrer ?",
+          "Combien tu investirais par mois ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc5",
+    "titre": "Comprendre les marchés financiers",
+    "description": "Bourse, indices boursiers, offre et demande, capitalisation boursière, comment une entreprise entre en bourse.",
+    "categorie": "Marchés",
+    "niveau": "Avancé",
+    "duree": "3h00",
+    "modules": 5,
+    "tags": ["bourse", "indices", "marchés", "CAC40", "offre", "demande"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Qu'est-ce que la Bourse ?",
+        "contenu": "La Bourse = marché où s'achètent/se vendent actions et obligations. Metteur en scène = banques qui organisent. Acteurs = investisseurs (toi), fonds, entreprises, États. Prix = offre et demande. Bourse de Paris (Euronext) = où se vendent actions françaises. NYSE = New York, place d'actions US.",
+        "exemple": "Tu veux vendre 10 actions Apple. Tu les mets à vendre à 150€ chacun. Un acheteur les achète à 150€. Transaction faite en quelques millisecondes. C'est ça la Bourse.",
+        "questions": [
+          "Où se trouve la Bourse la plus proche de toi ?",
+          "Quelles actions célèbres tu connais ?",
+          "Comment tu accèdes à la Bourse ?"
+        ]
+      },
+      {
+        "titre": "Indices boursiers (CAC 40, DAX, S&P 500)",
+        "contenu": "Un indice = moyenne des prix des plus grandes entreprises d'un pays. CAC 40 = les 40 plus grandes entreprises de France (Total, LVMH, Sanofi, etc.). DAX = 40 géantes allemandes. S&P 500 = 500 US. Indice monte = économie va bien. Indice baisse = inquiétude. L'indice est un baromètre économique.",
+        "exemple": "CAC 40 = 7500 points aujourd'hui. Demain = 7600 points (+100). Ça signifie que les 40 grandes entreprises françaises font mieux. L'économie française va mieux. Les investisseurs sont optimistes.",
+        "questions": [
+          "Quel est le CAC 40 aujourd'hui ?",
+          "Comment il a changé en 1 an ?",
+          "Pourquoi l'indice monte ou baisse ?"
+        ]
+      },
+      {
+        "titre": "Offre et demande sur le marché",
+        "contenu": "OFFRE = vendeurs veulent vendre à ce prix. DEMANDE = acheteurs veulent acheter à ce prix. PRIX = où se rencontrent offre et demande. Si demande > offre, prix monte (tout le monde veut, peu à vendre). Si offre > demande, prix baisse (beaucoup à vendre, peu d'acheteurs). C'est un équilibre constant.",
+        "exemple": "Nouvelle : Apple va lancer un produit révolutionnaire. Tout le monde veut acheter les actions Apple. Demande augmente énormément. Peu de vendeurs. Prix passe de 150€ à 180€ en quelques heures. Bonne nouvelle = prix monte.",
+        "questions": [
+          "Pourquoi le prix d'une action change chaque minute ?",
+          "Comment tu prédis si un prix va monter ?"
+        ]
+      },
+      {
+        "titre": "Capitalisation boursière",
+        "contenu": "Capitalisation = prix de l'action × nombre d'actions. Exemple : Apple = 150€ par action × 15 milliards d'actions = 2250 milliards €. C'est la valeur totale selon les investisseurs. Grande cap = grandes, stables. Small cap = petites, plus risquées.",
+        "exemple": "Apple (2250 Md€) = géante. Startu inconnue (10 Md€) = petite. Apple baisse 10% = beaucoup de gens affectés. Startup baisse 50% = peu impacte mais possible. Risque proportionnel à la taille.",
+        "questions": [
+          "Quelle est la capitalisation d'Apple ?",
+          "Pourquoi les grandes cap sont plus sûres ?"
+        ]
+      },
+      {
+        "titre": "IPO : Comment une entreprise entre en bourse",
+        "contenu": "IPO (Initial Public Offering) = première vente d'actions au public. Exemple : startup créée par 3 amis. Ils décident d'entrer en Bourse. Ils vendent 40% de l'entreprise au public pour lever 100 millions €. Les 60% restants = les fondateurs gardent. L'entreprise a maintenant du capital pour s'agrandir.",
+        "exemple": "Airbnb créé en 2008 par 3 personnes. 2020 = IPO à Wall Street. Ils vendent des actions. Levée = 102 milliards € de valeur. Les fondateurs deviennent milliardaires sur le papier. Airbnb peut maintenant s'agrandir avec cet argent.",
+        "questions": [
+          "Qu'est-ce qu'une IPO ?",
+          "Pourquoi les entreprises veulent entrer en bourse ?",
+          "Est-ce bon pour les investisseurs de buy juste après une IPO ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc6",
+    "titre": "Cryptomonnaies et Blockchain",
+    "description": "Fonctionnement blockchain, Bitcoin, Ethereum, stablecoins, wallets, risques et arnaques fréquentes.",
+    "categorie": "Crypto",
+    "niveau": "Avancé",
+    "duree": "3h30",
+    "modules": 7,
+    "tags": ["blockchain", "bitcoin", "ethereum", "crypto", "wallet", "risques"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Fonctionnement simplifié de la Blockchain",
+        "contenu": "Blockchain = base de données décentralisée (pas une seule autorité). Chaque transaction est enregistrée dans un 'bloc'. Ces blocs sont chaînés ensemble de façon immuable. Tout le monde peut vérifier. Pas besoin de banque pour valider. Utilise la cryptographie pour sécuriser. Révolutionnaire car = transparent, sécurisé, sans intermédiaire.",
+        "exemple": "Au lieu de la banque qui dit 'tu as 1000€', la blockchain dit : 'Tout le monde voit que tu as reçu 1000€ de la personne X et tu as gardé depuis. La transaction est immuable.' Personne ne peut tricher.",
+        "questions": [
+          "Pourquoi la blockchain est décentralisée ?",
+          "Quel est l'avantage par rapport aux banques ?",
+          "Quel est le risque principal ?"
+        ]
+      },
+      {
+        "titre": "Bitcoin : la première cryptomonnaie",
+        "contenu": "Bitcoin créé en 2009 par Satoshi Nakamoto (anonyme). C'est argent numérique peer-to-peer (sans intermédiaire). Limité à 21 millions de Bitcoin. Nouveau Bitcoin créé par 'mining' (résoudre énigmes mathématiques). Valeur fluctue énormément : 2011 (1€), 2017 (20000€), 2024 (60000€+). Volatil mais revolutionnaire.",
+        "exemple": "Tu achètes 0.001 Bitcoin à 40000€ = 40€. 1 an après = 60000€ = 60€. Gain = 20€. Mais 1 mois après peut devenir 30€. Très volatil.",
+        "questions": [
+          "Pourquoi Bitcoin est limité à 21 millions ?",
+          "Est-ce un bon investissement pour toi ?",
+          "Peux-tu supporter 50% de baisse ?"
+        ]
+      },
+      {
+        "titre": "Ethereum et les smart contracts",
+        "contenu": "Ethereum (créé 2015) = blockchain plus avancée. Permet les 'smart contracts' (contrats automatiques exécutés sans intermédiaire). Exemple : contrat d'assurance. Si température monte au-dessus 40°C pendant 10 jours, tu reçois 500€ automatiquement. Pas besoin d'appeler l'assurance, c'est code. Révolutionnaire.",
+        "exemple": "Assurance récolte classique : tu appelles l'assureur, il envoie quelqu'un vérifier, puis paie. Ethereum : contrat smart reçoit données météo en direct. Si mauvaise météo confirmée, verse 500€ automatiquement. Plus rapide, transparent, juste.",
+        "questions": [
+          "Quel est l'intérêt d'Ethereum vs Bitcoin ?",
+          "Comment les smart contracts changent les assurances ?",
+          "Quels autres utilisations tu vois ?"
+        ]
+      },
+      {
+        "titre": "Stablecoins et paiements",
+        "contenu": "Stablecoin = crypto adossé à quelque chose de stable (dollar, or). Exemple : USDC (assuré 1 dollar = 1 USDC). Volatilité faible. Utile pour paiements. Au Cameroun : USDC utilisé pour paiements inter-pays sans frais bancaires énormes. Plus stable que Bitcoin, plus utile pour le commerce.",
+        "exemple": "Tu envoies 100 USDC à un ami au Cameroun. Coût = 1 USDC (~1$) au lieu de 30€ avec banque classique. Reçoit 99 USDC (~99$). Révolutionnaire pour l'Afrique.",
+        "questions": [
+          "Quels stablecoins existent ?",
+          "Pourquoi c'est utile pour l'Afrique ?",
+          "Quelle est la différence avec une banque classique ?"
+        ]
+      },
+      {
+        "titre": "Wallets : gérer ses cryptos",
+        "contenu": "Wallet = portefeuille numérique pour tes cryptos. Types : (1) Centralisé (Coinbase, Kraken) = facile mais tu confies tes clés. (2) Non-custodial (Metamask, Ledger) = toi seul contrôles. RÈGLE D'OR : ta clé privée = ton argent. Jamais la partage. Si tu la perds, tu perds tout (pas de 'oubli de mot de passe' comme Gmail).",
+        "exemple": "Tu crées wallet Metamask. Tu reçois clé privée : 'abc123defgh456...'. Tu la notes et la gardes super secret. Elle = ta signature numérique. Avec elle, quelqu'un peut voler tous tes cryptos. Sans elle, tu ne peux pas accéder à ton argent.",
+        "questions": [
+          "Quel wallet tu utiliserais ?",
+          "Où tu garderais ta clé privée en sécurité ?",
+          "Que se passe si tu la perds ?"
+        ]
+      },
+      {
+        "titre": "Risques des cryptomonnaies",
+        "contenu": "Risques : (1) Volatilité énorme (baisse 80% est possible). (2) Pas d'assurance (ta banque assure les 100k€, cryptos non). (3) Techniquement complexe (facile de se tromper). (4) Réglementation changeante (illégal demain ?). (5) Marché jeune (peut disparaître). (6) Environnement : Bitcoin consomme énorme électricité.",
+        "exemple": "Ami invests 10000€ en Bitcoin. 6 mois après = 5000€. Il panique et vend. Puis Bitcoin remonte à 15000€. Il a perdu pour avoir paniqué. Crypto = long terme ou très risqué.",
+        "questions": [
+          "Peux-tu perdre 80% sans paniquer ?",
+          "Combien % de ton argent tu mettrais en crypto ?",
+          "Quel objectif pour toi en crypto ?"
+        ]
+      },
+      {
+        "titre": "Arnaques crypto fréquentes",
+        "contenu": "ARNAQUE 1 : 'Garantis 100% rendement par mois' = FAKE. ARNAQUE 2 : 'Envoie 1 BTC, reçois 2 BTC' = vol. ARNAQUE 3 : Faux wallet qui te vole clé privée. ARNAQUE 4 : ICO (Initial Coin Offering) = fausse coin qui disparaît avec ton argent. Règle : si ça semble trop beau = arnaque.",
+        "exemple": "Tu vois annonce : 'Deposite 100€ en USDC, reçois 50€/mois = 600% par an garantis !' C'est 100% arnaque. Personne ne donne 600% par an. Le faux site prend ton argent et disparu.",
+        "questions": [
+          "Comment tu reconnais une arnaque crypto ?",
+          "Que faire si tu es victime ?",
+          "Pourquoi les gens tombent dedans ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc7",
+    "titre": "Paiements numériques et FinTech",
+    "description": "Mobile Money, paiement en ligne, wallets numériques, FinTech, sécurité des transactions.",
+    "categorie": "FinTech",
+    "niveau": "Intermédiaire",
+    "duree": "2h30",
+    "modules": 5,
+    "tags": ["mobile money", "paiement", "fintech", "sécurité", "wallet"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Mobile Money : révolution en Afrique",
+        "contenu": "Mobile Money (M-Pesa au Kenya, Orange Money au Cameroun, MTN MoMo) = services de paiement via téléphone. En Afrique : 80% des gens n'ont pas accès banque mais ont téléphone. Mobile Money change ça : envoyer argent, recevoir, payer sans compte bancaire. Révolution pour l'inclusion financière.",
+        "exemple": "Une vendeuse au marché au Cameroun n'a pas de compte bancaire. Elle reçoit Orange Money (compte gratuit sur téléphone). Clients paient via Mobile Money. Elle peut retirer l'argent ou le garder en compte pour payer ses fournisseurs. Finalement bancarisée.",
+        "questions": [
+          "Pourquoi Mobile Money est important en Afrique ?",
+          "Comment ça change la vie économique ?",
+          "Comment tu l'utilises toi ?"
+        ]
+      },
+      {
+        "titre": "Paiements en ligne sécurisés",
+        "contenu": "Quand tu payes en ligne : (1) Tes données de carte sont encryptées (codées). (2) Le site reçoit un code de sécurité, pas ton numéro complet. (3) Vérification 3D Secure (SMS confirmation). (4) Données stockées chez processeur certifié (Stripe, PayPal), pas le site vendeur. Plus sûr qu'en magasin où tu montres ta carte.",
+        "exemple": "Tu achètes livre sur Amazon pour 20€. Tu rentre ta carte. Amazon ne voit PAS ton numéro complet. Stripe (processeur) vérifie. Tu reçois SMS. Tu confirmes. Paiement accepté. Amazon a juste la preuve du paiement, pas tes infos.",
+        "questions": [
+          "Quel est le processus de paiement en ligne ?",
+          "Pourquoi c'est plus sûr que magasin ?",
+          "Quand est-ce pas sûr ?"
+        ]
+      },
+      {
+        "titre": "Wallets numériques (Apple Pay, Google Pay, Wise)",
+        "contenu": "Wallet = app qui stocke tes cartes bancaires/cryptos. Apple Pay = Apple stocke ta carte, tu payes avec empreinte digitale. Google Pay = même chose avec Google. Wise = app pour envoyer argent international à bon taux. Avantages : (1) Pas besoin de chercher ta carte. (2) Rapide. (3) Tracé numériquement. (4) Wallet crypto = contrôle total.",
+        "exemple": "Tu utilise Apple Pay pour payer tes courses : tu poses iPhone sur le lecteur, c'est instant. Tes informations de carte ne sont jamais exposées au terminal. Sûr et rapide.",
+        "questions": [
+          "Quel wallet tu utilises ?",
+          "Pourquoi c'est mieux que carte physique ?",
+          "Quel risque existe ?"
+        ]
+      },
+      {
+        "titre": "FinTech : Finance + Technologie",
+        "contenu": "FinTech = entreprises qui utilisent tech pour innover en finance. Exemples : Revolut (banque mobile), Stripe (paiements), Klarna (paiement différé), Robinhood (investissements faciles). Avantages : (1) Pas d'agence (app only). (2) Moins cher. (3) Plus rapide. (4) UX meilleur. Disruption de la banque classique.",
+        "exemple": "Robinhood a révolutionné l'investissement. Avant : frais énormes, minimum 10000€. Robinhood : 0 frais, commence avec 1€, app super user-friendly. Maintenant millions de jeunes investissent.",
+        "questions": [
+          "Quelle FinTech tu utilises ?",
+          "Quel problème elle résout ?"
+        ]
+      },
+      {
+        "titre": "Sécurité des transactions",
+        "contenu": "Best practices : (1) Jamais partage code CVV (3 chiffres derrière carte). (2) Jamais partage numéro entier à étrangers. (3) Utilise 3D Secure. (4) Regarde l'URL (https:// et cadenas). (5) Ne click pas liens bizarres. (6) Utilise wallets de confiance. (7) Active notifications pour chaque paiement. (8) Regarde relevé mensuellement.",
+        "exemple": "Quelqu'un t'envoie SMS : 'Clique ici pour vérifier ta carte'. C'est phishing. Tu clicks, site fake demande ta carte. Tu payes 5000€ en paiements bizarres. Règle : ne JAMAIS click sur lien reçu. Va directement sur app/site officiel.",
+        "questions": [
+          "Comment tu reconnais une arnaque paiement ?",
+          "Que faire si on te demande ta carte ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc8",
+    "titre": "Économie et société",
+    "description": "Inflation, taux d'intérêt, chômage, croissance, rôle des banques centrales, politique monétaire.",
+    "categorie": "Macro-Économie",
+    "niveau": "Avancé",
+    "duree": "3h00",
+    "modules": 6,
+    "tags": ["inflation", "taux", "chômage", "croissance", "banque centrale", "politique"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Inflation expliquée simplement",
+        "contenu": "INFLATION = prix montent généralement. Exemple : console PS5 coûte 500€. 1 an après = 550€. Inflation = 10%. Causes : (1) Demande > offre (tout le monde achète). (2) Coûts de production montent. (3) Imprimer trop d'argent. Conséquences : argent épargné perd valeur, mais salaires aussi montent (idéalement).",
+        "exemple": "Inflation 2% par an = normal, sain (économie grandit). Inflation 10% = grave, tes 1000€ deviennent 900€ en pouvoir d'achat. Venezuela : inflation 100% par mois = catastrophe, argent n'a plus valeur.",
+        "questions": [
+          "Quelle est l'inflation en ce moment ?",
+          "Comment ça affecte ta vie ?",
+          "Comment tu te protèges contre l'inflation ?"
+        ]
+      },
+      {
+        "titre": "Taux d'intérêt et politique monétaire",
+        "contenu": "Taux d'intérêt = prix de l'argent emprunté. Banque centrale (ECB en Europe, Fed aux US) fixe taux directeur. Si taux monte : (1) Emprunter devient cher. (2) Gens mettent argent en épargne plutôt que consommer. (3) Inflation baisse mais croissance ralentit. Si taux baisse : inverse. Politique monétaire = outil pour contrôler inflation et croissance.",
+        "exemple": "2024 : inflation élevée. ECB augmente taux de 0% à 4%. Emprunt devient cher. Gens ralentissent achat (inflation baisse). Mais aussi moins de création d'emploi (croissance ralentit).",
+        "questions": [
+          "Quel est le taux directeur maintenant ?",
+          "Comment ça affecte ton crédit ?"
+        ]
+      },
+      {
+        "titre": "Chômage et marché du travail",
+        "contenu": "CHÔMAGE = taux de gens sans emploi. Calcul : chômeurs ÷ population active. Si croissance forte = moins de chômage (entreprises embauchent). Si crise = plus de chômage. Taux naturel de chômage ~ 4-5% (frictionnels = gens entre deux jobs). Au-dessus = problème.",
+        "exemple": "2023 : chômage France = 7.5% (1.2 millions sans emploi). 2020 COVID : chômage monté à 9%. Avec inflation + taux hauts = chômage va augmenter.",
+        "questions": [
+          "Quel est le taux de chômage maintenant ?",
+          "Comment ça te touche ?"
+        ]
+      },
+      {
+        "titre": "Croissance économique (PIB)",
+        "contenu": "PIB (Produit Intérieur Brut) = valeur totale biens/services produits en 1 an. Croissance = augmentation du PIB. Exemple : PIB France 2023 = 2800 Md€. 2024 = 2850 Md€ = croissance 1.8%. Plus haut = meilleur (plus emplois, salaires, prospérité). Négatif = récession (crise).",
+        "exemple": "Croissance 3% = excellent (jobs, augmentations). Croissance 0% = stagnation (pas de progrès). Croissance -2% = récession (crise, licenciements).",
+        "questions": [
+          "Quelle est la croissance de ton pays ?"
+        ]
+      },
+      {
+        "titre": "Rôle de la Banque Centrale",
+        "contenu": "Banque Centrale (ECB, Fed, Banque de France) = banque des banques. Rôles : (1) Fixe taux directeur (politique monétaire). (2) Régule inflation. (3) Supervise banques (ne faillissent pas). (4) Imprime l'argent. (5) Achète/vend obligations (quantitative easing). Super puissante, affecte tout.",
+        "exemple": "2008 crise : Fed baisse taux à 0% et achète milliards d'obligations (QE) pour sauver l'économie. Ça fonctionne. 2020 COVID : ECB fait pareil. Économie sauvée.",
+        "questions": [
+          "Qui est le PDG de la Banque Centrale ?"
+        ]
+      },
+      {
+        "titre": "Interdépendance économie mondiale",
+        "contenu": "Monde interconnecté. Crise US = impact Europe. Guerre Russie-Ukraine = prix pétrole montent partout. Pandemie COVID = usines chinoises ferment = chaîne d'approvisionnement cassée = inflation mondiale. Exemple : Prix semi-conducteurs montent = auto devient cher = inflation plus haute.",
+        "exemple": "2022 : Pénurie énergie Europe (Russie coupe gaz). Prix électricité × 10. Entreprises réduisent production. Chômage monte. Tout connecté.",
+        "questions": [
+          "Comment une crise ailleurs peut t'affecter ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc9",
+    "titre": "Entrepreneuriat et création d'entreprise",
+    "description": "Créer un projet, business model, revenus et dépenses, marketing de base, gestion d'une petite activité.",
+    "categorie": "Entrepreneuriat",
+    "niveau": "Intermédiaire",
+    "duree": "3h30",
+    "modules": 5,
+    "tags": ["entrepreneuriat", "startup", "business", "marketing", "gestion"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Créer un projet : idée à réalité",
+        "contenu": "Étapes : (1) Identifie un problème que tu peux résoudre. (2) Crée une solution simple. (3) Teste avec amis (validation). (4) Fais un prototype/MVP (minimum viable product). (5) Cherche premiers clients. (6) Itère based on feedback. Clé = commencer petit, pas besoin d'être parfait.",
+        "exemple": "Idée : tes amis payent trop cher pour transports/taxi. Tu crées app de covoiturage simple. Test avec 10 amis. Ils adorent. 1 mois après = 50 utilisateurs. Ça marche !",
+        "questions": [
+          "Quel problème tu pourrais résoudre ?",
+          "Comment tu validerais cette idée ?",
+          "Qui serait tes premiers clients ?"
+        ]
+      },
+      {
+        "titre": "Business model : comment gagner de l'argent",
+        "contenu": "Business model = ta façon de générer revenu. Exemples : (1) Vendre produit (Amazon). (2) Abonnement (Netflix). (3) Commissions (Uber). (4) Ads (Google). (5) Freemium (Spotify = gratuit avec ads, premium sans). Choix = crucial.",
+        "exemple": "Ton app covoiturage : (1) Option = commission par trajet (0.50€). (2) Option = abonnement 5€/mois. (3) Option = publicités dans l'app. Lequel choisir ? Commissions = sûr si beaucoup trajets. Abonnement = revenu stable. Ads = compliqué.",
+        "questions": [
+          "Quel business model tu choisirais ?",
+          "Combien tu chargerais ?"
+        ]
+      },
+      {
+        "titre": "Revenus et dépenses",
+        "contenu": "REVENUES = argent rentrant (ventes, abonnements, ads). DÉPENSES = argent sortant (serveurs, marketing, salaires). PROFIT = revenus - dépenses. Au début, profit souvent négatif (perte). Objectif = devenir profitable. Cash flow = timing (reçois-tu argent avant de payer dépenses ?).",
+        "exemple": "App covoiturage : Mois 1 = revenus 500€, dépenses 1000€ (serveurs, marketing) = perte 500€. Mois 6 = revenus 3000€, dépenses 1200€ = profit 1800€. Enfin rentable !",
+        "questions": [
+          "Quels seraient tes revenus premiers mois ?"
+        ]
+      },
+      {
+        "titre": "Marketing : comment attirer clients",
+        "contenu": "Marketing = faire connaître ta solution. Stratégies : (1) Bouche à oreille (amis parlent). (2) Réseaux sociaux (Instagram, TikTok). (3) Google/ads payantes. (4) Relations presse. (5) Influenceurs. (6) Contenu de qualité (blog, vidéos). Budget limité = commencer avec gratuit (amis, réseaux).",
+        "exemple": "App covoiturage : (1) Invite 100 amis gratuitement (first 1 month free). (2) Ils invitent amis. (3) Fais vidéo TikTok drôle (5 millions vues = boum). (4) Inflenceur utilise app. Growth exponential.",
+        "questions": [
+          "Comment tu attirerait tes premiers 100 clients ?"
+        ]
+      },
+      {
+        "titre": "Gestion d'une petite activité",
+        "contenu": "Essentiels : (1) Comptabilité (track revenus/dépenses). (2) Légal (enregistre ton entreprise). (3) Taxes (lis règles). (4) Client service (réponds rapidement). (5) Évolutivité (peut tu grandir ?). (6) Auto-critique (feedback utilisateurs). Conseil = simple au début, complexe plus tard.",
+        "exemple": "À 18 ans tu crées petite activité freelance (3D design). Mois 1 : gagnes 500€. Tes parents font comptabilité simple (cahier). Mois 6 : gagnes 3000€/mois. Tu enregistres 'micro-entreprise'. Déclares taxes. Boom légal.",
+        "questions": [
+          "Quel statut légal tu choirais ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc10",
+    "titre": "Cybersécurité financière",
+    "description": "Phishing, vol d'identité, escroqueries en ligne, protection des mots de passe, sécurisation des comptes.",
+    "categorie": "Sécurité",
+    "niveau": "Intermédiaire",
+    "duree": "2h00",
+    "modules": 5,
+    "tags": ["cybersécurité", "phishing", "vol", "arnaque", "protection"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Phishing : l'arnaque #1",
+        "contenu": "Phishing = email/SMS faux qui prétend être de ta banque. Exemple : 'Clique ici pour vérifier ton compte' → lien vers faux site identique → tu rentre identifiant/mot de passe → escroc accède à ton compte. 90% des piratages commencent par phishing.",
+        "exemple": "Tu reçois email : 'Urgent : vérifier ton compte PayPal.' Email semble officiel. Tu clicks. Site = exact copie PayPal. Tu rentre login/password. Escroc vole compte. Total damage = tout l'argent + accès données.",
+        "questions": [
+          "Comment tu reconnais phishing ?",
+          "Que faire si tu suspects phishing ?"
+        ]
+      },
+      {
+        "titre": "Vol d'identité et conséquences",
+        "contenu": "Vol d'identité = quelqu'un prétend être toi. Conséquences : (1) Compte bancaire vidé. (2) Faux emprunts à ton nom. (3) Dégât crédit score. (4) Des années pour réparer. Protection : (1) Partage JAMAIS identifiant. (2) Vérifie URLs avant de cliquer. (3) Utilise 2FA. (4) Monitor compte régulièrement.",
+        "exemple": "Quelqu'un a ton email et mot de passe. Il accède banque. Transfère 5000€. Puis emprunte 20000€ prêt auto à ton nom. Tu découvres 6 mois après. Des années pour fixer.",
+        "questions": [
+          "As-tu un bon mot de passe ?"
+        ]
+      },
+      {
+        "titre": "Escroqueries en ligne courantes",
+        "contenu": "ARNAQUE 1 : 'Tu as gagné la loterie !' (tu n'as pas acheté ticket). ARNAQUE 2 : 'Prince nigérian veut transférer 10M€' (t'as vu ça ? non). ARNAQUE 3 : 'Paiement échoué reclique ici'. ARNAQUE 4 : Faux site crypto/bank. Règle générale : si ça semble trop beau ou suspect = arnaque.",
+        "exemple": "SMS : 'Amazon : ta commande est en retard, clique pour confirmer.' Tu clicks = faux site. Tu rentre adresse + numéro bancaire. Voilà, escroc a tes infos.",
+        "questions": [
+          "Quelle arnaque tu as failli tomber dedans ?"
+        ]
+      },
+      {
+        "titre": "Mots de passe forts et 2FA",
+        "contenu": "Mot de passe fort = 12+ caractères, mélange majuscules/minuscules/chiffres/symboles. Exemple : 'MonChien2024!Sky' (bon) vs 'password' (terrible). JAMAIS le même mot de passe partout (1 compte hacké = tous hacké). Manager : Bitwarden, 1Password. 2FA (2 facteurs) = même si quelqu'un a mot de passe, besoin code SMS aussi. Activé partout possible.",
+        "exemple": "Mot de passe : 'qWe9@nB2$mK!' (fort). Partout différent. 2FA activé sur banque. Quelqu'un vole mot de passe. Accès refusé = besoin code SMS que tu reçois. Sûr.",
+        "questions": [
+          "Tes mots de passe sont-ils forts ?"
+        ]
+      },
+      {
+        "titre": "Sécurisation des comptes financiers",
+        "contenu": "Checklist : (1) Mot de passe différent, fort, 2FA partout. (2) Email de compte = sécurisé (fort MDP, 2FA). (3) Pas wifi public pour transactions. (4) Notification pour chaque paiement (active). (5) Monitor compte régulièrement. (6) Téléphone à jour (updates = patchs sécurité). (7) Signale fraude IMMÉDIATEMENT à banque.",
+        "exemple": "Tu utilises banque OK. MDP fort, 2FA, notifications. Quelqu'un essaie accéder = tu reçois notif. Tu dis non. Compte protégé.",
+        "questions": [
+          "As-tu 2FA sur ton compte banque ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc11",
+    "titre": "Finance durable et investissement responsable",
+    "description": "Investissement responsable, critères ESG, finance verte, impact environnemental des investissements.",
+    "categorie": "Impact",
+    "niveau": "Intermédiaire",
+    "duree": "2h30",
+    "modules": 4,
+    "tags": ["ESG", "durabilité", "impact", "vert", "responsable"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Investissement responsable (ISR)",
+        "contenu": "ISR (Investissement Socialement Responsable) = investir en entreprises qui respectent valeurs éthiques. Exemple : ne pas investir dans armes, tabac, pollution. Au lieu d'ça : entreprises durables, équité social, bonne gouvernance. Rendement souvent pareil, plus conscient conscience.",
+        "exemple": "Fonds classique = Petro-Saudi (pétrole). Rendement 5%. Fonds ISR = Tesla (electric) + Unilever (éthique). Rendement 5.2%. Plus durable ET meilleur rendement !",
+        "questions": [
+          "Tes valeurs dans l'argent ?",
+          "Aimerais tu investir éthiquement ?"
+        ]
+      },
+      {
+        "titre": "Critères ESG expliqués",
+        "contenu": "ESG = Environmental, Social, Governance. (1) E = respect environnement, émissions carbone bas. (2) S = traite bien ses employés, diversité. (3) G = gouvernance honnête, pas de scandales, PDG pas surpayé. Entreprises haute ESG = généralement plus rentable long terme (moins risques).",
+        "exemple": "Entreprise ESG haute : réduire CO2 50%, femmes 50% management, PDG gagné 20x salaire moyen. Vs entreprise ESG basse : pollution énorme, scandales, PDG 500x salaire moyen.",
+        "questions": [
+          "Comment tu évalues ESG d'une entreprise ?"
+        ]
+      },
+      {
+        "titre": "Finance verte et obligations vertes",
+        "contenu": "Finance verte = argent pour projets environnementaux. Obligations vertes = emprunts pour énergies propres (panneaux solaires, éoliennes). Gouvernements/entreprises émettent. Toi tu achètes, tu prêtes argent, tu reçois intérêt. Rendement un peu bas (3-4%) mais ton argent aide planète.",
+        "exemple": "Tu achètes obligation verte gouvernement = 1000€ à 3% pendant 10 ans. L'argent finance parc éolien. Tu reçois 30€/an. À la fin : ton argent devenu 1300€. Panneaux solaires existent aussi.",
+        "questions": [
+          "Aimerais-tu acheter obligations vertes ?"
+        ]
+      },
+      {
+        "titre": "Impact environnemental de tes investissements",
+        "contenu": "Chaque euro investi a impact. Investis dans banque ? Tu finances hypothèques (construction = énergie). Investis dans industrie ? Tu finances pollution potentielle. Pense impact. Utilise outils (Tricycle, Ecolabel) pour mesurer empreinte carbone de fonds. Divulgue : 'Je veux fonds avec empreinte carbone < 50 tonnes CO2/million€ investi'.",
+        "exemple": "Fonds A : empreinte 200 tonnes CO2/M€. Fonds B : empreinte 40 tonnes CO2/M€. Rendement similaire. Choix B = plus durable.",
+        "questions": [
+          "Quel impact ton argent a ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lc12",
+    "titre": "Préparation vie étudiante et professionnelle",
+    "description": "Budget étudiant, premier salaire, épargne études, fiche de paie, planification financière personnelle.",
+    "categorie": "Préparation",
+    "niveau": "Intermédiaire",
+    "duree": "2h00",
+    "modules": 5,
+    "tags": ["budget", "étudiant", "salaire", "fiche paie", "planification"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Gérer son budget étudiant",
+        "contenu": "Challenges étudiant : (1) Revenus bas/zéro. (2) Coûts élevés (loyer, nourriture, transport). (3) Besoin économiser. Budget étudiant simple : loyer 40%, nourriture 20%, transport/téléphone 15%, loisirs 10%, épargne 10%, divers 5%. Clé = limiter dépenses inutiles, partager appart.",
+        "exemple": "Tu as bourse 500€/mois. Loyer 200€ (coloc), nourriture 100€, transport 50€, téléphone 15€, loisirs 50€, épargne 50€, divers 35€. Zéro dette, petit épargne.",
+        "questions": [
+          "Quel budget étudiant tu aurais ?"
+        ]
+      },
+      {
+        "titre": "Premier salaire : gérer l'argent",
+        "contenu": "Premier salaire = défi psychologique. Tendance = dépenser tout. STOP. Plan : (1) Prends 10% épargne (automatique chaque mois). (2) Prends 20% pour se faire plaisir (culpabilité zéro). (3) Reste = vie normale. Après épargne d'urgence établie → pense investissement.",
+        "exemple": "Salaire 1500€. (1) Épargne 150€ (auto-transfert). (2) Plaisir 300€ (loisir guilt-free). (3) Reste 1050€ pour dépenses. Mois 1 facile. Mois 12 = épargne 1800€. Mois 24 = 3600€.",
+        "questions": [
+          "Quel est ton premier salaire prévu ?"
+        ]
+      },
+      {
+        "titre": "Épargner pour les études",
+        "contenu": "Si études payantes (master privé, étranger) = coûtent beaucoup. Plan : (1) Pendant prépa = épargne petit. (2) Première année études = travail job étudiant. (3) Investis en placements court terme (CEL, Livret A) pour études années 2-3. Parents peuvent aider (PEL = plan épargne-logement but études aussi).",
+        "exemple": "Master privé = 20000€ total. Tu travailles 10h/semaine pendant études = 500€/mois. 2 ans = 12000€ gagné. Parents aident 8000€. Total = 20000€. Faisable.",
+        "questions": [
+          "Combien coutent tes études ?"
+        ]
+      },
+      {
+        "titre": "Comprendre sa fiche de paie",
+        "contenu": "Fiche de paie = document donnée par employeur. Parties : (1) Brut = salaire avant impôts. (2) Cotisations = sécurité sociale, retraite (~23% du brut). (3) Net = ce que tu reçois réellement (brut - cotisations). Exemple : Brut 1500€, cotisations 350€, net 1150€. Normal.",
+        "exemple": "Fiche : Brut 2000€, Sécurité sociale 200€, Retraite 180€, CSG 120€, net 1500€. Total cotisations = 500€. C'est ton argent qui finance sécurité social, retraite, etc. (pas perdu, c'est ton filet de sécurité).",
+        "questions": [
+          "Comprends-tu ta fiche de paie ?"
+        ]
+      },
+      {
+        "titre": "Planification financière personnelle",
+        "contenu": "Étapes : (1) Fonds d'urgence (3-6 mois dépenses). (2) Pas de dette (carte crédit = 0 solde). (3) Épargne pour projets court terme (1 an). (4) Investis long terme (5+ ans). (5) Retraite (épargne pour 65 ans). À 22 ans = commence étape 1-2. À 25 = étape 3-4. À 30 = étape 5 sérieusement.",
+        "exemple": "Plan à 22 ans : Étape 1 = épargne 3 mois dépenses. Étape 2 = 0 dette (pay credit card). À 25 : Étape 3 = épargne voyage. Étape 4 = investis 200€/mois action/ETF. À 30 : Étape 5 = PER retraite (10% salaire).",
+        "questions": [
+          "Où tu es dans ces étapes ?"
+        ]
+      }
+    ]
+  }
+]
