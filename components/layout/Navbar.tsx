@@ -51,7 +51,7 @@ export function Navbar({ onMenuClick, isMenuOpen }: NavbarProps) {
           />
         </form>
 
-        {/* Espace vide pour garder l'alignement flex si pas de recherche */}
+        {/* Espace vide pour garder l’alignement flex si pas de recherche */}
         <div className="flex-1 md:hidden"></div>
 
         {/* Section Droite : Notifications / Profil ou Authentification */}
@@ -89,7 +89,7 @@ export function Navbar({ onMenuClick, isMenuOpen }: NavbarProps) {
                 href="/register" 
                 className="rounded-full shadow-md shadow-primary/20 px-6 font-bold"
               >
-                S'inscrire
+                S’inscrire
               </Button>
             </div>
           )}

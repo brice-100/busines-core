@@ -1,0 +1,511 @@
+{
+  "platform": "BusinessCore",
+  "tagline": "FINTECH | FINANCE | INNOVATION",
+  "categories": [
+    {
+      "id": "monnaie_digitale",
+      "label": "Monnaie digitale",
+      "color": "#7C3AED",
+      "articles": [
+        {
+          "id": "md-001",
+          "category": "Monnaie digitale",
+          "title": "Mobile Money : comment l'Afrique a réinventé la banque sans les banques",
+          "subtitle": "M-Pesa, Orange Money, Wave, MTN MoMo — avant que le monde parle de fintech, l'Afrique avait déjà trouvé sa solution.",
+          "excerpt": "En 2007, le Kenya lançait M-Pesa sur des téléphones à touches. Aujourd'hui, le Mobile Money représente plus de 800 milliards de dollars de transactions annuelles sur le continent. Retour sur l'innovation qui a tout changé.",
+          "read_time_min": 10,
+          "published_at": "2025-01-14",
+          "author": {
+            "name": "Fatoumata Koné",
+            "avatar_initials": "FK",
+            "avatar_color": "#7C3AED"
+          },
+          "tags": ["Mobile Money", "M-Pesa", "Inclusion financière"],
+          "featured": true
+        },
+        {
+          "id": "md-002",
+          "category": "Monnaie digitale",
+          "title": "Wave vs Orange Money : la guerre du portefeuille mobile en Afrique de l'Ouest",
+          "subtitle": "Wave casse les prix avec ses transferts à 1 %. Orange Money riposte. Qui profite vraiment à l'utilisateur final ?",
+          "excerpt": "Depuis l'arrivée de Wave au Sénégal et en Côte d'Ivoire, les frais de Mobile Money ont chuté de 70 %. Une guerre tarifaire salutaire pour les ménages, mais qui met sous pression les modèles économiques des opérateurs historiques.",
+          "read_time_min": 8,
+          "published_at": "2025-02-03",
+          "author": {
+            "name": "Oumar Traoré",
+            "avatar_initials": "OT",
+            "avatar_color": "#F59E0B"
+          },
+          "tags": ["Wave", "Orange Money", "UEMOA"],
+          "featured": false
+        },
+        {
+          "id": "md-003",
+          "category": "Monnaie digitale",
+          "title": "Franc CFA numérique : utopie ou nécessité pour la zone UEMOA ?",
+          "subtitle": "La BCEAO explore une version numérique du franc CFA. Entre souveraineté monétaire et dépendance à Paris, le débat est vif.",
+          "excerpt": "Alors que la BCEAO mène des études exploratoires sur une CBDC pour la zone franc, des économistes africains s'interrogent : une monnaie numérique de banque centrale a-t-elle un sens dans un système monétaire encore ancré sur des accords post-coloniaux ?",
+          "read_time_min": 11,
+          "published_at": "2025-03-10",
+          "author": {
+            "name": "Aminata Diallo",
+            "avatar_initials": "AD",
+            "avatar_color": "#2563EB"
+          },
+          "tags": ["CBDC", "Franc CFA", "BCEAO"],
+          "featured": false
+        },
+        {
+          "id": "md-004",
+          "category": "Monnaie digitale",
+          "title": "MTN MoMo : 60 millions d'utilisateurs et une ambition de super-app",
+          "subtitle": "Le géant télécoms sud-africain construit la plus grande infrastructure de paiement mobile du continent.",
+          "excerpt": "Avec une présence dans 16 pays africains et plus de 60 millions de portefeuilles actifs, MTN Mobile Money n'est plus un simple service de transfert — c'est une infrastructure financière continentale. Décryptage de la stratégie.",
+          "read_time_min": 9,
+          "published_at": "2025-04-22",
+          "author": {
+            "name": "Serge Mbala",
+            "avatar_initials": "SM",
+            "avatar_color": "#DC2626"
+          },
+          "tags": ["MTN MoMo", "Super-app", "Afrique subsaharienne"],
+          "featured": false
+        },
+        {
+          "id": "md-005",
+          "category": "Monnaie digitale",
+          "title": "Interopérabilité Mobile Money : quand envoyer de l'argent entre réseaux reste un parcours du combattant",
+          "subtitle": "Orange vers Wave, MTN vers Airtel — les murs entre opérateurs coûtent cher aux utilisateurs africains.",
+          "excerpt": "Malgré les injonctions des régulateurs et les engagements des opérateurs, l'interopérabilité totale du Mobile Money reste un chantier inachevé dans la majorité des pays africains. Les conséquences sont concrètes pour des millions de ménages.",
+          "read_time_min": 7,
+          "published_at": "2025-05-30",
+          "author": {
+            "name": "Nadia Osei",
+            "avatar_initials": "NO",
+            "avatar_color": "#9333EA"
+          },
+          "tags": ["Interopérabilité", "Mobile Money", "Régulation"],
+          "featured": false
+        },
+        {
+          "id": "md-006",
+          "category": "Monnaie digitale",
+          "title": "Bancarisation via le mobile : les femmes rurales, grande oubliée ou premier public cible ?",
+          "subtitle": "Au Kenya, au Ghana et au Cameroun, des programmes ciblent spécifiquement les femmes sans compte bancaire via le Mobile Money.",
+          "excerpt": "60 % des adultes non bancarisés en Afrique subsaharienne sont des femmes. Le Mobile Money est présenté comme la solution — mais sans accès au smartphone, sans réseau, et sans éducation financière, l'outil reste inaccessible à celles qui en auraient le plus besoin.",
+          "read_time_min": 9,
+          "published_at": "2025-06-05",
+          "author": {
+            "name": "Chisom Eze",
+            "avatar_initials": "CE",
+            "avatar_color": "#16A34A"
+          },
+          "tags": ["Inclusion financière", "Genre", "Zones rurales"],
+          "featured": false
+        }
+      ]
+    },
+
+    {
+      "id": "neobanques",
+      "label": "Néobanques",
+      "color": "#2563EB",
+      "articles": [
+        {
+          "id": "neo-001",
+          "category": "Néobanques",
+          "title": "Néobanques africaines : Wave, Moov et la révolution du compte sans agence",
+          "subtitle": "Des millions d'Africains accèdent à leurs premiers services bancaires via le smartphone — sans jamais mettre les pieds dans une agence.",
+          "excerpt": "Wave au Sénégal, Moov en Côte d'Ivoire, Carbon au Nigeria, Djamo en zone UEMOA : les néobanques africaines ne copient pas le modèle européen — elles inventent le leur, adapté aux contraintes locales d'infrastructure, de connectivité et de régulation.",
+          "read_time_min": 10,
+          "published_at": "2025-02-19",
+          "author": {
+            "name": "Oumar Traoré",
+            "avatar_initials": "OT",
+            "avatar_color": "#F59E0B"
+          },
+          "tags": ["Wave", "Afrique", "Inclusion bancaire"],
+          "featured": true
+        },
+        {
+          "id": "neo-002",
+          "category": "Néobanques",
+          "title": "Carbon, Kuda, Chipper Cash : le trio qui redéfinit la banque au Nigeria",
+          "subtitle": "Le marché nigérian, le plus peuplé d'Afrique, est devenu le laboratoire des néobanques continentales.",
+          "excerpt": "Avec 220 millions d'habitants dont 60 % non bancarisés et une diaspora massive qui envoie 20 milliards de dollars par an, le Nigeria est la terre promise des néobanques africaines. Mais la concurrence est féroce et la régulation de la CBN, imprévisible.",
+          "read_time_min": 11,
+          "published_at": "2025-03-05",
+          "author": {
+            "name": "Emeka Okafor",
+            "avatar_initials": "EO",
+            "avatar_color": "#16A34A"
+          },
+          "tags": ["Nigeria", "Carbon", "Kuda"],
+          "featured": false
+        },
+        {
+          "id": "neo-003",
+          "category": "Néobanques",
+          "title": "Djamo en Côte d'Ivoire : construire une néobanque dans un marché sous-bancarisé",
+          "subtitle": "Fondée à Abidjan, Djamo compte plus de 500 000 utilisateurs. Son pari : rendre la carte bancaire accessible à tous.",
+          "excerpt": "En Côte d'Ivoire, moins de 20 % de la population adulte détient un compte bancaire classique. Djamo a choisi de cibler cette masse silencieuse avec un compte gratuit, une carte Visa et une interface mobile intuitive. Entretien avec ses fondateurs.",
+          "read_time_min": 8,
+          "published_at": "2025-01-22",
+          "author": {
+            "name": "Mariama Camara",
+            "avatar_initials": "MC",
+            "avatar_color": "#2563EB"
+          },
+          "tags": ["Djamo", "Côte d'Ivoire", "Sous-bancarisation"],
+          "featured": false
+        },
+        {
+          "id": "neo-004",
+          "category": "Néobanques",
+          "title": "Réglementation des fintechs bancaires : la COBAC, la BCEAO et le maquis réglementaire africain",
+          "subtitle": "Obtenir une licence bancaire en Afrique centrale ou de l'Ouest reste un parcours semé d'embûches pour les startups.",
+          "excerpt": "Dépôts de dossiers qui s'éternisent, exigences de fonds propres élevées, absence de cadre sandbox dans la plupart des pays : les néobanques africaines naviguent dans un environnement réglementaire qui freine autant qu'il protège.",
+          "read_time_min": 9,
+          "published_at": "2025-04-11",
+          "author": {
+            "name": "Jean-Pierre Moreau",
+            "avatar_initials": "JM",
+            "avatar_color": "#6B7280"
+          },
+          "tags": ["Réglementation", "COBAC", "BCEAO"],
+          "featured": false
+        },
+        {
+          "id": "neo-005",
+          "category": "Néobanques",
+          "title": "Les néobanques peuvent-elles résoudre le problème du crédit en Afrique ?",
+          "subtitle": "Accéder à un prêt reste quasi impossible pour la majorité des Africains. Les fintechs promettent de changer ça grâce aux données alternatives.",
+          "excerpt": "Faute d'historique de crédit, de garanties ou de fiches de paie, des millions d'Africains sont exclus du crédit bancaire traditionnel. Des néobanques comme Umba, Migo ou FairMoney utilisent les données de Mobile Money et les comportements téléphoniques pour scorer autrement.",
+          "read_time_min": 12,
+          "published_at": "2025-05-08",
+          "author": {
+            "name": "Abena Mensah",
+            "avatar_initials": "AM",
+            "avatar_color": "#DC2626"
+          },
+          "tags": ["Crédit", "Scoring alternatif", "Inclusion"],
+          "featured": false
+        }
+      ]
+    },
+
+    {
+      "id": "crypto",
+      "label": "Crypto",
+      "color": "#F59E0B",
+      "articles": [
+        {
+          "id": "cr-001",
+          "category": "Crypto",
+          "title": "Crypto en Afrique : adoption record, infrastructure encore limitée",
+          "subtitle": "L'Afrique représente 15 % des volumes mondiaux de crypto — portée par des usages très différents du reste du monde.",
+          "excerpt": "Nigeria, Ghana, Kenya, Cameroun : les Africains n'utilisent pas la crypto pour spéculer — ils s'en servent pour se protéger contre l'inflation, contourner les restrictions de change et envoyer de l'argent à moindre coût. Reportage sur une adoption populaire avant d'être institutionnelle.",
+          "read_time_min": 10,
+          "published_at": "2025-01-28",
+          "author": {
+            "name": "Chisom Eze",
+            "avatar_initials": "CE",
+            "avatar_color": "#F59E0B"
+          },
+          "tags": ["Afrique", "Adoption crypto", "Remittances"],
+          "featured": true
+        },
+        {
+          "id": "cr-002",
+          "category": "Crypto",
+          "title": "Nigeria vs Bitcoin : pourquoi la CBN a levé son interdiction (et ce que ça change vraiment)",
+          "subtitle": "Après avoir banni les cryptos en 2021, la Banque Centrale du Nigeria autorise désormais les échanges. Le marché reste méfiant.",
+          "excerpt": "En 2021, la CBN avait ordonné aux banques de fermer les comptes liés aux exchanges crypto. En 2023, elle a fait volte-face. Mais entre les restrictions persistantes sur les transferts en devises et l'instabilité du naira, les Nigérians continuent de préférer les P2P et les USDT.",
+          "read_time_min": 9,
+          "published_at": "2025-02-17",
+          "author": {
+            "name": "Emeka Okafor",
+            "avatar_initials": "EO",
+            "avatar_color": "#16A34A"
+          },
+          "tags": ["Nigeria", "CBN", "Réglementation crypto"],
+          "featured": false
+        },
+        {
+          "id": "cr-003",
+          "category": "Crypto",
+          "title": "Les stablecoins comme bouclier contre l'inflation : le cas du Zimbabwe, du Ghana et de l'Éthiopie",
+          "subtitle": "Quand la monnaie nationale s'effondre, l'USDT devient la valeur refuge des populations ordinaires.",
+          "excerpt": "Au Zimbabwe, où le dollar zimbabwéen a perdu 80 % de sa valeur en deux ans, l'USDT circule dans les marchés informels comme une véritable monnaie courante. Un phénomène similaire s'observe au Ghana (cedi) et en Éthiopie (birr). Reportage.",
+          "read_time_min": 11,
+          "published_at": "2025-03-22",
+          "author": {
+            "name": "Kwame Asante",
+            "avatar_initials": "KA",
+            "avatar_color": "#0EA5E9"
+          },
+          "tags": ["Stablecoins", "Inflation", "Afrique"],
+          "featured": false
+        },
+        {
+          "id": "cr-004",
+          "category": "Crypto",
+          "title": "Transferts d'argent vers l'Afrique : la crypto peut-elle battre Western Union ?",
+          "subtitle": "Les frais de remittances vers l'Afrique subsaharienne dépassent 8 % en moyenne. La crypto promet de faire mieux.",
+          "excerpt": "L'Afrique subsaharienne reçoit plus de 50 milliards de dollars de transferts de diaspora chaque année, mais paie les frais les plus élevés au monde. Des plateformes comme Bitpesa (désormais AZA Finance) et Kotani Pay utilisent la blockchain pour réduire drastiquement ces coûts.",
+          "read_time_min": 8,
+          "published_at": "2025-04-05",
+          "author": {
+            "name": "Fatou Diallo",
+            "avatar_initials": "FD",
+            "avatar_color": "#7C3AED"
+          },
+          "tags": ["Remittances", "Diaspora", "Blockchain"],
+          "featured": false
+        },
+        {
+          "id": "cr-005",
+          "category": "Crypto",
+          "title": "Binance, Coinbase, Yellow Card : quels exchanges pour les investisseurs africains ?",
+          "subtitle": "Entre les plateformes mondiales peu adaptées aux réalités locales et les exchanges africains encore jeunes, le choix est complexe.",
+          "excerpt": "Yellow Card opère dans 20 pays africains et accepte le Mobile Money comme moyen de dépôt. Binance domine les volumes mais a eu des démêlés avec les autorités nigérianes. Comparatif des options disponibles pour un investisseur au Cameroun, en Côte d'Ivoire ou au Sénégal.",
+          "read_time_min": 7,
+          "published_at": "2025-05-15",
+          "author": {
+            "name": "Romuald Atangana",
+            "avatar_initials": "RA",
+            "avatar_color": "#DC2626"
+          },
+          "tags": ["Yellow Card", "Exchanges", "Cameroun"],
+          "featured": false
+        },
+        {
+          "id": "cr-006",
+          "category": "Crypto",
+          "title": "DeFi en Afrique : entre promesses d'inclusion et réalité d'accès",
+          "subtitle": "La finance décentralisée est présentée comme la solution ultime pour les non-bancarisés. Mais qui y accède vraiment ?",
+          "excerpt": "Pour utiliser Aave ou Uniswap, il faut un wallet, de l'ETH pour les gas fees, une connexion stable et une certaine maîtrise technique. Autant de barrières qui excluent paradoxalement les populations que la DeFi prétend servir en priorité.",
+          "read_time_min": 10,
+          "published_at": "2025-06-01",
+          "author": {
+            "name": "Rania Hassoun",
+            "avatar_initials": "RH",
+            "avatar_color": "#8B5CF6"
+          },
+          "tags": ["DeFi", "Inclusion", "Afrique"],
+          "featured": false
+        }
+      ]
+    },
+
+    {
+      "id": "finance_durable",
+      "label": "Finance Durable",
+      "color": "#059669",
+      "articles": [
+        {
+          "id": "fd-001",
+          "category": "Finance Durable",
+          "title": "Financement climatique en Afrique : les 100 milliards promis, toujours attendus",
+          "subtitle": "L'Afrique est la région la plus vulnérable aux dérèglements climatiques et la moins financée pour y faire face.",
+          "excerpt": "Les pays développés ont promis 100 milliards de dollars par an de financements climatiques pour les pays du Sud depuis 2009. En 2025, l'Afrique subsaharienne ne reçoit que 3 % de ces flux mondiaux. Enquête sur un scandale silencieux.",
+          "read_time_min": 11,
+          "published_at": "2025-05-20",
+          "author": {
+            "name": "Abena Mensah",
+            "avatar_initials": "AM",
+            "avatar_color": "#059669"
+          },
+          "tags": ["Climat", "Afrique", "Financement"],
+          "featured": true
+        },
+        {
+          "id": "fd-002",
+          "category": "Finance Durable",
+          "title": "Green bonds africains : le Kenya et l'Égypte montrent la voie, le reste du continent hésite",
+          "subtitle": "Seuls quelques pays africains ont émis des obligations vertes souveraines. Les obstacles sont nombreux, mais les exemples se multiplient.",
+          "excerpt": "Le Kenya a émis en 2024 une obligation verte de 500 millions de dollars dédiée aux énergies renouvelables. L'Égypte a fait de même pour financer son programme solaire. Mais pour la majorité des États africains, l'accès aux marchés internationaux de la dette verte reste fermé faute de notation ou de cadre légal.",
+          "read_time_min": 9,
+          "published_at": "2025-01-20",
+          "author": {
+            "name": "Sonia Laurent",
+            "avatar_initials": "SL",
+            "avatar_color": "#059669"
+          },
+          "tags": ["Green bonds", "Kenya", "Dette souveraine"],
+          "featured": false
+        },
+        {
+          "id": "fd-003",
+          "category": "Finance Durable",
+          "title": "Agriculture et finance durable : financer les petits exploitants africains sans les piéger",
+          "subtitle": "80 % de l'agriculture africaine est portée par des exploitants familiaux. La finance durable peut-elle les atteindre ?",
+          "excerpt": "Les fonds ESG internationaux financent des projets d'agrobusiness à grande échelle en Afrique — souvent au détriment des agriculteurs locaux. Des initiatives comme Aceli Africa ou Root Capital tentent de construire un modèle de financement vert qui profite réellement aux petits producteurs.",
+          "read_time_min": 10,
+          "published_at": "2025-02-25",
+          "author": {
+            "name": "Fatoumata Koné",
+            "avatar_initials": "FK",
+            "avatar_color": "#F59E0B"
+          },
+          "tags": ["Agriculture", "ESG", "Petits exploitants"],
+          "featured": false
+        },
+        {
+          "id": "fd-004",
+          "category": "Finance Durable",
+          "title": "Énergie solaire et micro-finance : le duo qui électrifie l'Afrique rurale",
+          "subtitle": "Des millions de foyers africains accèdent à l'électricité grâce à des kits solaires financés via le Mobile Money et le crédit communautaire.",
+          "excerpt": "Le modèle pay-as-you-go (PAYG) permet à des ménages ruraux sans revenus fixes d'acquérir un kit solaire en payant par petites tranches via Mobile Money. Des entreprises comme BBOXX, Engie Energy Access et SunKing ont électrifié plus de 5 millions de foyers africains avec ce modèle.",
+          "read_time_min": 8,
+          "published_at": "2025-03-18",
+          "author": {
+            "name": "David Nkosi",
+            "avatar_initials": "DN",
+            "avatar_color": "#F59E0B"
+          },
+          "tags": ["Solaire", "PAYG", "Électrification rurale"],
+          "featured": false
+        },
+        {
+          "id": "fd-005",
+          "category": "Finance Durable",
+          "title": "Greenwashing en Afrique : quand les multinationales vendent du vert sur un continent qui subit le brun",
+          "subtitle": "Des projets estampillés 'durables' qui déplacent des communautés, détruisent des forêts, polluent des rivières.",
+          "excerpt": "Au Cameroun, en RDC et en Mozambique, plusieurs projets de compensation carbone financés par des entreprises européennes ont été épinglés pour leurs impacts négatifs sur les populations locales. La finance durable peut-elle se passer de l'avis des communautés concernées ?",
+          "read_time_min": 12,
+          "published_at": "2025-04-30",
+          "author": {
+            "name": "Marc Duval",
+            "avatar_initials": "MD",
+            "avatar_color": "#DC2626"
+          },
+          "tags": ["Greenwashing", "Compensation carbone", "Communautés"],
+          "featured": false
+        }
+      ]
+    },
+
+    {
+      "id": "marches",
+      "label": "Marchés",
+      "color": "#DC2626",
+      "articles": [
+        {
+          "id": "ma-001",
+          "category": "Marchés",
+          "title": "BRVM : la bourse régionale ouest-africaine entre ambitions et réalités",
+          "subtitle": "70 sociétés cotées, 8 pays membres, mais une liquidité chroniquement faible. La BRVM peut-elle tenir ses promesses ?",
+          "excerpt": "Basée à Abidjan et servant les 8 pays de l'UEMOA, la BRVM est la deuxième bourse d'Afrique subsaharienne. Mais avec des volumes journaliers souvent inférieurs à 500 millions de FCFA, les investisseurs institutionnels peinent à entrer et sortir sans bouger les cours.",
+          "read_time_min": 12,
+          "published_at": "2025-01-08",
+          "author": {
+            "name": "Romuald Atangana",
+            "avatar_initials": "RA",
+            "avatar_color": "#DC2626"
+          },
+          "tags": ["BRVM", "UEMOA", "Liquidité"],
+          "featured": true
+        },
+        {
+          "id": "ma-002",
+          "category": "Marchés",
+          "title": "Bourse de Douala, Lagos, Nairobi : les marchés africains fragmentés face à l'intégration continentale",
+          "subtitle": "Chaque pays a sa bourse, ses réglementations, sa devise. La Zone de Libre-Échange Continentale Africaine (ZLECAf) changera-t-elle la donne ?",
+          "excerpt": "L'Afrique compte plus de 25 bourses de valeurs, souvent sous-capitalisées et peu connectées entre elles. Un investisseur souhaitant diversifier son portefeuille sur le continent fait face à des obstacles réglementaires, fiscaux et de change qui n'existent pas en Europe.",
+          "read_time_min": 10,
+          "published_at": "2025-02-12",
+          "author": {
+            "name": "Éric Nkurunziza",
+            "avatar_initials": "EN",
+            "avatar_color": "#2563EB"
+          },
+          "tags": ["Intégration financière", "ZLECAf", "Marchés africains"],
+          "featured": false
+        },
+        {
+          "id": "ma-003",
+          "category": "Marchés",
+          "title": "Matières premières africaines : produire tout, contrôler rien",
+          "subtitle": "Le continent produit 40 % du cacao mondial, 60 % du cobalt, 30 % de l'or — et fixe les prix de rien.",
+          "excerpt": "Le cacao du Cameroun et de Côte d'Ivoire est coté à Londres et New York. Le cuivre zambien est tarifé au LME. L'Afrique reste price-taker sur ses propres ressources. Des initiatives comme la bourse africaine des matières premières tentent de renverser cette logique coloniale.",
+          "read_time_min": 11,
+          "published_at": "2025-03-28",
+          "author": {
+            "name": "Kwame Asante",
+            "avatar_initials": "KA",
+            "avatar_color": "#F59E0B"
+          },
+          "tags": ["Matières premières", "Souveraineté", "Cacao"],
+          "featured": false
+        },
+        {
+          "id": "ma-004",
+          "category": "Marchés",
+          "title": "Investir en bourse depuis Dakar, Yaoundé ou Abidjan : le parcours du combattant",
+          "subtitle": "Ouvrir un compte-titres, accéder à la recherche, passer un ordre — ce qui prend 5 minutes en France peut prendre des semaines en Afrique.",
+          "excerpt": "Absence de courtiers en ligne locaux, frais de transaction disproportionnés, délais de règlement-livraison, barrière de la langue dans les documents officiels : les particuliers africains qui souhaitent investir en bourse font face à des obstacles structurels que les professionnels normalisent.",
+          "read_time_min": 9,
+          "published_at": "2025-04-02",
+          "author": {
+            "name": "Aïcha Diop",
+            "avatar_initials": "AD",
+            "avatar_color": "#9333EA"
+          },
+          "tags": ["Accès aux marchés", "Investisseurs particuliers", "Afrique"],
+          "featured": false
+        },
+        {
+          "id": "ma-005",
+          "category": "Marchés",
+          "title": "Comment fonctionne une IPO à la BRVM ?",
+          "subtitle": "Admission à la cote, appel public à l'épargne, roadshow africain : le processus décrypté étape par étape.",
+          "excerpt": "Se faire coter à la BRVM est une ambition croissante pour les PME et entreprises familiales d'Afrique de l'Ouest. Mais entre les exigences de la SGI, les délais d'instruction du CREPMF et la preparation des documents de référence, le chemin est long et coûteux.",
+          "read_time_min": 8,
+          "published_at": "2025-04-15",
+          "author": {
+            "name": "Dr. Yves Kouassi",
+            "avatar_initials": "YK",
+            "avatar_color": "#059669"
+          },
+          "tags": ["IPO", "BRVM", "CREPMF"],
+          "featured": false
+        },
+        {
+          "id": "ma-006",
+          "category": "Marchés",
+          "title": "Dette souveraine africaine : entre FMI, eurobonds et le piège de la dépendance extérieure",
+          "subtitle": "Le Ghana en défaut, la Zambie restructurée, l'Éthiopie sous pression : la crise de la dette africaine est structurelle.",
+          "excerpt": "Après des années d'emprunts facilités par des taux bas à l'échelle mondiale, plusieurs États africains se retrouvent étranglés par leur dette en devises. La restructuration est douloureuse, lente, et souvent dictée par des créanciers qui n'ont pas les mêmes intérêts que les populations.",
+          "read_time_min": 13,
+          "published_at": "2025-05-12",
+          "author": {
+            "name": "Pierre Lecomte",
+            "avatar_initials": "PL",
+            "avatar_color": "#DC2626"
+          },
+          "tags": ["Dette souveraine", "FMI", "Ghana"],
+          "featured": false
+        }
+      ]
+    }
+  ],
+
+  "dossier_special": {
+    "id": "ds-001",
+    "label": "DOSSIER SPÉCIAL",
+    "title": "Mobile Money",
+    "subtitle": "Comment l'Afrique a inventé la banque du futur avec un téléphone à touches et une idée simple.",
+    "color": "#7C3AED",
+    "articles_count": 6,
+    "published_at": "2025-06-01"
+  },
+
+  "metadata": {
+    "total_articles": 27,
+    "last_updated": "2026-06-16",
+    "language": "fr",
+    "focus": "Afrique subsaharienne et Afrique de l'Ouest principalement",
+    "platform_url": "localhost:3001"
+  }
+}
