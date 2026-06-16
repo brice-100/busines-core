@@ -31,8 +31,8 @@ const quickAccess = [
     href: "/explorer",
     label: "Explorer",
     description: "Découvrir la fintech, la monnaie et bien plus.",
-    icon: BookOpen,
-    accent: "bg-primary text-white border-primary",
+    icon: Compass,
+    accent: "bg-blue-50 text-blue-600 border border-blue-100/40 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300",
     badge: "primary" as const,
   },
   {
@@ -40,7 +40,7 @@ const quickAccess = [
     label: "Formations",
     description: "Trouvez votre cursus, les établissements et diplômes.",
     icon: BookOpen,
-    accent: "bg-accent-violet-50 text-accent-violet border-accent-violet-100",
+    accent: "bg-violet-50 text-violet-600 border border-violet-100/40 group-hover:bg-violet-600 group-hover:text-white transition-all duration-300",
     badge: "violet" as const,
   },
   {
@@ -48,7 +48,7 @@ const quickAccess = [
     label: "Décryptages",
     description: "Analysez l'actualité financière et les tendances.",
     icon: TrendingUp,
-    accent: "bg-accent-orange-50 text-accent-orange border-accent-orange-100",
+    accent: "bg-amber-50 text-amber-600 border border-amber-100/40 group-hover:bg-amber-600 group-hover:text-white transition-all duration-300",
     badge: "orange" as const,
   },
   {
@@ -56,7 +56,7 @@ const quickAccess = [
     label: "Pratiques",
     description: "Simulez, exercez-vous et développez vos compétences.",
     icon: Dumbbell,
-    accent: "bg-accent-green-50 text-accent-green-500 border-accent-green-100",
+    accent: "bg-emerald-50 text-emerald-600 border border-emerald-100/40 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300",
     badge: "green" as const,
   },
   {
@@ -64,7 +64,7 @@ const quickAccess = [
     label: "Juniors",
     description: "Parcours adaptés aux niveaux scolaires.",
     icon: Users,
-    accent: "bg-accent-rose-50 text-accent-rose border-accent-rose-100",
+    accent: "bg-rose-50 text-rose-600 border border-rose-100/40 group-hover:bg-rose-600 group-hover:text-white transition-all duration-300",
     badge: "rose" as const,
   },
   {
@@ -72,7 +72,7 @@ const quickAccess = [
     label: "Carrières",
     description: "Découvrez les métiers et opportunités.",
     icon: Briefcase,
-    accent: "bg-primary text-white border-primary",
+    accent: "bg-indigo-50 text-indigo-600 border border-indigo-100/40 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300",
     badge: "primary" as const,
   },
 ];
@@ -85,17 +85,22 @@ export default function HomePage() {
       {/* =============================================
           SECTION HERO
           ============================================= */}
-      <section className="relative overflow-hidden bg-white flex flex-col md:flex-row items-center justify-between pb-20 mb-20 border-b border-gray-100">
+      <section className="relative overflow-hidden bg-gradient-to-tr from-blue-50/20 via-white to-violet-50/10 flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-16 mb-16 border border-slate-100/60 rounded-3xl shadow-premium">
         
-        <div className="relative z-10 w-full md:w-1/2 md:pr-10 animate-fade-in mb-16 md:mb-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-secondary leading-tight mb-6">
+        <div className="relative z-10 w-full md:w-1/2 md:pr-10 animate-fade-in mb-12 md:mb-0">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/5 text-primary text-xs font-semibold mb-6">
+            <Sparkles className="h-3.5 w-3.5" />
+            <span>La finance claire et accessible à tous</span>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-secondary leading-tight mb-6">
             Comprendre, Apprendre, Décrypter{" "}
-            <span className="text-primary">la Finance.</span>
+            <span className="gradient-text">la Finance.</span>
           </h1>
 
-          <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-lg">
+          <p className="text-slate-600 text-lg mb-8 leading-relaxed max-w-lg">
             Business Core vous accompagne dans la découverte de la fintech,
-            des formations et des opportunités.
+            des formations et des opportunités de carrière.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -104,7 +109,7 @@ export default function HomePage() {
               variant="primary"
               size="lg"
               rightIcon={<ArrowRight className="h-4 w-4" />}
-              className="rounded-full px-8 shadow-lg shadow-primary/30"
+              className="rounded-full px-8 shadow-sm hover:shadow-glow"
             >
               Explorer la plateforme
             </Button>
@@ -112,7 +117,7 @@ export default function HomePage() {
               href="/decryptages"
               variant="outline"
               size="lg"
-              className="rounded-full px-8 border-gray-200 text-secondary hover:border-gray-300"
+              className="rounded-full px-8 border-slate-200 text-slate-700 bg-white hover:bg-slate-50 active:bg-slate-100 hover:border-slate-300"
             >
               Découvrir la Fintech
             </Button>
@@ -121,7 +126,7 @@ export default function HomePage() {
 
         {/* Hero Image */}
         <div className="relative w-full md:w-1/2 flex justify-center animate-slide-in-left">
-          <div className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-card-hover border-4 border-white animate-float">
             <Image
               src="/images/hero.png"
               alt="Femme utilisant une tablette"
@@ -131,19 +136,22 @@ export default function HomePage() {
             />
           </div>
           {/* Decorative elements */}
-          <div className="absolute -top-4 -right-4 h-24 w-24 bg-accent-cyan/10 rounded-full blur-xl" />
-          <div className="absolute -bottom-6 -left-6 h-32 w-32 bg-primary/10 rounded-full blur-xl" />
+          <div className="absolute -top-6 -right-6 h-28 w-28 bg-blue-400/20 rounded-full blur-2xl" />
+          <div className="absolute -bottom-10 -left-10 h-36 w-36 bg-violet-400/20 rounded-full blur-3xl" />
         </div>
       </section>
 
       {/* =============================================
           ACCÈS RAPIDE — 6 cartes
           ============================================= */}
-      <section className="pb-20 bg-white">
-        <div className="flex items-center justify-between mb-10">
-          <h2 className="text-2xl font-display font-bold text-secondary">Accès rapide</h2>
-          <Button variant="ghost" size="sm" className="rounded-full border border-gray-200 h-10 w-10 p-0 flex items-center justify-center">
-            <ArrowRight className="h-4 w-4" />
+      <section className="pb-16">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="text-2xl font-display font-bold text-secondary">Accès rapide</h2>
+            <p className="text-xs text-slate-500 mt-1">Accédez directement à nos services et ressources pédagogiques</p>
+          </div>
+          <Button variant="ghost" size="sm" className="rounded-full border border-slate-200 h-10 w-10 p-0 flex items-center justify-center bg-white hover:bg-slate-50">
+            <ArrowRight className="h-4 w-4 text-slate-600" />
           </Button>
         </div>
 
@@ -155,7 +163,7 @@ export default function HomePage() {
                 <Card
                   hover
                   padding="md"
-                  className="h-full group transition-all duration-300 border border-gray-100 flex items-center shadow-sm hover:border-gray-300 hover:shadow-md rounded-2xl"
+                  className="h-full group transition-all duration-300 border border-slate-100/80 flex items-center shadow-premium hover:border-primary/20 hover:shadow-md rounded-2xl bg-white"
                 >
                   <div
                     className={`h-12 w-12 min-w-[3rem] rounded-xl flex items-center justify-center mr-4 ${item.accent}`}
@@ -163,8 +171,8 @@ export default function HomePage() {
                     <Icon className="h-5 w-5" />
                   </div>
                   <div className="flex flex-col min-w-0">
-                    <h3 className="font-bold text-secondary text-[15px] mb-0.5 break-words line-clamp-2">{item.label}</h3>
-                    <p className="text-[11px] text-gray-500 leading-snug break-words line-clamp-2">{item.description}</p>
+                    <h3 className="font-bold text-secondary text-[15px] mb-0.5 break-words line-clamp-2 group-hover:text-primary transition-colors">{item.label}</h3>
+                    <p className="text-[11px] text-slate-500 leading-snug break-words line-clamp-2">{item.description}</p>
                   </div>
                 </Card>
               </Link>
@@ -176,36 +184,35 @@ export default function HomePage() {
       {/* =============================================
           À LA UNE & NOS UNIVERS & ADJA
           ============================================= */}
-      <section className="py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start border-t border-gray-100">
+      <section className="py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch border-t border-slate-100/60">
         
         {/* À la une */}
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-4 flex flex-col">
           <h2 className="text-xl font-display font-bold text-secondary mb-6">À la une</h2>
           {featuredArticles.slice(0, 1).map((article) => (
-            <Link key={article.id} href={`/decryptages`}>
-              <Card hover padding="none" className="overflow-hidden shadow-sm border-gray-100 group">
-                <div className="relative h-48 w-full overflow-hidden bg-secondary flex items-center justify-center">
+            <Link key={article.id} href={`/decryptages`} className="flex-1 flex">
+              <Card hover padding="none" className="overflow-hidden shadow-premium border-slate-100/80 group rounded-2xl bg-white flex flex-col w-full h-full">
+                <div className="relative h-48 w-full overflow-hidden bg-slate-900 flex items-center justify-center flex-shrink-0">
                   <Image 
                     src="/images/hero.png" 
                     alt="Article Image" 
                     fill 
-                    className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Mock credit card illustration over image */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-32 h-20 rounded-xl bg-blue-600/80 backdrop-blur-md shadow-2xl border border-white/20 transform -rotate-12 translate-y-4"></div>
-                    <div className="w-32 h-20 rounded-xl bg-primary/90 backdrop-blur-md shadow-2xl border border-white/20 transform rotate-6 -translate-x-4 absolute"></div>
-                  </div>
+                  {/* Soft elegant gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
                 </div>
-                <div className="p-6 flex flex-col min-w-0 space-y-2">
-                  <Badge variant="primary" size="sm" className="bg-primary/5 text-primary self-start">Tendance</Badge>
-                  <h3 className="font-bold text-secondary text-base break-words line-clamp-2 group-hover:text-primary transition-colors">
-                    La Fintech transforme l'Afrique
-                  </h3>
-                  <p className="text-xs text-gray-500 leading-relaxed break-words line-clamp-2">
-                    De la monnaie mobile aux paiements numériques, découvrez les innovations qui changent notre quotidien.
-                  </p>
-                  <span className="text-primary text-xs font-semibold flex items-center gap-1 group-hover:gap-2 transition-all mt-2">
+                <div className="p-6 flex flex-col flex-1 justify-between space-y-3">
+                  <div className="space-y-2">
+                    <Badge variant="primary" size="sm" className="bg-primary/5 text-primary self-start border-none">Tendance</Badge>
+                    <h3 className="font-bold text-secondary text-base break-words line-clamp-2 group-hover:text-primary transition-colors">
+                      La Fintech transforme l'Afrique
+                    </h3>
+                    <p className="text-xs text-slate-500 leading-relaxed break-words line-clamp-2">
+                      De la monnaie mobile aux paiements numériques, découvrez les innovations qui changent notre quotidien.
+                    </p>
+                  </div>
+                  <span className="text-primary text-xs font-semibold flex items-center gap-1 group-hover:gap-2 transition-all mt-2 pt-2">
                     Lire l'article <ArrowRight className="h-3 w-3" />
                   </span>
                 </div>
@@ -215,55 +222,58 @@ export default function HomePage() {
         </div>
 
         {/* Nos univers */}
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-4 flex flex-col">
           <h2 className="text-xl font-display font-bold text-secondary mb-6">Nos univers</h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 flex-1">
             {[
               { value: "+120", label: "Formations" },
               { value: "35", label: "Établissements" },
               { value: "60+", label: "Métiers" },
               { value: "200+", label: "Articles & Ressources" },
             ].map((stat, i) => (
-              <Card key={i} padding="md" className="border-gray-100 shadow-sm flex flex-col justify-center text-center min-w-0 space-y-2">
-                <p className="text-2xl font-bold text-primary break-words">{stat.value}</p>
-                <p className="text-xs text-gray-500 font-medium break-words line-clamp-2">{stat.label}</p>
+              <Card key={i} padding="md" className="border-slate-100/80 shadow-premium flex flex-col justify-center text-center min-w-0 space-y-1.5 hover:border-primary/10 transition-all duration-300 bg-white rounded-2xl">
+                <p className="text-3xl font-extrabold text-primary tracking-tight break-words">{stat.value}</p>
+                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider break-words line-clamp-2">{stat.label}</p>
               </Card>
             ))}
           </div>
         </div>
 
         {/* Adja Assistant */}
-        <div className="lg:col-span-4">
-          <Card padding="none" className="overflow-hidden bg-primary/5 border-primary/10 shadow-sm relative h-full min-h-[300px]">
-            <div className="p-6 relative z-10 w-2/3 h-full flex flex-col justify-center min-w-0 space-y-3">
-              <h3 className="font-bold text-secondary text-lg leading-snug break-words">Adja, votre assistant</h3>
-              <p className="text-xs text-gray-600 leading-relaxed break-words line-clamp-3">
-                Posez vos questions sur la finance et obtenez des réponses claires et simples.
-              </p>
-              <Button href="/adja" variant="primary" size="sm" className="rounded-full self-start shadow-md shadow-primary/20">
-                Discuter avec Adja
-              </Button>
-            </div>
-            
-            {/* Adja Image */}
-            <div className="absolute right-0 bottom-0 top-0 w-1/2">
-              <div className="relative w-full h-full">
-                {/* Decorative background circles */}
-                <div className="absolute -left-10 top-1/2 -translate-y-1/2 h-40 w-40 rounded-full border border-primary/20" />
-                <div className="absolute -left-4 top-1/2 -translate-y-1/2 h-28 w-28 rounded-full border border-primary/30" />
-                
-                <Image
-                  src="/images/adja.png"
-                  alt="Adja Assistant"
-                  fill
-                  className="object-cover object-top"
-                />
-                
-                {/* Gradient fade on left side of image */}
-                <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#f4f7fc] to-transparent" />
+        <div className="lg:col-span-4 flex flex-col">
+          <h2 className="text-xl font-display font-bold text-secondary mb-6">Assistant IA</h2>
+          <div className="flex-1 flex">
+            <Card padding="none" className="overflow-hidden bg-gradient-to-br from-slate-900 via-secondary to-slate-950 border border-slate-800 shadow-premium relative w-full rounded-2xl flex items-center h-full min-h-[300px]">
+              <div className="p-6 relative z-10 w-2/3 flex flex-col justify-center min-w-0 space-y-3">
+                <h3 className="font-bold text-white text-lg leading-snug break-words">Adja, votre assistant</h3>
+                <p className="text-xs text-slate-300 leading-relaxed break-words line-clamp-3">
+                  Posez vos questions sur la finance et obtenez des réponses claires et simples.
+                </p>
+                <Button href="/adja" variant="outline" size="sm" className="rounded-full self-start bg-white text-slate-900 border-none hover:bg-slate-100 shadow-sm transition-all font-bold">
+                  Discuter avec Adja
+                </Button>
               </div>
-            </div>
-          </Card>
+              
+              {/* Adja Image */}
+              <div className="absolute right-0 bottom-0 top-0 w-1/2">
+                <div className="relative w-full h-full">
+                  {/* Decorative background circles */}
+                  <div className="absolute -left-10 top-1/2 -translate-y-1/2 h-40 w-40 rounded-full border border-white/5" />
+                  <div className="absolute -left-4 top-1/2 -translate-y-1/2 h-28 w-28 rounded-full border border-white/10" />
+                  
+                  <Image
+                    src="/images/adja.png"
+                    alt="Adja Assistant"
+                    fill
+                    className="object-cover object-top"
+                  />
+                  
+                  {/* Gradient fade on left side of image (dark theme compatible) */}
+                  <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-secondary to-transparent" />
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
     </div>
