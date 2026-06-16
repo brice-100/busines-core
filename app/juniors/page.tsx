@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import { 
-  GraduationCap, 
-  BookOpen, 
-  PiggyBank 
-} from "lucide-react";
+import Image from "next/image";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
@@ -19,8 +15,7 @@ const parcoursItems = [
   {
     title: "Collège",
     desc: "Découvrir les bases de l'argent et de la finance. Revenu...",
-    icon: PiggyBank,
-    color: "text-blue-500",
+    img: "/images/college_junior_universe.png",
     bg: "bg-blue-50 border-blue-100",
     hoverBorder: "hover:border-blue-300",
     iconBg: "bg-white",
@@ -29,8 +24,7 @@ const parcoursItems = [
   {
     title: "Lycée",
     desc: "Comprendre l'économie et la gestion.",
-    icon: BookOpen,
-    color: "text-orange-500",
+    img: "/images/lycee_junior_universe.png",
     bg: "bg-orange-50 border-orange-100",
     hoverBorder: "hover:border-orange-300",
     iconBg: "bg-white",
@@ -39,12 +33,11 @@ const parcoursItems = [
   {
     title: "Université",
     desc: "Approfondir ses connaissances en finance.",
-    icon: GraduationCap,
-    color: "text-green-500",
+    img: "/images/university_junior_universe.png",
     bg: "bg-green-50 border-green-100",
     hoverBorder: "hover:border-green-300",
     iconBg: "bg-white",
-      href: "/juniors/universite",
+    href: "/juniors/universite",
   }
 ];
 
@@ -80,7 +73,6 @@ export default function JuniorsPage() {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-12">
           {parcoursItems.map((item) => {
-            const Icon = item.icon;
             return (
               <Link key={item.title} href={item.href}>
                 <Card padding="lg" className={`group border-2 ${item.bg} ${item.hoverBorder} shadow-sm hover:shadow-xl flex flex-col h-[380px] cursor-pointer rounded-[2rem] transition-all duration-300 relative overflow-hidden`}>
@@ -93,10 +85,17 @@ export default function JuniorsPage() {
                     </p>
                   </div>
                   
-                  {/* Illustration Placeholder - matching the 06_Juniors mockup */}
+                  {/* Illustration using project PNGs - centered, consistent size */}
                   <div className="mt-auto flex justify-center pb-4 relative z-10">
-                    <div className={`h-32 w-32 rounded-full ${item.iconBg} shadow-sm flex items-center justify-center transform group-hover:-translate-y-3 group-hover:scale-110 transition-all duration-500`}>
-                      <Icon className={`h-16 w-16 ${item.color}`} />
+                    <div className={`h-32 w-32 rounded-full ${item.iconBg} shadow-sm flex items-center justify-center transform group-hover:-translate-y-3 group-hover:scale-110 transition-all duration-500 overflow-hidden`}> 
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        width={64}
+                        height={64}
+                        className="object-contain"
+                        priority={true}
+                      />
                     </div>
                   </div>
                 </Card>
