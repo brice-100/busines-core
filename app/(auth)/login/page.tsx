@@ -24,11 +24,12 @@ export default function LoginPage() {
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 800));
-      const success = login(email, password);
-      if (success) {
+      const result = await login(email, password);
+      if (result.success) {
+        // La redirection est gérée par le DashboardLayout
         router.push("/dashboard");
       } else {
-        setError("Identifiants incorrects (essayez admin@businesscore.com / admin2024)");
+        setError(result.error || "Identifiants incorrects.");
       }
     } catch (err) {
       setError("Une erreur est survenue.");

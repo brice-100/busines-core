@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { LockKeyhole, Sparkles, ChevronRight } from "lucide-react";
+import type { UserRole } from "@/types";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -16,6 +17,8 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [role, setRole] = useState<UserRole>("utilisateur");
+  const [secretCode, setSecretCode] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,6 +31,11 @@ export default function RegisterPage() {
       return;
     }
 
+    if (role === "administrateur" && secretCode !== "ADMIN2026") {
+      setError("Code secret administrateur invalide.");
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -35,11 +43,17 @@ export default function RegisterPage() {
       const [prenom, ...nomParts] = nomComplet.split(" ");
       const nom = nomParts.join(" ") || "Inconnu";
 
-      const success = await register({ nom, prenom, email, password });
-      if (success) {
-        router.push("/dashboard");
+      const result = await register({ nom, prenom, email, password, confirmPassword, role });
+      if (result.success) {
+        if (role === "administrateur") {
+          router.push("/dashboard/admin");
+        } else if (role === "blogueur") {
+          router.push("/dashboard/blogueur");
+        } else {
+          router.push("/dashboard");
+        }
       } else {
-        setError("Cet email est déjà utilisé.");
+        setError(result.error || "Cet email est déjà utilisé.");
       }
     } catch (err) {
       setError("Une erreur est survenue.");
@@ -53,7 +67,7 @@ export default function RegisterPage() {
       <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row-reverse gap-10 items-center justify-center">
         
         {/* Form Section */}
-        <div className="flex-1 w-full max-w-md bg-white p-6 sm:p-8 rounded-xl overflow-hidden shadow-card border border-gray-100 min-w-0">
+        <div className="flex-1 w-full max-w-md bg-white p-6 sm:p-8 rounded-xl overflow-hidden shadow-card border border-gray-100 min-w-0 my-8">
           <div className="mb-8 text-center space-y-2">
             <div className="mx-auto h-16 w-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
               <LockKeyhole className="h-8 w-8 text-primary" />
@@ -62,7 +76,7 @@ export default function RegisterPage() {
             <p className="text-sm text-gray-500">Rejoignez la communauté BusinessCore</p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-4">
               <Input
                 label="Nom complet"
@@ -83,26 +97,57 @@ export default function RegisterPage() {
                 required
                 fullWidth
               />
-              
-              <Input
-                label="Mot de passe"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                required
-                fullWidth
-              />
 
-              <Input
-                label="Confirmer le mot de passe"
-                type="password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                placeholder="••••••••"
-                required
-                fullWidth
-              />
+              <div className="space-y-1">
+                <label className="block text-sm font-semibold text-secondary">Rôle souhaité</label>
+                <select
+                  value={role}
+                  onChange={(e) => setRole(e.target.value as UserRole)}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-secondary font-medium outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all shadow-sm"
+                  required
+                >
+                  <option value="utilisateur">Utilisateur standard</option>
+                  <option value="blogueur">Blogueur (Auteur)</option>
+                  <option value="administrateur">Administrateur</option>
+                </select>
+              </div>
+
+              {role === "administrateur" && (
+                <div className="animate-slide-up">
+                  <Input
+                    label="Code Secret Admin"
+                    type="password"
+                    value={secretCode}
+                    onChange={(e) => setSecretCode(e.target.value)}
+                    placeholder="Entrez le code secret"
+                    required={role === "administrateur"}
+                    fullWidth
+                  />
+                  <p className="text-xs text-gray-400 mt-1">Nécessaire pour valider la création d'un compte Administrateur.</p>
+                </div>
+              )}
+              
+              <div className="grid grid-cols-2 gap-4">
+                <Input
+                  label="Mot de passe"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  required
+                  fullWidth
+                />
+
+                <Input
+                  label="Confirmation"
+                  type="password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="••••••••"
+                  required
+                  fullWidth
+                />
+              </div>
             </div>
 
             {error && <p className="text-sm text-red-500 font-medium bg-red-50 p-3 rounded-xl border border-red-100">{error}</p>}
@@ -113,7 +158,7 @@ export default function RegisterPage() {
               size="lg" 
               fullWidth 
               isLoading={isLoading}
-              className="mt-4 shadow-lg shadow-primary/30 rounded-xl"
+              className="mt-6 shadow-lg shadow-primary/30 rounded-xl"
             >
               S'inscrire
             </Button>

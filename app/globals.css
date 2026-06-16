@@ -6,22 +6,38 @@
    Ne pas modifier sans accord de l'équipe
    =================================================== */
 
-@config "../tailwind.config.ts";
 
-:root {
-  --font-inter: "Inter", system-ui, sans-serif;
-  --font-poppins: "Poppins", system-ui, sans-serif;
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Poppins", system-ui, sans-serif;
 
-  /* Couleurs de design tokens CSS (miroir de tailwind.config.ts) */
+  /* Couleurs de design tokens CSS */
+  --color-primary-50: var(--color-blue-50);
+  --color-primary-100: var(--color-blue-100);
+  --color-primary-400: var(--color-blue-400);
   --color-primary: #2563eb;
+  --color-primary-700: var(--color-blue-700);
+  --color-primary-800: var(--color-blue-800);
+
+  --color-secondary-50: var(--color-slate-50);
+  --color-secondary-100: var(--color-slate-100);
+  --color-secondary-300: var(--color-slate-300);
   --color-secondary: #0f1e3d;
+
+  --color-accent-violet-50: var(--color-violet-50);
+  --color-accent-violet-200: var(--color-violet-200);
+  --color-accent-violet: #7c3aed;
+
+  --color-accent-orange-50: var(--color-orange-50);
+  --color-accent-orange: #f97316;
+
   --color-surface: #f8fafc;
   --color-background: #eef2ff;
+}
 
-  --sidebar-width: 16rem;
-  /* 256px */
-  --navbar-height: 4rem;
-  /* 64px */
+:root {
+  --sidebar-width: 16rem; /* 256px */
+  --navbar-height: 4rem; /* 64px */
 }
 
 /* Reset et base */
@@ -40,7 +56,7 @@ html {
 }
 
 body {
-  font-family: var(--font-inter);
+  font-family: var(--font-sans);
   background-color: var(--color-background);
   color: var(--color-secondary);
   min-height: 100vh;
@@ -84,7 +100,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-poppins);
+  font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.2;
   color: var(--color-secondary);

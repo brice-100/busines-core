@@ -4,7 +4,7 @@
 // ===================================================
 
 // --- Utilisateur & Auth ---
-export type UserRole = "visiteur" | "utilisateur" | "administrateur";
+export type UserRole = "visiteur" | "utilisateur" | "blogueur" | "administrateur";
 
 export interface User {
   id: string;
@@ -15,6 +15,7 @@ export interface User {
   role: UserRole;
   createdAt: string;
   avatar?: string;
+  isBanned?: boolean;
 }
 
 export interface AuthState {
@@ -48,10 +49,32 @@ export interface Article {
   categorie: string;
   tags: string[];
   auteur: string;
+  auteurId?: string; // Lier l'article à l'ID de l'utilisateur
   publishedAt: string;
   image?: string;
   readTime: number; // minutes
   featured?: boolean;
+}
+
+// --- Notifications ---
+export interface AppNotification {
+  id: string;
+  title: string;
+  message: string;
+  date: string;
+  read: boolean;
+  type: "info" | "warning" | "success" | "error";
+  link?: string;
+}
+
+// --- Commentaires ---
+export interface Comment {
+  id: string;
+  articleId: string;
+  auteur: string;
+  auteurId?: string;
+  contenu: string;
+  date: string;
 }
 
 // --- Métiers / Carrières ---
