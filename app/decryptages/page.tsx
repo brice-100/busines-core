@@ -98,31 +98,32 @@ export default function DecryptagesPage() {
           const isCrypto = pill === "Crypto";
           const isFinanceDurable = pill === "Finance Durable";
           const isMarches = pill === "Marchés";
-          const Component = (isMonnaieDigitale || isNeobanques || isCrypto || isFinanceDurable || isMarches) ? Link : "button";
-          const props = isMonnaieDigitale 
-            ? { href: "/decryptages/monnaie-digitale" } 
-            : isNeobanques
-            ? { href: "/decryptages/neobanques" }
-            : isCrypto
-            ? { href: "/decryptages/crypto" }
-            : isFinanceDurable
-            ? { href: "/decryptages/finance-durable" }
-            : isMarches
-            ? { href: "/decryptages/marches" }
-            : {};
+          
+          const className = `px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            i === 0 
+              ? "bg-secondary text-white shadow-md shadow-secondary/20" 
+              : "bg-gray-50 text-gray-600 hover:text-secondary hover:bg-gray-100 hover:shadow-sm"
+          }`;
+
+          if (isMonnaieDigitale || isNeobanques || isCrypto || isFinanceDurable || isMarches) {
+            let href = "";
+            if (isMonnaieDigitale) href = "/decryptages/monnaie-digitale";
+            else if (isNeobanques) href = "/decryptages/neobanques";
+            else if (isCrypto) href = "/decryptages/crypto";
+            else if (isFinanceDurable) href = "/decryptages/finance-durable";
+            else if (isMarches) href = "/decryptages/marches";
+
+            return (
+              <Link key={pill} href={href} className={className}>
+                {pill}
+              </Link>
+            );
+          }
           
           return (
-            <Component 
-              key={pill}
-              {...props}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                i === 0 
-                  ? "bg-secondary text-white shadow-md shadow-secondary/20" 
-                  : "bg-gray-50 text-gray-600 hover:text-secondary hover:bg-gray-100 hover:shadow-sm"
-              }`}
-            >
+            <button key={pill} className={className}>
               {pill}
-            </Component>
+            </button>
           );
         })}
       </div>
