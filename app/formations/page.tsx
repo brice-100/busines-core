@@ -1,95 +1,123 @@
 import type { Metadata } from "next";
-import { BookOpen, Clock, Layers } from "lucide-react";
-import { getAllFormations } from "@/lib/mock-data";
-import { Card } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
+import { GraduationCap, Sparkles } from "lucide-react";
+import {
+  getFilieres,
+  getAllMetiers,
+  getFiliereTheme,
+} from "@/lib/formations-data";
+import { FiliereIcon } from "@/components/modules/formations/FiliereIcon";
+import { MetierCard } from "@/components/modules/formations/MetierCard";
+import { SideNav, type SideNavItem } from "@/components/modules/formations/SideNav";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Formations",
-  description: "Découvrez toutes les formations fintech et finance sur BusinessCore.",
+  description:
+    "L'univers des formations en finance au Cameroun : filières, métiers et établissements de référence, programme détaillé matière par matière.",
 };
 
-const pills = ["Toutes", "Débutant", "Intermédiaire", "Avancé", "Certifiantes"];
-
 export default function FormationsPage() {
-  const formations = getAllFormations();
+  const filieres = getFilieres();
+  const totalMetiers = getAllMetiers().length;
+
+  const navItems: SideNavItem[] = filieres.map((f) => ({
+    id: f.id,
+    label: f.titre,
+    sublabel: `Filière ${f.numero}`,
+  }));
 
   return (
     <div className="flex flex-col">
-      <div className="w-full">
-        
-        {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="h-12 w-12 rounded-2xl bg-accent-green-50 text-accent-green flex items-center justify-center shadow-inner">
-              <BookOpen className="h-6 w-6" />
-            </div>
-            <h1 className="text-3xl lg:text-4xl font-display font-bold text-secondary">Formations</h1>
-          </div>
-          <p className="text-gray-500 max-w-2xl text-sm lg:text-base">
-            Trouvez le cursus idéal pour propulser votre carrière. Des bases de la finance aux technologies blockchain avancées, apprenez à votre rythme.
+      {/* Hero */}
+      <section className="relative mb-12 overflow-hidden rounded-3xl bg-gradient-hero px-8 py-12 text-white shadow-lg lg:px-12 lg:py-16">
+        <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-primary-400/20 blur-3xl" />
+        <div className="relative z-10 max-w-2xl">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider backdrop-blur">
+            <Sparkles className="h-4 w-4" />
+            Univers Formation
+          </span>
+          <h1 className="mt-5 font-display text-3xl font-extrabold leading-tight lg:text-5xl">
+            Les métiers de la finance au Cameroun
+          </h1>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/80 lg:text-base">
+            Un guide complet des filières, métiers et établissements de référence
+            en finance, comptabilité, banque et assurance — avec le cursus détaillé,
+            matière par matière, pour chaque parcours.
           </p>
+          <div className="mt-8 flex flex-wrap gap-8">
+            <Stat value={filieres.length} label="Filières" />
+            <Stat value={totalMetiers} label="Métiers" />
+            <Stat value="CEMAC" label="Zone couverte" />
+          </div>
         </div>
+      </section>
 
-        {/* Filters */}
-        <div className="flex flex-wrap gap-3 mb-10">
-          {pills.map((pill, i) => (
-            <button 
-              key={pill}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                i === 0 
-                  ? "bg-secondary text-white shadow-lg shadow-secondary/20" 
-                  : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm"
-              }`}
-            >
-              {pill}
-            </button>
-          ))}
-        </div>
+      {/* Contenu : menu latéral + sections */}
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[230px_1fr]">
+        {/* Menu latéral (desktop) */}
+        <aside className="hidden lg:block">
+          <SideNav title="Filières" items={navItems} />
+        </aside>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {formations.map((f) => (
-            <Card key={f.id} padding="none" className="flex flex-col group overflow-hidden hover:border-accent-green-200 transition-colors">
-              <div className="p-6 flex-1 flex flex-col relative overflow-hidden">
-                {/* Decorative background element */}
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent-green-50 rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                
-                <div className="flex items-start justify-between mb-4 relative z-10">
-                  <Badge variant="green" className="font-bold tracking-wide">{f.categorie}</Badge>
-                  <span className={`text-xs font-bold px-2.5 py-1 rounded-md ${
-                    f.niveau === "Débutant" ? "bg-blue-50 text-blue-600" :
-                    f.niveau === "Intermédiaire" ? "bg-orange-50 text-orange-600" :
-                    "bg-purple-50 text-purple-600"
-                  }`}>
-                    {f.niveau}
-                  </span>
-                </div>
-
-                <h2 className="font-display font-bold text-secondary text-lg mb-3 leading-snug group-hover:text-accent-green transition-colors relative z-10">
-                  {f.titre}
-                </h2>
-                <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1 relative z-10">
-                  {f.description}
-                </p>
-
-                <div className="flex items-center gap-4 text-xs font-medium text-gray-400 mt-auto pt-4 border-t border-gray-100 relative z-10">
-                  <div className="flex items-center gap-1.5">
-                    <Clock className="h-4 w-4" />
-                    {f.duree}
+        {/* Sections par filière */}
+        <div className="flex flex-col gap-14">
+          {filieres.map((filiere) => {
+            const theme = getFiliereTheme(filiere.numero);
+            return (
+              <section key={filiere.id} id={filiere.id} className="scroll-mt-6">
+                <header className="mb-6 flex items-start gap-4">
+                  <div
+                    className={cn(
+                      "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl",
+                      theme.bgSoft,
+                      theme.text
+                    )}
+                  >
+                    <FiliereIcon numero={filiere.numero} className="h-6 w-6" />
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <Layers className="h-4 w-4" />
-                    {f.modules} modules
+                  <div>
+                    <p className={cn("text-xs font-bold uppercase tracking-wider", theme.text)}>
+                      Filière {filiere.numero}
+                    </p>
+                    <h2 className="font-display text-xl font-bold text-secondary lg:text-2xl">
+                      {filiere.titre}
+                    </h2>
+                    {filiere.sousTitre && (
+                      <p className="mt-1.5 max-w-3xl text-sm leading-relaxed text-gray-500">
+                        {filiere.sousTitre}
+                      </p>
+                    )}
                   </div>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
+                </header>
 
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                  {filiere.metiers.map((metier) => (
+                    <MetierCard key={metier.id} metier={metier} />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
       </div>
+
+      {/* Note de bas de page */}
+      <p className="mt-16 flex items-start gap-2 rounded-2xl bg-gray-50 p-5 text-xs leading-relaxed text-gray-500">
+        <GraduationCap className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-400" />
+        Les volumes horaires sont des estimations pédagogiques basées sur les
+        standards LMD appliqués au Cameroun. Ils peuvent varier d&apos;un
+        établissement à l&apos;autre et d&apos;une année à l&apos;autre.
+      </p>
+    </div>
+  );
+}
+
+function Stat({ value, label }: { value: string | number; label: string }) {
+  return (
+    <div>
+      <div className="font-display text-2xl font-bold lg:text-3xl">{value}</div>
+      <div className="text-xs uppercase tracking-wide text-white/60">{label}</div>
     </div>
   );
 }
