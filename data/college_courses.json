@@ -1,0 +1,320 @@
+[
+  {
+    "id": "cc1",
+    "titre": "Comprendre l'argent au quotidien",
+    "description": "Les bases simples : d'où vient l'argent, à quoi sert une monnaie, la différence entre besoin et envie, et pourquoi on ne peut pas 'juste imprimer de l'argent'.",
+    "categorie": "Fondamentaux",
+    "niveau": "Débutant",
+    "duree": "1h30",
+    "modules": 4,
+    "tags": ["argent", "monnaie", "économie", "base"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "D'où vient l'argent ?",
+        "contenu": "L'argent vient du travail, de l'échange de services, et du commerce. Quand tu fais un travail, tu reçois de l'argent en échange. Quand quelqu'un te vend quelque chose, il reçoit de l'argent en retour. C'est un système d'échange qui permet à tout le monde de partager des biens et des services.",
+        "exemple": "Imagine que tu coupes la pelouse chez ton voisin. Il te donne 10€ parce qu'il n'a pas le temps de le faire lui-même. Cet argent vient de son travail à lui. C'est un échange équitable.",
+        "questions": [
+          "D'où vient l'argent que tes parents gagnent ?",
+          "Que peux-tu faire pour gagner de l'argent de poche ?"
+        ]
+      },
+      {
+        "titre": "À quoi sert une monnaie ?",
+        "contenu": "La monnaie (argent, euros, francs CFA) est un outil pour échanger des biens. Avant, les gens échangeaient directement (je te donne une poule, tu me donnes du riz). Avec la monnaie, c'est plus simple. Tout le monde accepte l'argent, donc tu peux acheter ce que tu veux.",
+        "exemple": "Sans monnaie : tu veux un téléphone mais tu n'as qu'une chèvre. Le vendeur veut une chèvre ? Non, il veut des chaussures. Tu dois d'abord trouver quelqu'un qui échange des chaussures contre une chèvre. Avec la monnaie : tu vends ta chèvre, tu reçois de l'argent, tu achètes des chaussures, puis le téléphone. Plus simple !",
+        "questions": [
+          "Comment ferais-tu les courses sans monnaie ?",
+          "Est-ce que tout le monde accepte la même monnaie ?"
+        ]
+      },
+      {
+        "titre": "Besoin vs Envie",
+        "contenu": "Un BESOIN est quelque chose d'essentiel pour vivre : nourriture, eau, abri, vêtements. Une ENVIE est quelque chose que tu désires mais qui n'est pas essentiel : les jeux vidéo, les bonbons, les vêtements à la mode. Bien gérer son argent, c'est d'abord satisfaire ses besoins, puis utiliser ce qui reste pour ses envies.",
+        "exemple": "Besoin : tu as besoin de chaussures pour aller à l'école. Envie : tu veux les dernières Air Jordan qui coûtent 120€ alors qu'une paire normale coûte 40€. C'est normal d'avoir des envies, mais tu dois d'abord payer tes besoins.",
+        "questions": [
+          "Fais une liste de 5 besoins et 5 envies.",
+          "Si tu gagnes 20€, comment tu les dépenses ?"
+        ]
+      },
+      {
+        "titre": "Pourquoi on ne peut pas imprimer d'argent ?",
+        "contenu": "Si on imprimait de l'argent sans limite, tout le monde en aurait beaucoup. Mais si tout le monde a beaucoup d'argent, les prix montent (inflation). Exemple : une baguette coûte 1€. Si tout le monde a 10 fois plus d'argent, la boulangère augmente le prix à 10€. Tu as plus d'argent mais tu ne peux rien acheter de plus. L'argent n'a de valeur que s'il est rare.",
+        "exemple": "Imagine qu'on donne 1000€ à chaque élève demain. Chouette ! Mais demain, l'école augmente les prix de la cantine de 900€ (les cookies coûteraient 50€ au lieu de 1€). Tu as plus d'argent mais tu ne peux acheter qu'un cookie au lieu de plusieurs. L'inflation tue le pouvoir d'achat.",
+        "questions": [
+          "Pourquoi l'argent a-t-il de la valeur ?",
+          "Qu'est-ce que l'inflation ? Comment ça te touche ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cc2",
+    "titre": "Le monde réel de l'argent (Mobile Money)",
+    "description": "Concret et localisé pour le Cameroun : Mobile Money (Orange Money, MTN MoMo), paiement sans cash, sécurité basique et comment envoyer/recevoir de l'argent.",
+    "categorie": "Pratique",
+    "niveau": "Débutant",
+    "duree": "2h00",
+    "modules": 5,
+    "tags": ["mobile money", "paiement", "sécurité", "Cameroun"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Qu'est-ce que le Mobile Money ?",
+        "contenu": "Mobile Money est un service qui te permet d'envoyer et de recevoir de l'argent avec juste ton téléphone. Au Cameroun, les deux plus grands services sont Orange Money et MTN MoMo. Tu n'as pas besoin d'aller à la banque, tout se fait directement sur ton téléphone.",
+        "exemple": "Ton copain Yannick à Yaoundé veut te donner de l'argent pour te remercier. Avant, il devait t'envoyer par bus ou Western Union. Maintenant, il utilise son MTN MoMo, tape ton numéro, et boum ! L'argent est dans ton compte 30 secondes plus tard.",
+        "questions": [
+          "Quels services de Mobile Money existent au Cameroun ?",
+          "Quels sont les avantages du Mobile Money ?"
+        ]
+      },
+      {
+        "titre": "Comment ouvrir un compte Mobile Money ?",
+        "contenu": "Pour Orange Money ou MTN MoMo, tu dois avoir un téléphone avec un numéro actif du réseau. Tu vas dans un shop Orange ou MTN, ou tu appelles un numéro spécifique. Tu dois te faire inscrire avec ton identité (nom, prénom, date de naissance). C'est gratuit et ça prend 10 minutes.",
+        "exemple": "Tu vas au shop Orange avec ta pièce d'identité (carte scolaire ou passeport). L'agent rentre tes infos. On te donne un code PIN à mémoriser. Voilà, ton compte Orange Money est activé !",
+        "questions": [
+          "Que faut-il pour ouvrir un compte Mobile Money ?",
+          "Où peux-tu aller pour t'inscrire ?"
+        ]
+      },
+      {
+        "titre": "Comment envoyer et recevoir de l'argent ?",
+        "contenu": "Pour envoyer : ouvre l'app ou compose le code USSD spécifique, sélectionne 'Envoyer de l'argent', entre le numéro du destinataire et le montant, confirme, tape ton PIN, c'est fait. Pour recevoir : tu n'as rien à faire, sauf de prendre note du numéro de confirmation. L'argent arrive automatiquement.",
+        "exemple": "Tu veux envoyer 1000 FCFA à ta cousine. Tu ouvres Orange Money, cliques sur 'Envoyer', rentre son numéro (1 234 567 890), tape 1000, confirme, tape ton PIN 1234, et c'est envoyé. Elle reçoit une notification immédiatement.",
+        "questions": [
+          "Quelles étapes pour envoyer de l'argent ?",
+          "Combien de temps ça prend ?"
+        ]
+      },
+      {
+        "titre": "Recharger et retirer de l'argent",
+        "contenu": "Pour recharger ton compte : tu vas à un shop, tu dis 'Je veux recharger 5000 FCFA sur Orange Money', l'agent reçoit de l'argent, il ajoute le crédit à ton compte. Pour retirer : tu vas à un guichet, tu donnes ton numéro et ton PIN, l'agent te donne l'argent en espèces.",
+        "exemple": "Tu as 15000 FCFA sur ton compte MTN MoMo. Tu veux retirer 8000 FCFA pour acheter un pantalon au marché. Tu vas à un guichet MTN, tu dis ton numéro et ton PIN, l'agent te donne 8000 FCFA en espèces.",
+        "questions": [
+          "Où peux-tu recharger ton compte ?",
+          "Quels frais il faut payer ?"
+        ]
+      },
+      {
+        "titre": "Sécurité et bons réflexes",
+        "contenu": "RÈGLES D'OR : (1) Ton PIN est secret, JAMAIS tu ne le dis à personne, même pas à tes amis. (2) N'envoie jamais d'argent à quelqu'un que tu ne connais pas. (3) Méfie-toi des SMS ou des messages qui disent 'Tu as gagné !'. (4) Ne partage jamais ton code de recharge. (5) Garde toujours une trace de tes transactions.",
+        "exemple": "Un mec inconnu te dit 'Hey, je suis un représentant Orange. Rentre 1234 pour vérifier ton compte.' C'est une arnaque ! Orange ne te demande jamais ton PIN. Ignore-le.",
+        "questions": [
+          "Qu'est-ce que tu ne dois jamais faire avec ton PIN ?",
+          "Comment reconnaître une arnaque au Mobile Money ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cc3",
+    "titre": "Premiers concepts bancaires",
+    "description": "Sans entrer trop loin : qu'est-ce qu'une banque, épargne vs dépenses, intérêt simplifié, pourquoi garder l'argent à la banque.",
+    "categorie": "Banque",
+    "niveau": "Débutant",
+    "duree": "2h30",
+    "modules": 5,
+    "tags": ["banque", "épargne", "intérêt", "compte"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Qu'est-ce qu'une banque ?",
+        "contenu": "Une banque est une entreprise qui s'occupe d'argent. Elle te permet d'ouvrir un compte pour stocker ton argent en sécurité. Elle prête aussi de l'argent aux gens (pour acheter une maison, une voiture, démarrer une entreprise). La banque gagne de l'argent en prenant des frais et des intérêts.",
+        "exemple": "Imagine que tu as 50000 FCFA. Au lieu de les garder chez toi (risque de vol), tu les mets à la banque. La banque garde ton argent en sécurité. Tu peux aller le chercher n'importe quand. En plus, la banque peut te donner de l'intérêt (un petit cadeau) pour être un client régulier.",
+        "questions": [
+          "À quoi sert une banque ?",
+          "Pourquoi c'est mieux de mettre son argent à la banque que chez soi ?"
+        ]
+      },
+      {
+        "titre": "Un compte bancaire",
+        "contenu": "Un compte bancaire est comme une boîte personnelle à la banque. Tu peux y mettre ou en prendre de l'argent. Chaque compte a un numéro unique (IBAN) et tu es le seul à pouvoir y accéder (avec ta carte et ton PIN). Il existe des comptes courants (pour l'argent de tous les jours) et des comptes d'épargne (pour économiser).",
+        "exemple": "Tu ouvres un compte courant à 14 ans avec ta mère. La banque te donne un numéro de compte (1234567890). Tu reçois une carte bancaire. Tu peux maintenant recevoir de l'argent (ta mère y verse ton argent de poche) et dépenser avec ta carte.",
+        "questions": [
+          "Qu'est-ce qu'un compte courant ?",
+          "Qu'est-ce qu'une carte bancaire ?"
+        ]
+      },
+      {
+        "titre": "Épargne vs Dépenses",
+        "contenu": "DÉPENSER : utiliser ton argent tout de suite (acheter des vêtements, manger un burger). ÉPARGNER : garder ton argent pour plus tard (acheter un téléphone dans 3 mois, te constituer une réserve pour les urgences). C'est une question d'équilibre : tu peux dépenser une partie maintenant et en épargner une autre pour le futur.",
+        "exemple": "Tu gagnes 10000 FCFA par mois. Tu peux dépenser 7000 FCFA cette semaine (vêtements, sorties) et en épargner 3000 (pour acheter un ordinateur dans 6 mois). Ou inversement, tout dépendre de tes priorités.",
+        "questions": [
+          "Pourquoi c'est important d'épargner ?",
+          "Comment tu planifies tes dépenses et tes économies ?"
+        ]
+      },
+      {
+        "titre": "L'intérêt (simplifié)",
+        "contenu": "L'INTÉRÊT est de l'argent bonus que la banque te donne parce que tu laisses ton argent chez elle. Par exemple, si tu mets 100000 FCFA et que la banque te donne 3% d'intérêt par an, tu reçois 3000 FCFA en plus. C'est comme une récompense pour ton argent qui 'dort' à la banque.",
+        "exemple": "Tu mets 50000 FCFA sur un compte d'épargne qui donne 2% d'intérêt par an. Après 1 an, tu as 50000 + 1000 (l'intérêt) = 51000 FCFA. Ton argent a 'grandi' sans que tu fasses rien ! C'est la magie de l'épargne.",
+        "questions": [
+          "Qu'est-ce qu'un intérêt ?",
+          "Pourquoi c'est mieux d'épargner à la banque que chez soi ?"
+        ]
+      },
+      {
+        "titre": "Pourquoi garder son argent à la banque",
+        "contenu": "Raisons : (1) SÉCURITÉ : moins de risque de vol. (2) INTÉRÊT : tu gagnes un petit bonus. (3) TRACES : tu sais où est allé chaque euro. (4) ACCÈS : tu peux retirer n'importe quand. (5) CRÉDIT FUTUR : si tu montres que tu gères bien ton compte, la banque peut t'aider à emprunter pour un projet.",
+        "exemple": "Tu as 100000 FCFA. À la maison : risque de vol, pas d'intérêt, pas de trace. À la banque : sécurisé, tu gagnes 2000 FCFA d'intérêt en 1 an, tu as une preuve de chaque transactions.",
+        "questions": [
+          "Quels sont les avantages d'avoir un compte bancaire ?",
+          "Pourquoi c'est important d'avoir des traces de tes transactions ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cc4",
+    "titre": "Initiation à la gestion de l'argent",
+    "description": "Budget simple avec argent de poche, répartir l'argent (dépenser/économiser/aider), objectifs financiers personnels.",
+    "categorie": "Gestion",
+    "niveau": "Débutant",
+    "duree": "1h45",
+    "modules": 4,
+    "tags": ["budget", "gestion", "économie", "objectif"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Créer ton budget",
+        "contenu": "Un BUDGET est un plan pour ton argent. Tu écris combien tu gagnes (argent de poche, cadeau), puis tu décides comment le dépenser. Exemple : Si tu reçois 5000 FCFA par mois, tu peux faire : 2000 pour dépenser (loisir, snacks), 2000 pour économiser, 1000 pour aider ta famille ou donner.",
+        "exemple": "Tu reçois 6000 FCFA d'argent de poche. Tu fais un budget simple : \n- 2500 FCFA : snacks et loisirs\n- 2500 FCFA : économies pour un objectif\n- 1000 FCFA : donner ou aider\nTotal : 6000 FCFA. Tout est planifié !",
+        "questions": [
+          "Combien tu reçois comme argent de poche ?",
+          "Comment tu aimerais le répartir ?"
+        ]
+      },
+      {
+        "titre": "Dépenser, économiser, aider",
+        "contenu": "DÉPENSER : argent pour profiter maintenant (sorties, manger, jeux). ÉCONOMISER : argent pour un projet futur (téléphone, scooter, voyage). AIDER : argent pour la famille ou les autres (parents qui ont besoin, un ami en difficulté). Un bon équilibre : 40-50% dépenses, 30-40% économies, 10-20% aider.",
+        "exemple": "Sur tes 10000 FCFA : 4000 pour te faire plaisir (tu achètes des baskets, tu vas au ciné), 5000 pour économiser (vers ton objectif), 1000 pour aider (tu donnes à ta petite sœur ou à une association).",
+        "questions": [
+          "Pourquoi c'est important d'aider les autres avec son argent ?",
+          "Comment tu trouves un bon équilibre entre dépenser et économiser ?"
+        ]
+      },
+      {
+        "titre": "Fixer un objectif financier",
+        "contenu": "Un OBJECTIF FINANCIER est quelque chose que tu veux acheter ou faire dans le futur. Exemple : Un nouveau téléphone qui coûte 80000 FCFA. Tu fixes ça comme objectif. Puis tu calcules : si j'économise 5000 FCFA par mois, j'aurais assez en 16 mois. C'est motivant et ça structure tes choix financiers.",
+        "exemple": "Tu veux acheter un ordinateur à 150000 FCFA. Tu commences à économiser 10000 FCFA par mois. Calcul : 150000 ÷ 10000 = 15 mois. Tu sais que si tu es discipliné, tu auras ton ordinateur en 15 mois. C'est un objectif clair et réaliste.",
+        "questions": [
+          "Quel est ton objectif financier ? (court terme : < 1 an, long terme : > 1 an)",
+          "Combien tu dois économiser par mois pour l'atteindre ?"
+        ]
+      },
+      {
+        "titre": "Tracker tes dépenses",
+        "contenu": "Pour savoir où va ton argent, tu dois le noter. À chaque fois que tu dépenses, note-le : 'Lundi : 500 FCFA burger', 'Jeudi : 1500 FCFA films'. À la fin du mois, tu peux voir tes habitudes. Peut-être tu dépenses plus que prévu en snacks. Tu peux alors ajuster.",
+        "exemple": "Tu notes tes dépenses toute la semaine :\n- Lundi : 800 (burger)\n- Mercredi : 300 (bonbons)\n- Jeudi : 1500 (cinéma)\n- Samedi : 400 (sodas)\nTotal semaine : 3000 FCFA. Tu vois que tu dépenses beaucoup. Tu peux réduire les snacks.",
+        "questions": [
+          "Comment tu peux tracker tes dépenses ?",
+          "Qu'est-ce que tu découvrirais en notant tes dépenses pendant un mois ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cc5",
+    "titre": "Mini économie autour de toi",
+    "description": "Pourquoi les prix changent, pourquoi certains produits coûtent plus cher, échanges dans la vie réelle (marché, transport, école).",
+    "categorie": "Économie",
+    "niveau": "Débutant",
+    "duree": "2h00",
+    "modules": 4,
+    "tags": ["prix", "économie", "marché", "offre", "demande"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Pourquoi les prix changent",
+        "contenu": "Les prix ne sont pas fixes. Ils dépendent de l'OFFRE (combien il y a du produit) et la DEMANDE (combien de gens le veulent). Si tout le monde veut des mangues et qu'il n'y en a pas beaucoup, les mangues coûtent cher. Si les mangues sont abondantes et personne n'en veut, elles sont pas chères.",
+        "exemple": "En saison des mangues (juin-juillet), il y en a partout au marché. Le prix : 100 FCFA le kg. En janvier, les mangues sont rares (ce n'est pas la saison). Le prix : 500 FCFA le kg. Même produit, prix différent selon l'offre.",
+        "questions": [
+          "Pourquoi un ticket de cinéma coûte plus cher le week-end ?",
+          "Pourquoi les prix des fruits changent avec les saisons ?"
+        ]
+      },
+      {
+        "titre": "Pourquoi certains produits coûtent plus cher",
+        "contenu": "Raisons : (1) QUALITÉ : une bonne qualité coûte plus cher. (2) MARQUE : Nike vs marque inconnue (Nike coûte plus cher car c'est une marque célèbre). (3) RARETÉ : produit difficile à trouver = plus cher. (4) COÛTS DE PRODUCTION : plus chers à fabriquer = plus cher à vendre. (5) LIEU : même produit coûte moins cher au marché qu'au centre commercial.",
+        "exemple": "Un téléphone Samsung à 150000 FCFA vs un téléphone inconnu à 30000 FCFA. Pourquoi la différence ? Samsung = marque réputée, meilleure batterie, meilleure caméra. Le téléphone inconnu = basique, peu de fonctionnalités. Tu paies pour la qualité et la marque.",
+        "questions": [
+          "Pourquoi les vêtements des grandes marques coûtent plus cher ?",
+          "Est-ce que c'est toujours mieux d'acheter la marque la plus chère ?"
+        ]
+      },
+      {
+        "titre": "Échanges au marché",
+        "contenu": "Au marché, tu vois comment ça fonctionne vraiment : le vendeur demande un prix, tu négocies, vous trouvez un accord. Il y a de la compétition (plusieurs vendeurs vendent la même chose), donc les prix sont raisonnables. Si un vendeur demande trop cher, tu vas ailleurs.",
+        "exemple": "Tu vas au marché acheter des tomates. Vendeur 1 : 800 FCFA le kg. Vendeur 2 : 700 FCFA. Tu négocies avec Vendeur 2 : 'C'est trop cher, peux-tu faire 650 ?' Il accepte. Deal ! Tu as économisé 50 FCFA.",
+        "questions": [
+          "Comment fonctionne la négociation au marché ?",
+          "Pourquoi c'est important d'avoir plusieurs vendeurs ?"
+        ]
+      },
+      {
+        "titre": "Chaîne de valeur simple",
+        "contenu": "Comment un produit arrive à toi : PRODUCTEUR (crée) → TRANSPORT → GROSSISTE → VENDEUR → TOI. À chaque étape, le prix augmente un peu parce que chacun gagne sa part. C'est normal. Mais si le transport coûte très cher ou le grossiste prend trop, le prix final devient très élevé.",
+        "exemple": "Une mangue : l'arboriculteur récolte (coûte 50 FCFA). Le transporteur la porte (coûte 30 FCFA). Le vendeur au détail : 50 + 30 + sa part = tu l'achètes 200 FCFA. C'est logique : tout le monde a travaillé.",
+        "questions": [
+          "Qui gagne de l'argent à chaque étape de la chaîne ?",
+          "Pourquoi les produits à la capitale coûtent plus cher qu'à la campagne ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cc6",
+    "titre": "Sécurité et bons réflexes",
+    "description": "Arnaques simples, ne jamais partager son code, importance de la confidentialité, comment se protéger.",
+    "categorie": "Sécurité",
+    "niveau": "Débutant",
+    "duree": "1h30",
+    "modules": 4,
+    "tags": ["sécurité", "arnaque", "confidentialité", "protection"],
+    "auteur": "BusinessCore Juniors",
+    "publishedAt": "2026-01-01",
+    "sections": [
+      {
+        "titre": "Arnaques simples à connaître",
+        "contenu": "ARNAQUE 1 : SMS qui dit 'Tu as gagné 1 million ! Clique ici.' - MENSONGE. ARNAQUE 2 : Appel : 'Je suis de ta banque. Rentre ton code PIN.' - Jamais ! ARNAQUE 3 : Quelqu'un te demande de lui envoyer de l'argent 'pour lui rendre service'. - Refus. ARNAQUE 4 : Lien mystérieux qui dit 'Ton compte a un problème. Connecte-toi ici.' - PIÈGE.",
+        "exemple": "Tu reçois un SMS : 'Bravo ! Tu as gagné 50 millions FCFA ! Clique ici.' C'est 100% une arnaque. Les vrais prix, on te les annonce de façon officielle, pas par SMS random.",
+        "questions": [
+          "Qu'est-ce qu'une arnaque ?",
+          "Que fais-tu si tu reçois un SMS suspect ?"
+        ]
+      },
+      {
+        "titre": "Ne jamais partager ton code PIN",
+        "contenu": "Ton PIN (ou mot de passe) est comme la clé de ta maison. C'est CONFIDENTIEL. Règles : (1) Ne le dis JAMAIS à personne, même pas tes meilleurs amis. (2) Ne le tape pas quand quelqu'un te regarde. (3) Ne le note pas sur un bout de papier. (4) Si quelqu'un le demande, c'est une arnaque. (5) Change-le régulièrement.",
+        "exemple": "Ton ami Thierry te dit : 'Allez, dis-moi ton PIN pour te faire une blague.' Refus catégorique ! Même ta mère ne doit pas le connaître. C'est PERSONNEL.",
+        "questions": [
+          "Pourquoi ton PIN est secret ?",
+          "Qu'est-ce que tu fais si quelqu'un te demande ton PIN ?"
+        ]
+      },
+      {
+        "titre": "Confidentialité et données personnelles",
+        "contenu": "Tes DONNÉES PERSONNELLES : nom, prénom, date de naissance, numéro de téléphone, email, adresse. Les arnaqueurs en veulent pour te voler de l'argent ou te faire du mal. Ne les partage PAS sur internet, ne les donne PAS à des inconnus. Sur les réseaux sociaux, attention à ce que tu mets public.",
+        "exemple": "Tu reçois un message Facebook : 'Complète ce formulaire pour vérifier ton compte.' Arnaque ! Meta/Facebook a déjà toutes tes infos. Personne d'officiel ne te demandera de les donner par un formulaire random.",
+        "questions": [
+          "Qu'est-ce que les données personnelles ?",
+          "Que peux-tu mettre public sur les réseaux ? Qu'est-ce que tu gardes privé ?"
+        ]
+      },
+      {
+        "titre": "Comment te protéger",
+        "contenu": "CHECKLIST DE SÉCURITÉ : (1) Installe des mises à jour sur ton téléphone. (2) Utilise un bon mot de passe (mélange majuscules, minuscules, chiffres). (3) Fais attention aux mots de passe identiques sur plusieurs sites. (4) Garde des traces de tes transactions. (5) Dis à un adulte de confiance si tu vois quelque chose de suspect. (6) Bloque les comptes qui te menacent ou t'arnaquent.",
+        "exemple": "Tu vois un compte qui t'envoie des messages suspects : 'Tu dois payer 5000 FCFA ou je raconte tes secrets.' C'est du chantage. Tu : (1) Ne paies pas. (2) Bloque le compte. (3) Dis à un adulte de confiance. (4) Signale à l'app (Facebook, WhatsApp, etc.).",
+        "questions": [
+          "Comment tu crées un bon mot de passe ?",
+          "Qu'est-ce que tu fais si quelqu'un te menace ?"
+        ]
+      }
+    ]
+  }
+]

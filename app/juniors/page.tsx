@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Juniors",
@@ -23,6 +24,7 @@ const parcoursItems = [
     bg: "bg-blue-50 border-blue-100",
     hoverBorder: "hover:border-blue-300",
     iconBg: "bg-white",
+    href: "/juniors/college",
   },
   {
     title: "Lycée",
@@ -32,6 +34,7 @@ const parcoursItems = [
     bg: "bg-orange-50 border-orange-100",
     hoverBorder: "hover:border-orange-300",
     iconBg: "bg-white",
+    href: "/juniors/lycee",
   },
   {
     title: "Université",
@@ -41,6 +44,7 @@ const parcoursItems = [
     bg: "bg-green-50 border-green-100",
     hoverBorder: "hover:border-green-300",
     iconBg: "bg-white",
+      href: "/juniors/universite",
   }
 ];
 
@@ -78,23 +82,25 @@ export default function JuniorsPage() {
           {parcoursItems.map((item) => {
             const Icon = item.icon;
             return (
-              <Card key={item.title} padding="lg" className={`group border-2 ${item.bg} ${item.hoverBorder} shadow-sm hover:shadow-xl flex flex-col h-[380px] cursor-pointer rounded-[2rem] transition-all duration-300 relative overflow-hidden`}>
-                <div className="relative z-10">
-                  <h3 className="font-display font-bold text-secondary text-2xl mb-4 text-center">
-                    {item.title}
-                  </h3>
-                  <p className="text-base text-gray-600 leading-relaxed text-center">
-                    {item.desc}
-                  </p>
-                </div>
-                
-                {/* Illustration Placeholder - matching the 06_Juniors mockup */}
-                <div className="mt-auto flex justify-center pb-4 relative z-10">
-                  <div className={`h-32 w-32 rounded-full ${item.iconBg} shadow-sm flex items-center justify-center transform group-hover:-translate-y-3 group-hover:scale-110 transition-all duration-500`}>
-                    <Icon className={`h-16 w-16 ${item.color}`} />
+              <Link key={item.title} href={item.href}>
+                <Card padding="lg" className={`group border-2 ${item.bg} ${item.hoverBorder} shadow-sm hover:shadow-xl flex flex-col h-[380px] cursor-pointer rounded-[2rem] transition-all duration-300 relative overflow-hidden`}>
+                  <div className="relative z-10">
+                    <h3 className="font-display font-bold text-secondary text-2xl mb-4 text-center">
+                      {item.title}
+                    </h3>
+                    <p className="text-base text-gray-600 leading-relaxed text-center">
+                      {item.desc}
+                    </p>
                   </div>
-                </div>
-              </Card>
+                  
+                  {/* Illustration Placeholder - matching the 06_Juniors mockup */}
+                  <div className="mt-auto flex justify-center pb-4 relative z-10">
+                    <div className={`h-32 w-32 rounded-full ${item.iconBg} shadow-sm flex items-center justify-center transform group-hover:-translate-y-3 group-hover:scale-110 transition-all duration-500`}>
+                      <Icon className={`h-16 w-16 ${item.color}`} />
+                    </div>
+                  </div>
+                </Card>
+              </Link>
             );
           })}
         </div>

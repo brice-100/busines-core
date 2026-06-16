@@ -126,6 +126,58 @@ export interface Question {
   explication: string;
 }
 
+// --- College Courses (Juniors) ---
+export interface CollegeCourse {
+  id: string;
+  titre: string;
+  description: string;
+  categorie: string;
+  niveau: "Débutant" | "Intermédiaire" | "Avancé";
+  duree: string; // ex: "2h30"
+  modules: number;
+  tags: string[];
+  auteur: string;
+  publishedAt: string;
+  sections: CourseSection[];
+}
+
+// --- Lycée Courses (Juniors) ---
+export interface LyceeCourse {
+  id: string;
+  titre: string;
+  description: string;
+  categorie: string;
+  niveau: "Débutant" | "Intermédiaire" | "Avancé";
+  duree: string; // ex: "2h30"
+  modules: number;
+  tags: string[];
+  auteur: string;
+  publishedAt: string;
+  sections: CourseSection[];
+}
+
+export interface CourseSection {
+  titre: string;
+  contenu: string;
+  exemple: string;
+  questions: string[];
+}
+
+// --- Université Courses (Juniors avancé) ---
+export interface UniversiteCourse {
+  id: string;
+  titre: string;
+  description: string;
+  categorie: string;
+  niveau: "Débutant" | "Intermédiaire" | "Avancé";
+  duree: string;
+  modules: number;
+  tags: string[];
+  auteur: string;
+  publishedAt: string;
+  sections: CourseSection[];
+}
+
 // --- Module générique pour la navigation ---
 export interface NavModule {
   href: string;
