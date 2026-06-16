@@ -1,29 +1,6 @@
-"use client";
+import React from 'react';
 
-import React, { useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { Search, Bell, User, Menu, X } from "lucide-react";
-import { useAuth } from "@/lib/auth-context";
-import { Button } from "@/components/ui/Button";
-
-interface NavbarProps {
-  onMenuClick: () => void;
-  isMenuOpen: boolean;
-}
-
-export function Navbar({ onMenuClick, isMenuOpen }: NavbarProps) {
-  const { currentUser, isAuthenticated } = useAuth();
-  const router = useRouter();
-  const [query, setQuery] = useState("");
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (query.trim()) {
-      router.push(`/explorer?q=${encodeURIComponent(query.trim())}`);
-    }
-  };
-
+export default function Navbar() {
   return (
     <header className="sticky top-0 z-20 w-full bg-white/80 backdrop-blur-xl border-b border-gray-100/50">
       <div className="flex items-center justify-between h-20 px-6 lg:px-10">
@@ -95,6 +72,10 @@ export function Navbar({ onMenuClick, isMenuOpen }: NavbarProps) {
           )}
         </div>
 
+        {/* Bouton d'action principal */}
+        <button className="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-xl text-xs font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm">
+          Se connecter
+        </button>
       </div>
     </header>
   );

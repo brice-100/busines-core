@@ -1,71 +1,74 @@
 [
   {
     "id": "a1",
-    "titre": "L'essor du paiement mobile en Afrique subsaharienne",
-    "resume": "Le continent africain connaît une révolution silencieuse dans les transactions financières. M-Pesa, Wave, Orange Money... ces services redéfinissent la bancarisation.",
-    "contenu": "Article complet sur le paiement mobile en Afrique...",
-    "categorie": "Mobile Money",
-    "tags": ["paiement", "Afrique", "mobile", "inclusion"],
-    "auteur": "Aïssatou Bah",
-    "publishedAt": "2025-03-10",
-    "readTime": 7,
+    "titre": "Les Tontines à l'ère du numérique",
+    "resume": "La tontine, c'est la banque des gens qui n'ont pas accès à la banque. Cette pratique millénaire qui structure l'économie informelle camerounaise se digitalise – et ça change tout.",
+    "categorie": "Finance africaine",
+    "readTime": 10,
+    "image": "/images/P1.jpeg",
     "featured": true
   },
   {
     "id": "a2",
-    "titre": "DeFi : la finance décentralisée expliquée simplement",
-    "resume": "La finance décentralisée promet de remplacer les intermédiaires bancaires par des protocoles automatisés. Qu'est-ce que cela signifie concrètement pour les épargnants ?",
-    "contenu": "Article sur la DeFi...",
-    "categorie": "DeFi",
-    "tags": ["DeFi", "blockchain", "crypto", "yield farming"],
-    "auteur": "Ibrahim Coulibaly",
-    "publishedAt": "2025-03-18",
-    "readTime": 10,
-    "featured": true
+    "titre": "Le Leapfrogging africain",
+    "resume": "Comment l'Afrique subsaharienne a court-circuité le système bancaire classique pour passer directement du cash au téléphone portable.",
+    "categorie": "Finance africaine",
+    "readTime": 8,
+    "image": "/images/P2.jpeg",
+    "featured": false
   },
   {
     "id": "a3",
-    "titre": "Les néobanques face aux banques traditionnelles",
-    "resume": "Revolut, Lydia, Nalo... les néobanques gagnent des parts de marché. Mais peuvent-elles vraiment concurrencer les établissements centenaires ?",
-    "contenu": "Comparatif néobanques vs banques traditionnelles...",
-    "categorie": "Néobanques",
-    "tags": ["néobanque", "banque", "comparatif", "digital"],
-    "auteur": "Mariama Camara",
-    "publishedAt": "2025-04-02",
-    "readTime": 8,
-    "featured": true
+    "titre": "Comment les banques créent l'argent",
+    "resume": "À chaque prêt accordé, les banques créent de l'argent nouveau — le secret le mieux gardé du système bancaire, expliqué avec un schéma.",
+    "categorie": "Systèmes monétaires",
+    "readTime": 7,
+    "image": "/images/P3.jpeg",
+    "featured": false
   },
   {
     "id": "a4",
-    "titre": "Comment fonctionne une IPO ?",
-    "resume": "Introduction en bourse : mécanismes, risques et opportunités pour les investisseurs particuliers.",
-    "contenu": "Explication IPO...",
-    "categorie": "Marchés",
-    "tags": ["IPO", "bourse", "investissement", "actions"],
-    "auteur": "Dr. Yves Kouassi",
-    "publishedAt": "2025-04-15",
-    "readTime": 6
+    "titre": "La Blockchain expliquée simplement",
+    "resume": "Pas besoin d'être ingénieur. Un schéma animé pas-à-pas pour enfin comprendre cette technologie.",
+    "categorie": "Tech & Crypto",
+    "readTime": 9,
+    "image": "/images/P4.jpeg",
+    "featured": false
   },
   {
     "id": "a5",
-    "titre": "Les stablecoins au cœur de la crise réglementaire",
-    "resume": "USDT, USDC, DAI : les monnaies stables cristallisent les tensions entre innovation et régulation.",
-    "contenu": "Article stablecoins...",
-    "categorie": "Crypto",
-    "tags": ["stablecoin", "régulation", "USDT", "USD"],
-    "auteur": "Kofi Mensah",
-    "publishedAt": "2025-05-01",
-    "readTime": 9
+    "titre": "La Monnaie-Déchet et l'économie circulaire",
+    "resume": "Quand un déchet plastique devient valeur d'échange. Du recyclage au crédit Mobile Money — la révolution verte du Cameroun.",
+    "categorie": "Systèmes monétaires",
+    "readTime": 6,
+    "image": "/images/P5.jpeg",
+    "featured": false
   },
   {
     "id": "a6",
-    "titre": "Green Finance : investir pour la planète",
-    "resume": "Obligations vertes, taxonomie européenne, fonds ESG : la finance durable est-elle un vrai mouvement ou du greenwashing ?",
-    "contenu": "Article green finance...",
-    "categorie": "Finance Durable",
-    "tags": ["ESG", "green", "durabilité", "investissement"],
-    "auteur": "Fatou Diallo",
-    "publishedAt": "2025-05-20",
-    "readTime": 11
+    "titre": "Anthropologie de l'argent",
+    "resume": "La monnaie comme fait social et de confiance. Pourquoi l'argent vaut quelque chose ? Parce qu'on décide collectivement qu'il vaut quelque chose.",
+    "categorie": "Systèmes monétaires",
+    "readTime": 7,
+    "image": "/images/P6.jpeg",
+    "featured": false
+  },
+  {
+    "id": "a7",
+    "titre": "Bitcoin vs Monnaie Numérique d'État (MNBC)",
+    "resume": "L'e-Naira du Nigeria, le e-CFA en projet... les États veulent leur crypto. Quelle différence avec Bitcoin ?",
+    "categorie": "Tech & Crypto",
+    "readTime": 8,
+    "image": "/images/P7.jpeg",
+    "featured": false
+  },
+  {
+    "id": "a8",
+    "titre": "Fintechs made in Africa",
+    "resume": "De Flutterwave à Wave, panorama des entreprises qui réinventent la finance africaine et camerounaise.",
+    "categorie": "Finance africaine",
+    "readTime": 6,
+    "image": "/images/P8.jpeg",
+    "featured": false
   }
 ]
