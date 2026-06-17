@@ -118,14 +118,14 @@ export default function Navbar({ isSidebarOpen, onToggleSidebar }: NavbarProps) 
               <Button
                 variant="ghost"
                 href="/login"
-                className="hidden sm:flex font-bold text-secondary hover:bg-gray-50 px-5"
+                className="hidden sm:flex font-bold text-[#1e293b] hover:bg-slate-50 px-5 py-3 rounded-full"
               >
                 Se connecter
               </Button>
               <Button
                 variant="primary"
                 href="/register"
-                className="rounded-xl shadow-md shadow-primary/20 px-8 font-bold"
+                className="rounded-full bg-[#2563eb] hover:bg-blue-700 text-white shadow-none px-8 py-3.5 font-bold"
               >
                 S'inscrire
               </Button>

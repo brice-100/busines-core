@@ -1,0 +1,1056 @@
+{
+  "filieres": [
+    {
+      "id": "filiere-1",
+      "numero": 1,
+      "slug": "finance-d-entreprise-audit-et-comptabilite",
+      "titre": "Finance d'Entreprise, Audit et Comptabilité",
+      "sousTitre": "Les métiers du chiffre, du contrôle et du pilotage stratégique de l'entreprise : contrôleur de gestion, auditeur financier, directeur administratif et financier (DAF), expert-comptable.",
+      "image": "filiere-1.jpg",
+      "metiers": [
+        {
+          "id": "f1-metier-a",
+          "slug": "controleur-de-gestion-tresorier-d-entreprise",
+          "nom": "Contrôleur de gestion / Trésorier d'entreprise",
+          "description": "Les professionnels du pilotage de la performance : ils mesurent les écarts budgétaires, optimisent la trésorerie et éclairent les décisions de la direction.",
+          "filiereId": "filiere-1",
+          "filiereNum": 1,
+          "filiereTitre": "Finance d'Entreprise, Audit et Comptabilité",
+          "formations": [
+            {
+              "id": "0",
+              "slug": "ucac",
+              "etablissement": "UCAC (Université Catholique d'Afrique Centrale)",
+              "parcours": "Parcours de référence : Licence en Management, Audit et Contrôle (MAC).",
+              "semestres": [
+                {
+                  "label": "Licence 1 — Semestre 1",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Comptabilité Générale I (Principes et opérations courantes)", "volume": "50 h" },
+                    { "num": "2", "intitule": "Microéconomie I (Comportement du consommateur et du producteur)", "volume": "45 h" },
+                    { "num": "3", "intitule": "Mathématiques Générales Appliquées à la Gestion", "volume": "60 h" },
+                    { "num": "4", "intitule": "Introduction Générale au Droit et Droit Civil", "volume": "45 h" },
+                    { "num": "5", "intitule": "Introduction au Management et Organisation des Entreprises", "volume": "45 h" },
+                    { "num": "6", "intitule": "Anglais des Affaires I", "volume": "30 h" },
+                    { "num": "7", "intitule": "Éthique et Culture Chrétienne I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Licence 1 — Semestre 2",
+                  "description": "",
+                  "matieres": [
+                    { "num": "9", "intitule": "Macroéconomie I (Grands agrégats et équilibres)", "volume": "45 h" },
+                    { "num": "10", "intitule": "Statistiques Descriptives", "volume": "60 h" },
+                    { "num": "11", "intitule": "Droit Commercial et des Affaires (OHADA)", "volume": "45 h" },
+                    { "num": "13", "intitule": "Anglais des Affaires II", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Licence 2 — Semestre 3",
+                  "description": "",
+                  "matieres": [
+                    { "num": "16", "intitule": "Finance d'Entreprise I (Analyse financière, bilans et ratios)", "volume": "50 h" },
+                    { "num": "19", "intitule": "Statistiques Inductives et Probabilités", "volume": "60 h" },
+                    { "num": "20", "intitule": "Anglais Financier I", "volume": "30 h" },
+                    { "num": "21", "intitule": "Éthique Professionnelle et Responsabilité Sociale", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Licence 2 — Semestre 4",
+                  "description": "",
+                  "matieres": [
+                    { "num": "23", "intitule": "Finance d'Entreprise II (Choix d'investissement et de financement)", "volume": "50 h" },
+                    { "num": "24", "intitule": "Fiscalité des Entreprises I (Impôts directs : IS, IRPP)", "volume": "50 h" },
+                    { "num": "26", "intitule": "Marketing Fondamental", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Licence 3 — Semestre 5",
+                  "description": "",
+                  "matieres": [
+                    { "num": "29", "intitule": "Contrôle de Gestion I (Calcul des écarts et tableaux de bord)", "volume": "50 h" },
+                    { "num": "30", "intitule": "Audit Interne (Cadre de référence CRIPP, méthodologie de mission)", "volume": "30 h" },
+                    { "num": "34", "intitule": "Mathématiques Financières (Intérêts, annuités, emprunts)", "volume": "60 h" }
+                  ]
+                },
+                {
+                  "label": "Licence 3 — Semestre 6",
+                  "description": "",
+                  "matieres": [
+                    { "num": "36", "intitule": "Audit Financier et Comptable (Vérification des cycles comptables)", "volume": "50 h" },
+                    { "num": "37", "intitule": "Systèmes d'Information de Gestion (Pratique sur logiciel SAGE Saisie & Comptabilité)", "volume": "40 h" },
+                    { "num": "38", "intitule": "Management Stratégique", "volume": "45 h" },
+                    { "num": "39", "intitule": "Anglais Professionnel appliqué à l'Audit", "volume": "30 h" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1",
+              "slug": "essec-de-douala",
+              "etablissement": "ESSEC de Douala (Université de Douala)",
+              "parcours": "Filière professionnelle Bachelor en Gestion — Option Finance et Contrôle. Le cursus est organisé en blocs d'enseignements (Unités Majeures et Mineures) et totalise 180 crédits ECTS sur 3 ans.",
+              "semestres": [
+                {
+                  "label": "Bachelor 1 — Semestre 1 : Finance, Comptabilité & Outils",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Comptabilité Financière I", "volume": "50 h" },
+                    { "num": "2", "intitule": "Mathématiques Appliquées à la Gestion I (Algèbre linéaire)", "volume": "60 h" },
+                    { "num": "3", "intitule": "Mathématiques Financières I", "volume": "60 h" },
+                    { "num": "4", "intitule": "Statistique Descriptive I", "volume": "60 h" },
+                    { "num": "5", "intitule": "Analyse Économique (Micro et Macroéconomie)", "volume": "45 h" },
+                    { "num": "6", "intitule": "Principes fondamentaux de la Finance d'Entreprise", "volume": "50 h" },
+                    { "num": "7", "intitule": "Initiation aux Logiciels Comptables", "volume": "40 h" }
+                  ]
+                },
+                {
+                  "label": "Bachelor 1 — Semestre 2 : Mineures d'Appuis & Environnement",
+                  "description": "",
+                  "matieres": [
+                    { "num": "8", "intitule": "Théorie des Organisations et Management", "volume": "40 h" },
+                    { "num": "9", "intitule": "Droit des Affaires Camerounais et OHADA", "volume": "45 h" },
+                    { "num": "10", "intitule": "Techniques d'Expression Écrite et Orale", "volume": "40 h" },
+                    { "num": "11", "intitule": "Anglais Commercial I", "volume": "30 h" },
+                    { "num": "12", "intitule": "Informatique Générale et Algorithmique", "volume": "40 h" },
+                    { "num": "13", "intitule": "Environnement Juridique et Fiscal de l'Entreprise", "volume": "40 h" }
+                  ]
+                },
+                {
+                  "label": "Bachelor 2 — Semestre 3 : Majeures Finance, Comptabilité & Outils",
+                  "description": "",
+                  "matieres": [
+                    { "num": "14", "intitule": "Comptabilité de Gestion", "volume": "45 h" },
+                    { "num": "15", "intitule": "Analyse Financière Approfondie", "volume": "45 h" },
+                    { "num": "16", "intitule": "Comptabilité des Sociétés et Groupes", "volume": "60 h" },
+                    { "num": "17", "intitule": "Recherche Opérationnelle (Modélisation et optimisation linéaire)", "volume": "60 h" },
+                    { "num": "18", "intitule": "Statistique Inférentielle", "volume": "50 h" },
+                    { "num": "19", "intitule": "Fiscalité des Sociétés et de la Consommation (Régime camerounais)", "volume": "50 h" },
+                    { "num": "20", "intitule": "Gestion Financière à Court Terme (Introduction à la Trésorerie)", "volume": "50 h" }
+                  ]
+                },
+                {
+                  "label": "Bachelor 2 — Semestre 4 : Mineures d'Appuis & Environnement",
+                  "description": "",
+                  "matieres": [
+                    { "num": "21", "intitule": "Droit des Sociétés Commerciales", "volume": "45 h" },
+                    { "num": "22", "intitule": "Gestion de Projet (Fondamentaux)", "volume": "50 h" },
+                    { "num": "23", "intitule": "Système d'Information de Gestion (SIG)", "volume": "50 h" },
+                    { "num": "24", "intitule": "Management des Équipes et Leadership", "volume": "45 h" },
+                    { "num": "25", "intitule": "Anglais Commercial II", "volume": "30 h" },
+                    { "num": "26", "intitule": "Éthique des Affaires et Gouvernance", "volume": "35 h" }
+                  ]
+                },
+                {
+                  "label": "Bachelor 3 — Semestre 1 : Spécialisation « Finance et Contrôle »",
+                  "description": "C'est ici que se concentre le cœur opérationnel des métiers demandés par les multinationales à Douala.",
+                  "matieres": [
+                    { "num": "27", "intitule": "Gestion Budgétaire et Tableaux de Bord (Contrôle de gestion opérationnel)", "volume": "50 h" },
+                    { "num": "28", "intitule": "Reporting Financier et Consolidation (Normes IFRS et SYSCOHADA)", "volume": "55 h" },
+                    { "num": "29", "intitule": "Gestion de la Trésorerie d'Entreprise (Flux, plans de trésorerie, relations bancaires)", "volume": "45 h" },
+                    { "num": "30", "intitule": "Marchés Financiers et Gestion des Risques (Risques de change et de taux)", "volume": "55 h" },
+                    { "num": "31", "intitule": "Évaluation d'Entreprise et Ingénierie Financière (Fusions / Acquisitions)", "volume": "60 h" },
+                    { "num": "32", "intitule": "Diagnostic Financier Approfondi", "volume": "50 h" },
+                    { "num": "33", "intitule": "Audit Interne et Contrôle Interne", "volume": "50 h" },
+                    { "num": "34", "intitule": "Fintech et Digitalisation Bancaire (Outils modernes de trésorerie)", "volume": "40 h" },
+                    { "num": "35", "intitule": "Droit Fiscal Approfondi (Contrôle et contentieux fiscal au Cameroun)", "volume": "55 h" }
+                  ]
+                },
+                {
+                  "label": "Bachelor 3 — Semestre 2 : Pratique Professionnelle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "36", "intitule": "Grand Stage Professionnel en multinationale ou cabinet", "volume": "4 mois min." },
+                    { "num": "", "intitule": "Rédaction et Soutenance d'un Mémoire Professionnel", "volume": "" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f1-metier-b",
+          "slug": "auditeur-financier",
+          "nom": "Auditeur financier",
+          "description": "Garant de la fiabilité des comptes : il vérifie, par les risques et par les cycles, la sincérité des états financiers et certifie l'information comptable.",
+          "filiereId": "filiere-1",
+          "filiereNum": 1,
+          "filiereTitre": "Finance d'Entreprise, Audit et Comptabilité",
+          "formations": [
+            {
+              "id": "0",
+              "slug": "ucac",
+              "etablissement": "UCAC (Université Catholique d'Afrique Centrale)",
+              "parcours": "Campus d'Ekounou (Yaoundé) — Master en Audit et Contrôle de Gestion (ACG). Régime semestriel strict (2 semestres / an), 20 matières théoriques sur deux ans, complétées par un stage professionnel de fin d'études.",
+              "semestres": [
+                {
+                  "label": "Master 1 — Semestre 7",
+                  "description": "L'année de M1 pose les bases méthodologiques de l'évaluation des risques et de la comptabilité avancée.",
+                  "matieres": [
+                    { "num": "1", "intitule": "Comptabilité Approfondie et Normes SYSCOHADA Révisé", "volume": "50 h" },
+                    { "num": "2", "intitule": "Audit Financier et Comptable I (Fondations et approche par les risques)", "volume": "50 h" },
+                    { "num": "3", "intitule": "Droit Fiscal Approfondi (Fiscalité des groupes et restructurations)", "volume": "50 h" },
+                    { "num": "4", "intitule": "Contrôle de Gestion Approfondi (Pilotage stratégique de la performance)", "volume": "50 h" },
+                    { "num": "5", "intitule": "Finance d'Entreprise : Décisions de long terme (Choix d'investissement et de financement)", "volume": "30 h" },
+                    { "num": "6", "intitule": "Anglais Professionnel des Affaires et de l'Audit I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Semestre 8",
+                  "description": "",
+                  "matieres": [
+                    { "num": "7", "intitule": "Normes Comptables Internationales (IAS / IFRS)", "volume": "50 h" },
+                    { "num": "8", "intitule": "Audit Financier et Comptable II (Pratique de l'audit par cycles d'exploitation)", "volume": "50 h" },
+                    { "num": "9", "intitule": "Contrôle Interne : Cadre de référence COSO et Cartographie des risques", "volume": "50 h" },
+                    { "num": "10", "intitule": "Consolidation des Comptes (Techniques de regroupement des états financiers)", "volume": "50 h" },
+                    { "num": "11", "intitule": "Droit des Sociétés et Gouvernance d'Entreprise (Acte uniforme OHADA)", "volume": "50 h" },
+                    { "num": "12", "intitule": "Systèmes d'Information et Audit Informatique", "volume": "50 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 9",
+                  "description": "L'année de M2 est axée sur l'expertise de terrain et la préparation à l'insertion dans les grands cabinets.",
+                  "matieres": [
+                    { "num": "13", "intitule": "Audit Financier et Certification des Comptes (Cas pratiques complexes d'audit)", "volume": "50 h" },
+                    { "num": "14", "intitule": "Ingénierie Financière et Évaluation des Entreprises (Fusions, acquisitions, restructurations)", "volume": "50 h" },
+                    { "num": "15", "intitule": "Montage de la Déclaration Statistique et Fiscale (DSF Cameroun / SYSCOHADA)", "volume": "50 h" },
+                    { "num": "16", "intitule": "Management des Risques Financiers et Gestion de Trésorerie", "volume": "50 h" },
+                    { "num": "17", "intitule": "Éthique des Affaires, Déontologie de l'Auditeur et RSE", "volume": "30 h" },
+                    { "num": "18", "intitule": "Audit Juridique et Fiscal", "volume": "50 h" },
+                    { "num": "19", "intitule": "Techniques d'Expression Orale, Management d'Équipe et Leadership", "volume": "30 h" },
+                    { "num": "20", "intitule": "Anglais Professionnel des Affaires et de l'Audit II", "volume": "50 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 10 : Pratique Professionnelle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "21", "intitule": "Stage professionnel de fin d'études (en cabinet d'audit ou grande entreprise)", "volume": "5 à 6 mois" },
+                    { "num": "22", "intitule": "Rédaction et soutenance publique d'un Mémoire de Master", "volume": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1",
+              "slug": "essec-de-douala",
+              "etablissement": "ESSEC de Douala (Université de Douala)",
+              "parcours": "Douala — Master Professionnel en Comptabilité, Contrôle et Audit (CCA). Cursus structuré en Blocs de Compétences calqués sur les exigences des cabinets de la place économique de Douala (18 matières théoriques).",
+              "semestres": [
+                {
+                  "label": "Master 1 — Bloc Comptabilité et Reporting",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Comptabilité Financière Approfondie et Opérations Spécifiques", "volume": "50 h" },
+                    { "num": "2", "intitule": "Consolidation des Comptes (Pratique avancée SYSCOHADA)", "volume": "45 h" },
+                    { "num": "3", "intitule": "Initiation aux Normes IFRS et Divergences SYSCOHADA", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Bloc Audit et Contrôle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "4", "intitule": "Théorie et Pratique de l'Audit Financier (Normes internationales ISA)", "volume": "60 h" },
+                    { "num": "5", "intitule": "Évaluation du Contrôle Interne et Méthodologie de l'Auditeur", "volume": "50 h" },
+                    { "num": "6", "intitule": "Contrôle de Gestion et Gestion Budgétaire Avancée", "volume": "55 h" },
+                    { "num": "7", "intitule": "Informatique Appliquée : Tableaux de bord et extraction de données (Excel avancé / SQL)", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Bloc Environnement Juridique et Fiscal",
+                  "description": "",
+                  "matieres": [
+                    { "num": "8", "intitule": "Droit Pénal des Affaires et Contentieux Commercial (OHADA)", "volume": "50 h" },
+                    { "num": "9", "intitule": "Fiscalité Directe des Entreprises et Optimisation Fiscale (Code Général des Impôts du Cameroun)", "volume": "55 h" },
+                    { "num": "10", "intitule": "Anglais Spécifique aux Métiers du Chiffre I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Bloc Expertise Audit et Finance",
+                  "description": "",
+                  "matieres": [
+                    { "num": "11", "intitule": "Audit Financier des Cycles Pratiques (Trésorerie, Immobilisations, Capitaux propres, Stocks)", "volume": "60 h" },
+                    { "num": "12", "intitule": "Ingénierie Financière (Diagnostic approfondi, Restructuration de haut de bilan, Fusions)", "volume": "55 h" },
+                    { "num": "13", "intitule": "Audit des Systèmes d'Information (Environnements complexes et ERP type SAP / SAGE)", "volume": "50 h" },
+                    { "num": "14", "intitule": "Évaluation des Entreprises et Prise de Participation", "volume": "50 h" },
+                    { "num": "15", "intitule": "Gestion des Risques de Marché et Instruments Financiers", "volume": "55 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Bloc Outils Transversaux",
+                  "description": "",
+                  "matieres": [
+                    { "num": "16", "intitule": "Réglementation Professionnelle et Déontologie (Normes de l'ONECCA)", "volume": "40 h" },
+                    { "num": "17", "intitule": "Anglais Spécifique aux Métiers du Chiffre II", "volume": "30 h" },
+                    { "num": "18", "intitule": "Méthodologie de la Recherche et Rédaction Professionnelle", "volume": "35 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Bloc Pratique Professionnelle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "", "intitule": "Grand Stage Professionnel obligatoire au sein d'un cabinet d'audit", "volume": "6 mois" },
+                    { "num": "", "intitule": "Soutenance d'un Mémoire Professionnel", "volume": "" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f1-metier-c",
+          "slug": "directeur-administratif-et-financier-daf",
+          "nom": "Directeur Administratif et Financier (DAF)",
+          "description": "Le sommet de la pyramide des métiers de la gestion : rôle hautement stratégique de conseil à la direction générale, pilotage de la stratégie financière globale, relations bancaires et supervision des équipes comptables, juridiques et RH. Un niveau Master (Bac+5) est indispensable.",
+          "filiereId": "filiere-1",
+          "filiereNum": 1,
+          "filiereTitre": "Finance d'Entreprise, Audit et Comptabilité",
+          "formations": [
+            {
+              "id": "0",
+              "slug": "ucac",
+              "etablissement": "UCAC (Université Catholique d'Afrique Centrale)",
+              "parcours": "Campus d'Ekounou (Yaoundé) — Master en Finance et Métiers de la Stratégie (FMS). Taillé pour la direction financière : décision stratégique, levée de fonds et pilotage de haut niveau. 4 semestres, 20 matières théoriques.",
+              "semestres": [
+                {
+                  "label": "Master 1 — Semestre 7",
+                  "description": "L'année de M1 consolide l'expertise financière globale et introduit la dimension stratégique et fiscale complexe.",
+                  "matieres": [
+                    { "num": "1", "intitule": "Stratégie Financière de l'Entreprise (Politique de structure financière et dividendes)", "volume": "45 h" },
+                    { "num": "2", "intitule": "Diagnostic Financier Approfondi (Analyse des flux et de la rentabilité)", "volume": "45 h" },
+                    { "num": "3", "intitule": "Ingénierie Fiscale et Choix de Structure (Optimisation fiscale au Cameroun)", "volume": "50 h" },
+                    { "num": "4", "intitule": "Comptabilité de Gestion Avancée (Outils de pilotage de la performance)", "volume": "50 h" },
+                    { "num": "5", "intitule": "Gestion des Risques d'Entreprise (Risk Management et cartographie)", "volume": "50 h" },
+                    { "num": "6", "intitule": "Anglais des Affaires et Négociation Financière I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Semestre 8",
+                  "description": "",
+                  "matieres": [
+                    { "num": "7", "intitule": "Évaluation des Entreprises (Méthodes patrimoniales, DCF, comparables)", "volume": "55 h" },
+                    { "num": "8", "intitule": "Choix d'Investissement et de Financement Internationaux", "volume": "50 h" },
+                    { "num": "9", "intitule": "Droit des Contrats et Droit Économique de l'Espace OHADA", "volume": "45 h" },
+                    { "num": "10", "intitule": "Gestion de Trésorerie de Groupe et Relations Bancaires", "volume": "50 h" },
+                    { "num": "11", "intitule": "Consolidation et Normes Internationales (IFRS)", "volume": "55 h" },
+                    { "num": "12", "intitule": "Systèmes d'Information Financière et ERP (Pilotage de l'intégration des données)", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 9",
+                  "description": "L'année de M2 est axée sur la direction stratégique, le leadership, la gouvernance et l'ingénierie financière lourde.",
+                  "matieres": [
+                    { "num": "13", "intitule": "Ingénierie Financière et Corporate Finance (Fusions, acquisitions, LBO)", "volume": "60 h" },
+                    { "num": "14", "intitule": "Management Stratégique et Gouvernance des Entreprises", "volume": "50 h" },
+                    { "num": "15", "intitule": "Pilotage de la Performance Globale et Tableaux de Bord de Direction", "volume": "55 h" },
+                    { "num": "16", "intitule": "Marchés de Capitaux, Produits Dérivés et Gestion des Risques de Change", "volume": "60 h" },
+                    { "num": "17", "intitule": "Éthique des Affaires, Déontologie des Dirigeants et RSE", "volume": "40 h" },
+                    { "num": "18", "intitule": "Droit Pénal des Affaires et Responsabilité du DAF", "volume": "45 h" },
+                    { "num": "19", "intitule": "Leadership, Management des Équipes et Conduite du Changement", "volume": "45 h" },
+                    { "num": "20", "intitule": "Anglais des Affaires et Négociation Financière II", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Bloc Pratique Professionnelle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "", "intitule": "Stage professionnel de fin d'études en direction financière", "volume": "5 à 6 mois" },
+                    { "num": "", "intitule": "Rédaction et soutenance publique d'un Mémoire de Master professionnel", "volume": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1",
+              "slug": "essec-de-douala",
+              "etablissement": "ESSEC de Douala (Université de Douala)",
+              "parcours": "Douala — Master Professionnel en Gestion Financière et Stratégique (GFS). Orienté vers le tissu industriel et commercial de Douala, pour piloter administrativement et financièrement de grandes structures (18 matières).",
+              "semestres": [
+                {
+                  "label": "Master 1 — Bloc Direction Financière & Analyse",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Politique Financière et Structure du Capital", "volume": "55 h" },
+                    { "num": "2", "intitule": "Analyse Financière des Groupes et Consolidation (SYSCOHADA & IFRS)", "volume": "60 h" },
+                    { "num": "3", "intitule": "Mathématiques Décisionnelles et Modélisation Financière sur Excel", "volume": "50 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Bloc Pilotage & Performance",
+                  "description": "",
+                  "matieres": [
+                    { "num": "4", "intitule": "Contrôle de Gestion Stratégique (Alignement des budgets sur la stratégie)", "volume": "55 h" },
+                    { "num": "5", "intitule": "Gestion des Risques Financiers et de Trésorerie", "volume": "50 h" },
+                    { "num": "6", "intitule": "Audit Interne et Évaluation du Contrôle Interne", "volume": "50 h" },
+                    { "num": "7", "intitule": "Systèmes d'Information de Gestion (SIG) et Architecture des ERP", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Bloc Environnement Juridique & Humain",
+                  "description": "",
+                  "matieres": [
+                    { "num": "8", "intitule": "Droit des Sociétés Commerciales et Gouvernance (OHADA)", "volume": "45 h" },
+                    { "num": "9", "intitule": "Gestion des Ressources Humaines pour Cadres Dirigeants", "volume": "40 h" },
+                    { "num": "10", "intitule": "Anglais Financier et Communication de Direction I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Bloc Haute Finance & Décisions Stratégiques",
+                  "description": "",
+                  "matieres": [
+                    { "num": "11", "intitule": "Ingénierie Financière (Fusions, acquisitions, privatisations, restructurations)", "volume": "60 h" },
+                    { "num": "12", "intitule": "Évaluation des Entreprises et Management de la Valeur", "volume": "55 h" },
+                    { "num": "13", "intitule": "Droit Fiscal Approfondi et Gestion du Contentieux Fiscal au Cameroun", "volume": "55 h" },
+                    { "num": "14", "intitule": "Marchés Financiers (BVMAC), Financements Structurés et Levées de Fonds", "volume": "60 h" },
+                    { "num": "15", "intitule": "Stratégie d'Entreprise et Business Model Canvas", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Bloc Management & Outils Transversaux",
+                  "description": "",
+                  "matieres": [
+                    { "num": "16", "intitule": "Management de Crise, Négociation Sociale et Commerciale", "volume": "45 h" },
+                    { "num": "17", "intitule": "Anglais Financier et Communication de Direction II", "volume": "30 h" },
+                    { "num": "18", "intitule": "Méthodologie du Business Plan et Gestion de Projet", "volume": "40 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Stage Professionnel & Mémoire",
+                  "description": "",
+                  "matieres": [
+                    { "num": "", "intitule": "Stage Professionnel : fin d'études en entreprise, institution financière, cabinet de conseil ou direction financière", "volume": "6 mois" },
+                    { "num": "", "intitule": "Mémoire Professionnel : mémoire appliqué à la finance d'entreprise ou à la direction financière", "volume": "1 semestre" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "slug": "isma-douala",
+              "etablissement": "ISMA (Institut Supérieur du Management des Affaires) — Douala",
+              "parcours": "En partenariat avec des universités d'État — Master Professionnel en Finance d'Entreprise et Direction Financière. Cursus taillé sur mesure pour la gestion des directions financières du tissu économique local.",
+              "semestres": [
+                {
+                  "label": "Master 1 — Semestre 1",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Analyse Financière Approfondie et Diagnostic IFRS", "volume": "60 h" },
+                    { "num": "2", "intitule": "Comptabilité de Gestion et Stratégies de Coûts", "volume": "50 h" },
+                    { "num": "3", "intitule": "Droit des Sociétés et Structures Juridiques (OHADA)", "volume": "45 h" },
+                    { "num": "4", "intitule": "Fiscalité Directe des Entreprises et Optimisation", "volume": "50 h" },
+                    { "num": "5", "intitule": "Mathématiques Financières et Actuariat", "volume": "55 h" },
+                    { "num": "6", "intitule": "Anglais des Affaires de Direction I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Semestre 2",
+                  "description": "",
+                  "matieres": [
+                    { "num": "7", "intitule": "Choix d'Investissement et Politiques de Financement", "volume": "55 h" },
+                    { "num": "8", "intitule": "Trésorerie de Groupe et Cash Management", "volume": "50 h" },
+                    { "num": "9", "intitule": "Gestion des Risques Financiers (Change et Taux)", "volume": "50 h" },
+                    { "num": "10", "intitule": "Audit Interne et Cartographie des Risques COSO", "volume": "50 h" },
+                    { "num": "11", "intitule": "Informatique de Gestion et Tableaux de Bord sur ERP", "volume": "45 h" },
+                    { "num": "12", "intitule": "Anglais des Affaires de Direction II", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 3",
+                  "description": "",
+                  "matieres": [
+                    { "num": "13", "intitule": "Ingénierie Financière (Fusions, Acquisitions, LBO, Restructurations)", "volume": "60 h" },
+                    { "num": "14", "intitule": "Évaluation des Entreprises et Management de la Valeur", "volume": "55 h" },
+                    { "num": "15", "intitule": "Management Stratégique et Politique Générale d'Entreprise", "volume": "50 h" },
+                    { "num": "16", "intitule": "Gouvernance d'Entreprise et Éthique des Dirigeants", "volume": "40 h" },
+                    { "num": "17", "intitule": "Droit Fiscal Approfondi et Contentieux Fiscal Camerounais", "volume": "55 h" },
+                    { "num": "18", "intitule": "Gestion des Ressources Humaines et Management des Équipes pour DAF", "volume": "45 h" },
+                    { "num": "19", "intitule": "Communication Financière et Relations avec les Investisseurs", "volume": "40 h" },
+                    { "num": "20", "intitule": "Négociation Commerciale et Gestion des Crises", "volume": "40 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 4 : Pratique Professionnelle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "", "intitule": "Stage Professionnel : Direction Financière, Contrôle de Gestion, Trésorerie ou Direction Administrative et Financière", "volume": "6 mois" },
+                    { "num": "", "intitule": "Mémoire Professionnel : mémoire professionnel de fin d'études", "volume": "1 semestre" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3",
+              "slug": "fseg-yaounde-ii-soa",
+              "etablissement": "FSEG de l'Université de Yaoundé II (Soa)",
+              "parcours": "Université d'État — Master Professionnel en Finance-Comptabilité-Direction Financière (FCDF). Réputé pour sa rigueur académique, il forme de nombreux cadres supérieurs administratifs et financiers au Cameroun.",
+              "semestres": [
+                {
+                  "label": "Master 1 — Semestre 1",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Théorie Financière et Politique de Groupe", "volume": "55 h" },
+                    { "num": "2", "intitule": "Comptabilité Approfondie (Cadre SYSCOHADA Révisé)", "volume": "60 h" },
+                    { "num": "3", "intitule": "Contrôle de Gestion et Gestion Budgétaire Avancée", "volume": "55 h" },
+                    { "num": "4", "intitule": "Fiscalité de l'Entreprise Camerounaise (IS, TVA)", "volume": "50 h" },
+                    { "num": "5", "intitule": "Économétrie Appliquée à la Finance", "volume": "50 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Semestre 2",
+                  "description": "",
+                  "matieres": [
+                    { "num": "6", "intitule": "Analyse et Diagnostic Financier des Groupes", "volume": "55 h" },
+                    { "num": "7", "intitule": "Gestion de la Trésorerie et Choix de Financement", "volume": "50 h" },
+                    { "num": "8", "intitule": "Droit des Affaires et de la Concurrence (OHADA)", "volume": "45 h" },
+                    { "num": "9", "intitule": "Systèmes d'Information et Outils Informatiques du DAF", "volume": "45 h" },
+                    { "num": "10", "intitule": "Anglais Financier", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 3",
+                  "description": "",
+                  "matieres": [
+                    { "num": "11", "intitule": "Ingénierie Financière et Évaluation des Entreprises", "volume": "60 h" },
+                    { "num": "12", "intitule": "Management Stratégique et Tableaux de Bord de Direction", "volume": "50 h" },
+                    { "num": "13", "intitule": "Consolidation des Comptes en Normes Nationales et IFRS", "volume": "55 h" },
+                    { "num": "14", "intitule": "Droit Social et Gestion Administrative du Personnel", "volume": "45 h" },
+                    { "num": "15", "intitule": "Audit Juridique et Fiscal de l'Entreprise", "volume": "50 h" },
+                    { "num": "16", "intitule": "Gestion des Risques de Marché et Produits Dérivés", "volume": "55 h" },
+                    { "num": "17", "intitule": "Éthique, Déontologie et Responsabilité Sociétale des Entreprises", "volume": "40 h" },
+                    { "num": "18", "intitule": "Méthodologie du Business Plan et Création de Valeur", "volume": "40 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 4 : Pratique Professionnelle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "", "intitule": "Stage Professionnel : 6 mois en Direction Financière, Contrôle de Gestion, Trésorerie ou Cabinet de Conseil / Audit", "volume": "6 mois" },
+                    { "num": "", "intitule": "Mémoire de Master : rédaction et soutenance publique d'un mémoire professionnel", "volume": "1 semestre" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "4",
+              "slug": "iut-de-douala",
+              "etablissement": "IUT de Douala (Université de Douala)",
+              "parcours": "Établissement public — Master Professionnel en Gestion Financière et Comptable (GFC). Cycle Master très technique et opérationnel, apprécié des PME et multinationales de la zone industrielle de Douala pour former des DAF de terrain.",
+              "semestres": [
+                {
+                  "label": "Master 1 — Semestre 1",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Diagnostic Financier Approfondi", "volume": "45 h" },
+                    { "num": "2", "intitule": "Contrôle de Gestion Opérationnel", "volume": "50 h" },
+                    { "num": "3", "intitule": "Comptabilité des Sociétés et Opérations Complexes", "volume": "50 h" },
+                    { "num": "4", "intitule": "Fiscalité des Affaires au Cameroun", "volume": "50 h" },
+                    { "num": "5", "intitule": "Outils Statistiques pour la Décision Financière", "volume": "60 h" },
+                    { "num": "6", "intitule": "Anglais Professionnel I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Semestre 2",
+                  "description": "",
+                  "matieres": [
+                    { "num": "7", "intitule": "Gestion de Trésorerie et Décisions Financières à Court Terme", "volume": "50 h" },
+                    { "num": "8", "intitule": "Choix d'Investissement et de Financement", "volume": "55 h" },
+                    { "num": "9", "intitule": "Droit du Travail et Gestion des Rémunérations", "volume": "45 h" },
+                    { "num": "10", "intitule": "Outils Informatiques Appliqués (SAGE Comptabilité, SAGE Paie)", "volume": "45 h" },
+                    { "num": "11", "intitule": "Anglais Professionnel II", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 3",
+                  "description": "",
+                  "matieres": [
+                    { "num": "12", "intitule": "Ingénierie Financière et Restructuration d'Entreprises", "volume": "60 h" },
+                    { "num": "13", "intitule": "Évaluation d'Entreprises et Diagnostic Stratégique", "volume": "55 h" },
+                    { "num": "14", "intitule": "Consolidation des Comptes (SYSCOHADA et IFRS)", "volume": "55 h" },
+                    { "num": "15", "intitule": "Audit Financier, Comptable et Interne", "volume": "60 h" },
+                    { "num": "16", "intitule": "Droit des Sociétés Commerciales (OHADA)", "volume": "45 h" },
+                    { "num": "17", "intitule": "Pilotage de la Performance et Tableaux de Bord Prospectifs", "volume": "50 h" },
+                    { "num": "18", "intitule": "Management d'Équipe, Leadership et Négociation", "volume": "45 h" },
+                    { "num": "19", "intitule": "Droit Fiscal Approfondi et Gestion du Risque Fiscal", "volume": "55 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 4 : Pratique Professionnelle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "", "intitule": "Stage Professionnel : stage obligatoire de 6 mois en entreprise à Douala", "volume": "6 mois" },
+                    { "num": "", "intitule": "Mémoire Professionnel : mémoire professionnel de fin d'études", "volume": "1 semestre" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f1-metier-d",
+          "slug": "expert-comptable",
+          "nom": "Expert-Comptable",
+          "description": "Le plus haut niveau de certification des métiers du chiffre. Diplôme de référence dans la zone CEMAC : le DSGC, qui donne accès au statut d'Expert-Comptable Stagiaire (ONECCA), puis au titre d'Expert-Comptable Diplômé après un stage professionnel de 3 ans et la soutenance d'un mémoire.",
+          "filiereId": "filiere-1",
+          "filiereNum": 1,
+          "filiereTitre": "Finance d'Entreprise, Audit et Comptabilité",
+          "formations": [
+            {
+              "id": "0",
+              "slug": "issea-yaounde",
+              "etablissement": "ISSEA (Institut Sous-régional de Statistique et d'Économie Appliquée) — Yaoundé",
+              "parcours": "Établissement interétatique de la CEMAC — Cursus officiel du DSGC-CEMAC. Centre d'excellence sous-régional chargé des cours et des examens du DSGC : la voie directe vers le statut d'expert-comptable stagiaire. Cursus de 2 ans après une Licence (Bac+3).",
+              "semestres": [
+                {
+                  "label": "DSGC 1 (Niveau Master 1) — Unités d'Enseignement Fondamentales",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Gestion juridique, fiscale et sociale (Droit des affaires, fiscalité des groupes, droit du travail)", "volume": "90 h" },
+                    { "num": "2", "intitule": "Finance d'entreprise (Politiques de financement, ingénierie financière, investissements complexes)", "volume": "85 h" },
+                    { "num": "3", "intitule": "Management et contrôle de gestion (Pilotage de la performance, théories des organisations, stratégie)", "volume": "80 h" },
+                    { "num": "4", "intitule": "Comptabilité et audit (SYSCOHADA approfondi, fusions, consolidation des comptes)", "volume": "100 h" },
+                    { "num": "5", "intitule": "Management des systèmes d'information (Gouvernance informatique, audit des ERP, sécurité des données)", "volume": "70 h" },
+                    { "num": "6", "intitule": "Économie (Grands enjeux économiques contemporains, macroéconomie financière)", "volume": "60 h" },
+                    { "num": "7", "intitule": "Anglais des affaires (Communication et terminologie financière internationale)", "volume": "40 h" }
+                  ]
+                },
+                {
+                  "label": "DSGC 2 (Niveau Master 2) — Certificats d'Expertise Professionnelle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "8", "intitule": "Audit approfondi et révision légale des comptes (Commissariat aux comptes, normes ISA)", "volume": "90 h" },
+                    { "num": "9", "intitule": "Ingénierie financière et restructuration des groupes (Évaluation avancée, fusions-acquisitions)", "volume": "85 h" },
+                    { "num": "10", "intitule": "Grand oral et déontologie professionnelle (Éthique, réglementation de l'ONECCA et de l'IFAC)", "volume": "50 h" },
+                    { "num": "11", "intitule": "Anglais financier approfondi", "volume": "40 h" }
+                  ]
+                },
+                {
+                  "label": "DSGC 2 (Niveau Master 2) — Stage et Pré-insertion Professionnelle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "12", "intitule": "Rapport de stage de pré-insertion (Préparation à l'entrée en stage professionnel de 3 ans)", "volume": "1 semestre" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1",
+              "slug": "essec-de-douala",
+              "etablissement": "ESSEC de Douala (Université de Douala)",
+              "parcours": "En partenariat avec l'INTEC de Paris — Cursus double diplômant : Master CCA + modules du DSGC. L'un des pôles majeurs de formation des futurs experts-comptables à Douala.",
+              "semestres": [
+                {
+                  "label": "Master 1 / Prép. DSGC 1 — Bloc Comptabilité et Normes",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Comptabilité Financière Approfondie et Regroupements d'entreprises", "volume": "50 h" },
+                    { "num": "2", "intitule": "Consolidation des Comptes (Règles SYSCOHADA et divergences IFRS)", "volume": "45 h" },
+                    { "num": "3", "intitule": "Cadre conceptuel des normes IAS / IFRS", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Bloc Juridique et Fiscal",
+                  "description": "",
+                  "matieres": [
+                    { "num": "4", "intitule": "Droit des Sociétés et Droit Pénal des Affaires (OHADA)", "volume": "45 h" },
+                    { "num": "5", "intitule": "Fiscalité des Entreprises et Stratégie d'Optimisation (Droit camerounais)", "volume": "50 h" },
+                    { "num": "6", "intitule": "Droit Social Approfondi", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Bloc Outils & Pilotage",
+                  "description": "",
+                  "matieres": [
+                    { "num": "7", "intitule": "Contrôle de Gestion et Tableaux de Bord de Direction", "volume": "50 h" },
+                    { "num": "8", "intitule": "Finance de Marché et Évaluation des Actifs", "volume": "50 h" },
+                    { "num": "9", "intitule": "Systèmes d'Information et Gestion de Projets Informatiques", "volume": "50 h" },
+                    { "num": "10", "intitule": "Anglais des Métiers du Chiffre I", "volume": "50 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 / Prép. DSGC 2 — Bloc Professionnel d'Expertise",
+                  "description": "",
+                  "matieres": [
+                    { "num": "11", "intitule": "Audit Financier et Commissariat aux Comptes (Techniques de révision)", "volume": "50 h" },
+                    { "num": "12", "intitule": "Ingénierie Financière et Gestion de Haut de Bilan", "volume": "50 h" },
+                    { "num": "13", "intitule": "Déontologie et Réglementation Professionnelle (ONECCA)", "volume": "45 h" },
+                    { "num": "14", "intitule": "Audit du Système d'Information Comptable", "volume": "50 h" },
+                    { "num": "15", "intitule": "Évaluation d'Entreprises et Diagnostic Stratégique", "volume": "50 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Bloc Transversal",
+                  "description": "",
+                  "matieres": [
+                    { "num": "16", "intitule": "Anglais des Métiers du Chiffre II", "volume": "30 h" },
+                    { "num": "17", "intitule": "Droit Fiscal Approfondi (Contrôle et contentieux au Cameroun)", "volume": "50 h" },
+                    { "num": "18", "intitule": "Méthodologie du Mémoire Professionnel", "volume": "30 h" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "slug": "ucac-yaounde",
+              "etablissement": "UCAC (Université Catholique d'Afrique Centrale) — Yaoundé",
+              "parcours": "Campus d'Ekounou — Master en Comptabilité, Contrôle et Audit (CCA) avec orientation expertise. Formation homologuée offrant une dispense partielle sur certains examens de l'expertise comptable.",
+              "semestres": [
+                {
+                  "label": "Master 1 CCA — Semestre 7",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Comptabilité Approfondie (SYSCOHADA révisé)", "volume": "60 h" },
+                    { "num": "2", "intitule": "Droit Pénal des Affaires et Droit des Sociétés (OHADA)", "volume": "50 h" },
+                    { "num": "3", "intitule": "Fiscalité Approfondie (Imposition des bénéfices et des flux)", "volume": "55 h" },
+                    { "num": "4", "intitule": "Théorie de la Finance d'Entreprise", "volume": "50 h" },
+                    { "num": "5", "intitule": "Systèmes d'Information Appliqués", "volume": "45 h" },
+                    { "num": "6", "intitule": "Anglais pour Experts Comptables I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 CCA — Semestre 8",
+                  "description": "",
+                  "matieres": [
+                    { "num": "7", "intitule": "Consolidation des Comptes de Groupes", "volume": "60 h" },
+                    { "num": "8", "intitule": "Initiation aux Normes Comptables Internationales (IFRS)", "volume": "50 h" },
+                    { "num": "9", "intitule": "Contrôle de Gestion et Pilotage Budgétaire Avancé", "volume": "55 h" },
+                    { "num": "10", "intitule": "Cadre Général de l'Audit et du Contrôle Interne", "volume": "55 h" },
+                    { "num": "11", "intitule": "Droit des Contrats et des Marchés", "volume": "45 h" },
+                    { "num": "12", "intitule": "Informatique de Gestion (Outils d'extraction de données de masse)", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 CCA — Semestre 9",
+                  "description": "",
+                  "matieres": [
+                    { "num": "13", "intitule": "Audit Financier et Certification Légale des Comptes (Démarche des cabinets)", "volume": "60 h" },
+                    { "num": "14", "intitule": "Ingénierie Financière et Restructurations (Fusions, Scissions)", "volume": "55 h" },
+                    { "num": "15", "intitule": "Déontologie de l'Expert-Comptable et du Commissaire aux Comptes", "volume": "40 h" },
+                    { "num": "16", "intitule": "Gestion Fiscale des Groupes et Audit Fiscal", "volume": "55 h" },
+                    { "num": "17", "intitule": "Évaluation des Entreprises et Management de la Valeur", "volume": "55 h" },
+                    { "num": "18", "intitule": "Risques Financiers et Modélisation de Marché", "volume": "50 h" },
+                    { "num": "19", "intitule": "Anglais pour Experts Comptables II", "volume": "30 h" },
+                    { "num": "20", "intitule": "Management des Équipes et Conduite des Missions d'Audit", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 CCA — Semestre 10 : Pratique Professionnelle",
+                  "description": "",
+                  "matieres": [
+                    { "num": "", "intitule": "Stage Professionnel : 6 mois dans un Cabinet d'Expertise Comptable membre de l'ONECCA", "volume": "6 mois" },
+                    { "num": "", "intitule": "Mémoire Professionnel : mémoire de fin d'études en Comptabilité, Contrôle ou Audit", "volume": "1 semestre" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f1-metier-e",
+          "slug": "bts-cge-vers-master-cca",
+          "nom": "Parcours BTS CGE (Bac+2) vers Master CCA",
+          "description": "Le parcours standard du BTS Comptabilité et Gestion des Entreprises (diplôme d'État national, programme fixé par le MINESUP, identique dans tous les IPES) menant au Master CCA (Comptabilité-Contrôle-Audit), dont la maquette est propre à chaque université ou grande école.",
+          "filiereId": "filiere-1",
+          "filiereNum": 1,
+          "filiereTitre": "Finance d'Entreprise, Audit et Comptabilité",
+          "formations": [
+            {
+              "id": "0",
+              "slug": "bts-cge-ipes",
+              "etablissement": "Cursus unique du BTS CGE (valable pour TOUS les IPES)",
+              "parcours": "Le BTS se prépare en 4 semestres répartis sur 2 ans. Programme national identique dans tous les IPES (IUC, IME, ISMA, ESG, ISTDI, Siantou, IUGET, ISGO, ESSIG).",
+              "semestres": [
+                {
+                  "label": "Année 1 — BTS 1 : Semestre 1",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Comptabilité Générale I (Principes de base, comptabilisation des flux)", "volume": "50 h" },
+                    { "num": "2", "intitule": "Mathématiques Générales (Fonctions, intégrales, calcul matriciel)", "volume": "60 h" },
+                    { "num": "3", "intitule": "Microéconomie (Mécanismes de marché, producteur, consommateur)", "volume": "45 h" },
+                    { "num": "4", "intitule": "Droit Civil (Introduction au droit, personnes, biens)", "volume": "45 h" },
+                    { "num": "5", "intitule": "Informatique Générale (Systèmes d'exploitation, architecture)", "volume": "40 h" },
+                    { "num": "6", "intitule": "Techniques d'Expression Française I", "volume": "30 h" },
+                    { "num": "7", "intitule": "Anglais Commercial I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Année 1 — BTS 1 : Semestre 2",
+                  "description": "",
+                  "matieres": [
+                    { "num": "8", "intitule": "Comptabilité Générale II (Opérations d'inventaire, amortissements, provisions)", "volume": "50 h" },
+                    { "num": "9", "intitule": "Comptabilité Analytique d'Exploitation (Coûts complets, coûts partiels)", "volume": "50 h" },
+                    { "num": "10", "intitule": "Mathématiques Financières (Intérêts simples et composés, annuités)", "volume": "60 h" },
+                    { "num": "11", "intitule": "Macroéconomie (Agrégats économiques, inflation, chômage)", "volume": "45 h" },
+                    { "num": "12", "intitule": "Droit Commercial (Actes de commerce, commerçants selon l'OHADA)", "volume": "45 h" },
+                    { "num": "13", "intitule": "Informatique de Bureau (Maîtrise d'Excel et Access pour la gestion)", "volume": "40 h" },
+                    { "num": "14", "intitule": "Organisation et Gestion des Entreprises (Structures et théories)", "volume": "50 h" }
+                  ]
+                },
+                {
+                  "label": "Année 2 — BTS 2 : Semestre 3",
+                  "description": "",
+                  "matieres": [
+                    { "num": "15", "intitule": "Comptabilité des Sociétés (Constitution, modification de capital, liquidation)", "volume": "50 h" },
+                    { "num": "16", "intitule": "Analyse Financière I (Bilan fonctionnel, FRNG, BFR, Trésorerie)", "volume": "45 h" },
+                    { "num": "17", "intitule": "Gestion Budgétaire (Budgets fonctionnels, ventes, approvisionnements)", "volume": "50 h" },
+                    { "num": "18", "intitule": "Fiscalité des Entreprises I (Impôt sur les Sociétés, IRPP au Cameroun)", "volume": "50 h" },
+                    { "num": "19", "intitule": "Droit des Sociétés (SARL, SA, SAS selon le droit OHADA)", "volume": "45 h" },
+                    { "num": "20", "intitule": "Statistiques Descriptives et Probabilités", "volume": "60 h" },
+                    { "num": "21", "intitule": "Anglais Commercial II", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Année 2 — BTS 2 : Semestre 4",
+                  "description": "",
+                  "matieres": [
+                    { "num": "22", "intitule": "Analyse Financière II (Tableau de financement, SIG, ratios de rentabilité)", "volume": "50 h" },
+                    { "num": "23", "intitule": "Contrôle de Gestion (Calcul et analyse des écarts budgétaires)", "volume": "50 h" },
+                    { "num": "24", "intitule": "Fiscalité des Entreprises II (Taxe sur la Valeur Ajoutée - TVA, Patente)", "volume": "50 h" },
+                    { "num": "25", "intitule": "Droit du Travail (Contrats de travail, licenciement, CNPS au Cameroun)", "volume": "45 h" },
+                    { "num": "26", "intitule": "Recherche Opérationnelle (Programmation linéaire, méthode PERT)", "volume": "40 h" },
+                    { "num": "27", "intitule": "Informatique Appliquée (Pratique intensive sur le logiciel Sage Saari Comptabilité)", "volume": "40 h" },
+                    { "num": "28", "intitule": "Méthodologie du Rapport de Stage (Stage de 2 mois obligatoire en entreprise)", "volume": "40 h" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1",
+              "slug": "essec-de-douala-master-cca",
+              "etablissement": "ESSEC de Douala — Master CCA",
+              "parcours": "Le Master CCA s'y prépare en 4 semestres après la Licence.",
+              "semestres": [
+                {
+                  "label": "Master 1 — Semestre 1",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Comptabilité Financière Approfondie I (Actifs et passifs spécifiques)", "volume": "50 h" },
+                    { "num": "2", "intitule": "Droit des Sociétés et des Groupes (Gouvernance)", "volume": "40 h" },
+                    { "num": "3", "intitule": "Fiscalité Directe de l'Entreprise (Optimisation IS / IRPP)", "volume": "45 h" },
+                    { "num": "4", "intitule": "Gestion Budgétaire et Prévisionnelle Avancée", "volume": "45 h" },
+                    { "num": "5", "intitule": "Anglais Spécifique aux Métiers du Chiffre I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Semestre 2",
+                  "description": "",
+                  "matieres": [
+                    { "num": "6", "intitule": "Consolidation des Comptes I (Périmètre, méthodes d'intégration)", "volume": "45 h" },
+                    { "num": "7", "intitule": "Initiation aux Normes IAS / IFRS", "volume": "40 h" },
+                    { "num": "8", "intitule": "Théorie et Pratique de l'Audit Financier (Normes ISA)", "volume": "50 h" },
+                    { "num": "9", "intitule": "Systèmes d'Information et Extraction de Données (SQL / Business Intelligence)", "volume": "40 h" },
+                    { "num": "10", "intitule": "Droit Pénal des Affaires (Responsabilité des dirigeants)", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 3",
+                  "description": "",
+                  "matieres": [
+                    { "num": "11", "intitule": "Consolidation Approfondie (Variations de périmètre, fiscalité différée)", "volume": "50 h" },
+                    { "num": "12", "intitule": "Audit Financier des Cycles Pratiques (Immobilisations, stocks, trésorerie)", "volume": "50 h" },
+                    { "num": "13", "intitule": "Ingénierie Financière (Fusions, scissions, apports partiels d'actifs)", "volume": "45 h" },
+                    { "num": "14", "intitule": "Évaluation des Entreprises et Diagnostic Stratégique", "volume": "45 h" },
+                    { "num": "15", "intitule": "Droit Fiscal Approfondi (Contrôle, redressement et contentieux fiscal au Cameroun)", "volume": "40 h" },
+                    { "num": "16", "intitule": "Réglementation Professionnelle et Déontologie (ONECCA / IFAC)", "volume": "30 h" },
+                    { "num": "17", "intitule": "Anglais Spécifique aux Métiers du Chiffre II", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 4",
+                  "description": "",
+                  "matieres": [
+                    { "num": "18", "intitule": "Audit des Systèmes d'Information (Contrôle des environnements ERP complexes)", "volume": "40 h" },
+                    { "num": "19", "intitule": "Méthodologie de la Recherche + Grand Stage (6 mois en cabinet ou direction comptable) + Mémoire", "volume": "480 h" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "slug": "ucac-yaounde-master-cca",
+              "etablissement": "UCAC (Université Catholique d'Afrique Centrale) — Yaoundé",
+              "parcours": "Master CCA — maquette autonome de l'UCAC, validée par son conseil.",
+              "semestres": [
+                {
+                  "label": "Master 1 — Semestre 1",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Comptabilité Approfondie (SYSCOHADA révisé appliqué aux cas complexes)", "volume": "60 h" },
+                    { "num": "2", "intitule": "Droit des Affaires et Structures Juridiques (OHADA)", "volume": "45 h" },
+                    { "num": "3", "intitule": "Fiscalité Approfondie des Sociétés (Régimes spéciaux)", "volume": "50 h" },
+                    { "num": "4", "intitule": "Finance d'Entreprise : Théories de la structure du capital", "volume": "50 h" },
+                    { "num": "5", "intitule": "Outils Informatiques d'Audit (Analyse de bases de données de masse)", "volume": "40 h" },
+                    { "num": "6", "intitule": "Anglais pour Experts Comptables I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Semestre 2",
+                  "description": "",
+                  "matieres": [
+                    { "num": "7", "intitule": "Consolidation des Comptes de Groupes (Pratique des retraitements)", "volume": "45 h" },
+                    { "num": "8", "intitule": "Normes Comptables Internationales IFRS (Immobilisations et instruments)", "volume": "40 h" },
+                    { "num": "9", "intitule": "Contrôle de Gestion Stratégique et Pilotage de la Performance", "volume": "45 h" },
+                    { "num": "10", "intitule": "Cadre Général de l'Audit et Évaluation du Contrôle Interne", "volume": "40 h" },
+                    { "num": "11", "intitule": "Droit des Contrats, de la Concurrence et des Marchés", "volume": "30 h" },
+                    { "num": "12", "intitule": "Management des Équipes et Conduite des Missions d'Audit", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 3",
+                  "description": "",
+                  "matieres": [
+                    { "num": "13", "intitule": "Audit Financier Appliqué et Certification Légale des Comptes", "volume": "50 h" },
+                    { "num": "14", "intitule": "Ingénierie Financière et Restructurations d'Entreprises", "volume": "45 h" },
+                    { "num": "15", "intitule": "Déontologie de l'Expert-Comptable et du Commissaire aux Comptes", "volume": "20 h" },
+                    { "num": "16", "intitule": "Gestion Fiscale des Groupes et Audit Fiscal", "volume": "45 h" },
+                    { "num": "17", "intitule": "Évaluation des Entreprises et Management de la Valeur", "volume": "45 h" },
+                    { "num": "18", "intitule": "Gestion des Risques Financiers et Modélisation de Marché", "volume": "50 h" },
+                    { "num": "19", "intitule": "Anglais pour Experts Comptables II", "volume": "30 h" },
+                    { "num": "20", "intitule": "Éthique des Affaires et Responsabilité Sociale des Entreprises", "volume": "20 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 4",
+                  "description": "",
+                  "matieres": [
+                    { "num": "", "intitule": "Stage professionnel de 6 mois dans un Cabinet d'Expertise Comptable habilité", "volume": "480 h" },
+                    { "num": "", "intitule": "Séminaires de recherche, rédaction et soutenance publique du Mémoire de Master", "volume": "60 h" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3",
+              "slug": "fseg-soa-et-douala",
+              "etablissement": "FSEG de Yaoundé II (Soa) et Université de Douala",
+              "parcours": "Universités d'État publiques — maquettes standardisées fixées par la réforme LMD.",
+              "semestres": [
+                {
+                  "label": "Master 1 — Semestre 1",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Théorie Financière Avancée", "volume": "50 h" },
+                    { "num": "2", "intitule": "Comptabilité Approfondie SYSCOHADA (Opérations de haut de bilan)", "volume": "50 h" },
+                    { "num": "3", "intitule": "Contrôle de Gestion Opérationnel (Gestion des coûts complexes)", "volume": "45 h" },
+                    { "num": "4", "intitule": "Droit des Sociétés Commerciales (OHADA)", "volume": "40 h" },
+                    { "num": "5", "intitule": "Économétrie Financière Appliquée", "volume": "50 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Semestre 2",
+                  "description": "",
+                  "matieres": [
+                    { "num": "6", "intitule": "Diagnostic et Analyse Financière des Groupes", "volume": "45 h" },
+                    { "num": "7", "intitule": "Trésorerie Internationale et Choix de Financement", "volume": "40 h" },
+                    { "num": "8", "intitule": "Fiscalité de l'Entreprise Camerounaise (IS et Droits d'enregistrement)", "volume": "45 h" },
+                    { "num": "9", "intitule": "Management des Systèmes d'Information Comptable (ERP SAGE)", "volume": "40 h" },
+                    { "num": "10", "intitule": "Anglais Financier I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 3",
+                  "description": "",
+                  "matieres": [
+                    { "num": "11", "intitule": "Ingénierie Financière (Fusions, acquisitions, LBO)", "volume": "50 h" },
+                    { "num": "12", "intitule": "Évaluation des Entreprises et Planification Stratégique", "volume": "45 h" },
+                    { "num": "13", "intitule": "Consolidation des Comptes en Normes Nationales et IFRS", "volume": "45 h" },
+                    { "num": "14", "intitule": "Audit Interne et Cartographie des Risques", "volume": "40 h" },
+                    { "num": "15", "intitule": "Audit Juridique et Fiscal de l'Entreprise", "volume": "40 h" },
+                    { "num": "16", "intitule": "Gestion des Risques Financiers (Produits dérivés, change, taux)", "volume": "45 h" },
+                    { "num": "17", "intitule": "Éthique et Gouvernance des Organisations", "volume": "30 h" },
+                    { "num": "18", "intitule": "Anglais Financier II", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 4",
+                  "description": "",
+                  "matieres": [
+                    { "num": "", "intitule": "Stage en milieu professionnel (6 mois) + Encadrement et Soutenance de mémoire", "volume": "480 h" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "4",
+              "slug": "dschang-et-ngaoundere",
+              "etablissement": "Université de Dschang et Université de Ngaoundéré",
+              "parcours": "Master CCA — maquettes des universités d'État de Dschang et de Ngaoundéré.",
+              "semestres": [
+                {
+                  "label": "Master 1 — Semestre 1",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "Macroéconomie Financière et Marchés de Capitaux", "volume": "45 h" },
+                    { "num": "2", "intitule": "Comptabilité Approfondie I (SYSCOHADA Révisé)", "volume": "50 h" },
+                    { "num": "3", "intitule": "Gestion Budgétaire et Tableaux de Bord", "volume": "45 h" },
+                    { "num": "4", "intitule": "Fiscalité Générale des Affaires au Cameroun", "volume": "45 h" },
+                    { "num": "5", "intitule": "Anglais Technique d'Affaires I", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 1 — Semestre 2",
+                  "description": "",
+                  "matieres": [
+                    { "num": "6", "intitule": "Théorie des Organisations et Management Stratégique", "volume": "45 h" },
+                    { "num": "7", "intitule": "Mathématiques Décisionnelles (Recherche Opérationnelle Avancée)", "volume": "50 h" },
+                    { "num": "8", "intitule": "Droit des Affaires et de la Concurrence", "volume": "40 h" },
+                    { "num": "9", "intitule": "Comptabilité Analytique Approfondie (Activity-Based Costing - ABC)", "volume": "45 h" },
+                    { "num": "10", "intitule": "Informatique Appliquée à la Comptabilité", "volume": "40 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 3",
+                  "description": "",
+                  "matieres": [
+                    { "num": "11", "intitule": "Audit Financier, Comptable et Opérationnel", "volume": "50 h" },
+                    { "num": "12", "intitule": "Diagnostic Financier Approfondi des Entreprises en Difficulté", "volume": "45 h" },
+                    { "num": "13", "intitule": "Consolidation et Reporting International (Normes IFRS)", "volume": "45 h" },
+                    { "num": "14", "intitule": "Ingénierie Juridique et Financière des Groupes", "volume": "45 h" },
+                    { "num": "15", "intitule": "Contrôle de Gestion Sectoriel (Banques, Assurances, Industries)", "volume": "45 h" },
+                    { "num": "16", "intitule": "Droit Social Approfondi et Gestion de la Paie", "volume": "40 h" },
+                    { "num": "17", "intitule": "Méthodologie de la Recherche en Sciences de Gestion", "volume": "30 h" },
+                    { "num": "18", "intitule": "Anglais Technique d'Affaires II", "volume": "30 h" }
+                  ]
+                },
+                {
+                  "label": "Master 2 — Semestre 4",
+                  "description": "",
+                  "matieres": [
+                    { "num": "", "intitule": "Stage professionnel de fin de cycle (5 à 6 mois) + Rédaction et soutenance publique du mémoire", "volume": "480 h" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "5",
+              "slug": "ipes-partenariat-international",
+              "etablissement": "IPES sous Partenariat International (IUC, ISMA, IME)",
+              "parcours": "Préparation directe au programme du DSCG de l'INTEC de Paris / CNAM. Cursus organisé non par semestres mais par la validation obligatoire de 7 Unités d'Enseignement (UE) sur les deux années de Master.",
+              "semestres": [
+                {
+                  "label": "Année 1 (Niveau M1 / DSCG) — 4 Blocs de Matières",
+                  "description": "",
+                  "matieres": [
+                    { "num": "1", "intitule": "UE 1 : Gestion juridique, fiscale et sociale (contrats, sociétés, pénal, travail, fiscalité des structures et des groupes, financement)", "volume": "60 h" },
+                    { "num": "2", "intitule": "UE 2 : Finance (valeur et marchés, diagnostic financier, investissement, financement, ingénierie financière, trésorerie et risques)", "volume": "60 h" },
+                    { "num": "3", "intitule": "UE 4 : Comptabilité et audit (cadre conceptuel, fusions, comptes consolidés SYSCOHADA / IFRS, audit et contrôle interne)", "volume": "60 h" },
+                    { "num": "4", "intitule": "UE 5 : Management des systèmes d'information (gouvernance des SI, projets ERP, performance, sécurité, audit informatique)", "volume": "45 h" }
+                  ]
+                },
+                {
+                  "label": "Année 2 (Niveau M2 / DSCG) — 3 Blocs + Stage",
+                  "description": "",
+                  "matieres": [
+                    { "num": "5", "intitule": "UE 3 : Management et contrôle de gestion (modèles d'organisation, stratégie et contrôle, RH, conduite du changement)", "volume": "60 h" },
+                    { "num": "6", "intitule": "UE 6 : Anglais des affaires (finance, management, économie : analyse de documents + exposé et entretien en anglais)", "volume": "30 h" },
+                    { "num": "7", "intitule": "UE 7 : Mémoire professionnel (stage de 16 semaines minimum en cabinet + rédaction et soutenance d'un mémoire)", "volume": "640 h" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

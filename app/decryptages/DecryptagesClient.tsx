@@ -59,14 +59,24 @@ export default function DecryptagesClient() {
           <div className="absolute inset-0 bg-gradient-to-r from-accent-violet-50 to-orange-50 rounded-3xl transform -rotate-1 scale-[1.01] opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
           <Link href={`/decryptages/${featuredArticle.id}`}>
             <Card padding="none" className="relative flex flex-col lg:flex-row overflow-hidden border-transparent shadow-md hover:shadow-xl transition-all duration-500 rounded-3xl bg-white z-10">
-              <div className="lg:w-2/5 p-8 lg:p-12 bg-linear-to-br from-accent-violet to-purple-600 flex flex-col justify-between text-white min-h-[300px]">
-                <Badge className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-md border-none self-start font-bold">
-                  À la une
-                </Badge>
-                <div>
-                  <Sparkles className="h-8 w-8 text-white/50 mb-4" />
-                  <p className="text-white/80 font-medium text-sm tracking-wider uppercase mb-1">Dossier Spécial</p>
-                  <p className="text-2xl font-display font-bold leading-tight">{featuredArticle.categorie}</p>
+              <div className="lg:w-2/5 p-8 lg:p-12 relative flex flex-col justify-between text-white min-h-[300px] overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src="https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?q=80&w=800&auto=format&fit=crop" 
+                  alt="Finance africaine" 
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+                
+                <div className="relative z-10">
+                  <Badge className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-md border-none self-start font-bold shadow-sm">
+                    À la une
+                  </Badge>
+                </div>
+                <div className="relative z-10 mt-10">
+                  <Sparkles className="h-8 w-8 text-white/80 mb-4" />
+                  <p className="text-white/90 font-medium text-sm tracking-wider uppercase mb-1 drop-shadow-sm">Dossier Spécial</p>
+                  <p className="text-3xl font-display font-bold leading-tight drop-shadow-md">{featuredArticle.categorie}</p>
                 </div>
               </div>
               

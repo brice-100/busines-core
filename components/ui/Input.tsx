@@ -38,7 +38,7 @@ export function Input({
       {label && (
         <label
           htmlFor={inputId}
-          className="text-sm font-semibold text-secondary-700 mb-1"
+          className="text-[15px] font-bold text-[#1e293b] mb-1.5 ml-2"
         >
           {label}
         </label>
@@ -53,14 +53,14 @@ export function Input({
         <input
           id={inputId}
           className={cn(
-            "w-full rounded-xl border bg-white px-5 py-4 text-sm text-secondary outline-none",
+            "w-full rounded-full border bg-white px-6 py-4 text-[15px] text-secondary outline-none shadow-sm",
             "placeholder:text-gray-400 transition-all duration-200",
-            "focus:border-primary focus:ring-2 focus:ring-primary/20",
+            "focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20",
             error
               ? "border-red-400 focus:border-red-400 focus:ring-red-100"
               : "border-gray-200 hover:border-gray-300",
-            leftIcon && "pl-10",
-            rightElement && "pr-10",
+            !!leftIcon && "pl-10",
+            !!rightElement && "pr-10",
             className
           )}
           {...props}
