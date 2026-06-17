@@ -1,0 +1,107 @@
+{
+  "metiers": [
+    {
+      "id": "f1-metier-a",
+      "slug": "controleur-de-gestion-tresorier-d-entreprise",
+      "nom": "Contrôleur de gestion / Trésorier d'entreprise",
+      "filiereNum": 1,
+      "filiereTitre": "Finance d'Entreprise, Audit et Comptabilité",
+      "accroche": "Piloter la performance et la trésorerie de l'entreprise.",
+      "mission": "Mesurer les écarts entre prévisions et résultats, construire les tableaux de bord, optimiser la trésorerie et éclairer les décisions de la direction. Un métier-tremplin vers les fonctions de direction financière.",
+      "ouSeFormer": [
+        { "etablissement": "UCAC (Université Catholique d'Afrique Centrale)", "diplome": "Licence en Management, Audit et Contrôle (MAC)", "niveau": "Bac+3", "metierId": "f1-metier-a", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Bachelor en Gestion — option Finance et Contrôle", "niveau": "Bac+3", "metierId": "f1-metier-a", "formationId": "1" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Assistant contrôleur de gestion / Trésorier junior", "description": "Collecte des données, reporting mensuel, suivi des budgets et des flux de trésorerie sous supervision.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Contrôleur de gestion / Trésorier", "description": "Animation du cycle budgétaire, analyse des écarts, prévisions de trésorerie et relations bancaires courantes.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Contrôleur de gestion senior / Responsable trésorerie", "description": "Pilotage de la performance par activité, optimisation du cash, financement court terme et conseil aux opérationnels.", "experience": "5–8 ans" },
+        { "niveau": "Management", "poste": "Responsable du contrôle de gestion", "description": "Encadrement d'équipe, définition des indicateurs stratégiques et reporting de direction.", "experience": "8–12 ans" },
+        { "niveau": "Direction", "poste": "Directeur du contrôle de gestion → DAF", "description": "Pilotage global de la performance du groupe et accès aux fonctions de direction financière.", "experience": "12 ans et +" }
+      ]
+    },
+    {
+      "id": "f1-metier-b",
+      "slug": "auditeur-financier",
+      "nom": "Auditeur financier",
+      "filiereNum": 1,
+      "filiereTitre": "Finance d'Entreprise, Audit et Comptabilité",
+      "accroche": "Certifier la fiabilité des comptes des entreprises.",
+      "mission": "Vérifier, par les risques et par les cycles, la sincérité des états financiers. En cabinet (Big Four et cabinets locaux) ou en interne, l'audit est l'une des meilleures écoles pour toute la finance d'entreprise.",
+      "ouSeFormer": [
+        { "etablissement": "UCAC (Université Catholique d'Afrique Centrale)", "diplome": "Master en Audit et Contrôle de Gestion (ACG)", "niveau": "Bac+5", "metierId": "f1-metier-b", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master Professionnel en Comptabilité, Contrôle et Audit (CCA)", "niveau": "Bac+5", "metierId": "f1-metier-b", "formationId": "1" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Auditeur junior / Assistant", "description": "Réalisation des tests d'audit sur les cycles simples, préparation des feuilles de travail et des inventaires.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Auditeur senior", "description": "Conduite des sections complexes, supervision des juniors et rédaction des conclusions de cycle.", "experience": "2–4 ans" },
+        { "niveau": "Encadrement", "poste": "Chef de mission audit", "description": "Pilotage complet des missions, relation client, planification et revue des dossiers.", "experience": "4–7 ans" },
+        { "niveau": "Management", "poste": "Manager audit", "description": "Gestion d'un portefeuille de clients, développement commercial et encadrement des équipes de mission.", "experience": "7–10 ans" },
+        { "niveau": "Direction", "poste": "Directeur de mission / Associé — Commissaire aux comptes", "description": "Signature des rapports, responsabilité d'un bureau ou d'une ligne de services, statut d'associé.", "experience": "10 ans et +" }
+      ]
+    },
+    {
+      "id": "f1-metier-c",
+      "slug": "directeur-administratif-et-financier-daf",
+      "nom": "Directeur Administratif et Financier (DAF)",
+      "filiereNum": 1,
+      "filiereTitre": "Finance d'Entreprise, Audit et Comptabilité",
+      "accroche": "Le bras droit financier de la direction générale.",
+      "mission": "Piloter la stratégie financière globale, sécuriser le financement, gérer les relations bancaires et superviser les équipes comptables, juridiques et RH. Le sommet de la filière gestion, atteint après plusieurs années d'expérience.",
+      "ouSeFormer": [
+        { "etablissement": "UCAC (Université Catholique d'Afrique Centrale)", "diplome": "Master en Finance et Métiers de la Stratégie (FMS)", "niveau": "Bac+5", "metierId": "f1-metier-c", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master en Gestion Financière et Stratégique (GFS)", "niveau": "Bac+5", "metierId": "f1-metier-c", "formationId": "1" },
+        { "etablissement": "FSEG de Yaoundé II (Soa)", "diplome": "Master en Finance-Comptabilité-Direction Financière (FCDF)", "niveau": "Bac+5", "metierId": "f1-metier-c", "formationId": "3" }
+      ],
+      "evolution": [
+        { "niveau": "Accès", "poste": "Chef comptable / Responsable comptable", "description": "Maîtrise de la production comptable et fiscale, première supervision d'équipe.", "experience": "3–6 ans" },
+        { "niveau": "Confirmé", "poste": "Responsable Administratif et Financier (RAF)", "description": "Pilotage administratif et financier d'une PME : comptabilité, trésorerie, fiscalité et reporting.", "experience": "6–10 ans" },
+        { "niveau": "Senior", "poste": "DAF adjoint", "description": "Co-pilotage de la fonction finance d'une grande structure, projets de financement et de consolidation.", "experience": "10–13 ans" },
+        { "niveau": "Direction", "poste": "Directeur Administratif et Financier (DAF)", "description": "Direction de la stratégie financière, des risques et des relations avec les banques et investisseurs.", "experience": "13 ans et +" },
+        { "niveau": "Sommet", "poste": "Secrétaire général / Directeur général", "description": "Élargissement du périmètre à la direction générale de l'entreprise ou du groupe.", "experience": "15 ans et +" }
+      ]
+    },
+    {
+      "id": "f1-metier-d",
+      "slug": "expert-comptable",
+      "nom": "Expert-Comptable",
+      "filiereNum": 1,
+      "filiereTitre": "Finance d'Entreprise, Audit et Comptabilité",
+      "accroche": "Le plus haut titre des métiers du chiffre.",
+      "mission": "Tenir, réviser et certifier les comptes, conseiller les dirigeants et exercer le commissariat aux comptes. Un parcours réglementé : DSGC, puis stage professionnel de 3 ans et mémoire pour le titre d'Expert-Comptable Diplômé (ONECCA).",
+      "ouSeFormer": [
+        { "etablissement": "ISSEA — Yaoundé", "diplome": "DSGC-CEMAC (Diplôme Supérieur de Gestion et de Comptabilité)", "niveau": "Bac+5 / Expertise", "metierId": "f1-metier-d", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master CCA + modules du DSGC (partenariat INTEC Paris)", "niveau": "Bac+5", "metierId": "f1-metier-d", "formationId": "1" },
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master CCA avec orientation expertise", "niveau": "Bac+5", "metierId": "f1-metier-d", "formationId": "2" }
+      ],
+      "evolution": [
+        { "niveau": "Stagiaire", "poste": "Expert-comptable stagiaire (inscrit ONECCA)", "description": "Stage professionnel de 3 ans en cabinet après le DSGC, sous la responsabilité d'un maître de stage.", "experience": "0–3 ans" },
+        { "niveau": "Confirmé", "poste": "Collaborateur confirmé / Chef de mission", "description": "Conduite des dossiers de révision, d'établissement des comptes et de conseil fiscal.", "experience": "3–6 ans" },
+        { "niveau": "Diplômé", "poste": "Expert-Comptable Diplômé / Commissaire aux comptes", "description": "Titre obtenu après le mémoire ; signature des comptes et exercice du commissariat aux comptes.", "experience": "6–10 ans" },
+        { "niveau": "Direction", "poste": "Directeur de cabinet / Associé", "description": "Responsabilité d'un portefeuille, encadrement et association au sein d'un cabinet.", "experience": "10–15 ans" },
+        { "niveau": "Indépendance", "poste": "Expert-comptable indépendant", "description": "Création et direction de son propre cabinet d'expertise comptable et d'audit.", "experience": "15 ans et +" }
+      ]
+    },
+    {
+      "id": "f1-metier-e",
+      "slug": "comptable-bts-cge-vers-master-cca",
+      "nom": "Comptable (du BTS CGE au Master CCA)",
+      "filiereNum": 1,
+      "filiereTitre": "Finance d'Entreprise, Audit et Comptabilité",
+      "accroche": "La voie d'entrée vers tous les métiers du chiffre.",
+      "mission": "Tenir la comptabilité, produire les états financiers et la liasse fiscale. Le BTS CGE (Bac+2) ouvre la porte ; la poursuite en Licence puis Master CCA mène aux postes d'encadrement, à l'audit, à la direction financière ou à l'expertise comptable.",
+      "ouSeFormer": [
+        { "etablissement": "IPES (IUC, IME, ISMA, ISTDI…)", "diplome": "BTS Comptabilité et Gestion des Entreprises (CGE)", "niveau": "Bac+2", "metierId": "f1-metier-e", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master CCA (Comptabilité-Contrôle-Audit)", "niveau": "Bac+5", "metierId": "f1-metier-e", "formationId": "1" },
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master CCA (Comptabilité-Contrôle-Audit)", "niveau": "Bac+5", "metierId": "f1-metier-e", "formationId": "2" }
+      ],
+      "evolution": [
+        { "niveau": "Bac+2", "poste": "Aide-comptable / Comptable", "description": "Saisie des écritures, rapprochements bancaires et tenue courante après le BTS CGE.", "experience": "0–3 ans" },
+        { "niveau": "Bac+3", "poste": "Comptable / Collaborateur comptable confirmé", "description": "Production des états financiers, déclarations fiscales et sociales après une Licence.", "experience": "3–6 ans" },
+        { "niveau": "Bac+5", "poste": "Chef comptable", "description": "Supervision de la comptabilité, clôtures et liasse fiscale après le Master CCA.", "experience": "6–10 ans" },
+        { "niveau": "Encadrement", "poste": "Responsable comptable et fiscal", "description": "Pilotage du service comptable, contrôle interne et relation avec l'auditeur.", "experience": "10–14 ans" },
+        { "niveau": "Évolution", "poste": "Vers Expert-Comptable ou DAF", "description": "Bifurcation vers l'expertise comptable, l'audit ou la direction administrative et financière.", "experience": "14 ans et +" }
+      ]
+    }
+  ]
+}

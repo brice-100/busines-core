@@ -15,11 +15,16 @@ export default function AdminDashboard() {
   const { articles, deleteArticle, notifications, markNotificationRead } = useArticles();
   
   const [activeTab, setActiveTab] = useState<"articles" | "users" | "notifications">("articles");
+  const [users, setUsers] = useState(getAllUsers());
 
   if (!currentUser || currentUser.role !== "administrateur") return null;
 
-  const users = getAllUsers();
   const unreadNotifsCount = notifications.filter(n => !n.read).length;
+
+  const handleToggleBan = (userId: string) => {
+    toggleBanStatus(userId);
+    setUsers(getAllUsers()); // Rafraîchir la liste après modification
+  };
 
   return (
     <div className="px-6 py-10 lg:px-12">
@@ -119,7 +124,7 @@ export default function AdminDashboard() {
                     
                     {u.id !== currentUser.id && (
                       <button 
-                        onClick={() => toggleBanStatus(u.id)}
+                        onClick={() => handleToggleBan(u.id)}
                         className={`text-sm font-semibold px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
                           u.isBanned 
                             ? "bg-green-50 text-green-600 hover:bg-green-100" 

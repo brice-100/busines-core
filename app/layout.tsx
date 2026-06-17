@@ -37,10 +37,10 @@ export default function RootLayout({
       <body className="bg-slate-50/70 text-secondary min-h-screen font-sans">
         <AuthProvider>
           <ArticleProvider>
-            {/* MainLayout gère la responsivité et le décalage (margin-left) une bonne fois pour toutes */}
-            <MainLayout>
-              {children}
-            </MainLayout>
+              {/* MainLayout gère la responsivité et le décalage (margin-left) une bonne fois pour toutes */}
+              <MainLayout>
+                {children}
+              </MainLayout>
           </ArticleProvider>
         </AuthProvider>
       </body>

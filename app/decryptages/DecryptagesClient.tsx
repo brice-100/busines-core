@@ -9,27 +9,24 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-const pills = ["Tous", "Monnaie digitale", "Néobanques", "Crypto", "Finance Durable", "Marchés"];
+const tabs = [
+  { label: "Tous", href: "/decryptages" },
+  { label: "Monnaie digitale", href: "/decryptages/monnaie-digitale" },
+  { label: "Néobanques", href: "/decryptages/neobanques" },
+  { label: "Crypto", href: "/decryptages/crypto" },
+  { label: "Finance Durable", href: "/decryptages/finance-durable" },
+  { label: "Marchés", href: "/decryptages/marches" },
+];
 
 export default function DecryptagesClient() {
   const { articles } = useArticles();
   const { currentUser } = useAuth();
+  const pathname = usePathname();
 
-  // Etat pour l'onglet actif (0 = Tous)
-  const [active, setActive] = React.useState(0);
-
-  // Filtrer les articles selon l'onglet sélectionné. On compare en minuscules
-  const filteredArticles =
-    active === 0
-      ? articles
-      : articles.filter((a) => (a.categorie || "").toLowerCase().includes(pills[active].toLowerCase()));
-
-  // Choisir un article à la une parmi les articles filtrés, puis fallback sur l'ensemble
-  const featuredArticle =
-    filteredArticles.find((a) => a.featured) || filteredArticles[0] || articles.find((a) => a.featured) || articles[0];
-
-  const regularArticles = filteredArticles.filter((a) => a.id !== featuredArticle?.id);
+  const featuredArticle = articles.find((a) => a.featured) || articles[0];
+  const regularArticles = articles.filter((a) => a.id !== featuredArticle?.id);
 
   const canPublish = currentUser?.role === "blogueur" || currentUser?.role === "administrateur";
 
@@ -62,14 +59,24 @@ export default function DecryptagesClient() {
           <div className="absolute inset-0 bg-gradient-to-r from-accent-violet-50 to-orange-50 rounded-3xl transform -rotate-1 scale-[1.01] opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
           <Link href={`/decryptages/${featuredArticle.id}`}>
             <Card padding="none" className="relative flex flex-col lg:flex-row overflow-hidden border-transparent shadow-md hover:shadow-xl transition-all duration-500 rounded-3xl bg-white z-10">
-              <div className="lg:w-2/5 p-8 lg:p-12 bg-linear-to-br from-accent-violet to-purple-600 flex flex-col justify-between text-white min-h-[300px]">
-                <Badge className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-md border-none self-start font-bold">
-                  À la une
-                </Badge>
-                <div>
-                  <Sparkles className="h-8 w-8 text-white/50 mb-4" />
-                  <p className="text-white/80 font-medium text-sm tracking-wider uppercase mb-1">Dossier Spécial</p>
-                  <p className="text-2xl font-display font-bold leading-tight">{featuredArticle.categorie}</p>
+              <div className="lg:w-2/5 p-8 lg:p-12 relative flex flex-col justify-between text-white min-h-[300px] overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src="https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?q=80&w=800&auto=format&fit=crop" 
+                  alt="Finance africaine" 
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+                
+                <div className="relative z-10">
+                  <Badge className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-md border-none self-start font-bold shadow-sm">
+                    À la une
+                  </Badge>
+                </div>
+                <div className="relative z-10 mt-10">
+                  <Sparkles className="h-8 w-8 text-white/80 mb-4" />
+                  <p className="text-white/90 font-medium text-sm tracking-wider uppercase mb-1 drop-shadow-sm">Dossier Spécial</p>
+                  <p className="text-3xl font-display font-bold leading-tight drop-shadow-md">{featuredArticle.categorie}</p>
                 </div>
               </div>
               
@@ -111,18 +118,13 @@ export default function DecryptagesClient() {
 
       {/* Filters */}
       <div className="flex flex-wrap gap-2 pt-4">
-        {pills.map((pill, i) => {
-          const isActive = i === active;
+        {tabs.map((tab) => {
+          const isActive = pathname === tab.href;
           const className = `px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${isActive ? "bg-secondary text-white shadow-md shadow-secondary/20" : "bg-gray-50 text-gray-600 hover:text-secondary hover:bg-gray-100 hover:shadow-sm"}`;
           return (
-            <button
-              key={pill}
-              onClick={() => setActive(i)}
-              aria-pressed={isActive}
-              className={className}
-            >
-              {pill}
-            </button>
+            <Link key={tab.href} href={tab.href} className={className} aria-current={isActive ? "page" : undefined}>
+              {tab.label}
+            </Link>
           );
         })}
       </div>

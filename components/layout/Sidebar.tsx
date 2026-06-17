@@ -3,64 +3,74 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { X, Home, Compass, BookOpen, TrendingUp, Dumbbell, Users, Briefcase, Sparkles, Info } from 'lucide-react';
 
-export default function Sidebar() {
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname();
 
   const menuItems = [
-    { title: "Accueil", subtitle: "Tableau de bord", icon: "🏠", href: "/" },
-    { title: "Explorer", subtitle: "Fintech & Monnaie", icon: "🔍", href: "/explorer" },
-    { title: "Formations", subtitle: "Cours & Établissements", icon: "🎓", href: "/formations" },
-    { title: "Décryptages", subtitle: "Comprendre & Analyser", icon: "📊", href: "/decryptages" },
-    { title: "Pratiques", subtitle: "Simuler & Apprendre", icon: "💼", href: "/pratiques" },
-    { title: "Juniors", subtitle: "Par niveau scolaire", icon: "👶", href: "/juniors" },
-    { title: "Carrières", subtitle: "Métiers & Débouchés", icon: "🚀", href: "/carrieres" },
-    { title: "Innovation", subtitle: "Startups & Tendances", icon: "💡", href: "/innovation" },
-    { title: "À propos", subtitle: "Notre mission", icon: "ℹ️", href: "/a-propos" },
+    { title: "Accueil", subtitle: "Tableau de bord",  href: "/", icon: Home },
+    { title: "Explorer", subtitle: "Fintech & Monnaie", href: "/explorer", icon: Compass },
+    { title: "Formations", subtitle: "Cours & Établissements", href: "/formations", icon: BookOpen },
+    { title: "Décryptages", subtitle: "Comprendre & Analyser", href: "/decryptages", icon: TrendingUp },
+    { title: "Pratiques", subtitle: "Simuler & Apprendre", href: "/pratiques", icon: Dumbbell },
+    { title: "Juniors", subtitle: "Par niveau scolaire", href: "/juniors", icon: Users },
+    { title: "Carrières", subtitle: "Métiers & Débouchés",  href: "/carrieres", icon: Briefcase },
+    { title: "Innovation", subtitle: "Startups & Tendances",  href: "/innovation", icon: Sparkles },
+    { title: "À propos", subtitle: "Notre mission", href: "/a-propos", icon: Info },
   ];
 
   return (
-    // MODIFICATION 1 : Passage de w-64 à w-72 (La barre gagne 32px en largeur pour laisser respirer les textes)
-    <aside className="w-72 flex-shrink-0 bg-[#090D1A] text-slate-400 h-screen p-4 flex flex-col select-none border-r border-slate-900">
+    <aside className={`fixed top-0 left-0 z-30 h-screen w-50 transform bg-[#ffffff] text-slate-400 p-4 flex flex-col select-none border-r border-white transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:static lg:block`}>
       
-      {/* Brand Logo */}
-      <div className="flex items-center gap-3.5 px-3 py-4 mb-5">
-        <div className="w-9 h-9 bg-gradient-to-tr from-blue-600 to-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
-          <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 009 11V9a3 3 0 00-6 0v6a3 3 0 003 3h10a3 3 0 003-3v-1a3 3 0 00-3-3H7" />
-          </svg>
+      <div className="flex items-center justify-between px-3 py-6 mb-2">
+        <div className="flex items-center gap-3 pl-3">
+          <div className="w-10 h-10 bg-[#2563eb] rounded-xl flex items-center justify-center shadow-md shadow-blue-500/20 flex-shrink-0">
+            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-[#1e293b] font-extrabold text-lg tracking-tight leading-none">BusinessCore</span>
+            <span className="text-[10px] text-[#2563eb] font-bold tracking-widest uppercase mt-1">Fintech & Innovation</span>
+          </div>
         </div>
-        <div className="flex flex-col">
-          <span className="text-white font-extrabold text-base tracking-wide leading-none">BusinessCore</span>
-          <span className="text-[9px] text-slate-500 font-bold tracking-widest uppercase mt-1">Fintech & Innovation</span>
-        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          className="lg:hidden p-2 rounded-full text-slate-300 hover:bg-slate-100 hover:text-slate-600 transition-colors"
+          aria-label="Fermer le menu"
+        >
+          <X className="h-5 w-5" />
+        </button>
       </div>
 
-      {/* Navigation Links */}
-      {/* MODIFICATION 2 : Passage de gap-1 à gap-2 pour donner de l'espace vertical entre chaque bouton de menu */}
-      <nav className="flex-1 flex flex-col gap-2 overflow-y-auto pr-1 scrollbar-thin">
+      <nav className="flex-1 min-h-0 flex flex-col gap-1 overflow-y-auto py-2">
         {menuItems.map((item, idx) => {
           const isActive = pathname === item.href || (pathname?.startsWith(item.href) && item.href !== '/');
-          
+          const Icon = item.icon;
           return (
             <Link
               key={idx}
               href={item.href}
-              // MODIFICATION 3 : py-2.5 passe à py-3 pour donner plus de volume à la zone cliquable
-              className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 text-left group ${
+              onClick={onClose}
+              className={`w-full flex items-center gap-4 py-3 pl-6 pr-4 mr-4 rounded-r-2xl transition-all duration-200 text-left ${
                 isActive
-                  ? 'bg-[#2563EB] text-white font-medium shadow-md shadow-blue-600/20'
-                  : 'hover:bg-slate-800/40 hover:text-slate-200'
+                  ? 'bg-blue-50/50'
+                  : 'hover:bg-slate-50'
               }`}
             >
-              <span className={`text-lg transition-transform duration-200 ${!isActive && 'group-hover:scale-110'}`}>
-                {item.icon}
-              </span>
-              <div className="flex flex-col min-w-0">
-                <span className={`text-xs md:text-sm truncate ${isActive ? 'font-bold text-white' : 'text-slate-300 font-medium'}`}>
+              <Icon className={`h-5 w-5 flex-shrink-0 ${isActive ? 'text-[#2563eb]' : 'text-slate-400'}`} />
+              <div className="flex flex-col">
+                <span className={`text-[14px] leading-tight ${isActive ? 'font-bold text-[#2563eb]' : 'text-[#1e293b] font-semibold'}`}>
                   {item.title}
                 </span>
-                <span className={`text-[10px] truncate mt-0.5 ${isActive ? 'text-blue-100/80' : 'text-slate-500'}`}>
+                <span className={`text-[10px] mt-0.5 ${isActive ? 'text-blue-600/70 font-medium' : 'text-slate-500'}`}>
                   {item.subtitle}
                 </span>
               </div>
@@ -68,6 +78,21 @@ export default function Sidebar() {
           );
         })}
       </nav>
+
+      <div className="p-4 mt-auto border-t border-slate-100 flex flex-col gap-3">
+        <Link 
+          href="/login"
+          className="w-full py-3.5 bg-[#2563eb] hover:bg-blue-700 text-white rounded-xl text-sm font-bold text-center transition-colors shadow-sm"
+        >
+          Connexion
+        </Link>
+        <Link 
+          href="/login?mode=visiteur"
+          className="w-full py-3.5 bg-white border border-slate-200 text-[#1e293b] hover:bg-slate-50 rounded-xl text-sm font-bold text-center transition-colors"
+        >
+          Mode visiteur
+        </Link>
+      </div>
     </aside>
   );
 }

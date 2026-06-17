@@ -1,0 +1,59 @@
+[
+  {
+    "id": "e1",
+    "titre": "Calculer un taux d'intérêt composé",
+    "description": "Apprenez à calculer des intérêts composés et à comprendre la puissance des rendements cumulés.",
+    "categorie": "Mathématiques financières",
+    "difficulte": "Facile",
+    "duree": "15 min",
+    "tags": ["intérêts", "épargne", "calcul"],
+    "questions": [
+      {
+        "id": "q1",
+        "enonce": "Vous investissez 1000€ à un taux annuel de 5% pendant 3 ans avec intérêts composés. Quel est le montant final ?",
+        "type": "qcm",
+        "options": ["1150€", "1157,63€", "1050€", "1200€"],
+        "reponseCorrecte": 1,
+        "explication": "A = P(1+r)^n = 1000 × (1.05)^3 = 1000 × 1.157625 = 1157,63€"
+      }
+    ]
+  },
+  {
+    "id": "e2",
+    "titre": "Lire un bilan comptable",
+    "description": "Exercice pratique pour interpréter un bilan simplifié et identifier actif, passif et capitaux propres.",
+    "categorie": "Comptabilité",
+    "difficulte": "Moyen",
+    "duree": "30 min",
+    "tags": ["bilan", "comptabilité", "analyse"],
+    "questions": [
+      {
+        "id": "q1",
+        "enonce": "Dans un bilan, les créances clients apparaissent dans :",
+        "type": "qcm",
+        "options": ["Le passif circulant", "L'actif immobilisé", "L'actif circulant", "Les capitaux propres"],
+        "reponseCorrecte": 2,
+        "explication": "Les créances clients sont des droits à recevoir de l'argent, donc de l'actif à court terme (actif circulant)."
+      }
+    ]
+  },
+  {
+    "id": "e3",
+    "titre": "Quiz : Vocabulaire Fintech",
+    "description": "Testez votre maîtrise du vocabulaire de la fintech avec 10 questions rapides.",
+    "categorie": "Culture Fintech",
+    "difficulte": "Facile",
+    "duree": "10 min",
+    "tags": ["vocabulaire", "fintech", "quiz"],
+    "questions": [
+      {
+        "id": "q1",
+        "enonce": "Que signifie 'KYC' dans le domaine bancaire ?",
+        "type": "qcm",
+        "options": ["Keep Your Cash", "Know Your Customer", "Key Year Control", "Kyoto Yield Certificate"],
+        "reponseCorrecte": 1,
+        "explication": "KYC (Know Your Customer) désigne les procédures de vérification d'identité des clients dans la banque."
+      }
+    ]
+  }
+]

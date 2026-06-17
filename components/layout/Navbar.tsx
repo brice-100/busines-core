@@ -7,8 +7,12 @@ import { Button } from '../ui/Button';
 import { useAuth } from '@/lib/auth-context';
 import { useArticles } from '@/lib/article-context';
 
-export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface NavbarProps {
+  isSidebarOpen: boolean;
+  onToggleSidebar: () => void;
+}
+
+export default function Navbar({ isSidebarOpen, onToggleSidebar }: NavbarProps) {
   const [query, setQuery] = useState("");
 
   const { isAuthenticated, currentUser, logout } = useAuth();
@@ -28,29 +32,27 @@ export default function Navbar() {
     ? `${currentUser.prenom[0] ?? ""}${currentUser.nom[0] ?? ""}`.toUpperCase()
     : "?";
 
-  const onMenuClick = () => setIsMenuOpen(!isMenuOpen);
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
   };
 
   return (
-    <header className="sticky top-0 z-20 w-full bg-white/80 backdrop-blur-xl border-b border-gray-100/50">
+    <header className=" sticky top-0 z-20 w-full bg-white/80 backdrop-blur-xl border-b border-gray-100/50">
       <div className="flex items-center justify-between h-20 px-6 lg:px-10">
 
         {/* Menu Hamburger pour mobile */}
         <button
-          onClick={onMenuClick}
+          onClick={onToggleSidebar}
           className="lg:hidden p-2 -ml-2 rounded-xl text-gray-500 hover:bg-gray-100 transition-colors"
           aria-label="Menu"
-          aria-expanded={isMenuOpen}
+          aria-expanded={isSidebarOpen}
         >
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isSidebarOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
 
         {/* Barre de Recherche */}
         <form onSubmit={handleSearch} className="hidden md:flex flex-1 max-w-xl mx-auto relative group ml-4 lg:ml-0">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 group-focus-within:text-primary transition-colors" />
+          <Search className="absolute left-130 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 group-focus-within:text-primary transition-colors" />
           <input
             type="text"
             value={query}
@@ -83,16 +85,16 @@ export default function Navbar() {
                 </Link>
               )}
 
-              <div className="h-8 w-[1px] bg-gray-200 hidden sm:block mx-1"></div>
+              <div className="h-8 w-px bg-gray-200 hidden sm:block mx-1"></div>
 
               {/* Avatar + nom + rôle */}
               <Link href={dashboardHref} className="flex items-center gap-3 pl-1 pr-3 py-1 rounded-full border border-transparent hover:border-gray-200 hover:bg-gray-50 transition-all group">
                 <div className={`h-9 w-9 rounded-full flex items-center justify-center shadow-sm font-bold text-sm text-white ${
                   currentUser.role === "administrateur"
-                    ? "bg-gradient-to-tr from-violet-600 to-purple-400"
+                    ? "bg-linear-to-tr from-violet-600 to-purple-400"
                     : currentUser.role === "blogueur"
-                    ? "bg-gradient-to-tr from-blue-500 to-blue-400"
-                    : "bg-gradient-to-tr from-gray-500 to-gray-400"
+                    ? "bg-linear-to-tr from-blue-500 to-blue-400"
+                    : "bg-linear-to-tr from-gray-500 to-gray-400"
                 }`}>
                   {initials}
                 </div>
@@ -116,14 +118,14 @@ export default function Navbar() {
               <Button
                 variant="ghost"
                 href="/login"
-                className="hidden sm:flex font-bold text-secondary hover:bg-gray-50 px-5"
+                className="hidden sm:flex font-bold text-[#1e293b] hover:bg-slate-50 px-5 py-3 rounded-full"
               >
                 Se connecter
               </Button>
               <Button
                 variant="primary"
                 href="/register"
-                className="rounded-full shadow-md shadow-primary/20 px-6 font-bold"
+                className="rounded-full bg-[#2563eb] hover:bg-blue-700 text-white shadow-none px-8 py-3.5 font-bold"
               >
                 S'inscrire
               </Button>

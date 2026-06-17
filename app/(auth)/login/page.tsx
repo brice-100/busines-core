@@ -52,8 +52,8 @@ export default function LoginPage() {
             <p className="text-sm text-gray-500">Veuillez vous connecter à votre compte</p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-7">
+            <div className="space-y-6">
               <Input
                 label="Email professionnel"
                 type="email"
@@ -79,7 +79,7 @@ export default function LoginPage() {
               <label className="flex items-center gap-3 cursor-pointer group">
                 <div className="relative flex items-center justify-center">
                   <input type="checkbox" className="peer sr-only" />
-                  <div className="h-5 w-5 rounded-md border-2 border-gray-300 bg-white peer-checked:bg-primary peer-checked:border-primary transition-all"></div>
+                  <div className="h-5 w-5 rounded-md border-2 border-gray-300 bg-white peer-checked:bg-[#2563eb] peer-checked:border-[#2563eb] transition-all"></div>
                   <svg className="absolute w-3 h-3 text-white pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
@@ -87,7 +87,7 @@ export default function LoginPage() {
                 <span className="text-sm text-gray-600 font-medium select-none group-hover:text-secondary">Se souvenir de moi</span>
               </label>
 
-              <Link href="#" className="text-sm font-bold text-primary hover:text-primary-700 transition-colors">
+              <Link href="#" className="text-sm font-bold text-[#2563eb] hover:text-blue-700 transition-colors">
                 Mot de passe oublié ?
               </Link>
             </div>
@@ -100,7 +100,7 @@ export default function LoginPage() {
               size="lg" 
               fullWidth 
               isLoading={isLoading}
-              className="mt-4 shadow-lg shadow-primary/30 rounded-xl"
+              className="mt-8 shadow-lg shadow-primary/30 rounded-full"
             >
               Se connecter
             </Button>

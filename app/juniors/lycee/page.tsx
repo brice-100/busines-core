@@ -52,7 +52,7 @@ export default function LyceePage() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.map((course) => (
+          {courses.map((course, idx) => (
             <Link 
               key={course.id}
               href={`/juniors/lycee/${course.id}`}
@@ -61,7 +61,7 @@ export default function LyceePage() {
                 <div className="relative">
                   <div className="h-44 w-full bg-orange-50 relative">
                     <Image
-                      src={`/images/juniors/lycee/${course.id}.png`}
+                      src={`/images/lycee_images/${idx + 1}.jpeg`}
                       alt={course.titre}
                       fill
                       className="object-cover"

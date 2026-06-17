@@ -48,7 +48,7 @@ export default function UniversitePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.map((course) => (
+          {courses.map((course, idx) => (
             <Link 
               key={course.id}
               href={`/juniors/universite/${course.id}`}
@@ -57,7 +57,7 @@ export default function UniversitePage() {
                 <div className="relative">
                   <div className="h-44 w-full bg-green-50 relative">
                     <Image
-                      src={`/images/juniors/universite/${course.id}.png`}
+                      src={`/images/university_images/${idx + 1}.jpeg`}
                       alt={course.titre}
                       fill
                       className="object-cover"

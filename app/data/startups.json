@@ -1,0 +1,62 @@
+[
+  {
+    "id": "s1",
+    "nom": "Wave",
+    "secteur": "Paiement Mobile",
+    "description": "Wave révolutionne les transferts d'argent en Afrique de l'Ouest avec des frais quasi nuls et une interface ultra-simple.",
+    "fondateurs": ["Drew Durbin", "Lincoln Quirk"],
+    "annee": 2017,
+    "pays": "USA / Sénégal",
+    "levee": "200M$",
+    "tags": ["mobile money", "Afrique", "transfert", "fintech"],
+    "site": "https://wave.com"
+  },
+  {
+    "id": "s2",
+    "nom": "Kuda",
+    "secteur": "Néobanque",
+    "description": "Kuda est la néobanque nigériane qui propose des comptes bancaires gratuits, des microcrédits et une app primée.",
+    "fondateurs": ["Babs Ogundeyi", "Musty Mustapha"],
+    "annee": 2019,
+    "pays": "Nigeria",
+    "levee": "55M$",
+    "tags": ["néobanque", "Nigeria", "Afrique", "digital"],
+    "site": "https://kuda.com"
+  },
+  {
+    "id": "s3",
+    "nom": "Paystack",
+    "secteur": "Paiement en ligne",
+    "description": "Infrastructure de paiement pour les entreprises africaines, acquise par Stripe pour 200M$ en 2020.",
+    "fondateurs": ["Shola Akinlade", "Ezra Olubi"],
+    "annee": 2015,
+    "pays": "Nigeria",
+    "levee": "200M$ (acquisition Stripe)",
+    "tags": ["paiement", "API", "e-commerce", "Nigeria"],
+    "site": "https://paystack.com"
+  },
+  {
+    "id": "s4",
+    "nom": "Qonto",
+    "secteur": "Banque d'entreprise",
+    "description": "Qonto simplifie la gestion financière des PME et freelances européens avec une interface moderne.",
+    "fondateurs": ["Alexandre Prot", "Steve Anavi"],
+    "annee": 2016,
+    "pays": "France",
+    "levee": "622M€",
+    "tags": ["B2B", "PME", "comptabilité", "France"],
+    "site": "https://qonto.com"
+  },
+  {
+    "id": "s5",
+    "nom": "Chipper Cash",
+    "secteur": "Transfert d'argent",
+    "description": "Transferts d'argent gratuits entre pays africains, disponible dans 7 pays.",
+    "fondateurs": ["Ham Serunjogi", "Maijid Moujaled"],
+    "annee": 2018,
+    "pays": "USA / Ouganda",
+    "levee": "300M$",
+    "tags": ["transfert", "pan-africain", "gratuit", "fintech"],
+    "site": "https://chippercash.com"
+  }
+]
