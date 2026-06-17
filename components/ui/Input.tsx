@@ -59,8 +59,13 @@ export function Input({
             error
               ? "border-red-400 focus:border-red-400 focus:ring-red-100"
               : "border-gray-200 hover:border-gray-300",
+<<<<<<< HEAD
+            leftIcon ? "pl-10" : undefined,
+            rightElement ? "pr-10" : undefined,
+=======
             !!leftIcon && "pl-10",
             !!rightElement && "pr-10",
+>>>>>>> 3308c2635c71608418fa2327db226e7e3f4d6a83
             className
           )}
           {...props}
