@@ -6,11 +6,7 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
+
 
 export const metadata: Metadata = {
   title: "Cours - Collège",
@@ -122,19 +118,19 @@ export default function CourseDetailPage({ params }: any) {
 
               {/* Content */}
               <div className="mb-8">
-                <h3 className="text-base font-semibold text-gray-700 mb-3">📚 Explication</h3>
+                <h3 className="text-base font-semibold text-gray-700 mb-3"> Explication</h3>
                 <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{section.contenu}</p>
               </div>
 
               {/* Example */}
               <div className="mb-8 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
-                <h3 className="text-base font-semibold text-gray-800 mb-3">💡 Exemple</h3>
+                <h3 className="text-base font-semibold text-gray-800 mb-3"> Exemple</h3>
                 <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{section.exemple}</p>
               </div>
 
               {/* Questions */}
               <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
-                <h3 className="text-base font-semibold text-gray-800 mb-4">❓ Questions pour tester ta compréhension</h3>
+                <h3 className="text-base font-semibold text-gray-800 mb-4"> Questions pour tester ta compréhension</h3>
                 <ul className="space-y-3">
                   {section.questions.map((question, qIndex) => (
                     <li key={qIndex} className="flex gap-3">

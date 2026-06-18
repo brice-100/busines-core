@@ -126,7 +126,7 @@ export default function CourseDetailPage({ params }: PageProps) {
 
             {/* Content */}
             <div className="mb-8">
-              <h3 className="text-base font-semibold text-gray-700 mb-3">📚 Explication</h3>
+              <h3 className="text-base font-semibold text-gray-700 mb-3"> Explication</h3>
               <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
                 {section.contenu}
               </p>
@@ -134,7 +134,7 @@ export default function CourseDetailPage({ params }: PageProps) {
 
             {/* Example */}
             <div className="mb-8 bg-orange-50 border-l-4 border-orange-500 p-6 rounded-lg">
-              <h3 className="text-base font-semibold text-gray-800 mb-3">💡 Exemple</h3>
+              <h3 className="text-base font-semibold text-gray-800 mb-3"> Exemple</h3>
               <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
                 {section.exemple}
               </p>
@@ -142,7 +142,7 @@ export default function CourseDetailPage({ params }: PageProps) {
 
             {/* Questions */}
             <div className="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg">
-              <h3 className="text-base font-semibold text-gray-800 mb-4">❓ Questions pour tester ta compréhension</h3>
+              <h3 className="text-base font-semibold text-gray-800 mb-4"> Questions pour tester ta compréhension</h3>
               <ul className="space-y-3">
                 {section.questions.map((question, qIndex) => (
                   <li key={qIndex} className="flex gap-3">
