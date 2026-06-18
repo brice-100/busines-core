@@ -90,6 +90,18 @@ export default function ArticleDetailPage() {
         Retour aux Décryptages
       </button>
 
+      {/* Hero Image */}
+      {article.image && (
+        <div className="w-full h-[250px] md:h-[400px] rounded-[2rem] overflow-hidden mb-8 relative shadow-lg shadow-gray-200/50">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src={article.image} 
+            alt={article.titre} 
+            className="absolute inset-0 w-full h-full object-cover" 
+          />
+        </div>
+      )}
+
       {/* En-tête article */}
       <div className="mb-8">
         <div className="flex flex-wrap items-center gap-2 mb-4">

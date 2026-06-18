@@ -18,7 +18,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { title: "Explorer", subtitle: "Fintech & Monnaie", href: "/explorer", icon: Compass },
     { title: "Formations", subtitle: "Cours & Établissements", href: "/formations", icon: BookOpen },
     { title: "Décryptages", subtitle: "Comprendre & Analyser", href: "/decryptages", icon: TrendingUp },
-    { title: "Pratiques", subtitle: "Simuler & Apprendre", href: "/pratiques", icon: Dumbbell },
     { title: "Juniors", subtitle: "Par niveau scolaire", href: "/juniors", icon: Users },
     { title: "Carrières", subtitle: "Métiers & Débouchés",  href: "/carrieres", icon: Briefcase },
     { title: "Innovation", subtitle: "Startups & Tendances",  href: "/innovation", icon: Sparkles },
@@ -29,7 +28,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     <aside className={`fixed top-0 left-0 z-30 h-screen w-50 transform bg-[#ffffff] text-slate-400 p-4 flex flex-col select-none border-r border-white transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:static lg:block`}>
       
       <div className="flex items-center justify-between px-3 py-6 mb-2">
-        <div className="flex items-center gap-3 pl-5">
+        <div className="flex items-center gap-3 pl-3">
           <div className="w-10 h-10 bg-[#2563eb] rounded-xl flex items-center justify-center shadow-md shadow-blue-500/20 flex-shrink-0">
             <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
@@ -59,7 +58,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               key={idx}
               href={item.href}
               onClick={onClose}
-              className={`w-full flex items-center gap-4 py-3 pl-8 pr-4 mr-4 rounded-r-2xl transition-all duration-200 text-left ${
+              className={`w-full flex items-center gap-4 py-3 pl-6 pr-4 mr-4 rounded-r-2xl transition-all duration-200 text-left ${
                 isActive
                   ? 'bg-blue-50/50'
                   : 'hover:bg-slate-50'

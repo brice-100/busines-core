@@ -61,6 +61,7 @@ export function Input({
               : "border-gray-200 hover:border-gray-300",
             !!leftIcon && "pl-10",
             !!rightElement && "pr-10",
+
             className
           )}
           {...props}

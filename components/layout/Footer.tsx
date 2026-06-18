@@ -46,7 +46,6 @@ export function Footer() {
               {[
                 { href: "/formations", label: "Formations" },
                 { href: "/decryptages", label: "Décryptages" },
-                { href: "/pratiques", label: "Pratiques" },
                 { href: "/carrieres", label: "Carrières" },
                 { href: "/innovation", label: "Innovation" },
               ].map((l) => (

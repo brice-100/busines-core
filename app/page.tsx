@@ -44,9 +44,7 @@ const quickAccess = [
     label: "Formations",
     description: "Trouvez votre cursus, les établissements et diplômes.",
     icon: BookOpen,
-    accent: "bg-indigo-50 text-indigo-600 border border-indigo-100/60 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300",
-    hoverBorder: "hover:border-indigo-300",
-    hoverTitle: "group-hover:text-indigo-600",
+    accent: "bg-indigo-50 text-indigo-600 border border-indigo-100/40 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300",
     badge: "violet" as const,
   },
   {
@@ -54,29 +52,15 @@ const quickAccess = [
     label: "Décryptages",
     description: "Analysez l'actualité financière et les tendances.",
     icon: TrendingUp,
-    accent: "bg-orange-50 text-orange-500 border border-orange-100/60 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300",
-    hoverBorder: "hover:border-orange-300",
-    hoverTitle: "group-hover:text-orange-500",
+    accent: "bg-orange-50 text-orange-500 border border-orange-100/40 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300",
     badge: "orange" as const,
-  },
-  {
-    href: "/pratiques",
-    label: "Pratiques",
-    description: "Simulez, exercez-vous et développez vos compétences.",
-    icon: Dumbbell,
-    accent: "bg-emerald-50 text-emerald-500 border border-emerald-100/60 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300",
-    hoverBorder: "hover:border-emerald-300",
-    hoverTitle: "group-hover:text-emerald-500",
-    badge: "green" as const,
   },
   {
     href: "/juniors",
     label: "Juniors",
     description: "Parcours adaptés aux niveaux scolaires.",
     icon: Users,
-    accent: "bg-pink-50 text-pink-500 border border-pink-100/60 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300",
-    hoverBorder: "hover:border-pink-300",
-    hoverTitle: "group-hover:text-pink-500",
+    accent: "bg-pink-50 text-pink-500 border border-pink-100/40 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300",
     badge: "rose" as const,
   },
   {
@@ -84,9 +68,7 @@ const quickAccess = [
     label: "Carrières",
     description: "Découvrez les métiers et opportunités.",
     icon: Briefcase,
-    accent: "bg-blue-50 text-blue-600 border border-blue-100/60 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300",
-    hoverBorder: "hover:border-blue-300",
-    hoverTitle: "group-hover:text-blue-600",
+    accent: "bg-blue-50 text-blue-600 border border-blue-100/40 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300",
     badge: "primary" as const,
   },
 ];
@@ -95,13 +77,13 @@ export default function HomePage() {
   const featuredArticles = getFeaturedArticles();
 
   return (
-    <div className="flex flex-col w-full bg-white">
+    <div className="flex flex-col w-full bg-white px-6 md:px-12 lg:px-20">
       {/* =============================================
           SECTION HERO
           ============================================= */}
-      <section className="relative flex flex-col md:flex-row items-center justify-between pt-8 pb-16 md:pb-20">
-
-        <div className="relative z-10 w-full md:w-[45%] pr-4 md:pr-8 animate-fade-in mb-10 md:mb-0">
+      <section className="relative flex flex-col md:flex-row items-center justify-between pt-8 pb-12 md:pb-20">
+        
+        <div className="relative z-10 w-full md:w-[45%] pr-4 md:pr-8 animate-fade-in mb-12 md:mb-0">
           <h1 className="text-[2.5rem] md:text-5xl lg:text-[3.5rem] font-bold text-[#1e293b] leading-[1.1] mb-6 tracking-tight">
             Comprendre, Apprendre,<br/>
             Décrypter <span className="text-[#2563eb]">la Finance.</span>
@@ -112,7 +94,7 @@ export default function HomePage() {
             des formations et des opportunités.
           </p>
 
-          <div className="flex flex-wrap gap-4 items-center">
+          <div className="flex flex-wrap gap-10 items-center">
             <Button
               href="/explorer"
               variant="primary"
@@ -147,8 +129,8 @@ export default function HomePage() {
       {/* =============================================
           ACCÈS RAPIDE — 6 cartes
           ============================================= */}
-      <section className="pb-16">
-        <div className="flex items-center justify-between mb-6">
+      <section className="pb-16 pt-4">
+        <div className="flex items-center justify-between mb-8">
           <h2 className="text-xl font-bold text-[#1e293b]">Accès rapide</h2>
           <Button variant="ghost" size="sm" className="rounded-full border border-slate-200 h-9 w-9 p-0 flex items-center justify-center bg-white hover:bg-slate-50">
             <ArrowRight className="h-4 w-4 text-[#2563eb]" />
@@ -162,7 +144,7 @@ export default function HomePage() {
               <Link key={item.href} href={item.href}>
                 <Card
                   padding="sm"
-                  className={`h-full group transition-all duration-300 border border-slate-100 shadow-sm hover:shadow-md rounded-2xl bg-white flex flex-row lg:flex-col items-center lg:items-start p-4 lg:p-5 ${item.hoverBorder}`}
+                  className="h-full group transition-all duration-300 border border-slate-100 shadow-sm hover:border-[#2563eb]/30 hover:shadow-md rounded-2xl bg-white flex flex-row lg:flex-col items-center lg:items-start p-4 lg:p-5"
                 >
                   <div
                     className={`h-12 w-12 rounded-xl flex items-center justify-center mb-0 lg:mb-4 mr-4 lg:mr-0 flex-shrink-0 ${item.accent}`}
@@ -170,7 +152,7 @@ export default function HomePage() {
                     <Icon className="h-5 w-5" />
                   </div>
                   <div className="flex flex-col min-w-0 flex-1">
-                    <h3 className={`font-bold text-[#1e293b] text-sm mb-1 transition-colors ${item.hoverTitle}`}>{item.label}</h3>
+                    <h3 className="font-bold text-[#1e293b] text-sm mb-1 group-hover:text-[#2563eb] transition-colors">{item.label}</h3>
                     <p className="text-[11px] text-slate-500 leading-snug line-clamp-2">{item.description}</p>
                   </div>
                 </Card>
@@ -183,7 +165,7 @@ export default function HomePage() {
       {/* =============================================
           À LA UNE & NOS UNIVERS & ADJA
           ============================================= */}
-      <section className="pb-16 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+      <section className="pb-20 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         
         {/* À la une */}
         <div className="lg:col-span-4 flex flex-col">
@@ -238,8 +220,7 @@ export default function HomePage() {
 
         {/* Adja Assistant */}
         <div className="lg:col-span-4 flex flex-col">
-          <h2 className="text-lg font-bold text-[#1e293b] mb-4">Assistant</h2>
-          <Card padding="none" className="overflow-hidden bg-gradient-to-br from-[#E6F0FE] to-[#F1F5FF] border-none shadow-sm relative w-full rounded-2xl flex items-center flex-1 min-h-[180px]">
+          <Card padding="none" className="overflow-hidden bg-gradient-to-br from-[#E6F0FE] to-[#F1F5FF] border-none shadow-sm relative w-full rounded-2xl flex items-center h-full min-h-[180px]">
             <div className="p-6 relative z-10 w-2/3 flex flex-col justify-center min-w-0">
               <h3 className="font-bold text-[#1e293b] text-[15px] mb-2">Adja, votre assistant</h3>
               <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3 mb-4">

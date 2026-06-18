@@ -32,7 +32,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       )}
 
       <div className="flex-1 flex flex-col h-screen lg:ml-60">
-        <div className={`flex-1 ${bgClass} transition-colors duration-300 lg:rounded-tl-[2.2rem] lg:rounded-bl-[2.2rem] flex flex-col shadow-2xl border-l border-slate-900/10 lg:my-1 lg:mr-1 overflow-hidden`}>
+        <div className="flex-1 bg-[#F8FAFC] lg:rounded-tl-[2.2rem] lg:rounded-bl-[2.2rem] flex flex-col shadow-2xl border-l border-slate-900/10 lg:my-1 lg:mr-1 overflow-hidden">
           <Navbar onToggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
           <main className="flex-1 overflow-y-auto px-6 lg:px-10 pb-10">
             {children}

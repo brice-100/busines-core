@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BookOpen, Clock, Layers } from "lucide-react";
+import Image from "next/image";
 import { getAllLyceeCourses } from "@/lib/mock-data";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
@@ -51,42 +52,50 @@ export default function LyceePage() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.map((course) => (
+          {courses.map((course, idx) => (
             <Link 
               key={course.id}
               href={`/juniors/lycee/${course.id}`}
             >
-              <Card padding="none" className="flex flex-col group overflow-hidden hover:border-orange-200 transition-colors cursor-pointer h-full hover:shadow-lg">
-                <div className="p-6 flex-1 flex flex-col relative overflow-hidden">
-                  {/* Decorative background element */}
-                  <div className="absolute -top-10 -right-10 w-32 h-32 bg-orange-50 rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                  
-                  <div className="flex items-start justify-between mb-4 relative z-10">
-                    <Badge variant="secondary" className="font-bold tracking-wide">{course.categorie}</Badge>
-                    <span className={`text-xs font-bold px-2.5 py-1 rounded-md ${
-                      course.niveau === "Débutant" ? "bg-blue-50 text-blue-600" :
-                      course.niveau === "Intermédiaire" ? "bg-orange-50 text-orange-600" :
-                      "bg-purple-50 text-purple-600"
-                    }`}>
-                      {course.niveau}
-                    </span>
+              <Card padding="none" className="group overflow-hidden hover:border-orange-200 transition-colors cursor-pointer h-full hover:shadow-lg">
+                <div className="relative">
+                  <div className="h-44 w-full bg-orange-50 relative">
+                    <Image
+                      src={`/images/lycee_images/${idx + 1}.jpeg`}
+                      alt={course.titre}
+                      fill
+                      className="object-cover"
+                      placeholder="empty"
+                    />
                   </div>
-
-                  <h2 className="font-display font-bold text-secondary text-lg mb-3 leading-snug group-hover:text-orange-500 transition-colors relative z-10">
-                    {course.titre}
-                  </h2>
-                  <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1 relative z-10">
-                    {course.description}
-                  </p>
-
-                  <div className="flex items-center gap-4 text-xs font-medium text-gray-400 mt-auto pt-4 border-t border-gray-100 relative z-10">
-                    <div className="flex items-center gap-1.5">
-                      <Clock className="h-4 w-4" />
-                      {course.duree}
+                  <div className="p-6 flex flex-col">
+                    <div className="flex items-start justify-between mb-3">
+                      <Badge variant="secondary" className="font-bold tracking-wide">{course.categorie}</Badge>
+                      <span className={`text-xs font-bold px-2.5 py-1 rounded-md ${
+                        course.niveau === "Débutant" ? "bg-blue-50 text-blue-600" :
+                        course.niveau === "Intermédiaire" ? "bg-orange-50 text-orange-600" :
+                        "bg-purple-50 text-purple-600"
+                      }`}>
+                        {course.niveau}
+                      </span>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <Layers className="h-4 w-4" />
-                      {course.modules} sections
+
+                    <h2 className="font-display font-bold text-secondary text-lg mb-2 leading-snug group-hover:text-orange-500 transition-colors">
+                      {course.titre}
+                    </h2>
+                    <p className="text-sm text-gray-500 leading-relaxed mb-4 flex-1">
+                      {course.description}
+                    </p>
+
+                    <div className="flex items-center gap-4 text-xs font-medium text-gray-400 mt-2 pt-2 border-t border-gray-100">
+                      <div className="flex items-center gap-1.5">
+                        <Clock className="h-4 w-4" />
+                        {course.duree}
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Layers className="h-4 w-4" />
+                        {course.modules} sections
+                      </div>
                     </div>
                   </div>
                 </div>
