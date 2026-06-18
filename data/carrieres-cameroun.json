@@ -102,6 +102,316 @@
         { "niveau": "Encadrement", "poste": "Responsable comptable et fiscal", "description": "Pilotage du service comptable, contrôle interne et relation avec l'auditeur.", "experience": "10–14 ans" },
         { "niveau": "Évolution", "poste": "Vers Expert-Comptable ou DAF", "description": "Bifurcation vers l'expertise comptable, l'audit ou la direction administrative et financière.", "experience": "14 ans et +" }
       ]
+    },
+    {
+      "id": "f2-metier-a",
+      "slug": "operateur-de-marche-trader",
+      "nom": "Opérateur de marché (Trader)",
+      "filiereNum": 2,
+      "filiereTitre": "Finance de Marché, Risque et Actuariat",
+      "accroche": "Acheter et vendre les actifs financiers en salle de marché.",
+      "mission": "Négocier actions, obligations, devises et produits dérivés pour le compte d'une banque, d'une société de bourse ou d'une grande entreprise, autour de la BVMAC. Un métier qui exige l'agrément de la COSUMAF et une grande maîtrise du risque.",
+      "ouSeFormer": [
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master en Banque et Finance de Marché (BFM)", "niveau": "Bac+5", "metierId": "f2-metier-a", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master en Ingénierie Financière et Marchés (IFM)", "niveau": "Bac+5", "metierId": "f2-metier-a", "formationId": "1" },
+        { "etablissement": "ISMA — Douala", "diplome": "Master Professionnel en Banque-Finance de Marché (BFM)", "niveau": "Bac+5", "metierId": "f2-metier-a", "formationId": "3" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Assistant trader / Middle-office", "description": "Saisie et contrôle des opérations, suivi des positions et reporting des risques en middle-office.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Trader junior (négociateur agréé COSUMAF)", "description": "Exécution des ordres sur un périmètre encadré (taux, change ou actions) après obtention de l'agrément.", "experience": "2–4 ans" },
+        { "niveau": "Senior", "poste": "Trader senior / Négociateur principal", "description": "Gestion d'un book propre, prise de positions et couverture, animation de la liquidité d'un segment de marché.", "experience": "4–8 ans" },
+        { "niveau": "Management", "poste": "Responsable de desk / Chef de salle de marché", "description": "Encadrement d'une équipe de traders, fixation des limites de risque et de la stratégie de trading.", "experience": "8–12 ans" },
+        { "niveau": "Direction", "poste": "Directeur des activités de marché", "description": "Pilotage global du trading, relation avec la direction des risques et avec le régulateur (COSUMAF).", "experience": "12 ans et +" }
+      ]
+    },
+    {
+      "id": "f2-metier-b",
+      "slug": "analyste-financier-buy-side-sell-side",
+      "nom": "Analyste financier (Buy-side / Sell-side)",
+      "filiereNum": 2,
+      "filiereTitre": "Finance de Marché, Risque et Actuariat",
+      "accroche": "Évaluer la valeur des entreprises et des actifs.",
+      "mission": "Analyser les états financiers, la macroéconomie et les tendances sectorielles pour produire des recommandations (sell-side) ou décider des investissements d'un fonds (buy-side), au sein des banques d'affaires, sociétés de gestion d'actifs et sociétés de bourse agréées par la COSUMAF.",
+      "ouSeFormer": [
+        { "etablissement": "ESSEC de Douala", "diplome": "Master Professionnel en Ingénierie Financière et Marchés (IFM)", "niveau": "Bac+5", "metierId": "f2-metier-b", "formationId": "0" },
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master en Finance et Métiers de la Stratégie (FMS)", "niveau": "Bac+5", "metierId": "f2-metier-b", "formationId": "1" },
+        { "etablissement": "ISMA — Douala", "diplome": "Master en Finance d'Entreprise et Ingénierie Financière", "niveau": "Bac+5", "metierId": "f2-metier-b", "formationId": "3" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Analyste junior / Assistant de recherche", "description": "Collecte de données, modélisation financière de base et rédaction de notes sous supervision.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Analyste financier", "description": "Couverture d'un secteur, construction des modèles d'évaluation (DCF, multiples) et recommandations Acheter / Vendre / Conserver.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Analyste senior / Référent sectoriel", "description": "Référent d'un secteur, relation avec les émetteurs et les investisseurs, notes de recherche à fort impact.", "experience": "5–8 ans" },
+        { "niveau": "Management", "poste": "Responsable de la recherche / Gérant adjoint", "description": "Encadrement d'une équipe d'analystes ou co-gestion d'un portefeuille buy-side.", "experience": "8–12 ans" },
+        { "niveau": "Direction", "poste": "Directeur de la recherche / Directeur des investissements (CIO)", "description": "Définition de la stratégie d'investissement et de la politique de recherche de l'institution.", "experience": "12 ans et +" }
+      ]
+    },
+    {
+      "id": "f2-metier-c",
+      "slug": "gestionnaire-de-portefeuille-fund-manager",
+      "nom": "Gestionnaire de portefeuille / Fund Manager",
+      "filiereNum": 2,
+      "filiereTitre": "Finance de Marché, Risque et Actuariat",
+      "accroche": "Faire fructifier l'épargne confiée par les investisseurs.",
+      "mission": "Allouer les fonds entre actions, obligations, devises et autres actifs afin de maximiser le rendement tout en maîtrisant le risque, au sein des sociétés de gestion d'actifs (SGA) et des banques d'investissement régulées par la COSUMAF.",
+      "ouSeFormer": [
+        { "etablissement": "ENSPY — Yaoundé", "diplome": "Diplôme d'Ingénieur en Génie Financier", "niveau": "Bac+5", "metierId": "f2-metier-c", "formationId": "0" },
+        { "etablissement": "ISSEA — Yaoundé", "diplome": "Diplôme d'Ingénieur Statisticien Économiste (ISE) - Option Finance", "niveau": "Bac+5", "metierId": "f2-metier-c", "formationId": "1" },
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master en Banque et Finance de Marché (BFM)", "niveau": "Bac+5", "metierId": "f2-metier-c", "formationId": "2" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Analyste buy-side / Assistant de gestion", "description": "Analyse des supports d'investissement, suivi des portefeuilles et reporting de performance.", "experience": "0–3 ans" },
+        { "niveau": "Confirmé", "poste": "Gérant de portefeuille junior", "description": "Gestion déléguée d'un portefeuille sous mandat, arbitrages et allocation tactique.", "experience": "3–6 ans" },
+        { "niveau": "Senior", "poste": "Gérant de portefeuille (Fund Manager)", "description": "Gestion autonome d'un ou plusieurs fonds (OPCVM, FCP) et construction de l'allocation stratégique.", "experience": "6–10 ans" },
+        { "niveau": "Management", "poste": "Responsable de la gestion / Gérant senior", "description": "Supervision d'une équipe de gérants et d'une gamme de fonds, relation avec les grands clients.", "experience": "10–14 ans" },
+        { "niveau": "Direction", "poste": "Directeur de la gestion d'actifs (CIO) / Dirigeant de SGA", "description": "Direction de la stratégie d'investissement et pilotage d'une société de gestion d'actifs.", "experience": "14 ans et +" }
+      ]
+    },
+    {
+      "id": "f2-metier-d",
+      "slug": "ingenieur-financier",
+      "nom": "Ingénieur financier",
+      "filiereNum": 2,
+      "filiereTitre": "Finance de Marché, Risque et Actuariat",
+      "accroche": "Concevoir et modéliser les produits financiers complexes.",
+      "mission": "À la croisée des mathématiques, de l'informatique et de la finance, concevoir des produits structurés, automatiser des stratégies (trading algorithmique) et modéliser les risques extrêmes. Le profil « Quant » par excellence.",
+      "ouSeFormer": [
+        { "etablissement": "ENSPY — Yaoundé", "diplome": "Diplôme d'Ingénieur de Conception en Génie Financier", "niveau": "Bac+5", "metierId": "f2-metier-d", "formationId": "0" },
+        { "etablissement": "ISSEA — Yaoundé", "diplome": "Diplôme d'Ingénieur Statisticien Économiste (ISE) - Option Finance", "niveau": "Bac+5", "metierId": "f2-metier-d", "formationId": "1" },
+        { "etablissement": "IUC — Douala", "diplome": "Master Professionnel en Génie Financier et Marchés Financiers", "niveau": "Bac+5", "metierId": "f2-metier-d", "formationId": "2" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Analyste quantitatif junior (Quant)", "description": "Implémentation de modèles de pricing et de risque, développement d'outils sous Python / R.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Ingénieur financier / Quant", "description": "Conception et calibrage de modèles d'évaluation et de produits structurés, backtesting de stratégies.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Quant senior / Structureur", "description": "Structuration de produits sur-mesure et modélisation avancée des risques (VaR, stress-tests).", "experience": "5–9 ans" },
+        { "niveau": "Management", "poste": "Responsable modélisation / Head of Quant", "description": "Encadrement d'une équipe quantitative, validation des modèles et gouvernance des risques.", "experience": "9–13 ans" },
+        { "niveau": "Direction", "poste": "Directeur de l'ingénierie financière / des risques (CRO)", "description": "Direction de la R&D financière et de la stratégie de gestion des risques de l'institution.", "experience": "13 ans et +" }
+      ]
+    },
+    {
+      "id": "f2-metier-e",
+      "slug": "cadre-de-banque-banque-et-finance",
+      "nom": "Cadre de banque (Banque et Finance)",
+      "filiereNum": 2,
+      "filiereTitre": "Finance de Marché, Risque et Actuariat",
+      "accroche": "Piloter les métiers et les risques de la banque.",
+      "mission": "Issu du Master Professionnel en Banque et Finance, le cadre de banque maîtrise les opérations bancaires, la gestion des risques, la conformité et l'innovation (fintech, microfinance) pour évoluer vers l'encadrement et la direction d'agence ou de pôle.",
+      "ouSeFormer": [
+        { "etablissement": "UCAC (Campus d'Ekounou)", "diplome": "Master Professionnel en Banque et Finance", "niveau": "Bac+5", "metierId": "f2-metier-e", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master Professionnel en Banque et Finance Internationale", "niveau": "Bac+5", "metierId": "f2-metier-e", "formationId": "1" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Chargé de clientèle / Analyste bancaire junior", "description": "Gestion d'un portefeuille de clients, instruction des dossiers et vente de produits bancaires.", "experience": "0–3 ans" },
+        { "niveau": "Confirmé", "poste": "Chargé d'affaires / Cadre bancaire", "description": "Suivi d'un portefeuille à enjeux, montage de financements et maîtrise du risque de crédit.", "experience": "3–6 ans" },
+        { "niveau": "Senior", "poste": "Responsable de pôle (crédit, conformité, exploitation)", "description": "Pilotage d'un pôle d'expertise (engagements, conformité, opérations) et encadrement d'équipe.", "experience": "6–10 ans" },
+        { "niveau": "Management", "poste": "Directeur d'agence / Directeur régional", "description": "Direction d'une agence ou d'un réseau, pilotage commercial et du produit net bancaire (PNB).", "experience": "10–15 ans" },
+        { "niveau": "Direction", "poste": "Directeur de département / Membre du comité de direction", "description": "Direction d'une grande fonction bancaire (exploitation, risques, réseau) au siège.", "experience": "15 ans et +" }
+      ]
+    },
+    {
+      "id": "f3-metier-a",
+      "slug": "gestionnaire-de-clientele-entreprises-charge-d-affaires",
+      "nom": "Gestionnaire de Clientèle Entreprises / Chargé d'affaires",
+      "filiereNum": 3,
+      "filiereTitre": "Banque, Microfinance et Services Financiers",
+      "accroche": "Accompagner les entreprises dans leurs besoins financiers.",
+      "mission": "Gérer un portefeuille de PME, PMI et grandes entreprises : analyser leur santé financière, évaluer le risque de crédit et proposer des solutions de financement et de trésorerie. Une double compétence en analyse financière et en négociation commerciale.",
+      "ouSeFormer": [
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master Professionnel en Banque et Finance (Cadres de Banque)", "niveau": "Bac+5", "metierId": "f3-metier-a", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master en Banque et Finance Internationale (BFI)", "niveau": "Bac+5", "metierId": "f3-metier-a", "formationId": "1" },
+        { "etablissement": "ISMA — Douala", "diplome": "Master en Gestion de la Relation Client et Banque (GRCB)", "niveau": "Bac+5", "metierId": "f3-metier-a", "formationId": "2" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Chargé de clientèle junior / Analyste corporate", "description": "Appui à la gestion du portefeuille, montage des dossiers et analyse financière sous supervision.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Chargé d'affaires entreprises", "description": "Gestion autonome d'un portefeuille d'entreprises, négociation des financements et suivi du risque.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Chargé d'affaires grands comptes", "description": "Portefeuille de grandes entreprises et multinationales, montages complexes (crédits syndiqués, haut de bilan).", "experience": "5–9 ans" },
+        { "niveau": "Management", "poste": "Responsable du marché entreprises / Centre d'affaires", "description": "Encadrement d'une équipe de chargés d'affaires et pilotage du produit net bancaire corporate.", "experience": "9–13 ans" },
+        { "niveau": "Direction", "poste": "Directeur de la clientèle entreprises", "description": "Direction de la stratégie corporate de la banque et des relations grands comptes.", "experience": "13 ans et +" }
+      ]
+    },
+    {
+      "id": "f3-metier-b",
+      "slug": "analyste-de-credit",
+      "nom": "Analyste de crédit",
+      "filiereNum": 3,
+      "filiereTitre": "Banque, Microfinance et Services Financiers",
+      "accroche": "Évaluer le risque avant chaque financement.",
+      "mission": "Garde-fou de la banque : décortiquer les états financiers, évaluer les garanties, calculer la capacité de remboursement et émettre un avis pour le comité de crédit. Spécialiste du diagnostic financier, des sûretés et de la réglementation prudentielle.",
+      "ouSeFormer": [
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master Professionnel en Banque et Finance", "niveau": "Bac+5", "metierId": "f3-metier-b", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master en Banque et Finance Internationale (BFI)", "niveau": "Bac+5", "metierId": "f3-metier-b", "formationId": "1" },
+        { "etablissement": "ISMA — Douala", "diplome": "Master en Audit, Contrôle de Gestion et Gestion des Risques", "niveau": "Bac+5", "metierId": "f3-metier-b", "formationId": "3" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Analyste de crédit junior", "description": "Instruction des dossiers, analyse financière et préparation des avis sous supervision.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Analyste de crédit / Analyste risques", "description": "Évaluation autonome du risque de contrepartie, scoring et rédaction des avis pour le comité.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Analyste de crédit senior / corporate", "description": "Analyse des dossiers complexes et grands comptes, modélisation du risque de défaut.", "experience": "5–9 ans" },
+        { "niveau": "Management", "poste": "Responsable des engagements / des risques de crédit", "description": "Encadrement de l'équipe d'analystes, politique d'octroi et fixation des limites de risque.", "experience": "9–13 ans" },
+        { "niveau": "Direction", "poste": "Directeur des risques (CRO)", "description": "Direction de la gestion globale des risques de la banque et relation avec la COBAC.", "experience": "13 ans et +" }
+      ]
+    },
+    {
+      "id": "f3-metier-c",
+      "slug": "chef-d-agence-de-microfinance",
+      "nom": "Chef d'agence de microfinance",
+      "filiereNum": 3,
+      "filiereTitre": "Banque, Microfinance et Services Financiers",
+      "accroche": "Diriger une agence de microfinance de proximité.",
+      "mission": "Piloter la rentabilité d'un centre de profit, encadrer les agents de crédit, gérer le risque de proximité, collecter l'épargne et veiller au respect de la réglementation COBAC propre aux EMF de catégories 1, 2 ou 3.",
+      "ouSeFormer": [
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master Professionnel en Banque et Finance", "niveau": "Bac+5", "metierId": "f3-metier-c", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master en Banque et Finance Internationale (BFI)", "niveau": "Bac+5", "metierId": "f3-metier-c", "formationId": "1" },
+        { "etablissement": "ISMA — Douala", "diplome": "Master en Gestion de la Relation Client et Banque (GRCB)", "niveau": "Bac+5", "metierId": "f3-metier-c", "formationId": "2" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Agent de crédit / Chargé de clientèle EMF", "description": "Octroi et suivi des microcrédits, collecte de l'épargne et recouvrement de proximité.", "experience": "0–3 ans" },
+        { "niveau": "Confirmé", "poste": "Superviseur des agents de crédit", "description": "Encadrement d'une équipe d'agents, contrôle du portefeuille à risque et de la qualité.", "experience": "3–6 ans" },
+        { "niveau": "Senior", "poste": "Chef d'agence de microfinance", "description": "Direction d'une agence : rentabilité, risque, collecte, conformité et management de l'équipe.", "experience": "6–10 ans" },
+        { "niveau": "Management", "poste": "Responsable régional / de réseau d'agences", "description": "Coordination de plusieurs agences, déploiement commercial et maîtrise des risques du réseau.", "experience": "10–14 ans" },
+        { "niveau": "Direction", "poste": "Directeur d'exploitation / Directeur général d'EMF", "description": "Direction d'un établissement de microfinance et relation avec la COBAC et l'ANIF.", "experience": "14 ans et +" }
+      ]
+    },
+    {
+      "id": "f3-metier-d",
+      "slug": "compliance-officer-responsable-conformite",
+      "nom": "Compliance Officer (Responsable Conformité)",
+      "filiereNum": 3,
+      "filiereTitre": "Banque, Microfinance et Services Financiers",
+      "accroche": "Garantir le respect des lois et la lutte anti-blanchiment.",
+      "mission": "Veiller au respect des directives COBAC et ANIF : lutte contre le blanchiment et le financement du terrorisme (LCB-FT), prévention de la fraude interne et gestion des risques juridiques. Une double compétence en droit bancaire et en contrôle des risques.",
+      "ouSeFormer": [
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master Professionnel en Droit Bancaire et Financier (Conformité)", "niveau": "Bac+5", "metierId": "f3-metier-d", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master en Audit, Contrôle et Conformité des Institutions Financières (ACC)", "niveau": "Bac+5", "metierId": "f3-metier-d", "formationId": "1" },
+        { "etablissement": "ISMA — Douala", "diplome": "Master en Audit, Contrôle de Gestion et Gestion des Risques", "niveau": "Bac+5", "metierId": "f3-metier-d", "formationId": "3" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Chargé de conformité junior / Analyste KYC", "description": "Contrôles KYC, surveillance des opérations et alimentation des reportings réglementaires.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Chargé de conformité / Analyste LCB-FT", "description": "Analyse des alertes, déclarations de soupçon (ANIF) et contrôle de second niveau.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Responsable conformité (Compliance Officer)", "description": "Pilotage du dispositif LCB-FT, cartographie des risques et relation avec les régulateurs.", "experience": "5–9 ans" },
+        { "niveau": "Management", "poste": "Responsable du contrôle permanent / de la conformité groupe", "description": "Encadrement des équipes conformité et contrôle, gouvernance et reporting au comité.", "experience": "9–13 ans" },
+        { "niveau": "Direction", "poste": "Directeur de la conformité / Secrétaire général", "description": "Direction de la fonction conformité de l'établissement et responsabilité réglementaire.", "experience": "13 ans et +" }
+      ]
+    },
+    {
+      "id": "f3-metier-e",
+      "slug": "ingenieur-statisticien-economiste-ise",
+      "nom": "Ingénieur Statisticien Économiste (ISE)",
+      "filiereNum": 3,
+      "filiereTitre": "Banque, Microfinance et Services Financiers",
+      "accroche": "L'expert quantitatif des données économiques et financières.",
+      "mission": "Profil d'élite de l'ISSEA : maîtrise des probabilités, de l'économétrie, du scoring et de la data science. Très recherché par les banques centrales (BEAC), les directions des risques et les compagnies d'assurance.",
+      "ouSeFormer": [
+        { "etablissement": "ISSEA — Yaoundé", "diplome": "Diplôme d'Ingénieur Statisticien Économiste (ISE)", "niveau": "Bac+5", "metierId": "f3-metier-e", "formationId": "0" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Statisticien / Data analyst junior", "description": "Traitement des données, modélisation statistique et production d'indicateurs.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Ingénieur statisticien économiste / Data scientist", "description": "Conception de modèles économétriques et de scoring, prévisions et études quantitatives.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Statisticien senior / Quant risques", "description": "Modélisation avancée (risque de crédit, marché, actuariat) et rôle de référent méthodologique.", "experience": "5–9 ans" },
+        { "niveau": "Management", "poste": "Chef de département études / modélisation", "description": "Encadrement d'une équipe d'experts quantitatifs et pilotage des projets data.", "experience": "9–13 ans" },
+        { "niveau": "Direction", "poste": "Directeur des études / des risques / Économiste en chef", "description": "Direction des fonctions quantitatives d'une banque centrale, d'un assureur ou d'un grand institutionnel.", "experience": "13 ans et +" }
+      ]
+    },
+    {
+      "id": "f4-metier-a",
+      "slug": "actuaire",
+      "nom": "Actuaire",
+      "filiereNum": 4,
+      "filiereTitre": "Assurance et Gestion des Risques",
+      "accroche": "Le mathématicien des risques de l'assurance.",
+      "mission": "Évaluer l'impact financier des risques futurs (décès, accidents, retraites, catastrophes), concevoir les tarifs et calculer les provisions techniques en assurance vie, non-vie et prévoyance (CNPS, zone CIMA). Une spécialité très sélective et hautement quantitative.",
+      "ouSeFormer": [
+        { "etablissement": "ISSEA — Yaoundé", "diplome": "Diplôme d'Ingénieur Statisticien Économiste (ISE) - Spécialisation Actuariat", "niveau": "Bac+5", "metierId": "f4-metier-a", "formationId": "0" },
+        { "etablissement": "ENSPY — Yaoundé", "diplome": "Diplôme d'Ingénieur de Conception en Génie Financier", "niveau": "Bac+5", "metierId": "f4-metier-a", "formationId": "1" },
+        { "etablissement": "IUI — Garoua / Yaoundé", "diplome": "Master Professionnel en Mathématiques Appliquées, Option Actuariat", "niveau": "Bac+5", "metierId": "f4-metier-a", "formationId": "2" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Actuaire junior / Analyste actuariel", "description": "Calculs de provisions, tarification de base et travaux de modélisation sous supervision.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Actuaire (tarificateur / inventaire)", "description": "Tarification des produits, calcul des provisions techniques et études de rentabilité.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Actuaire senior / Responsable actuariat", "description": "Modélisation du capital et de la solvabilité (CIMA / Solvabilité II) et pilotage des risques techniques.", "experience": "5–9 ans" },
+        { "niveau": "Management", "poste": "Chef du département actuariat / Chief Actuary", "description": "Encadrement de l'équipe actuarielle, certification des provisions et reporting réglementaire.", "experience": "9–13 ans" },
+        { "niveau": "Direction", "poste": "Directeur technique / des risques (CRO)", "description": "Direction technique d'une compagnie d'assurance ou d'un organisme de prévoyance (CNPS).", "experience": "13 ans et +" }
+      ]
+    },
+    {
+      "id": "f4-metier-b",
+      "slug": "souscripteur-underwriter-corporate",
+      "nom": "Souscripteur (Underwriter) Corporate",
+      "filiereNum": 4,
+      "filiereTitre": "Assurance et Gestion des Risques",
+      "accroche": "Accepter et tarifer les grands risques d'entreprise.",
+      "mission": "Analyser les risques complexes et sur-mesure (industriels, maritimes, RC des dirigeants, construction), décider de l'acceptation, fixer les conditions (franchises, exclusions) et le juste montant de la prime. Exige la maîtrise du Code CIMA et des risques industriels.",
+      "ouSeFormer": [
+        { "etablissement": "IIA — Yaoundé", "diplome": "Master Professionnel en Assurances", "niveau": "Bac+5", "metierId": "f4-metier-b", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master en Gestion des Risques et Assurances (GRA)", "niveau": "Bac+5", "metierId": "f4-metier-b", "formationId": "1" },
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master en Droit Bancaire et Financier (Assurances & Risques Corporate)", "niveau": "Bac+5", "metierId": "f4-metier-b", "formationId": "2" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Souscripteur junior / Rédacteur production", "description": "Étude des risques simples, établissement des polices et appui aux souscripteurs seniors.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Souscripteur (Underwriter)", "description": "Souscription d'un portefeuille de risques d'entreprise, tarification et négociation avec les courtiers.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Souscripteur corporate / grands risques", "description": "Souscription des grands risques industriels et maritimes, montages en co-assurance et réassurance.", "experience": "5–9 ans" },
+        { "niveau": "Management", "poste": "Responsable souscription / des risques divers", "description": "Encadrement de l'équipe de souscription, définition de la politique d'acceptation et de tarification.", "experience": "9–13 ans" },
+        { "niveau": "Direction", "poste": "Directeur technique / de la souscription", "description": "Direction de la politique de souscription et de l'équilibre technique de la compagnie.", "experience": "13 ans et +" }
+      ]
+    },
+    {
+      "id": "f4-metier-c",
+      "slug": "gestionnaire-de-sinistres",
+      "nom": "Gestionnaire de sinistres",
+      "filiereNum": 4,
+      "filiereTitre": "Assurance et Gestion des Risques",
+      "accroche": "Indemniser au moment de vérité du contrat.",
+      "mission": "Analyser les circonstances du sinistre, vérifier les garanties, déterminer les responsabilités, chiffrer les dommages et piloter l'indemnisation, en s'appuyant sur le barème du Code CIMA et le droit de la responsabilité civile.",
+      "ouSeFormer": [
+        { "etablissement": "IIA — Yaoundé", "diplome": "Master Professionnel en Assurances", "niveau": "Bac+5", "metierId": "f4-metier-c", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master en Gestion des Risques et Assurances (GRA)", "niveau": "Bac+5", "metierId": "f4-metier-c", "formationId": "1" },
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master en Droit Bancaire et Financier (Assurances & Contentieux)", "niveau": "Bac+5", "metierId": "f4-metier-c", "formationId": "2" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Gestionnaire de sinistres junior", "description": "Ouverture et instruction des dossiers simples, vérification des garanties et règlement.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Gestionnaire de sinistres", "description": "Gestion autonome des sinistres (auto, corporel, dommages), expertise et négociation de l'indemnisation.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Gestionnaire sinistres complexes / Rédacteur contentieux", "description": "Sinistres corporate et complexes, recours contre tiers, relation avec les réassureurs et contentieux.", "experience": "5–9 ans" },
+        { "niveau": "Management", "poste": "Responsable du service sinistres", "description": "Encadrement de l'équipe sinistres, maîtrise des provisions et des délais de règlement.", "experience": "9–13 ans" },
+        { "niveau": "Direction", "poste": "Directeur des sinistres / de l'indemnisation", "description": "Direction de la fonction sinistres de la compagnie et de la politique d'indemnisation.", "experience": "13 ans et +" }
+      ]
+    },
+    {
+      "id": "f4-metier-d",
+      "slug": "courtier-agent-general-d-assurance",
+      "nom": "Courtier / Agent général d'assurance",
+      "filiereNum": 4,
+      "filiereTitre": "Assurance et Gestion des Risques",
+      "accroche": "L'intermédiaire indépendant entre assurés et compagnies.",
+      "mission": "Conseiller les clients, placer les risques auprès des compagnies et gérer les contrats et sinistres. Agréé par le Ministère des Finances, le courtier représente le client tandis que l'agent général représente une compagnie.",
+      "ouSeFormer": [
+        { "etablissement": "IIA — Yaoundé", "diplome": "Master Professionnel en Assurances", "niveau": "Bac+5", "metierId": "f4-metier-d", "formationId": "0" },
+        { "etablissement": "ESSEC de Douala", "diplome": "Master en Gestion des Risques et Assurances (GRA)", "niveau": "Bac+5", "metierId": "f4-metier-d", "formationId": "1" },
+        { "etablissement": "UCAC — Yaoundé", "diplome": "Master en Droit Bancaire et Financier (Assurances & Contentieux)", "niveau": "Bac+5", "metierId": "f4-metier-d", "formationId": "2" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Collaborateur d'agence / Production", "description": "Établissement des contrats, conseil de premier niveau et gestion administrative du portefeuille.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Conseiller / Chargé de clientèle assurances", "description": "Développement d'un portefeuille de clients, placement des risques et suivi des sinistres.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Courtier / Agent général d'assurance (agréé)", "description": "Exploitation de son propre mandat ou cabinet, négociation avec les compagnies et les réassureurs.", "experience": "5–10 ans" },
+        { "niveau": "Management", "poste": "Directeur de cabinet de courtage / d'agence", "description": "Direction d'un cabinet, encadrement des collaborateurs et développement commercial.", "experience": "10–15 ans" },
+        { "niveau": "Direction", "poste": "Dirigeant de cabinet de courtage / Réseau d'agences", "description": "Direction d'un cabinet de courtage d'envergure ou d'un réseau d'agences générales.", "experience": "15 ans et +" }
+      ]
+    },
+    {
+      "id": "f4-metier-e",
+      "slug": "cadre-technique-d-assurance-mpa",
+      "nom": "Cadre technique d'assurance (MPA)",
+      "filiereNum": 4,
+      "filiereTitre": "Assurance et Gestion des Risques",
+      "accroche": "Le cadre polyvalent des compagnies d'assurance.",
+      "mission": "Issu du Master Professionnel en Assurance de l'IIA, le cadre technique maîtrise les branches d'assurance, la réglementation CIMA, l'actuariat de base, la réassurance et le pilotage, pour évoluer vers les directions techniques.",
+      "ouSeFormer": [
+        { "etablissement": "IIA — Yaoundé", "diplome": "Master Professionnel en Assurance (MPA)", "niveau": "Bac+5", "metierId": "f4-metier-e", "formationId": "0" }
+      ],
+      "evolution": [
+        { "niveau": "Débutant", "poste": "Rédacteur production / technique", "description": "Établissement et gestion des contrats, application des règles techniques et réglementaires.", "experience": "0–2 ans" },
+        { "niveau": "Confirmé", "poste": "Cadre technique (production, sinistres ou réassurance)", "description": "Gestion d'un portefeuille technique, tarification et coordination avec les courtiers.", "experience": "2–5 ans" },
+        { "niveau": "Senior", "poste": "Responsable technique / Souscription / Réassurance", "description": "Pilotage d'une branche technique, équilibre du portefeuille et programmes de réassurance.", "experience": "5–9 ans" },
+        { "niveau": "Management", "poste": "Sous-directeur technique / des opérations", "description": "Encadrement de plusieurs services techniques et pilotage de la performance.", "experience": "9–14 ans" },
+        { "niveau": "Direction", "poste": "Directeur technique / Directeur général de compagnie", "description": "Direction technique et stratégique d'une compagnie d'assurance en zone CIMA.", "experience": "14 ans et +" }
+      ]
     }
   ]
 }

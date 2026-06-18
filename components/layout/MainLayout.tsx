@@ -1,14 +1,23 @@
 "use client";
 
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleSidebar = () => setSidebarOpen((prev) => !prev);
   const closeSidebar = () => setSidebarOpen(false);
+
+  // Fond teinté selon l'univers : violet fin pour Formations, bleu fin pour Carrières.
+  const bgClass = pathname?.startsWith('/formations')
+    ? 'bg-violet-50'
+    : pathname?.startsWith('/carrieres')
+    ? 'bg-blue-50'
+    : 'bg-[#F8FAFC]';
   return (
     <div className="w-full h-screen bg-[white] flex antialiased font-sans overflow-hidden">
       <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />

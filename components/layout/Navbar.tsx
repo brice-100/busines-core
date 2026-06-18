@@ -51,8 +51,8 @@ export default function Navbar({ isSidebarOpen, onToggleSidebar }: NavbarProps) 
         </button>
 
         {/* Barre de Recherche */}
-        <form onSubmit={handleSearch} className="hidden md:flex flex-1 max-w-xl mx-auto relative group ml-4 lg:ml-0">
-          <Search className="absolute left-130 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 group-focus-within:text-primary transition-colors" />
+        <form onSubmit={handleSearch} className="hidden md:flex flex-1 max-w-lg mx-auto relative group">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 group-focus-within:text-primary transition-colors" />
           <input
             type="text"
             value={query}

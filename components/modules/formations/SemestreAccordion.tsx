@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Clock } from "lucide-react";
+import { ChevronDown, Clock, ExternalLink } from "lucide-react";
 import { type Semestre, type FiliereTheme } from "@/lib/formations-data";
 import { cn } from "@/lib/utils";
 
@@ -72,7 +72,22 @@ export function SemestreAccordion({
                 >
                   <td className="px-3 py-2.5 text-gray-400">{m.num || "–"}</td>
                   <td className="px-3 py-2.5 font-medium text-secondary">
-                    {m.intitule}
+                    {m.lien ? (
+                      <a
+                        href={m.lien}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={cn(
+                          "inline-flex items-center gap-1.5 font-semibold underline decoration-dotted underline-offset-2 transition-colors hover:opacity-80",
+                          theme.text
+                        )}
+                      >
+                        {m.intitule}
+                        <ExternalLink className="h-3.5 w-3.5 flex-shrink-0" />
+                      </a>
+                    ) : (
+                      m.intitule
+                    )}
                   </td>
                   <td className="whitespace-nowrap px-3 py-2.5 text-right">
                     {m.volume && (

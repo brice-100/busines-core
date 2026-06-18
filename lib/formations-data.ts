@@ -11,6 +11,8 @@ export interface Matiere {
   num: string;
   intitule: string;
   volume: string;
+  /** lien optionnel vers un cours (ouvert dans un nouvel onglet) */
+  lien?: string;
 }
 
 export interface Semestre {

@@ -37,7 +37,7 @@ export default function DecryptagesClient() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-gray-100 pb-8">
         <div className="max-w-2xl">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-14 w-14 rounded-2xl bg-accent-violet-50 text-accent-violet flex items-center justify-center shadow-inner">
+            <div className="h-14 w-14 rounded-2xl bg-orange-50 text-orange-500 flex items-center justify-center shadow-inner">
               <FileText className="h-7 w-7" />
             </div>
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-secondary tracking-tight">Décryptages</h1>
@@ -47,7 +47,7 @@ export default function DecryptagesClient() {
           </p>
         </div>
         {canPublish && (
-          <Button href="/dashboard/blogueur/publier?univers=Décryptages" variant="primary" className="bg-accent-violet hover:bg-violet-700 gap-2 shadow-violet-600/30">
+          <Button href="/dashboard/blogueur/publier?univers=Décryptages" variant="primary" className="bg-orange-500 hover:bg-orange-600 gap-2 shadow-orange-600/30">
             <Plus className="h-4 w-4" /> Publier un article ici
           </Button>
         )}
@@ -56,7 +56,7 @@ export default function DecryptagesClient() {
       {/* Featured Article */}
       {featuredArticle && (
         <section className="relative group">
-          <div className="absolute inset-0 bg-gradient-to-r from-accent-violet-50 to-orange-50 rounded-3xl transform -rotate-1 scale-[1.01] opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-50 to-amber-50 rounded-3xl transform -rotate-1 scale-[1.01] opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
           <Link href={`/decryptages/${featuredArticle.id}`}>
             <Card padding="none" className="relative flex flex-col lg:flex-row overflow-hidden border-transparent shadow-md hover:shadow-xl transition-all duration-500 rounded-3xl bg-white z-10">
               <div className="lg:w-2/5 p-8 lg:p-12 relative flex flex-col justify-between text-white min-h-[300px] overflow-hidden">
@@ -88,7 +88,7 @@ export default function DecryptagesClient() {
                   <span>{featuredArticle.publishedAt ? formatDate(featuredArticle.publishedAt) : "Récemment"}</span>
                 </div>
                 
-                <h2 className="text-3xl lg:text-4xl font-display font-bold text-secondary mb-4 leading-tight group-hover:text-accent-violet transition-colors duration-300">
+                <h2 className="text-3xl lg:text-4xl font-display font-bold text-secondary mb-4 leading-tight group-hover:text-orange-500 transition-colors duration-300">
                   {featuredArticle.titre}
                 </h2>
                 
@@ -98,7 +98,7 @@ export default function DecryptagesClient() {
                 
                 <div className="flex items-center justify-between mt-auto">
                   <div className="flex items-center gap-4">
-                    <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-accent-violet to-purple-400 flex items-center justify-center text-white font-bold text-sm shadow-md">
+                    <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-orange-400 to-amber-500 flex items-center justify-center text-white font-bold text-sm shadow-md">
                       {(featuredArticle.auteur || "B").charAt(0)}
                     </div>
                     <div>
@@ -106,7 +106,7 @@ export default function DecryptagesClient() {
                       <p className="text-sm text-gray-400">Auteur</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-accent-violet font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                  <div className="flex items-center gap-2 text-orange-500 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                     Lire l’article <ArrowRight className="h-5 w-5" />
                   </div>
                 </div>
@@ -149,7 +149,7 @@ export default function DecryptagesClient() {
                   </div>
                 </div>
               
-              <h3 className="font-display font-bold text-secondary text-xl mb-3 leading-snug group-hover:text-accent-violet transition-colors duration-300 line-clamp-2">
+              <h3 className="font-display font-bold text-secondary text-xl mb-3 leading-snug group-hover:text-orange-500 transition-colors duration-300 line-clamp-2">
                 {a.titre}
               </h3>
               
@@ -159,7 +159,7 @@ export default function DecryptagesClient() {
               
               <div className="flex items-center justify-between mt-auto pt-5 border-t border-gray-50">
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-accent-violet to-purple-400 flex items-center justify-center text-white font-bold text-xs shadow-sm">
+                  <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-orange-400 to-amber-500 flex items-center justify-center text-white font-bold text-xs shadow-sm">
                     {(a.auteur || "B").charAt(0)}
                   </div>
                   <div>
@@ -167,7 +167,7 @@ export default function DecryptagesClient() {
                     <p className="text-xs text-gray-400">{a.publishedAt ? formatDate(a.publishedAt) : "Récemment"}</p>
                   </div>
                 </div>
-                <div className="h-8 w-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-accent-violet group-hover:text-white text-gray-400 transition-colors duration-300">
+                <div className="h-8 w-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-orange-500 group-hover:text-white text-gray-400 transition-colors duration-300">
                   <ChevronRight className="h-4 w-4" />
                 </div>
               </div>

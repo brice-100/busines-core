@@ -25,14 +25,18 @@ export const metadata: Metadata = {
     "Formations, décryptages, exercices pratiques et opportunités de carrière dans la fintech et la finance. Rejoignez la communauté BusinessCore.",
 };
 
-// Accès rapide — 6 modules
+// Accès rapide — 6 modules.
+// Chaque module porte la couleur définie dans globals.css (palette BusinessCore) :
+// l'icône, la bordure au survol et le titre au survol partagent la même teinte.
 const quickAccess = [
   {
     href: "/explorer",
     label: "Explorer",
     description: "Découvrez la fintech, la monnaie et bien plus.",
     icon: Compass,
-    accent: "bg-blue-50 text-blue-600 border border-blue-100/40 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300",
+    accent: "bg-blue-50 text-blue-600 border border-blue-100/60 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300",
+    hoverBorder: "hover:border-blue-300",
+    hoverTitle: "group-hover:text-blue-600",
     badge: "primary" as const,
   },
   {

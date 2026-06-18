@@ -74,7 +74,7 @@ export default async function CarriereMetierPage({ params }: PageProps) {
 
       {/* En-tête */}
       <header
-        className="relative mb-20 overflow-hidden rounded-3xl shadow-lg flex flex-col lg:flex-row items-stretch bg-gradient-to-br from-violet-700 to-violet-500 text-white"
+        className="relative mb-12 overflow-hidden rounded-3xl shadow-lg flex flex-col lg:flex-row items-stretch bg-gradient-to-br from-blue-700 to-blue-500 text-white"
       >
         <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/15 blur-3xl pointer-events-none" />
         

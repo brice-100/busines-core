@@ -34,9 +34,9 @@ export default function CarrieresPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative mb-20 overflow-hidden rounded-3xl bg-violet-700 px-10 py-14 text-white shadow-lg lg:px-14 lg:py-20">
+      <section className="relative mb-12 overflow-hidden rounded-3xl bg-blue-700 px-10 py-14 text-white shadow-lg lg:px-14 lg:py-20">
         <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-violet-400/20 blur-3xl" />
+        <div className="absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-blue-400/20 blur-3xl" />
         <div className="relative z-10 max-w-2xl">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider backdrop-blur">
             <Briefcase className="h-4 w-4" />
@@ -67,7 +67,7 @@ export default function CarrieresPage() {
           <SideNav title="Filières" items={navItems} />
         </aside>
 
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-14">
           {filieres.map(([num, list]) => {
             const theme = getFiliereTheme(num);
             return (
@@ -92,7 +92,7 @@ export default function CarrieresPage() {
                   </div>
                 </header>
 
-                <div className="grid grid-cols-1 gap-10 xl:grid-cols-2">
+                <div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
                   {list.map((metier) => (
                     <CarriereCard key={metier.id} metier={metier} />
                   ))}

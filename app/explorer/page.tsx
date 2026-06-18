@@ -129,6 +129,12 @@ export default function ExplorerPage() {
             );
           })}
         </div>
+        
+        {filteredItems.length === 0 && (
+          <div className="text-center py-20 bg-gray-50 rounded-3xl border border-gray-100">
+            <p className="text-gray-500">Aucun concept trouvé pour cette catégorie.</p>
+          </div>
+        )}
 
         {filteredItems.length === 0 && (
           <div className="text-center py-20 bg-gray-50 rounded-3xl border border-gray-100">
@@ -137,6 +143,53 @@ export default function ExplorerPage() {
         )}
 
       </div>
+
+      {/* Detail Modal */}
+      <Modal
+        isOpen={!!selectedItem}
+        onClose={() => setSelectedItem(null)}
+        title={selectedItem?.title}
+        size="lg"
+      >
+        {selectedItem && (
+          <div className="space-y-6">
+            <div className="w-full h-48 rounded-2xl relative overflow-hidden mb-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src={selectedItem.image} 
+                alt={selectedItem.title} 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold text-secondary mb-2">Aperçu</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {selectedItem.details.overview}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-secondary mb-2">Points clés</h3>
+              <ul className="space-y-2">
+                {selectedItem.details.keyPoints.map((point, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
+              <h3 className="text-sm font-semibold text-secondary mb-1">L'impact</h3>
+              <p className="text-gray-600 text-sm italic">
+                "{selectedItem.details.impact}"
+              </p>
+            </div>
+          </div>
+        )}
+      </Modal>
     </div>
   );
 }

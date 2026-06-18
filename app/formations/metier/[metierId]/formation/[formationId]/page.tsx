@@ -85,7 +85,7 @@ export default async function FormationPage({ params }: PageProps) {
 
       {/* En-tête formation */}
       <header
-        className="relative mb-20 overflow-hidden rounded-3xl shadow-lg flex flex-col lg:flex-row items-stretch bg-gradient-to-br from-blue-700 to-blue-500"
+        className="relative mb-12 overflow-hidden rounded-3xl shadow-lg flex flex-col lg:flex-row items-stretch bg-gradient-to-br from-indigo-700 to-indigo-500"
       >
         <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/15 blur-3xl pointer-events-none" />
         
