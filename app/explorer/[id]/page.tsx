@@ -42,7 +42,7 @@ export default function ExplorerDetailPage({ params }: Props) {
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Dégradé pour lisibilité du texte */}
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/10" />
         
         {/* Contenu Hero */}
         <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 flex flex-col items-start justify-end h-full">
@@ -53,10 +53,10 @@ export default function ExplorerDetailPage({ params }: Props) {
               </span>
             ))}
           </div>
-          <h1 className="text-3xl md:text-5xl font-display font-bold text-white mb-2 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-display font-bold !text-white mb-2 leading-tight drop-shadow-lg" style={{color: '#ffffff'}}>
             {item.title}
           </h1>
-          <p className="text-lg md:text-xl text-white/80 font-medium">
+          <p className="text-lg md:text-xl !text-white/80 font-medium drop-shadow-md" style={{color: 'rgba(255,255,255,0.8)'}}>
             {item.desc}
           </p>
         </div>

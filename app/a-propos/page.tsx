@@ -11,17 +11,17 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full">
       <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-        
+
         {/* Left Column - Content */}
         <div className="w-full lg:w-1/2">
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide mb-6">
             NOTRE MISSION
           </div>
-          
+
           <h1 className="text-4xl lg:text-5xl font-display font-bold text-secondary leading-tight mb-8">
             Démocratiser l'accès à l'éducation <span className="text-primary">financière.</span>
           </h1>
-          
+
           <p className="text-gray-600 text-lg leading-relaxed mb-16">
             BusinessCore est né d'une conviction simple : la finance et la technologie financière (fintech) doivent être accessibles à tous. Nous construisons la plateforme de référence pour former la prochaine génération d'experts financiers.
           </p>
@@ -92,10 +92,10 @@ export default function AboutPage() {
               priority
             />
           </div>
-          
+
           {/* Floating badge */}
           <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-[200px] animate-float">
-            <p className="text-3xl font-display font-bold text-primary mb-1">2024</p>
+            <p className="text-3xl font-display font-bold text-primary mb-1">2027</p>
             <p className="text-sm text-gray-500 font-medium leading-tight">Lancement officiel de la plateforme</p>
           </div>
         </div>

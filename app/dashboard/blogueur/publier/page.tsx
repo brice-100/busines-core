@@ -22,6 +22,7 @@ export default function PublierPage() {
   const [contenu, setContenu] = useState("");
   const [categorie, setCategorie] = useState(universParam || "Décryptages");
   const [readTime, setReadTime] = useState<number | "">(5);
+  const [image, setImage] = useState("");
 
   useEffect(() => {
     if (editId) {
@@ -37,6 +38,7 @@ export default function PublierPage() {
         setContenu(articleToEdit.contenu || "");
         setCategorie(articleToEdit.categorie);
         setReadTime(articleToEdit.readTime || 5);
+        setImage(articleToEdit.image || "");
       }
     }
   }, [editId, articles, currentUser, router]);
@@ -53,7 +55,8 @@ export default function PublierPage() {
       tags: [],
       auteur: `${currentUser.prenom} ${currentUser.nom}`,
       auteurId: currentUser.id,
-      readTime: typeof readTime === "number" ? readTime : 5
+      readTime: typeof readTime === "number" ? readTime : 5,
+      image
     };
 
     if (editId) {
@@ -92,6 +95,14 @@ export default function PublierPage() {
             onChange={(e) => setTitre(e.target.value)}
             placeholder="Saisissez un titre accrocheur"
             required
+            fullWidth
+          />
+
+          <Input
+            label="URL de l'image de couverture (Optionnel)"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            placeholder="https://images.unsplash.com/photo-..."
             fullWidth
           />
 

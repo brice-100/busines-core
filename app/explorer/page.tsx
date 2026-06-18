@@ -42,8 +42,8 @@ const tabsData = [
 export default function ExplorerPage() {
   const [activeTab, setActiveTab] = useState<string>("Tous");
 
-  const filteredItems = activeTab === "Tous" 
-    ? explorerItems 
+  const filteredItems = activeTab === "Tous"
+    ? explorerItems
     : explorerItems.filter(item => item.categories.includes(activeTab));
 
   const activeTabData = tabsData.find(t => t.id === activeTab);
@@ -51,7 +51,7 @@ export default function ExplorerPage() {
   return (
     <div className="flex flex-col w-full pb-10">
       <div className="w-full">
-        
+
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl lg:text-4xl font-display font-bold text-secondary mb-3">Explorer</h1>
@@ -63,14 +63,13 @@ export default function ExplorerPage() {
         {/* Filters */}
         <div className="flex flex-wrap gap-3 mb-6">
           {tabsData.map((tab) => (
-            <button 
+            <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                activeTab === tab.id
-                  ? "bg-secondary text-white shadow-lg shadow-secondary/20" 
-                  : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm"
-              }`}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${activeTab === tab.id
+                ? "bg-secondary text-white shadow-lg shadow-secondary/20"
+                : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm"
+                }`}
             >
               {tab.label}
             </button>
@@ -97,15 +96,15 @@ export default function ExplorerPage() {
           {filteredItems.map((item) => {
             return (
               <Link href={`/explorer/${item.id}`} key={item.id} className="block group">
-                <Card 
-                  padding="none" 
+                <Card
+                  padding="none"
                   className="overflow-hidden border border-gray-200 shadow-sm group-hover:shadow-xl transition-all duration-300 rounded-[2rem] flex flex-col h-full animate-fade-in"
                 >
                   <div className="h-48 w-full relative overflow-hidden flex-shrink-0">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img 
-                      src={item.image} 
-                      alt={item.title} 
+                    <img
+                      src={item.image}
+                      alt={item.title}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80" />
@@ -130,7 +129,7 @@ export default function ExplorerPage() {
             );
           })}
         </div>
-        
+
         {filteredItems.length === 0 && (
           <div className="text-center py-20 bg-gray-50 rounded-3xl border border-gray-100">
             <p className="text-gray-500">Aucun concept trouvé pour cette catégorie.</p>
