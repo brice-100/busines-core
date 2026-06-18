@@ -63,7 +63,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-100px)]">
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-100px)] px-6 py-8">
       <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row-reverse gap-10 items-center justify-center">
         
         {/* Form Section */}
@@ -98,12 +98,12 @@ export default function RegisterPage() {
                 fullWidth
               />
 
-              <div className="space-y-1">
-                <label className="block text-sm font-semibold text-secondary">Rôle souhaité</label>
+              <div className="mb-5">
+                <label className="block text-[15px] font-bold text-[#1e293b] mb-2 ml-2">Rôle souhaité</label>
                 <select
                   value={role}
                   onChange={(e) => setRole(e.target.value as UserRole)}
-                  className="w-full px-6 py-4 rounded-full border border-gray-200 bg-white text-[15px] text-secondary font-medium outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 transition-all shadow-sm"
+                  className="w-full px-6 py-4 min-h-[52px] rounded-full border border-gray-200 bg-white text-[15px] text-secondary font-medium outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 transition-all shadow-sm"
                   required
                 >
                   <option value="utilisateur">Utilisateur standard</option>

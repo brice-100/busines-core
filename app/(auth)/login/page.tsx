@@ -39,7 +39,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-100px)]">
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-100px)] px-6 py-8">
       <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-center justify-center">
         
         {/* Form Section */}

@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { X, Home, Compass, BookOpen, TrendingUp, Dumbbell, Users, Briefcase, Sparkles, Info } from 'lucide-react';
+import { X, Home, Compass, BookOpen, TrendingUp, Users, Briefcase, Sparkles, Info } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;

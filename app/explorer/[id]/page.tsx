@@ -2,21 +2,22 @@ import { getExplorerItemById } from "@/lib/explorer-data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, Lightbulb } from "lucide-react";
-import Image from "next/image";
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 // Optionnel: Générer les métadonnées dynamiquement
-export function generateMetadata({ params }: Props) {
-  const item = getExplorerItemById(params.id);
+export async function generateMetadata({ params }: Props) {
+  const { id } = await params;
+  const item = getExplorerItemById(id);
   if (!item) return { title: "Non trouvé" };
   return { title: `${item.title} | Explorer | BusinessCore` };
 }
 
-export default function ExplorerDetailPage({ params }: Props) {
-  const item = getExplorerItemById(params.id);
+export default async function ExplorerDetailPage({ params }: Props) {
+  const { id } = await params;
+  const item = getExplorerItemById(id);
 
   if (!item) {
     notFound();

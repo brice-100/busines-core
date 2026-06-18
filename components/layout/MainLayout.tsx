@@ -13,7 +13,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   const closeSidebar = () => setSidebarOpen(false);
 
   // Fond teinté selon l'univers : violet fin pour Formations, bleu fin pour Carrières.
-  const bgClass = pathname?.startsWith('/formations')
+  const _bgClass = pathname === "/login" || pathname === "/dashboard" || pathname === "/dashboard/blogueur" || pathname === "/dashboard/blogueur/publier" || pathname === "/dashboard/admin" || pathname === "/adja" ? 'bg-white' : pathname?.startsWith('/formations')
     ? 'bg-violet-50'
     : pathname?.startsWith('/carrieres')
     ? 'bg-blue-50'

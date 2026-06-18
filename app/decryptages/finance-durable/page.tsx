@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowLeft, Leaf, Globe2, ShieldCheck, ShieldAlert, Landmark, Recycle, BarChart4, Target, Sprout, Clock, ChevronRight } from "lucide-react";
+import { ArrowLeft, Leaf, Globe2, ShieldCheck, ShieldAlert, Landmark, Recycle, Target, Sprout, Clock, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { formatDate } from "@/lib/mock-data";
 import { Card } from "@/components/ui/Card";

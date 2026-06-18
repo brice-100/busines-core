@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export function generateStaticParams() {
@@ -15,13 +15,15 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const formation = getFormationById(params.id);
+  const { id } = await params;
+  const formation = getFormationById(id);
   if (!formation) return { title: "Formation introuvable" };
   return { title: formation.titre, description: formation.description };
 }
 
-export default function FormationDetail({ params }: PageProps) {
-  const formation = getFormationById(params.id);
+export default async function FormationDetail({ params }: PageProps) {
+  const { id } = await params;
+  const formation = getFormationById(id);
   if (!formation) notFound();
 
   return (

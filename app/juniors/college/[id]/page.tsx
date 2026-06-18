@@ -7,9 +7,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export const metadata: Metadata = {
@@ -17,8 +17,9 @@ export const metadata: Metadata = {
   description: "Contenu éducatif pour élèves du collège",
 };
 
-export default function CourseDetailPage({ params }: any) {
-  const course = getCollegeCourseById(params.id);
+export default async function CourseDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const course = getCollegeCourseById(id);
 
   if (!course) {
     notFound();

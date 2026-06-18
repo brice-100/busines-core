@@ -1,23 +1,18 @@
 import type { Metadata } from "next";
 import {
+  Compass,
   BookOpen,
-  FileText,
-  Dumbbell,
+  TrendingUp,
   Users,
   Briefcase,
-  Lightbulb,
   ArrowRight,
-  Sparkles,
-  Clock,
-  TrendingUp,
-  Compass,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { getFeaturedArticles, formatDate } from "@/lib/mock-data";
+import { getAllArticles, getAllMetiers, getFeaturedArticles, formatDate } from "@/lib/mock-data";
 
 export const metadata: Metadata = {
   title: "BusinessCore — Votre plateforme fintech & finance",
