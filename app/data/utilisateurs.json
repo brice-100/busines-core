@@ -1,0 +1,29 @@
+[
+  {
+    "id": "u1",
+    "nom": "Admin",
+    "prenom": "Business Core",
+    "email": "admin@businesscore.com",
+    "password": "admin2024",
+    "role": "administrateur",
+    "createdAt": "2024-09-01T08:00:00.000Z"
+  },
+  {
+    "id": "u2",
+    "nom": "Dupont",
+    "prenom": "Marie",
+    "email": "marie@example.com",
+    "password": "password123",
+    "role": "utilisateur",
+    "createdAt": "2024-10-15T10:30:00.000Z"
+  },
+  {
+    "id": "u3",
+    "nom": "Koné",
+    "prenom": "Ibrahima",
+    "email": "ibrahima@example.com",
+    "password": "test456",
+    "role": "utilisateur",
+    "createdAt": "2024-11-20T14:00:00.000Z"
+  }
+]

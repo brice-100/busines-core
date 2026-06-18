@@ -1,16 +1,25 @@
 "use client";
 
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleSidebar = () => setSidebarOpen((prev) => !prev);
   const closeSidebar = () => setSidebarOpen(false);
+
+  // Fond teinté selon l'univers : violet fin pour Formations, bleu fin pour Carrières.
+  const bgClass = pathname?.startsWith('/formations')
+    ? 'bg-violet-50'
+    : pathname?.startsWith('/carrieres')
+    ? 'bg-blue-50'
+    : 'bg-[#F8FAFC]';
   return (
-    <div className="w-full min-h-screen bg-[white] flex antialiased font-sans overflow-x-hidden">
+    <div className="w-full h-screen bg-[white] flex antialiased font-sans overflow-hidden">
       <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
 
       {isSidebarOpen && (
@@ -22,8 +31,8 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
         />
       )}
 
-      <div className="flex-1 flex flex-col min-h-screen lg:ml-60">
-        <div className="flex-1 bg-[#F8FAFC] rounded-l-[2.2rem] flex flex-col shadow-2xl border-l border-slate-900/10 my-1 mr-1 overflow-hidden">
+      <div className="flex-1 flex flex-col h-screen lg:ml-60">
+        <div className={`flex-1 ${bgClass} transition-colors duration-300 lg:rounded-tl-[2.2rem] lg:rounded-bl-[2.2rem] flex flex-col shadow-2xl border-l border-slate-900/10 lg:my-1 lg:mr-1 overflow-hidden`}>
           <Navbar onToggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
           <main className="flex-1 overflow-y-auto px-6 lg:px-10 pb-10">
             {children}

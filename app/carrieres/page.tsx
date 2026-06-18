@@ -1,98 +1,128 @@
 import type { Metadata } from "next";
-import { Briefcase, Building, MapPin, ChevronRight } from "lucide-react";
-import { getAllMetiers } from "@/lib/mock-data";
-import { Card } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import Link from "next/link";
+import { Briefcase, Compass, Route } from "lucide-react";
+import { getCarrieres, getFiliereTheme } from "@/lib/carrieres-data";
+import { FiliereIcon } from "@/components/modules/formations/FiliereIcon";
+import { CarriereCard } from "@/components/modules/carrieres/CarriereCard";
+import { SideNav, type SideNavItem } from "@/components/modules/formations/SideNav";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Carrières",
-  description: "Découvrez les métiers de la finance et de la fintech sur BusinessCore.",
+  description:
+    "Les carrières de la finance au Cameroun, métier par métier : où se former, quel cursus suivre et quels grades atteindre au fil de sa carrière.",
 };
 
-const pills = ["Tous les métiers", "Finance", "Technologie", "Data & IA", "Réglementation", "Banque"];
-
 export default function CarrieresPage() {
-  const metiers = getAllMetiers();
+  const metiers = getCarrieres();
+
+  // Regroupement par filière
+  const filieres = Array.from(
+    metiers.reduce((map, m) => {
+      const arr = map.get(m.filiereNum) ?? [];
+      arr.push(m);
+      map.set(m.filiereNum, arr);
+      return map;
+    }, new Map<number, typeof metiers>())
+  ).sort(([a], [b]) => a - b);
+
+  const navItems: SideNavItem[] = filieres.map(([num, list]) => ({
+    id: `filiere-${num}`,
+    label: list[0].filiereTitre,
+    sublabel: `Filière ${num}`,
+  }));
 
   return (
     <div className="flex flex-col">
-      <div className="w-full">
-        
-        {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="h-12 w-12 rounded-2xl bg-accent-cyan-50 text-accent-cyan flex items-center justify-center shadow-inner">
-              <Briefcase className="h-6 w-6" />
-            </div>
-            <h1 className="text-3xl lg:text-4xl font-display font-bold text-secondary">Carrières</h1>
-          </div>
-          <p className="text-gray-500 max-w-2xl text-sm lg:text-base">
-            Explorez les métiers d'avenir dans l'écosystème financier. De l'analyse de données à la conformité réglementaire, trouvez votre voie.
+      {/* Hero */}
+      <section className="relative mb-12 overflow-hidden rounded-3xl bg-blue-700 px-10 py-14 text-white shadow-lg lg:px-14 lg:py-20">
+        <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-blue-400/20 blur-3xl" />
+        <div className="relative z-10 max-w-2xl">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider backdrop-blur">
+            <Briefcase className="h-4 w-4" />
+            Univers Carrières
+          </span>
+          <h1 className="mt-5 font-display text-3xl font-extrabold leading-tight lg:text-5xl">
+            Construire sa carrière dans la finance
+          </h1>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/80 lg:text-base">
+            Pour chaque métier : où se former et quel cursus suivre, puis les
+            grades que l&apos;on peut atteindre au fil de sa carrière — du premier
+            poste jusqu&apos;aux fonctions de direction.
           </p>
+          <div className="mt-8 flex flex-wrap gap-8">
+            <Stat icon={<Compass className="h-4 w-4" />} value={metiers.length} label="Métiers" />
+            <Stat
+              icon={<Route className="h-4 w-4" />}
+              value={metiers.reduce((n, m) => n + m.evolution.length, 0)}
+              label="Étapes de carrière"
+            />
+          </div>
         </div>
+      </section>
 
-        {/* Filters */}
-        <div className="flex flex-wrap gap-3 mb-10">
-          {pills.map((pill, i) => (
-            <button 
-              key={pill}
-              className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
-                i === 0 
-                  ? "bg-secondary text-white shadow-md shadow-secondary/20" 
-                  : "bg-white text-gray-500 border border-gray-200 hover:border-gray-300 hover:text-secondary hover:shadow-sm"
-              }`}
-            >
-              {pill}
-            </button>
-          ))}
-        </div>
+      {/* Menu latéral + sections */}
+      <div className="grid grid-cols-1 gap-14 lg:grid-cols-[230px_1fr]">
+        <aside className="hidden lg:block">
+          <SideNav title="Filières" items={navItems} />
+        </aside>
 
-        {/* List */}
-        <div className="flex flex-col gap-4">
-          {metiers.map((m) => (
-            <Link key={m.id} href="#">
-              <Card padding="lg" className="group border-transparent hover:border-accent-cyan-300 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center gap-6">
-                
-                {/* Info block */}
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Badge variant="cyan" className="font-bold">{m.secteur}</Badge>
-                    <span className="text-xs font-semibold text-gray-400 flex items-center gap-1">
-                      <MapPin className="h-3.5 w-3.5" /> Hybride / Télétravail
-                    </span>
+        <div className="flex flex-col gap-14">
+          {filieres.map(([num, list]) => {
+            const theme = getFiliereTheme(num);
+            return (
+              <section key={num} id={`filiere-${num}`} className="scroll-mt-6">
+                <header className="mb-8 flex items-start gap-5">
+                  <div
+                    className={cn(
+                      "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl",
+                      theme.bgSoft,
+                      theme.text
+                    )}
+                  >
+                    <FiliereIcon numero={num} className="h-6 w-6" />
                   </div>
-                  <h2 className="font-display font-bold text-secondary text-xl mb-2 group-hover:text-accent-cyan transition-colors">
-                    {m.intitule}
-                  </h2>
-                  <p className="text-sm text-gray-500 leading-relaxed mb-4 max-w-3xl">
-                    {m.description}
-                  </p>
-                  
-                  {/* Skills */}
-                  <div className="flex flex-wrap gap-2">
-                    {m.competences.map((c) => (
-                      <span key={c} className="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-xs font-medium border border-gray-100">
-                        {c}
-                      </span>
-                    ))}
+                  <div>
+                    <p className={cn("text-xs font-bold uppercase tracking-wider", theme.text)}>
+                      Filière {num}
+                    </p>
+                    <h2 className="font-display text-xl font-bold text-secondary lg:text-2xl">
+                      {list[0].filiereTitre}
+                    </h2>
                   </div>
+                </header>
+
+                <div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
+                  {list.map((metier) => (
+                    <CarriereCard key={metier.id} metier={metier} />
+                  ))}
                 </div>
-
-                {/* Salary & Action block */}
-                <div className="md:w-64 flex flex-col justify-center items-start md:items-end md:border-l border-gray-100 md:pl-6 mt-4 md:mt-0">
-                  <p className="text-xs text-gray-400 font-semibold mb-1 uppercase tracking-wider">Salaire moyen</p>
-                  <p className="text-lg font-bold text-secondary mb-4">{m.salaireMoyen}</p>
-                  <div className="flex items-center text-sm font-semibold text-accent-cyan group-hover:gap-2 transition-all">
-                    Découvrir ce métier <ChevronRight className="h-4 w-4" />
-                  </div>
-                </div>
-
-              </Card>
-            </Link>
-          ))}
+              </section>
+            );
+          })}
         </div>
+      </div>
+    </div>
+  );
+}
 
+function Stat({
+  icon,
+  value,
+  label,
+}: {
+  icon: React.ReactNode;
+  value: string | number;
+  label: string;
+}) {
+  return (
+    <div className="flex items-center gap-3">
+      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15">
+        {icon}
+      </span>
+      <div>
+        <div className="font-display text-2xl font-bold leading-none lg:text-3xl">{value}</div>
+        <div className="mt-1 text-xs uppercase tracking-wide text-white/60">{label}</div>
       </div>
     </div>
   );

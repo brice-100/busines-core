@@ -1,0 +1,77 @@
+[
+  {
+    "id": "f1",
+    "titre": "Introduction à la Fintech",
+    "description": "Découvrez les fondamentaux de la technologie financière et comment elle transforme les services bancaires.",
+    "categorie": "Fintech",
+    "niveau": "Débutant",
+    "duree": "3h00",
+    "modules": 8,
+    "tags": ["fintech", "banque", "innovation", "paiement"],
+    "auteur": "Dr. Aminata Koné",
+    "publishedAt": "2024-09-15",
+    "popular": true
+  },
+  {
+    "id": "f2",
+    "titre": "Blockchain & Cryptomonnaies",
+    "description": "Comprendre la technologie blockchain, le Bitcoin, l'Ethereum et les smart contracts.",
+    "categorie": "Crypto",
+    "niveau": "Intermédiaire",
+    "duree": "6h30",
+    "modules": 14,
+    "tags": ["blockchain", "crypto", "bitcoin", "ethereum", "DeFi"],
+    "auteur": "Kofi Mensah",
+    "publishedAt": "2024-10-02",
+    "popular": true
+  },
+  {
+    "id": "f3",
+    "titre": "Analyse Financière pour Débutants",
+    "description": "Maîtrisez les bases de l'analyse fondamentale et technique pour comprendre les marchés.",
+    "categorie": "Finance",
+    "niveau": "Débutant",
+    "duree": "4h15",
+    "modules": 10,
+    "tags": ["analyse", "bourse", "investissement", "marchés"],
+    "auteur": "Fatou Diallo",
+    "publishedAt": "2024-11-10"
+  },
+  {
+    "id": "f4",
+    "titre": "Intelligence Artificielle en Finance",
+    "description": "Comment l'IA révolutionne la gestion de portefeuille, la détection de fraude et le trading algorithmique.",
+    "categorie": "IA & Finance",
+    "niveau": "Avancé",
+    "duree": "8h00",
+    "modules": 18,
+    "tags": ["IA", "machine learning", "trading", "algorithme"],
+    "auteur": "Kwame Asante",
+    "publishedAt": "2024-12-01",
+    "popular": true
+  },
+  {
+    "id": "f5",
+    "titre": "Inclusion Financière en Afrique",
+    "description": "Mobile money, bancarisation et accès aux services financiers dans les économies émergentes.",
+    "categorie": "Impact",
+    "niveau": "Intermédiaire",
+    "duree": "5h00",
+    "modules": 12,
+    "tags": ["inclusion", "mobile money", "Afrique", "microfinance"],
+    "auteur": "Aïcha Traoré",
+    "publishedAt": "2025-01-20"
+  },
+  {
+    "id": "f6",
+    "titre": "Réglementation Financière",
+    "description": "RGPD, AML, KYC, MiCA : comprendre le cadre légal qui encadre les fintechs en Europe et en Afrique.",
+    "categorie": "Réglementation",
+    "niveau": "Avancé",
+    "duree": "5h30",
+    "modules": 11,
+    "tags": ["réglementation", "conformité", "KYC", "AML"],
+    "auteur": "Me. Serge Bamba",
+    "publishedAt": "2025-02-14"
+  }
+]

@@ -76,8 +76,8 @@ export default function RegisterPage() {
             <p className="text-sm text-gray-500">Rejoignez la communauté BusinessCore</p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-7">
+            <div className="space-y-6">
               <Input
                 label="Nom complet"
                 type="text"
@@ -103,7 +103,7 @@ export default function RegisterPage() {
                 <select
                   value={role}
                   onChange={(e) => setRole(e.target.value as UserRole)}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-secondary font-medium outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all shadow-sm"
+                  className="w-full px-6 py-4 rounded-full border border-gray-200 bg-white text-[15px] text-secondary font-medium outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 transition-all shadow-sm"
                   required
                 >
                   <option value="utilisateur">Utilisateur standard</option>
@@ -152,14 +152,14 @@ export default function RegisterPage() {
 
             {error && <p className="text-sm text-red-500 font-medium bg-red-50 p-3 rounded-xl border border-red-100">{error}</p>}
 
-            <Button 
-              type="submit" 
-              variant="primary" 
-              size="lg" 
-              fullWidth 
-              isLoading={isLoading}
-              className="mt-6 shadow-lg shadow-primary/30 rounded-xl"
-            >
+              <Button 
+                type="submit" 
+                variant="primary" 
+                size="lg" 
+                fullWidth 
+                isLoading={isLoading}
+                className="mt-8 shadow-lg shadow-primary/30 rounded-full"
+              >
               S'inscrire
             </Button>
 
