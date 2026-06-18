@@ -32,6 +32,10 @@ interface RegisterData {
 // ===================================================
 const LS_USERS_KEY = "bc_users";
 const LS_CURRENT_KEY = "bc_current_user";
+const LS_LOGIN_ATTEMPTS_KEY = "bc_login_attempts";
+
+const MAX_LOGIN_ATTEMPTS = 3;
+const LOCKOUT_DURATION_MS = 5 * 60 * 1000;
 
 // Simulation d'un JWT et expiration
 const TOKEN_EXPIRATION_HOURS = 24;
@@ -182,6 +186,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   // --------------------------------------------------
   const login = useCallback(
     async (email: string, password: string): Promise<{ success: boolean; error?: string }> => {
+      const attemptsStr = localStorage.getItem(LS_LOGIN_ATTEMPTS_KEY);
+      let attempts = attemptsStr ? JSON.parse(attemptsStr) : { count: 0, lockUntil: null };
+
+      if (attempts.lockUntil) {
+        const lockUntilDate = new Date(attempts.lockUntil);
+        if (new Date() < lockUntilDate) {
+          const diffMs = lockUntilDate.getTime() - new Date().getTime();
+          const diffMinutes = Math.ceil(diffMs / 60000);
+          return { success: false, error: `Trop de tentatives. Veuillez patienter ${diffMinutes} minute(s).` };
+        } else {
+          attempts = { count: 0, lockUntil: null };
+          localStorage.removeItem(LS_LOGIN_ATTEMPTS_KEY);
+        }
+      }
+
       if (!email.trim() || !password.trim()) {
         return { success: false, error: "E-mail et mot de passe requis." };
       }
@@ -193,8 +212,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       );
 
       if (!found) {
+        attempts.count += 1;
+        if (attempts.count >= MAX_LOGIN_ATTEMPTS) {
+          attempts.lockUntil = new Date(new Date().getTime() + LOCKOUT_DURATION_MS).toISOString();
+        }
+        localStorage.setItem(LS_LOGIN_ATTEMPTS_KEY, JSON.stringify(attempts));
+
+        if (attempts.count >= MAX_LOGIN_ATTEMPTS) {
+          return { success: false, error: `Trop de tentatives. Veuillez patienter 5 minutes.` };
+        }
+
         return { success: false, error: "E-mail ou mot de passe incorrect." };
       }
+
+      localStorage.removeItem(LS_LOGIN_ATTEMPTS_KEY);
 
       if (found.isBanned) {
         return { success: false, error: "Ce compte a été suspendu par l'administration." };
@@ -235,6 +266,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const users = getUsers();
     const updatedUsers = users.map(u => {
       if (u.id === userId) {
+        if (u.role === "administrateur") return u; // Empêche de bannir un administrateur
         return { ...u, isBanned: !u.isBanned };
       }
       return u;

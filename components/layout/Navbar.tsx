@@ -38,7 +38,7 @@ export default function Navbar({ isSidebarOpen, onToggleSidebar }: NavbarProps) 
 
   return (
     <header className=" sticky top-0 z-20 w-full bg-white/80 backdrop-blur-xl border-b border-gray-100/50">
-      <div className="flex items-center justify-between h-20 px-6 lg:px-10">
+      <div className="flex items-center justify-between h-20 px-6 md:px-12 lg:px-20">
 
         {/* Menu Hamburger pour mobile */}
         <button

@@ -18,7 +18,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { title: "Explorer", subtitle: "Fintech & Monnaie", href: "/explorer", icon: Compass },
     { title: "Formations", subtitle: "Cours & Établissements", href: "/formations", icon: BookOpen },
     { title: "Décryptages", subtitle: "Comprendre & Analyser", href: "/decryptages", icon: TrendingUp },
-    { title: "Pratiques", subtitle: "Simuler & Apprendre", href: "/pratiques", icon: Dumbbell },
     { title: "Juniors", subtitle: "Par niveau scolaire", href: "/juniors", icon: Users },
     { title: "Carrières", subtitle: "Métiers & Débouchés",  href: "/carrieres", icon: Briefcase },
     { title: "Innovation", subtitle: "Startups & Tendances",  href: "/innovation", icon: Sparkles },

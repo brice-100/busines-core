@@ -122,7 +122,7 @@ export default function AdminDashboard() {
                   <div className="flex items-center gap-4">
                     <RoleBadge role={u.role} isBanned={u.isBanned} />
                     
-                    {u.id !== currentUser.id && (
+                    {u.id !== currentUser.id && u.role !== "administrateur" && (
                       <button 
                         onClick={() => handleToggleBan(u.id)}
                         className={`text-sm font-semibold px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${

@@ -52,14 +52,6 @@ const quickAccess = [
     badge: "orange" as const,
   },
   {
-    href: "/pratiques",
-    label: "Pratiques",
-    description: "Simulez, exercez-vous et développez vos compétences.",
-    icon: Dumbbell,
-    accent: "bg-emerald-50 text-emerald-500 border border-emerald-100/40 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300",
-    badge: "green" as const,
-  },
-  {
     href: "/juniors",
     label: "Juniors",
     description: "Parcours adaptés aux niveaux scolaires.",
@@ -81,7 +73,7 @@ export default function HomePage() {
   const featuredArticles = getFeaturedArticles();
 
   return (
-    <div className="flex flex-col w-full bg-white">
+    <div className="flex flex-col w-full bg-white px-6 md:px-12 lg:px-20">
       {/* =============================================
           SECTION HERO
           ============================================= */}
