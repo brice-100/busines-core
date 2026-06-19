@@ -25,7 +25,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   return (
-    <aside className={`fixed top-0 left-0 z-30 h-screen w-50 transform bg-[#ffffff] text-slate-400 p-4 flex flex-col select-none border-r border-white transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:static lg:block`}>
+    <aside className={`fixed top-0 left-0 z-30 h-screen w-64 transform bg-[#ffffff] text-slate-400 p-4 flex flex-col select-none border-r border-white transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:static lg:flex`}>
       
       <div className="flex items-center justify-between px-3 py-6 mb-2">
         <div className="flex items-center gap-3 pl-3">
@@ -78,7 +78,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         })}
       </nav>
 
-      <div className="p-4 mt-auto border-t border-slate-100 flex flex-col gap-3">
+      <div className="p-4 mt-auto mb-8 border-t border-slate-100 flex flex-col gap-3">
         <Link 
           href="/login"
           className="w-full py-3.5 bg-[#2563eb] hover:bg-blue-700 text-white rounded-xl text-sm font-bold text-center transition-colors shadow-sm"

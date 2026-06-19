@@ -36,7 +36,8 @@ export async function POST(request: Request) {
     const reply = data?.choices?.[0]?.message?.content ?? "";
 
     return NextResponse.json({ reply });
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message || String(err) }, { status: 500 });
+  } catch (err: unknown) {
+    const errorMessage = err instanceof Error ? err.message : String(err);
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }

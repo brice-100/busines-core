@@ -22,6 +22,8 @@ interface ArticleContextType {
 const LS_ARTICLES_KEY = "bc_articles";
 const LS_NOTIFS_KEY = "bc_notifs";
 const LS_COMMENTS_KEY = "bc_comments";
+// Incrémenter cette valeur pour forcer un rechargement des données mock
+const DATA_VERSION = "v5";
 
 const ArticleContext = createContext<ArticleContextType | undefined>(undefined);
 
@@ -31,10 +33,19 @@ export function ArticleProvider({ children }: { children: React.ReactNode }) {
   const [comments, setComments] = useState<Comment[]>([]);
 
   useEffect(() => {
+    const storedVersion = localStorage.getItem("bc_data_version");
+    const versionChanged = storedVersion !== DATA_VERSION;
+
+    // Si la version a changé, on réinitialise les articles (mais on garde les commentaires)
+    if (versionChanged) {
+      localStorage.removeItem(LS_ARTICLES_KEY);
+      localStorage.setItem("bc_data_version", DATA_VERSION);
+    }
+
     // Charger les articles
     try {
       const storedArticles = localStorage.getItem(LS_ARTICLES_KEY);
-      if (storedArticles) {
+      if (storedArticles && !versionChanged) {
         setArticles(JSON.parse(storedArticles));
       } else {
         const mockArticles = getMockArticles();

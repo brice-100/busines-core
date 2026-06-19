@@ -3,72 +3,112 @@
     "id": "a1",
     "titre": "Les Tontines à l'ère du numérique",
     "resume": "La tontine, c'est la banque des gens qui n'ont pas accès à la banque. Cette pratique millénaire qui structure l'économie informelle camerounaise se digitalise – et ça change tout.",
+    "contenu": "La tontine est bien plus qu'une simple collecte d'argent. C'est un système de confiance, de solidarité et d'épargne collective qui a traversé les siècles en Afrique subsaharienne. Au Cameroun, on l'appelle njangi. Au Sénégal, tontine. En Côte d'Ivoire, likelemba. Mais partout, le principe est le même : un groupe de personnes se réunit régulièrement, chacun verse une somme fixe, et à tour de rôle, l'un des membres reçoit la totalité de la cagnotte.\n\nCe système a permis à des milliers de familles camerounaises de construire des maisons, lancer des commerces ou scolariser leurs enfants, sans jamais passer par une banque.\n\nAujourd'hui, la technologie vient transformer ce modèle ancestral. Des applications comme Njangi House, EcoFinance ou encore des groupes WhatsApp gérant automatiquement les cotisations permettent de digitaliser le système, réduisant les risques de fraude et facilitant les vérifications.\n\nMais attention : la force de la tontine réside dans le lien social qu'elle crée. La digitalisation ne doit pas sacrifier cette dimension humaine au profit de la seule efficacité technique.",
     "categorie": "Finance africaine",
     "readTime": 10,
     "image": "/images/P1.jpeg",
-    "featured": true
+    "featured": true,
+    "auteur": "BusinessCore",
+    "auteurId": "bc_admin",
+    "publishedAt": "2025-03-15T10:00:00.000Z",
+    "tags": ["Tontine", "Finance informelle", "Cameroun", "Digitalisation"]
   },
   {
     "id": "a2",
     "titre": "Le Leapfrogging africain",
     "resume": "Comment l'Afrique subsaharienne a court-circuité le système bancaire classique pour passer directement du cash au téléphone portable.",
+    "contenu": "Le leapfrogging, ou saut technologique, est un phénomène fascinant. Là où les pays développés ont mis des décennies à passer de la banque physique aux chèques, puis aux cartes bancaires, puis au paiement mobile, l'Afrique a tout simplement sauté les étapes intermédiaires.\n\nAu Kenya, M-Pesa a été lancé en 2007 sur des téléphones à touches. Pas de smartphone nécessaire, pas de compte bancaire requis. Juste un numéro de téléphone et un agent M-Pesa au coin de la rue. En moins de 5 ans, 80 % des adultes kényans l'utilisaient.\n\nCe qui a rendu ce saut possible ? L'absence même d'infrastructure bancaire classique. Paradoxalement, ne pas avoir de vieilles banques à préserver a libéré le continent de ses contraintes héritées.\n\nAujourd'hui, ce modèle inspire le monde entier. Les grandes banques européennes et américaines étudient avec attention les innovations africaines pour comprendre comment elles ont réussi là où elles ont échoué.",
     "categorie": "Finance africaine",
     "readTime": 8,
     "image": "/images/P2.jpeg",
-    "featured": false
+    "featured": false,
+    "auteur": "BusinessCore",
+    "auteurId": "bc_admin",
+    "publishedAt": "2025-04-02T09:00:00.000Z",
+    "tags": ["Leapfrogging", "Mobile Money", "Innovation", "Afrique"]
   },
   {
     "id": "a3",
     "titre": "Comment les banques créent l'argent",
     "resume": "À chaque prêt accordé, les banques créent de l'argent nouveau — le secret le mieux gardé du système bancaire, expliqué avec un schéma.",
+    "contenu": "Contrairement à ce que la plupart des gens pensent, les banques ne prêtent pas l'argent que vous avez déposé. Elles créent de l'argent au moment même où elles accordent un prêt. Ce mécanisme s'appelle la création monétaire ex nihilo, ou 'à partir de rien'.\n\nVoici comment ça fonctionne : vous demandez un prêt de 10 millions de FCFA à votre banque. La banque ne prend pas 10 millions dans son coffre. Elle inscrit simplement 10 millions au crédit de votre compte. Cet argent n'existait pas avant. Il vient d'être créé.\n\nC'est pour cette raison que la masse monétaire d'un pays est bien supérieure aux billets et pièces en circulation. La grande majorité de l'argent qui circule dans l'économie est de l'argent scripturaire, créé par les banques commerciales.\n\nBien sûr, ce pouvoir est encadré. Les banques centrales fixent des ratios de réserves obligatoires et des exigences de fonds propres pour limiter la création monétaire excessive, qui peut provoquer l'inflation.",
     "categorie": "Systèmes monétaires",
     "readTime": 7,
     "image": "/images/P3.jpeg",
-    "featured": false
+    "featured": false,
+    "auteur": "BusinessCore",
+    "auteurId": "bc_admin",
+    "publishedAt": "2025-04-10T08:30:00.000Z",
+    "tags": ["Création monétaire", "Banques", "Système bancaire"]
   },
   {
     "id": "a4",
     "titre": "La Blockchain expliquée simplement",
     "resume": "Pas besoin d'être ingénieur. Un schéma animé pas-à-pas pour enfin comprendre cette technologie.",
+    "contenu": "La blockchain, c'est essentiellement un registre partagé et infalsifiable. Imaginez un grand livre de comptes, dont chaque page est reliée à la précédente par un cadenas mathématique. Pour modifier une page, il faudrait refaire tous les cadenas suivants, en même temps, sur des milliers d'ordinateurs simultanément. C'est mathématiquement quasi-impossible.\n\nChaque 'bloc' de ce registre contient un lot de transactions (par exemple : Alice envoie 1 Bitcoin à Bob). Une fois ce bloc validé et ajouté à la chaîne, il devient permanent et immuable.\n\nCe qui rend la blockchain révolutionnaire, c'est qu'elle n'a pas besoin d'un acteur central de confiance. Pas de banque, pas de notaire, pas de gouvernement pour garantir que la transaction a bien eu lieu. La mathématique et la cryptographie jouent ce rôle.\n\nAu-delà des cryptomonnaies, la blockchain trouve des applications dans la traçabilité des produits alimentaires, la certification des diplômes, le registre foncier ou encore les contrats intelligents (smart contracts).",
     "categorie": "Tech & Crypto",
     "readTime": 9,
     "image": "/images/P4.jpeg",
-    "featured": false
+    "featured": false,
+    "auteur": "BusinessCore",
+    "auteurId": "bc_admin",
+    "publishedAt": "2025-04-20T11:00:00.000Z",
+    "tags": ["Blockchain", "Crypto", "Technologie"]
   },
   {
     "id": "a5",
     "titre": "La Monnaie-Déchet et l'économie circulaire",
     "resume": "Quand un déchet plastique devient valeur d'échange. Du recyclage au crédit Mobile Money — la révolution verte du Cameroun.",
+    "contenu": "Et si vos déchets plastiques pouvaient payer votre loyer ? Ce qui ressemblait à de la science-fiction il y a dix ans devient réalité dans plusieurs villes africaines, notamment au Cameroun.\n\nDes initiatives comme RecycleUp Cameroun permettent aux habitants de rapporter leurs bouteilles plastiques dans des points de collecte et de recevoir en échange des crédits Mobile Money. Ces crédits peuvent ensuite être utilisés pour payer des factures, acheter des denrées alimentaires ou même épargner.\n\nCe modèle résout simultanément deux problèmes majeurs : la pollution plastique qui envahit les villes africaines, et l'exclusion financière de populations qui n'ont pas accès aux services bancaires classiques.\n\nC'est une illustration parfaite des principes de l'économie circulaire : transformer ce qui était considéré comme un déchet sans valeur en une ressource économique et environnementale. Le déchet devient monnaie, et la monnaie finance le développement durable.",
     "categorie": "Systèmes monétaires",
     "readTime": 6,
     "image": "/images/P5.jpeg",
-    "featured": false
+    "featured": false,
+    "auteur": "BusinessCore",
+    "auteurId": "bc_admin",
+    "publishedAt": "2025-05-01T09:00:00.000Z",
+    "tags": ["Économie circulaire", "Recyclage", "Mobile Money", "Cameroun"]
   },
   {
     "id": "a6",
     "titre": "Anthropologie de l'argent",
     "resume": "La monnaie comme fait social et de confiance. Pourquoi l'argent vaut quelque chose ? Parce qu'on décide collectivement qu'il vaut quelque chose.",
+    "contenu": "L'argent est l'une des plus grandes fictions collectives que l'humanité ait jamais inventées. Un billet de 1000 FCFA n'a aucune valeur intrinsèque. La valeur lui est attribuée collectivement, par une croyance partagée, garantie par une institution centrale.\n\nL'anthropologue David Graeber, dans son ouvrage 'Dette : 5000 ans d'histoire', démontre que la monnaie n'a pas été inventée pour remplacer le troc. Elle a d'abord été un outil de comptabilité sociale — une façon de mesurer les obligations mutuelles au sein d'une communauté.\n\nCe que révèle l'anthropologie de l'argent, c'est que les systèmes monétaires reposent toujours sur la confiance. La confiance dans l'État qui émet la monnaie, dans le système bancaire qui la distribue, dans les autres acteurs économiques qui l'acceptent en échange.\n\nC'est cette réalité qui explique pourquoi, lors des crises économiques, le simple fait de douter de la solidité d'une monnaie peut suffire à provoquer son effondrement. L'argent est une croyance collective, et comme toute croyance, elle peut vaciller.",
     "categorie": "Systèmes monétaires",
     "readTime": 7,
     "image": "/images/P6.jpeg",
-    "featured": false
+    "featured": false,
+    "auteur": "BusinessCore",
+    "auteurId": "bc_admin",
+    "publishedAt": "2025-05-12T10:00:00.000Z",
+    "tags": ["Anthropologie", "Monnaie", "Histoire", "Confiance"]
   },
   {
     "id": "a7",
     "titre": "Bitcoin vs Monnaie Numérique d'État (MNBC)",
     "resume": "L'e-Naira du Nigeria, le e-CFA en projet... les États veulent leur crypto. Quelle différence avec Bitcoin ?",
+    "contenu": "Bitcoin et les MNBC (Monnaies Numériques de Banque Centrale) sont souvent présentés comme deux faces d'une même révolution numérique de la monnaie. En réalité, ils incarnent des philosophies radicalement opposées.\n\nBitcoin a été conçu précisément pour se soustraire au contrôle des États et des banques centrales. Décentralisé, sans autorité centrale, à l'offre limitée à 21 millions d'unités — il est le rêve des libertariens et des sceptiques du système financier traditionnel.\n\nLes MNBC, à l'inverse, sont de la monnaie numérique émise et contrôlée par les banques centrales. L'e-Naira du Nigeria, lancé en 2021, ou les réflexions autour d'un e-CFA pour la zone franc, sont des monnaies numériques d'État : traçables, contrôlables, potentiellement programmables.\n\nPour les gouvernements africains, les MNBC représentent une opportunité d'améliorer l'inclusion financière tout en gardant la main sur la politique monétaire. Pour les citoyens méfiants des institutions, Bitcoin reste une alternative souveraine, même si volatile. Les deux coexisteront probablement, répondant à des besoins différents.",
     "categorie": "Tech & Crypto",
     "readTime": 8,
     "image": "/images/P7.jpeg",
-    "featured": false
+    "featured": false,
+    "auteur": "BusinessCore",
+    "auteurId": "bc_admin",
+    "publishedAt": "2025-05-25T08:00:00.000Z",
+    "tags": ["Bitcoin", "MNBC", "Crypto", "Nigeria", "Banque Centrale"]
   },
   {
     "id": "a8",
     "titre": "Fintechs made in Africa",
     "resume": "De Flutterwave à Wave, panorama des entreprises qui réinventent la finance africaine et camerounaise.",
+    "contenu": "Le continent africain est devenu le laboratoire mondial de la fintech. Des startups innovantes bousculent les acteurs traditionnels et inventent de nouveaux modèles adaptés aux réalités locales.\n\nFlutterwave, fondée au Nigeria, permet aux entreprises africaines d'accepter des paiements depuis n'importe quel pays du monde, en contournant les obstacles traditionnels des transferts internationaux. Valorisée à plus de 3 milliards de dollars, elle est devenue l'une des licornes africaines les plus emblématiques.\n\nWave, opérant au Sénégal et en Côte d'Ivoire, a révolutionné le Mobile Money en offrant des transferts à seulement 1% de commission, contre 5 à 10% pour les opérateurs traditionnels. En moins de 3 ans, elle a capté une part significative du marché.\n\nAu Cameroun, des startups comme ExpressPay ou MaCash commencent à émerger. Elles font face à des défis spécifiques : réglementation COBAC complexe, faible densité bancaire en zone rurale, mais aussi une population jeune, connectée et prête à adopter de nouveaux services financiers.\n\nL'Afrique prouve que l'innovation financière n'a pas de frontières géographiques. Elle a parfois plusieurs longueurs d'avance sur le reste du monde.",
     "categorie": "Finance africaine",
     "readTime": 6,
     "image": "/images/P8.jpeg",
-    "featured": false
+    "featured": false,
+    "auteur": "BusinessCore",
+    "auteurId": "bc_admin",
+    "publishedAt": "2025-06-05T09:00:00.000Z",
+    "tags": ["Fintech", "Afrique", "Startups", "Innovation", "Cameroun"]
   }
 ]
