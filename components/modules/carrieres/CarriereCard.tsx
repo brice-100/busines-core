@@ -12,7 +12,6 @@ export function CarriereCard({ metier }: CarriereCardProps) {
   const theme = getFiliereTheme(metier.filiereNum);
   const sommet = metier.evolution[metier.evolution.length - 1];
 
-
   return (
     <Link
       href={`/carrieres/metier/${metier.id}`}
@@ -25,7 +24,7 @@ export function CarriereCard({ metier }: CarriereCardProps) {
       <div className="relative w-full sm:w-2/5 md:w-1/3 h-48 sm:h-auto flex-shrink-0 p-3">
         <div className="relative h-full w-full overflow-hidden rounded-xl">
           <img
-            src={getMetierImage(metier.slug)}
+            src={getMetierImage(metier.id)}
             alt={metier.nom}
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />

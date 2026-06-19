@@ -20,6 +20,7 @@ import { getMetierImage } from "@/lib/metier-images";
 import { FiliereIcon } from "@/components/modules/formations/FiliereIcon";
 import { SemestreAccordion } from "@/components/modules/formations/SemestreAccordion";
 import { SideNav, type SideNavItem } from "@/components/modules/formations/SideNav";
+import { getMetierImage } from "@/lib/metier-images";
 import { cn } from "@/lib/utils";
 
 interface PageProps {
@@ -103,7 +104,7 @@ export default async function MetierPage({ params }: PageProps) {
         <div className="relative w-full lg:w-2/5 min-h-[250px] lg:min-h-auto flex-shrink-0 p-3">
           <div className="relative h-full w-full overflow-hidden rounded-2xl">
             <img
-              src={getMetierImage(metier.slug)}
+              src={getMetierImage(metier.id)}
               alt={metier.nom}
               className="absolute inset-0 h-full w-full object-cover"
             />

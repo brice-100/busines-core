@@ -17,7 +17,6 @@ export function MetierCard({ metier }: MetierCardProps) {
   const nbFormations = metier.formations.length;
   const nbMatieres = countMatieresMetier(metier);
 
-
   return (
     <Link
       href={`/formations/metier/${metier.id}`}
@@ -30,7 +29,7 @@ export function MetierCard({ metier }: MetierCardProps) {
       <div className="relative w-full sm:w-2/5 md:w-1/3 h-48 sm:h-auto flex-shrink-0 p-3">
         <div className="relative h-full w-full overflow-hidden rounded-xl">
           <img
-            src={getMetierImage(metier.slug)}
+            src={getMetierImage(metier.id)}
             alt={metier.nom}
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
