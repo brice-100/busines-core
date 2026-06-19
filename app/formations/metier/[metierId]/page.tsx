@@ -16,6 +16,7 @@ import {
   countMatieres,
   countMatieresMetier,
 } from "@/lib/formations-data";
+import { getMetierImage } from "@/lib/metier-images";
 import { FiliereIcon } from "@/components/modules/formations/FiliereIcon";
 import { SemestreAccordion } from "@/components/modules/formations/SemestreAccordion";
 import { SideNav, type SideNavItem } from "@/components/modules/formations/SideNav";

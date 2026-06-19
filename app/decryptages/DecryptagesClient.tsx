@@ -62,8 +62,8 @@ export default function DecryptagesClient() {
               <div className="lg:w-2/5 p-8 lg:p-12 relative flex flex-col justify-between text-white min-h-[300px] overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src="https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?q=80&w=800&auto=format&fit=crop" 
-                  alt="Finance africaine" 
+                  src={featuredArticle.image || "https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?q=80&w=800&auto=format&fit=crop"} 
+                  alt={featuredArticle.titre} 
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
@@ -133,14 +133,21 @@ export default function DecryptagesClient() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {regularArticles.map((a) => (
           <Link key={a.id} href={`/decryptages/${a.id}`}>
-            <Card padding="lg" className="h-full flex flex-col group border-gray-100 hover:border-orange-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-400 rounded-2xl bg-white">
-              <div className="flex items-start justify-between mb-5">
-                <Badge variant="orange" className="font-bold shadow-sm">{a.categorie}</Badge>
-                <div className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 bg-gray-50 px-3 py-1.5 rounded-full">
-                  <Clock className="h-3.5 w-3.5" />
-                  {a.readTime} min
+            <Card padding="none" className="h-full flex flex-col group border-gray-100 hover:border-accent-violet-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-400 rounded-2xl bg-white overflow-hidden">
+              {a.image && (
+                <div className="w-full h-48 relative overflow-hidden flex-shrink-0">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={a.image} alt={a.titre} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-              </div>
+              )}
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex items-start justify-between mb-5">
+                  <Badge variant="violet" className="font-bold shadow-sm">{a.categorie}</Badge>
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 bg-gray-50 px-3 py-1.5 rounded-full">
+                    <Clock className="h-3.5 w-3.5" />
+                    {a.readTime} min
+                  </div>
+                </div>
               
               <h3 className="font-display font-bold text-secondary text-xl mb-3 leading-snug group-hover:text-orange-500 transition-colors duration-300 line-clamp-2">
                 {a.titre}
@@ -163,6 +170,7 @@ export default function DecryptagesClient() {
                 <div className="h-8 w-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-orange-500 group-hover:text-white text-gray-400 transition-colors duration-300">
                   <ChevronRight className="h-4 w-4" />
                 </div>
+              </div>
               </div>
             </Card>
           </Link>

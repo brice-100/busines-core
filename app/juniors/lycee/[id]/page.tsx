@@ -7,9 +7,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export const metadata: Metadata = {
@@ -17,8 +17,9 @@ export const metadata: Metadata = {
   description: "Contenu éducatif pour élèves du lycée",
 };
 
-export default function CourseDetailPage({ params }: PageProps) {
-  const course = getLyceeCourseById(params.id);
+export default async function CourseDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const course = getLyceeCourseById(id);
 
   if (!course) {
     notFound();
@@ -83,15 +84,35 @@ export default function CourseDetailPage({ params }: PageProps) {
             </span>
           ))}
         </div>
-      </div>
+        </div>
 
-      {/* Course Content */}
-      <div className="flex flex-col gap-12">
-        {course.sections.map((section, index) => (
-          <div 
-            key={index}
-            className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-orange-200 transition-colors"
-          >
+        {/* Table of contents */}
+        <div className="mt-6 mb-6">
+          <div className="bg-white rounded-2xl border border-gray-100 p-4">
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">Sommaire</h3>
+            <ul className="text-sm text-gray-600 list-disc list-inside space-y-2">
+              {course.sections.map((s, i) => {
+                const slug = `${i + 1}-${s.titre.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+                return (
+                  <li key={i}>
+                    <a href={`#${slug}`} className="text-accent hover:underline text-sm">{s.titre}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+
+        {/* Course Content */}
+        <div className="flex flex-col gap-12">
+          {course.sections.map((section, index) => {
+            const id = `${index + 1}-${section.titre.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+            return (
+              <div 
+                id={id}
+                key={index}
+                className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-orange-200 transition-colors"
+              >
             {/* Section Title with number */}
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-2">
@@ -133,7 +154,8 @@ export default function CourseDetailPage({ params }: PageProps) {
               </ul>
             </div>
           </div>
-        ))}
+            );
+          })}
       </div>
 
       {/* Course Footer */}

@@ -9,7 +9,7 @@ import data from "@/data/carrieres-cameroun.json";
 // On utilise une charte visuelle violette pour tout l'univers Carrières comme demandé
 import { getFiliereTheme as getOriginalFiliereTheme, type FiliereTheme } from "@/lib/formations-data";
 
-export const getFiliereTheme = (numero: number): FiliereTheme => {
+export const getFiliereTheme = (_numero: number): FiliereTheme => {
   // Retourne toujours le thème 2 (Violet) pour forcer la couleur sur toute la section Carrières
   return getOriginalFiliereTheme(2);
 };

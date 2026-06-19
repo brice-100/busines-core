@@ -34,11 +34,11 @@ export function Input({
   const inputId = id ?? label?.toLowerCase().replace(/\s+/g, "-");
 
   return (
-    <div className={cn("flex flex-col gap-2", fullWidth && "w-full")}>
+    <div className={cn("flex flex-col mb-5", fullWidth && "w-full")}>
       {label && (
         <label
           htmlFor={inputId}
-          className="text-[15px] font-bold text-[#1e293b] mb-1.5 ml-2"
+          className="text-[15px] font-bold text-[#1e293b] mb-2 ml-2 block"
         >
           {label}
         </label>
@@ -53,7 +53,7 @@ export function Input({
         <input
           id={inputId}
           className={cn(
-            "w-full rounded-full border bg-white px-6 py-4 text-[15px] text-secondary outline-none shadow-sm",
+            "w-full rounded-full border bg-white px-6 py-4 min-h-[52px] text-[15px] text-secondary outline-none shadow-sm",
             "placeholder:text-gray-400 transition-all duration-200",
             "focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20",
             error
@@ -61,6 +61,7 @@ export function Input({
               : "border-gray-200 hover:border-gray-300",
             !!leftIcon && "pl-10",
             !!rightElement && "pr-10",
+
             className
           )}
           {...props}

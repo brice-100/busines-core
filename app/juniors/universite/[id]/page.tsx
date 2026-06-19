@@ -7,9 +7,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export const metadata: Metadata = {
@@ -17,8 +17,9 @@ export const metadata: Metadata = {
   description: "Contenu éducatif universitaire",
 };
 
-export default function CourseDetailPage({ params }: PageProps) {
-  const course = getUniversiteCourseById(params.id);
+export default async function CourseDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const course = getUniversiteCourseById(id);
 
   if (!course) {
     notFound();
@@ -83,9 +84,29 @@ export default function CourseDetailPage({ params }: PageProps) {
         </div>
       </div>
 
+      {/* Table of contents */}
+      <div className="mt-6 mb-6">
+        <div className="bg-white rounded-2xl border border-gray-100 p-4">
+          <h3 className="text-sm font-semibold text-gray-700 mb-3">Sommaire</h3>
+          <ul className="text-sm text-gray-600 list-disc list-inside space-y-2">
+            {course.sections.map((s, i) => {
+              const slug = `${i + 1}-${s.titre.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+              return (
+                <li key={i}>
+                  <a href={`#${slug}`} className="text-accent hover:underline text-sm">{s.titre}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+
       <div className="flex flex-col gap-12">
-        {course.sections.map((section, index) => (
+        {course.sections.map((section, index) => {
+          const id = `${index + 1}-${section.titre.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+          return (
           <div 
+            id={id}
             key={index}
             className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-green-200 transition-colors"
           >
@@ -126,7 +147,8 @@ export default function CourseDetailPage({ params }: PageProps) {
               </ul>
             </div>
           </div>
-        ))}
+            );
+          })}
       </div>
 
       <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center">

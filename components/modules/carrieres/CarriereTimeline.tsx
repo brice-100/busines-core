@@ -11,7 +11,7 @@ interface CarriereTimelineProps {
  * Timeline verticale de l'évolution de carrière.
  * Présentation pure (composant serveur).
  */
-export function CarriereTimeline({ etapes, theme }: CarriereTimelineProps) {
+export function CarriereTimeline({ etapes, theme: _theme }: CarriereTimelineProps) {
   return (
     <ol className="relative space-y-6 pl-2">
       {etapes.map((etape, i) => {

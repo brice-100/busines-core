@@ -7,9 +7,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export const metadata: Metadata = {
@@ -17,8 +17,9 @@ export const metadata: Metadata = {
   description: "Contenu éducatif pour élèves du collège",
 };
 
-export default function CourseDetailPage({ params }: PageProps) {
-  const course = getCollegeCourseById(params.id);
+export default async function CourseDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const course = getCollegeCourseById(id);
 
   if (!course) {
     notFound();
@@ -45,9 +46,7 @@ export default function CourseDetailPage({ params }: PageProps) {
                 {course.titre}
               </h1>
             </div>
-            <p className="text-gray-600 text-lg leading-relaxed mb-4">
-              {course.description}
-            </p>
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">{course.description}</p>
           </div>
         </div>
 
@@ -75,7 +74,7 @@ export default function CourseDetailPage({ params }: PageProps) {
 
         <div className="flex flex-wrap gap-2">
           {course.tags.map((tag) => (
-            <span 
+            <span
               key={tag}
               className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full"
             >
@@ -85,55 +84,70 @@ export default function CourseDetailPage({ params }: PageProps) {
         </div>
       </div>
 
+      {/* Table of contents */}
+      <div className="mt-6 mb-6">
+        <div className="bg-white rounded-2xl border border-gray-100 p-4">
+          <h3 className="text-sm font-semibold text-gray-700 mb-3">Sommaire</h3>
+          <ul className="text-sm text-gray-600 list-disc list-inside space-y-2">
+            {course.sections.map((s, i) => {
+              const slug = `${i + 1}-${s.titre.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+              return (
+                <li key={i}>
+                  <a href={`#${slug}`} className="text-accent hover:underline text-sm">{s.titre}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+
       {/* Course Content */}
       <div className="flex flex-col gap-12">
-        {course.sections.map((section, index) => (
-          <div 
-            key={index}
-            className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-blue-200 transition-colors"
-          >
-            {/* Section Title with number */}
-            <div className="mb-6">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="h-10 w-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-lg">
-                  {index + 1}
+        {course.sections.map((section, index) => {
+          const id = `${index + 1}-${section.titre.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+          return (
+            <div
+              id={id}
+              key={index}
+              className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-blue-200 transition-colors"
+            >
+              {/* Section Title with number */}
+              <div className="mb-6">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="h-10 w-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-lg">
+                    {index + 1}
+                  </div>
+                  <h2 className="text-2xl font-display font-bold text-secondary">{section.titre}</h2>
                 </div>
-                <h2 className="text-2xl font-display font-bold text-secondary">
-                  {section.titre}
-                </h2>
+              </div>
+
+              {/* Content */}
+              <div className="mb-8">
+                <h3 className="text-base font-semibold text-gray-700 mb-3">📚 Explication</h3>
+                <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{section.contenu}</p>
+              </div>
+
+              {/* Example */}
+              <div className="mb-8 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
+                <h3 className="text-base font-semibold text-gray-800 mb-3">💡 Exemple</h3>
+                <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{section.exemple}</p>
+              </div>
+
+              {/* Questions */}
+              <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
+                <h3 className="text-base font-semibold text-gray-800 mb-4">❓ Questions pour tester ta compréhension</h3>
+                <ul className="space-y-3">
+                  {section.questions.map((question, qIndex) => (
+                    <li key={qIndex} className="flex gap-3">
+                      <span className="text-green-600 font-bold flex-shrink-0">•</span>
+                      <p className="text-gray-700">{question}</p>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-
-            {/* Content */}
-            <div className="mb-8">
-              <h3 className="text-base font-semibold text-gray-700 mb-3">📚 Explication</h3>
-              <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
-                {section.contenu}
-              </p>
-            </div>
-
-            {/* Example */}
-            <div className="mb-8 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
-              <h3 className="text-base font-semibold text-gray-800 mb-3">💡 Exemple</h3>
-              <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
-                {section.exemple}
-              </p>
-            </div>
-
-            {/* Questions */}
-            <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
-              <h3 className="text-base font-semibold text-gray-800 mb-4">❓ Questions pour tester ta compréhension</h3>
-              <ul className="space-y-3">
-                {section.questions.map((question, qIndex) => (
-                  <li key={qIndex} className="flex gap-3">
-                    <span className="text-green-600 font-bold flex-shrink-0">•</span>
-                    <p className="text-gray-700">{question}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Course Footer */}

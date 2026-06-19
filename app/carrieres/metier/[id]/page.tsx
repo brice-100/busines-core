@@ -13,6 +13,7 @@ import {
   getCarriereById,
   getFiliereTheme,
 } from "@/lib/carrieres-data";
+import { getMetierImage } from "@/lib/metier-images";
 import { FiliereIcon } from "@/components/modules/formations/FiliereIcon";
 import { CarriereTimeline } from "@/components/modules/carrieres/CarriereTimeline";
 import { SideNav, type SideNavItem } from "@/components/modules/formations/SideNav";
