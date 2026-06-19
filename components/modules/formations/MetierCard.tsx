@@ -5,6 +5,7 @@ import {
   getFiliereTheme,
   countMatieresMetier,
 } from "@/lib/formations-data";
+import { getMetierImage } from "@/lib/metier-images";
 import { cn } from "@/lib/utils";
 
 interface MetierCardProps {
@@ -15,19 +16,6 @@ export function MetierCard({ metier }: MetierCardProps) {
   const theme = getFiliereTheme(metier.filiereNum);
   const nbFormations = metier.formations.length;
   const nbMatieres = countMatieresMetier(metier);
-
-  // Images representant les metiers
-  const getImage = (slug: string) => {
-    const images: Record<string, string> = {
-      "controleur-de-gestion-tresorier-d-entreprise": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
-      "auditeur-financier": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80",
-      "directeur-administratif-et-financier-daf": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80",
-      "expert-comptable": "https://images.unsplash.com/photo-1450101499163-c8848c66cb85?w=600&q=80",
-      "bts-cge-vers-master-cca": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80",
-      "comptable-bts-cge-vers-master-cca": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80",
-    };
-    return images[slug] || "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80";
-  };
 
   return (
     <Link
@@ -41,7 +29,7 @@ export function MetierCard({ metier }: MetierCardProps) {
       <div className="relative w-full sm:w-2/5 md:w-1/3 h-48 sm:h-auto flex-shrink-0 p-3">
         <div className="relative h-full w-full overflow-hidden rounded-xl">
           <img
-            src={getImage(metier.slug)}
+            src={getMetierImage(metier.id)}
             alt={metier.nom}
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
