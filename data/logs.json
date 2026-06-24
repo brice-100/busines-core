@@ -1,0 +1,70 @@
+[
+  {
+    "id": "log_1782320578180_jkstr5x",
+    "userId": "u1",
+    "eventType": "mise_a_jour_profil",
+    "description": "Mise à jour des informations personnelles",
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-24T17:02:58.180Z"
+  },
+  {
+    "id": "log_1782321927948_s9sg293",
+    "userId": "u1",
+    "eventType": "mise_a_jour_profil",
+    "description": "Mise à jour des informations personnelles",
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-24T17:25:27.949Z"
+  },
+  {
+    "id": "log_1782321933933_lx5pn1w",
+    "userId": "u1",
+    "eventType": "mise_a_jour_profil",
+    "description": "Mise à jour des informations personnelles",
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-24T17:25:33.933Z"
+  },
+  {
+    "id": "log_1782321945217_7r81v7u",
+    "userId": "u1",
+    "eventType": "mise_a_jour_profil",
+    "description": "Mise à jour des informations personnelles",
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-24T17:25:45.217Z"
+  },
+  {
+    "id": "log_1782321984743_3gigq02",
+    "userId": "u1",
+    "eventType": "mise_a_jour_profil",
+    "description": "Mise à jour des informations personnelles",
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-24T17:26:24.743Z"
+  },
+  {
+    "id": "log_1782321996546_spgl9vh",
+    "userId": "u1",
+    "eventType": "mise_a_jour_profil",
+    "description": "Mise à jour des informations personnelles",
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-24T17:26:36.546Z"
+  },
+  {
+    "id": "log_1782322465551_r5pzvkm",
+    "userId": "u1",
+    "eventType": "mise_a_jour_profil",
+    "description": "Mise à jour des informations personnelles",
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-24T17:34:25.551Z"
+  },
+  {
+    "id": "log_1782323048937_etf1eyp",
+    "userId": "u1",
+    "eventType": "connexion",
+    "description": "Connexion réussie sur BusinessCore",
+    "metadata": {
+      "email": "admin@businesscore.com",
+      "timestamp": "2026-06-24T17:44:02.938Z"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-24T17:44:08.937Z"
+  }
+]

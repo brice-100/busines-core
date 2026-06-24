@@ -3,7 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { X, Home, Compass, BookOpen, TrendingUp, Users, Briefcase, Sparkles, Info } from 'lucide-react';
+import { X, Home, Compass, BookOpen, TrendingUp, Users, Briefcase, Sparkles, Info, User, History } from 'lucide-react';
+import { useAuth } from '@/lib/auth-context';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -12,6 +13,8 @@ interface SidebarProps {
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname();
+
+  const { currentUser } = useAuth();
 
   const menuItems = [
     { title: "Accueil", subtitle: "Tableau de bord",  href: "/", icon: Home },
@@ -23,6 +26,14 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { title: "Innovation", subtitle: "Startups & Tendances",  href: "/innovation", icon: Sparkles },
     { title: "À propos", subtitle: "Notre mission", href: "/a-propos", icon: Info },
   ];
+
+  if (currentUser) {
+    menuItems.splice(1, 0, 
+      { title: "Mon Espace", subtitle: "Tableau de bord", href: "/dashboard", icon: Home },
+      { title: "Profil", subtitle: "Mes informations", href: "/dashboard/profile", icon: User },
+      { title: "Historique", subtitle: "Mes activités", href: "/dashboard/history", icon: History }
+    );
+  }
 
   return (
     <aside className={`fixed top-0 left-0 z-30 h-screen w-64 transform bg-[#ffffff] text-slate-400 p-4 flex flex-col select-none border-r border-white transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:static lg:flex`}>
@@ -79,19 +90,24 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       </nav>
 
       <div className="p-4 mt-auto mb-8 border-t border-slate-100 flex flex-col gap-3">
-        <Link 
-          href="/login"
-          className="w-full py-3.5 bg-[#2563eb] hover:bg-blue-700 text-white rounded-xl text-sm font-bold text-center transition-colors shadow-sm"
-        >
-          Connexion
-        </Link>
-        <Link 
-          href="/login?mode=visiteur"
-          className="w-full py-3.5 bg-white border border-slate-200 text-[#1e293b] hover:bg-slate-50 rounded-xl text-sm font-bold text-center transition-colors"
-        >
-          Mode visiteur
-        </Link>
+        {!currentUser ? (
+          <>
+            <Link 
+              href="/login"
+              className="w-full py-3.5 bg-[#2563eb] hover:bg-blue-700 text-white rounded-xl text-sm font-bold text-center transition-colors shadow-sm"
+            >
+              Connexion
+            </Link>
+            <Link 
+              href="/login?mode=visiteur"
+              className="w-full py-3.5 bg-white border border-slate-200 text-[#1e293b] hover:bg-slate-50 rounded-xl text-sm font-bold text-center transition-colors"
+            >
+              Mode visiteur
+            </Link>
+          </>
+        ) : null}
       </div>
+
     </aside>
   );
 }

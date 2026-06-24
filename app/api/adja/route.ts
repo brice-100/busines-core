@@ -9,7 +9,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing messages" }, { status: 400 });
     }
 
-    const key = process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+    const key = process.env.OPENAI_API_KEY;
     if (!key) {
       return NextResponse.json({ error: "API key not configured on server" }, { status: 500 });
     }

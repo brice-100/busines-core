@@ -20,7 +20,6 @@ import { getMetierImage } from "@/lib/metier-images";
 import { FiliereIcon } from "@/components/modules/formations/FiliereIcon";
 import { SemestreAccordion } from "@/components/modules/formations/SemestreAccordion";
 import { SideNav, type SideNavItem } from "@/components/modules/formations/SideNav";
-import { getMetierImage } from "@/lib/metier-images";
 import { cn } from "@/lib/utils";
 
 interface PageProps {
