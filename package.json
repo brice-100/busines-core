@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
+<<<<<<< HEAD
     "@hookform/resolvers": "^5.4.0",
     "lucide-react": "^0.468.0",
     "next": "15.1.0",
@@ -20,6 +21,13 @@
     "react-hook-form": "^7.80.0",
     "recharts": "^3.9.0",
     "zod": "^4.4.3"
+=======
+    "lucide-react": "^0.468.0",
+    "next": "15.1.0",
+    "openai": "^6.44.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+>>>>>>> 33b6840cf697bf7b6f94df3c5f1a64e7c23e70cd
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

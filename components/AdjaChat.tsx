@@ -22,13 +22,15 @@ export default function AdjaChat() {
     const userMsg: Message = { role: "user", content: input };
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
-    setLoading(true);
+    loading || setLoading(true);
     setError(null);
 
     try {
-      // send full conversation to server-side proxy
-      const payload = { messages: [...messages, userMsg] };
-      const response = await fetch("/api/adja", {
+      // 1. Alignement de la clé du payload attendue par l'API (messageHistory)
+      const payload = { messageHistory: [...messages, userMsg] };
+      
+      // 2. Redirection vers la nouvelle route globale /api/chat
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -37,7 +39,8 @@ export default function AdjaChat() {
       if (!response.ok) {
         const err = await response.json().catch(() => null);
         console.error("Adja API error", err);
-        const serverMessage = err?.error || err?.message || "Erreur serveur";
+        // Intercepte .reply pour capter nos messages d'erreur personnalisés de l'API
+        const serverMessage = err?.reply || err?.error || err?.message || "Erreur serveur";
         setError(typeof serverMessage === "string" ? serverMessage : JSON.stringify(serverMessage));
         setLoading(false);
         return;
@@ -90,7 +93,7 @@ export default function AdjaChat() {
           </div>
         )}
 
-        {error && <p className="text-red-600">{error}</p>}
+        {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
       </section>
 
       <form onSubmit={handleSubmit} className="flex gap-3">
