@@ -34,7 +34,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`${inter.variable} ${poppins.variable}`}>
-      <body className="bg-slate-50/70 text-secondary min-h-screen font-sans">
+      {/* Ajout de antialiased, leading-relaxed et tracking-normal pour aérer tous les textes par défaut */}
+      <body className="bg-slate-50/70 text-secondary min-h-screen font-sans antialiased leading-relaxed tracking-normal">
         <AuthProvider>
           <ArticleProvider>
               {/* MainLayout gère la responsivité et le décalage (margin-left) une bonne fois pour toutes */}

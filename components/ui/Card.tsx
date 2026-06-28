@@ -2,19 +2,20 @@
  * Card — Composant carte réutilisable Business Core
  *
  * Usage :
- *   <Card>...</Card>
- *   <Card hover accent="green" padding="lg">...</Card>
+ * <Card>...</Card>
+ * <Card hover accent="green" padding="lg">...</Card>
  *
  * ⚠️  Ne pas modifier sans accord de l'équipe.
  */
 
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
 type AccentColor = "green" | "violet" | "orange" | "rose" | "cyan" | "indigo" | "primary" | "none";
 type CardPadding = "sm" | "md" | "lg" | "none";
 
-interface CardProps {
+// On étend HTMLAttributes pour supporter nativement toutes les props d'un div classique (style, id, aria-*, etc.)
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
   hover?: boolean;
@@ -48,19 +49,21 @@ export function Card({
   accent = "none",
   padding = "md",
   onClick,
+  ...props // Récupère le reste des attributs (ex: style, id, etc.)
 }: CardProps) {
   return (
     <div
       onClick={onClick}
       className={cn(
         "bg-white rounded-xl overflow-hidden shadow-card border border-gray-100",
-        paddingMap[padding],
+        paddingMap[padding], // Grâce au nouveau cn(), cette classe sera écrasée si doublon dans className
         accentBorderMap[accent],
         hover &&
           "transition duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer",
         onClick && "cursor-pointer",
-        className
+        className // Ton className personnalisé prend désormais le contrôle absolu
       )}
+      {...props} // Transmet proprement les props à la div HTML
     >
       {children}
     </div>
@@ -71,33 +74,40 @@ export function Card({
 export function CardHeader({
   children,
   className,
+  ...props
 }: {
   children: React.ReactNode;
   className?: string;
-}) {
+} & HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={cn("mb-6 pb-6 border-b border-gray-100", className)}>{children}</div>
+    <div className={cn("mb-6 pb-6 border-b border-gray-100", className)} {...props}>
+      {children}
+    </div>
   );
 }
 
 export function CardBody({
   children,
   className,
+  ...props
 }: {
   children: React.ReactNode;
   className?: string;
-}) {
-  return <div className={cn("", className)}>{children}</div>;
+} & HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn("", className)} {...props}>{children}</div>;
 }
 
 export function CardFooter({
   children,
   className,
+  ...props
 }: {
   children: React.ReactNode;
   className?: string;
-}) {
+} & HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={cn("mt-6 pt-6 border-t border-gray-100", className)}>{children}</div>
+    <div className={cn("mt-6 pt-6 border-t border-gray-100", className)} {...props}>
+      {children}
+    </div>
   );
 }
