@@ -119,7 +119,7 @@ export default function DashboardPage() {
               Bonjour, {currentUser.prenom} 👋
             </h1>
             <p className="text-gray-500 text-sm mt-1">
-              Bienvenue sur <span className="font-semibold text-primary">BusinessCore</span> — votre espace personnel.
+              Bienvenue sur <span className="font-semibold text-primary">BusinessCore</span> votre espace personnel.
             </p>
           </div>
         </div>

@@ -142,5 +142,43 @@
     },
     "ipAddress": "::ffff:127.0.0.1",
     "timestamp": "2026-06-28T18:22:29.291Z"
+  },
+  {
+    "id": "log_1782672056486_lun24jr",
+    "userId": "u2",
+    "eventType": "lecture_article",
+    "description": "Lecture de l'article : Le Leapfrogging africain",
+    "metadata": {
+      "articleId": "a2",
+      "universe": "decryptages",
+      "categorie": "Finance africaine"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T18:40:56.486Z"
+  },
+  {
+    "id": "log_1782672056489_pmv6ns5",
+    "userId": "u2",
+    "eventType": "lecture_article",
+    "description": "Lecture de l'article : Le Leapfrogging africain",
+    "metadata": {
+      "articleId": "a2",
+      "universe": "decryptages",
+      "categorie": "Finance africaine"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T18:40:56.489Z"
+  },
+  {
+    "id": "log_1782672169318_orywt23",
+    "userId": "u1",
+    "eventType": "connexion",
+    "description": "Connexion réussie sur BusinessCore",
+    "metadata": {
+      "email": "admin@businesscore.com",
+      "timestamp": "2026-06-28T18:42:49.275Z"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T18:42:49.318Z"
   }
 ]

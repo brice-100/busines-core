@@ -19,7 +19,7 @@ const profileSchema = z.object({
 type ProfileFormValues = z.infer<typeof profileSchema>;
 
 export default function ProfilePage() {
-  const { currentUser } = useAuth();
+  const { currentUser, updateCurrentUser } = useAuth();
   const { logEvent } = useLogger();
   const [avatarPreview, setAvatarPreview] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -78,7 +78,7 @@ export default function ProfilePage() {
       if (response.ok) {
         setMessage({ type: "success", text: "Profil mis à jour avec succès !" });
         logEvent("mise_a_jour_profil", "Mise à jour des informations personnelles");
-        // Idéalement, recharger le currentUser dans le contexte ici
+        updateCurrentUser({ ...data, avatar: avatarPreview || undefined });
       } else {
         setMessage({ type: "error", text: "Erreur lors de la mise à jour du profil." });
       }

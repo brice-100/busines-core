@@ -4,7 +4,6 @@ import Image from "next/image";
 import { getAllUniversiteCourses } from "@/lib/mock-data";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 
 export const metadata: Metadata = {

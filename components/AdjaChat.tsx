@@ -22,7 +22,7 @@ export default function AdjaChat() {
     const userMsg: Message = { role: "user", content: input };
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
-    loading || setLoading(true);
+    if (!loading) setLoading(true);
     setError(null);
 
     try {

@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { Menu, X, Search, Bell, LogOut, Bookmark } from 'lucide-react';
+import { Menu, X, Bell, LogOut, Bookmark } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { useAuth } from '@/lib/auth-context';
 import { useArticles } from '@/lib/article-context';
 import { usePinnedArticles } from '@/lib/hooks/usePinnedArticles';
+import { GlobalSearch } from '@/components/ui/GlobalSearch';
 
 interface NavbarProps {
   isSidebarOpen: boolean;
@@ -14,8 +15,6 @@ interface NavbarProps {
 }
 
 export default function Navbar({ isSidebarOpen, onToggleSidebar }: NavbarProps) {
-  const [query, setQuery] = useState("");
-
   const { isAuthenticated, currentUser, logout } = useAuth();
   const { notifications } = useArticles();
 
@@ -35,10 +34,6 @@ export default function Navbar({ isSidebarOpen, onToggleSidebar }: NavbarProps) 
     ? `${currentUser.prenom[0] ?? ""}${currentUser.nom[0] ?? ""}`.toUpperCase()
     : "?";
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-  };
-
   return (
     <header className=" sticky top-0 z-20 w-full bg-white/80 backdrop-blur-xl border-b border-gray-100/50">
       <div className="flex items-center justify-between h-20 px-6 md:px-12 lg:px-20">
@@ -53,18 +48,8 @@ export default function Navbar({ isSidebarOpen, onToggleSidebar }: NavbarProps) 
           {isSidebarOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
 
-        {/* Barre de Recherche */}
-        <form onSubmit={handleSearch} className="hidden md:flex flex-1 max-w-lg mx-auto relative group">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 group-focus-within:text-primary transition-colors" />
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Rechercher un sujet, une formation, un métier..."
-            className="w-full pl-11 pr-4 py-3 bg-white hover:bg-gray-50 border border-gray-200 rounded-full text-sm font-medium text-secondary placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all shadow-sm"
-            aria-label="Recherche"
-          />
-        </form>
+        {/* Barre de Recherche Globale */}
+        <GlobalSearch />
 
         <div className="flex-1 md:hidden"></div>
 
