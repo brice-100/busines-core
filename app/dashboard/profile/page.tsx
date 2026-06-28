@@ -106,7 +106,7 @@ export default function ProfilePage() {
 
       <Card padding="lg" className="relative">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          
+
           {/* Avatar Section */}
           <div className="flex flex-col sm:flex-row items-center gap-6 pb-6 border-b border-gray-100">
             <div className="relative group cursor-pointer">

@@ -16,6 +16,7 @@ interface AuthContextType {
   logout: () => void;
   getAllUsers: () => User[];
   toggleBanStatus: (userId: string) => void;
+  updateCurrentUser: (data: Partial<User>) => void;
 }
 
 interface RegisterData {
@@ -279,6 +280,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, [getUsers, saveUsers, currentUser, logout]);
 
+  const updateCurrentUser = useCallback((data: Partial<User>) => {
+    if (!currentUser) return;
+    const updated = { ...currentUser, ...data };
+    setCurrentUser(updated);
+    // Mettre à jour aussi dans la liste des utilisateurs
+    const users = getUsers();
+    const updatedUsers = users.map(u => u.id === updated.id ? { ...u, ...data } : u);
+    saveUsers(updatedUsers);
+    // Mettre à jour la session stockée
+    try {
+      const stored = localStorage.getItem(LS_CURRENT_KEY);
+      if (stored) {
+        const session = JSON.parse(stored);
+        session.user = updated;
+        localStorage.setItem(LS_CURRENT_KEY, JSON.stringify(session));
+      }
+    } catch { /* ignore */ }
+  }, [currentUser, getUsers, saveUsers]);
+
   return (
     <AuthContext.Provider
       value={{
@@ -290,6 +310,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         logout,
         getAllUsers: getUsers,
         toggleBanStatus,
+        updateCurrentUser,
       }}
     >
       {children}

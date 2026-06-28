@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "@/lib/auth-context";
 import { useArticles } from "@/lib/article-context";
+import { usePinnedArticles } from "@/lib/hooks/usePinnedArticles";
 import { Card } from "@/components/ui/Card";
 import { RoleBadge } from "@/components/ui/RoleBadge";
 import { Badge } from "@/components/ui/Badge";
@@ -14,11 +15,13 @@ import {
   Activity, History, Compass, Briefcase,
   Sparkles, Users, ArrowRight,
   ShieldCheck, Bell, Trash2, Edit, CheckCircle, XCircle,
+  Bookmark, X,
 } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
 } from "recharts";
 import Link from "next/link";
+
 
 // Données illustratives de l'activité de lecture (7 derniers jours)
 const activityData = [
@@ -44,8 +47,10 @@ const quickAccess = [
 export default function DashboardPage() {
   const { currentUser, getAllUsers, toggleBanStatus } = useAuth();
   const { articles, deleteArticle, notifications, markNotificationRead } = useArticles();
+  const { pinnedArticles, removePin, pinnedCount } = usePinnedArticles();
 
   const [recentLogs, setRecentLogs] = useState<LogEvent[]>([]);
+  const [allLogs, setAllLogs] = useState<LogEvent[]>([]);
   const [activeTab, setActiveTab] = useState<"articles" | "users" | "notifications">("articles");
   const [users, setUsers] = useState(() => getAllUsers());
 
@@ -60,6 +65,7 @@ export default function DashboardPage() {
         const res = await fetch(`/api/logs?userId=${currentUser.id}`);
         if (res.ok) {
           const data = await res.json();
+          setAllLogs(data);
           setRecentLogs(data.slice(0, 5));
         }
       } catch (error) {
@@ -69,12 +75,29 @@ export default function DashboardPage() {
     fetchLogs();
   }, [currentUser]);
 
+  // Stats dynamiques
+  const articlesLusCount = allLogs.filter((l) => l.eventType === "lecture_article").length;
+  const formationsCount = allLogs.filter((l) => l.eventType === "consultation" && l.metadata?.universe === "formations").length;
+  const connexionsCount = allLogs.filter((l) => l.eventType === "connexion").length;
+
+  // Calcul du taux de complétion du profil
+  const profileFields = [
+    currentUser?.nom,
+    currentUser?.prenom,
+    currentUser?.email,
+    currentUser?.avatar,
+    currentUser?.role,
+  ];
+  const filledFields = profileFields.filter(Boolean).length;
+  const profileCompletion = Math.round((filledFields / profileFields.length) * 100);
+
   const handleToggleBan = (userId: string) => {
     toggleBanStatus(userId);
     setUsers(getAllUsers());
   };
 
   if (!currentUser) return null;
+
 
   return (
     <div className="px-4 py-8 lg:px-10 max-w-6xl mx-auto space-y-8">
@@ -104,16 +127,17 @@ export default function DashboardPage() {
       </div>
 
       {/* ── STATS RAPIDES ── */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {[
-          { label: "Articles lus", value: "12", icon: FileText, color: "text-violet-500", bg: "bg-violet-50" },
-          { label: "Formations", value: "3", icon: BookOpen, color: "text-blue-500", bg: "bg-blue-50" },
-          { label: "Connexions", value: recentLogs.filter((l) => l.eventType === "connexion").length.toString() || "0", icon: Activity, color: "text-green-500", bg: "bg-green-50" },
-          { label: "Profil", value: currentUser.avatar ? "100%" : "75%", icon: User, color: "text-orange-500", bg: "bg-orange-50" },
+          { label: "Articles lus", value: articlesLusCount.toString(), icon: FileText, color: "text-violet-500", bg: "bg-violet-50" },
+          { label: "Formations", value: formationsCount.toString(), icon: BookOpen, color: "text-blue-500", bg: "bg-blue-50" },
+          { label: "Connexions", value: connexionsCount.toString(), icon: Activity, color: "text-green-500", bg: "bg-green-50" },
+          { label: "Épingles", value: pinnedCount.toString(), icon: Bookmark, color: "text-amber-500", bg: "bg-amber-50", href: "/dashboard/epingles" },
+          { label: "Profil", value: `${profileCompletion}%`, icon: User, color: "text-orange-500", bg: "bg-orange-50", href: "/dashboard/profile" },
         ].map((s) => {
           const Icon = s.icon;
-          return (
-            <Card key={s.label} padding="md" className="flex flex-col items-center text-center gap-2">
+          const content = (
+            <Card key={s.label} padding="md" className="flex flex-col items-center text-center gap-2 hover:shadow-md transition-shadow">
               <div className={`${s.bg} p-3 rounded-xl`}>
                 <Icon className={`h-6 w-6 ${s.color}`} />
               </div>
@@ -121,8 +145,14 @@ export default function DashboardPage() {
               <p className="text-xs text-gray-400 leading-tight">{s.label}</p>
             </Card>
           );
+          return s.href ? (
+            <Link key={s.label} href={s.href}>{content}</Link>
+          ) : (
+            <div key={s.label}>{content}</div>
+          );
         })}
       </div>
+
 
       {/* ── GRAPHIQUE + ACTIVITÉ RÉCENTE ── */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -225,6 +255,56 @@ export default function DashboardPage() {
           Mon profil →
         </Link>
       </Card>
+
+      {/* ── MES ÉPINGLES ── */}
+      {pinnedArticles.length > 0 && (
+        <div>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-bold text-xl text-secondary flex items-center gap-2">
+              <Bookmark className="h-5 w-5 text-amber-500 fill-amber-500" />
+              Mes articles épinglés
+              <span className="text-sm font-normal text-gray-400 ml-1">({pinnedCount})</span>
+            </h2>
+            <Link href="/dashboard/epingles" className="text-primary text-sm font-medium hover:underline flex items-center gap-1">
+              Tout voir <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {pinnedArticles.slice(0, 3).map((pin) => (
+              <div key={pin.id} className="group relative bg-white rounded-2xl border border-gray-100 hover:border-amber-200 hover:shadow-md transition-all duration-300 overflow-hidden">
+                {pin.articleImage && (
+                  <div className="h-32 overflow-hidden">
+                    <img src={pin.articleImage} alt={pin.articleTitre} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                )}
+                <div className="p-4">
+                  <span className="inline-block text-[10px] font-semibold uppercase tracking-wide text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full mb-2">
+                    {pin.universe}
+                  </span>
+                  <p className="font-semibold text-secondary text-sm leading-snug line-clamp-2 mb-3">
+                    {pin.articleTitre}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={`/${pin.universe}/${pin.articleId}`}
+                      className="text-xs font-semibold text-primary hover:underline"
+                    >
+                      Lire l&apos;article →
+                    </Link>
+                    <button
+                      onClick={() => removePin(pin.articleId)}
+                      className="text-gray-300 hover:text-red-400 transition-colors"
+                      title="Désépingler"
+                    >
+                      <X className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* ══════════════════════════════════════════════
           ── SECTION ADMINISTRATION (Admins seulement) ──

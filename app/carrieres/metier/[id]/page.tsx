@@ -18,6 +18,7 @@ import { FiliereIcon } from "@/components/modules/formations/FiliereIcon";
 import { CarriereTimeline } from "@/components/modules/carrieres/CarriereTimeline";
 import { SideNav, type SideNavItem } from "@/components/modules/formations/SideNav";
 import { cn } from "@/lib/utils";
+import { PinButton } from "@/components/ui/PinButton";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -68,11 +69,18 @@ export default async function CarriereMetierPage({ params }: PageProps) {
         <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/15 blur-3xl pointer-events-none" />
         
         <div className="relative z-10 flex-1 p-8 lg:p-10">
-          <div className="mb-4 flex items-center gap-3">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider backdrop-blur">
               <FiliereIcon numero={metier.filiereNum} className="h-4 w-4" />
               {metier.filiereTitre}
             </span>
+            <PinButton
+              articleId={metier.id}
+              articleTitre={metier.nom}
+              universe="carrieres"
+              articleImage={getMetierImage(metier.id)}
+              className="bg-white/20 text-white hover:bg-white/30 hover:text-white border-0 shadow-sm"
+            />
           </div>
 
           <h1 className="font-display text-3xl font-extrabold leading-tight lg:text-4xl">

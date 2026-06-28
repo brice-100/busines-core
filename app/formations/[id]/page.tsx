@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 import { getAllFormations, getFormationById } from "@/lib/mock-data";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { PinButton } from "@/components/ui/PinButton";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -37,7 +38,14 @@ export default async function FormationDetail({ params }: PageProps) {
       </nav>
 
       <Card padding="lg" className="mb-6">
-        <h1 className="font-display text-2xl font-extrabold text-secondary mb-2">{formation.titre}</h1>
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-2">
+          <h1 className="font-display text-2xl font-extrabold text-secondary">{formation.titre}</h1>
+          <PinButton
+            articleId={formation.id}
+            articleTitre={formation.titre}
+            universe="formations"
+          />
+        </div>
         <p className="text-sm text-gray-600 mb-4">{formation.description}</p>
         <div className="flex flex-wrap gap-4 items-center">
           <div className="text-xs text-gray-500">Catégorie: <strong className="text-gray-700">{formation.categorie}</strong></div>

@@ -6,6 +6,15 @@
 // --- Utilisateur & Auth ---
 export type UserRole = "visiteur" | "utilisateur" | "blogueur" | "administrateur";
 
+export interface PinnedArticle {
+  id: string;           // identifiant unique de l'épingle
+  articleId: string;    // id de l'article épinglé
+  articleTitre: string;
+  universe: string;     // ex: "decryptages", "explorer", "formations"...
+  articleImage?: string;
+  pinnedAt: string;     // ISO date
+}
+
 export interface User {
   id: string;
   nom: string;
@@ -16,6 +25,7 @@ export interface User {
   createdAt: string;
   avatar?: string;
   isBanned?: boolean;
+  pinnedArticles?: PinnedArticle[];
 }
 
 export interface AuthState {
@@ -191,7 +201,7 @@ export interface NavModule {
 export interface LogEvent {
   id: string;
   userId: string;
-  eventType: "connexion" | "deconnexion" | "mise_a_jour_profil" | "commentaire" | "consultation" | "autre";
+  eventType: "connexion" | "deconnexion" | "mise_a_jour_profil" | "commentaire" | "consultation" | "lecture_article" | "autre";
   description: string;
   metadata?: Record<string, unknown>;
   ipAddress?: string;

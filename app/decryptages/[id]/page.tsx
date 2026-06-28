@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useArticles } from "@/lib/article-context";
 import { useAuth } from "@/lib/auth-context";
+import { useLogger } from "@/lib/hooks/useLogger";
 import { formatDate } from "@/lib/mock-data";
 import Link from "next/link";
 import {
@@ -19,6 +20,7 @@ import {
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { RoleBadge } from "@/components/ui/RoleBadge";
+import { PinButton } from "@/components/ui/PinButton";
 
 export default function ArticleDetailPage() {
   const params = useParams();
@@ -27,12 +29,25 @@ export default function ArticleDetailPage() {
 
   const { getArticleById, deleteArticle, getCommentsByArticleId, addComment } = useArticles();
   const { currentUser } = useAuth();
+  const { logEvent } = useLogger();
 
   const [commentText, setCommentText] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const article = getArticleById(id);
   const comments = getCommentsByArticleId(id);
+
+  // Logger la lecture de l'article
+  useEffect(() => {
+    if (article && currentUser) {
+      logEvent("lecture_article", `Lecture de l'article : ${article.titre}`, {
+        articleId: article.id,
+        universe: "decryptages",
+        categorie: article.categorie,
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [article?.id, currentUser?.id]);
 
   if (!article) {
     return (
@@ -145,27 +160,35 @@ export default function ArticleDetailPage() {
             </div>
           </div>
 
-          {/* Boutons auteur/admin */}
-          {canEdit && (
-            <div className="flex items-center gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                href={`/dashboard/blogueur/publier?edit=${article.id}`}
-                className="gap-2 text-gray-600 hover:text-primary"
-              >
-                <Edit className="h-4 w-4" /> Modifier
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleDelete}
-                className="text-red-500 border-red-100 hover:bg-red-50 gap-2"
-              >
-                <Trash2 className="h-4 w-4" /> Supprimer
-              </Button>
-            </div>
-          )}
+          {/* Boutons épingler + auteur/admin */}
+          <div className="flex items-center gap-2">
+            <PinButton
+              articleId={article.id}
+              articleTitre={article.titre}
+              universe="decryptages"
+              articleImage={article.image}
+            />
+            {canEdit && (
+              <>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  href={`/dashboard/blogueur/publier?edit=${article.id}`}
+                  className="gap-2 text-gray-600 hover:text-primary"
+                >
+                  <Edit className="h-4 w-4" /> Modifier
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleDelete}
+                  className="text-red-500 border-red-100 hover:bg-red-50 gap-2"
+                >
+                  <Trash2 className="h-4 w-4" /> Supprimer
+                </Button>
+              </>
+            )}
+          </div>
         </div>
       </div>
 

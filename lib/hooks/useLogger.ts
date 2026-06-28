@@ -6,7 +6,7 @@ export function useLogger() {
 
   const logEvent = useCallback(
     async (
-      eventType: "connexion" | "deconnexion" | "mise_a_jour_profil" | "commentaire" | "consultation" | "autre",
+      eventType: "connexion" | "deconnexion" | "mise_a_jour_profil" | "commentaire" | "consultation" | "lecture_article" | "autre",
       description: string,
       metadata?: Record<string, unknown>
     ) => {

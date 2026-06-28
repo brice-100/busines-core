@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Search, Bell, LogOut } from 'lucide-react';
+import { Menu, X, Search, Bell, LogOut, Bookmark } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { useAuth } from '@/lib/auth-context';
 import { useArticles } from '@/lib/article-context';
+import { usePinnedArticles } from '@/lib/hooks/usePinnedArticles';
 
 interface NavbarProps {
   isSidebarOpen: boolean;
@@ -21,6 +22,8 @@ export default function Navbar({ isSidebarOpen, onToggleSidebar }: NavbarProps) 
   const unreadCount = currentUser?.role === "administrateur"
     ? notifications.filter(n => !n.read).length
     : 0;
+
+  const { pinnedCount } = usePinnedArticles();
 
   const dashboardHref = currentUser?.role === "administrateur"
     ? "/dashboard/admin"
@@ -84,6 +87,20 @@ export default function Navbar({ isSidebarOpen, onToggleSidebar }: NavbarProps) 
                   )}
                 </Link>
               )}
+
+              {/* Bouton épingles pour tous les utilisateurs connectés */}
+              <Link
+                href="/dashboard/epingles"
+                className="relative p-2.5 rounded-full text-gray-500 hover:bg-amber-50 hover:text-amber-500 transition-colors"
+                title="Mes articles épinglés"
+              >
+                <Bookmark className={`h-5 w-5 ${pinnedCount > 0 ? 'fill-amber-400 text-amber-500' : ''}`} />
+                {pinnedCount > 0 && (
+                  <span className="absolute top-1.5 right-1.5 h-4 w-4 flex items-center justify-center text-[10px] font-bold text-white bg-amber-500 rounded-full border-2 border-white">
+                    {pinnedCount > 9 ? "9+" : pinnedCount}
+                  </span>
+                )}
+              </Link>
 
               <div className="h-8 w-px bg-gray-200 hidden sm:block mx-1"></div>
 

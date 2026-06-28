@@ -2,6 +2,8 @@ import { getExplorerItemById } from "@/lib/explorer-data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, Lightbulb } from "lucide-react";
+import { PinButton } from "@/components/ui/PinButton";
+
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -47,12 +49,19 @@ export default async function ExplorerDetailPage({ params }: Props) {
         
         {/* Contenu Hero */}
         <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 flex flex-col items-start justify-end h-full">
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap items-center gap-2 mb-4">
             {item.categories.map(cat => (
               <span key={cat} className="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider rounded-md border border-white/20">
                 {cat}
               </span>
             ))}
+            <PinButton
+              articleId={item.id}
+              articleTitre={item.title}
+              universe="explorer"
+              articleImage={item.image}
+              className="bg-white/20 backdrop-blur-md text-white border border-white/20 hover:bg-white/30"
+            />
           </div>
           <h1 className="text-3xl md:text-5xl font-display font-bold !text-white mb-2 leading-tight drop-shadow-lg" style={{color: '#ffffff'}}>
             {item.title}

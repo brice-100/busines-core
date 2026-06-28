@@ -66,5 +66,81 @@
     },
     "ipAddress": "::ffff:127.0.0.1",
     "timestamp": "2026-06-24T17:44:08.937Z"
+  },
+  {
+    "id": "log_1782654958289_59wa2yj",
+    "userId": "u1",
+    "eventType": "connexion",
+    "description": "Connexion réussie sur BusinessCore",
+    "metadata": {
+      "email": "admin@businesscore.com",
+      "timestamp": "2026-06-28T13:55:55.526Z"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T13:55:58.290Z"
+  },
+  {
+    "id": "log_1782655528691_w52rzls",
+    "userId": "u2",
+    "eventType": "connexion",
+    "description": "Connexion réussie sur BusinessCore",
+    "metadata": {
+      "email": "marie@example.com",
+      "timestamp": "2026-06-28T14:05:28.539Z"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T14:05:28.691Z"
+  },
+  {
+    "id": "log_1782670904597_h7sd1gt",
+    "userId": "u2",
+    "eventType": "lecture_article",
+    "description": "Lecture de l'article : Le Leapfrogging africain",
+    "metadata": {
+      "articleId": "a2",
+      "universe": "decryptages",
+      "categorie": "Finance africaine"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T18:21:44.597Z"
+  },
+  {
+    "id": "log_1782670904635_lmxts6w",
+    "userId": "u2",
+    "eventType": "lecture_article",
+    "description": "Lecture de l'article : Le Leapfrogging africain",
+    "metadata": {
+      "articleId": "a2",
+      "universe": "decryptages",
+      "categorie": "Finance africaine"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T18:21:44.635Z"
+  },
+  {
+    "id": "log_1782670949214_0ewf3fw",
+    "userId": "u2",
+    "eventType": "lecture_article",
+    "description": "Lecture de l'article : Le Leapfrogging africain",
+    "metadata": {
+      "articleId": "a2",
+      "universe": "decryptages",
+      "categorie": "Finance africaine"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T18:22:29.214Z"
+  },
+  {
+    "id": "log_1782670949291_qcszyox",
+    "userId": "u2",
+    "eventType": "lecture_article",
+    "description": "Lecture de l'article : Le Leapfrogging africain",
+    "metadata": {
+      "articleId": "a2",
+      "universe": "decryptages",
+      "categorie": "Finance africaine"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T18:22:29.291Z"
   }
 ]
