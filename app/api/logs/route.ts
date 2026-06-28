@@ -34,17 +34,34 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const { userId, eventType, description, metadata } = body;
+    // Guard against empty or malformed bodies
+    const contentType = request.headers.get("content-type") ?? "";
+    if (!contentType.includes("application/json")) {
+      return NextResponse.json({ message: "Content-Type doit être application/json" }, { status: 400 });
+    }
+
+    let body: Record<string, unknown>;
+    try {
+      body = await request.json();
+    } catch {
+      return NextResponse.json({ message: "Corps de requête JSON invalide ou vide" }, { status: 400 });
+    }
+
+    const { userId, eventType, description, metadata } = body as {
+      userId?: string;
+      eventType?: string;
+      description?: string;
+      metadata?: Record<string, unknown>;
+    };
 
     if (!userId || !eventType || !description) {
-      return NextResponse.json({ message: "Champs requis manquants" }, { status: 400 });
+      return NextResponse.json({ message: "Champs requis manquants (userId, eventType, description)" }, { status: 400 });
     }
 
     const newLog: LogEvent = {
       id: `log_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
       userId,
-      eventType,
+      eventType: eventType as LogEvent["eventType"],
       description,
       metadata,
       ipAddress: request.headers.get("x-forwarded-for") || "127.0.0.1",
@@ -66,3 +83,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Erreur serveur" }, { status: 500 });
   }
 }
+
