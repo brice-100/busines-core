@@ -180,5 +180,31 @@
     },
     "ipAddress": "::ffff:127.0.0.1",
     "timestamp": "2026-06-28T18:42:49.318Z"
+  },
+  {
+    "id": "log_1782675483773_hory9on",
+    "userId": "u1",
+    "eventType": "lecture_article",
+    "description": "Lecture de l'article : La Blockchain expliquée simplement",
+    "metadata": {
+      "articleId": "a4",
+      "universe": "decryptages",
+      "categorie": "Tech & Crypto"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T19:38:03.773Z"
+  },
+  {
+    "id": "log_1782675483775_5odphxb",
+    "userId": "u1",
+    "eventType": "lecture_article",
+    "description": "Lecture de l'article : La Blockchain expliquée simplement",
+    "metadata": {
+      "articleId": "a4",
+      "universe": "decryptages",
+      "categorie": "Tech & Crypto"
+    },
+    "ipAddress": "::ffff:127.0.0.1",
+    "timestamp": "2026-06-28T19:38:03.775Z"
   }
 ]
