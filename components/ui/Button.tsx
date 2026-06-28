@@ -5,8 +5,8 @@
  * Tailles   : sm | md | lg
  *
  * Usage :
- *   <Button variant="primary" size="md" onClick={...}>Texte</Button>
- *   <Button variant="outline" href="/formations">Voir tout</Button>
+ * <Button variant="primary" size="md" onClick={...}>Texte</Button>
+ * <Button variant="outline" href="/formations">Voir tout</Button>
  *
  * ⚠️  Ne pas modifier ce composant sans accord de l'équipe.
  */
@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils";
 type ButtonVariant = "primary" | "outline" | "ghost" | "danger";
 type ButtonSize = "sm" | "md" | "lg";
 
+// On autorise ButtonProps à accepter les attributs d'un bouton ET d'un lien pour éviter les conflits TypeScript
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -61,6 +62,7 @@ export function Button({
   const base =
     "inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer select-none";
 
+  // Grâce au nouveau cn() avec tailwind-merge, tout doublon passé dans `className` prendra le dessus ici
   const classes = cn(
     base,
     variantClasses[variant],
@@ -83,7 +85,8 @@ export function Button({
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      /* FIX : On propage désormais les ...props (comme style ou target) au Link de Next.js */
+      <Link href={href} className={classes} {...(props as any)}>
         {content}
       </Link>
     );
