@@ -26,7 +26,29 @@ export default function LoginPage() {
       await new Promise((resolve) => setTimeout(resolve, 800));
       const result = await login(email, password);
       if (result.success) {
-        // La redirection est gérée par le DashboardLayout
+        // Enregistrer l'événement de connexion dans les logs
+        try {
+          // Récupérer l'id de l'utilisateur depuis localStorage
+          const sessionRaw = localStorage.getItem("bc_current_user");
+          if (sessionRaw) {
+            const session = JSON.parse(sessionRaw);
+            const userId = session?.user?.id;
+            if (userId) {
+              await fetch("/api/logs", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  userId,
+                  eventType: "connexion",
+                  description: `Connexion réussie sur BusinessCore`,
+                  metadata: { email, timestamp: new Date().toISOString() },
+                }),
+              });
+            }
+          }
+        } catch (_logErr) {
+          // Ne pas bloquer la connexion si le log échoue
+        }
         router.push("/dashboard");
       } else {
         setError(result.error || "Identifiants incorrects.");

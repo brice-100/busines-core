@@ -186,3 +186,15 @@ export interface NavModule {
   description?: string;
   color?: string;
 }
+
+// --- Logs d'Activité ---
+export interface LogEvent {
+  id: string;
+  userId: string;
+  eventType: "connexion" | "deconnexion" | "mise_a_jour_profil" | "commentaire" | "consultation" | "autre";
+  description: string;
+  metadata?: Record<string, unknown>;
+  ipAddress?: string;
+  timestamp: string;
+}
+
